@@ -10,7 +10,6 @@ public class Test01 {
 		System.out.println("2번째 커밋!");
 
 		System.out.println("핸들을꽉잡아조 화이팅!");
-		System.out.println("수정");
 
 		
 		System.out.println("100번째 커밋!");
