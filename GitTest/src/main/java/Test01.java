@@ -3,8 +3,8 @@ public class Test01 {
 
 	public static void main(String[] args) {
 
-		System.out.println("1¹øÂ° Ä¿¹Ô");
-		//Ä¿¹Ô -> ·ÎÄÃ ·¹ÆÛÁöÅä¸®¿¡ ÀúÀåÇÏ´Â ÀÛ¾÷!
+		System.out.println("1ë²ˆì§¸ ì»¤ë°‹");
+		//ì»¤ë°‹ -> ë¡œì»¬ ë ˆí¼ì§€í† ë¦¬ì— ì €ìž¥í•˜ëŠ” ìž‘ì—…!
 
 	}
 
