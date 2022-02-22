@@ -12,6 +12,8 @@ public class Test01 {
 
 		
 		System.out.println("100¹øÂ° Ä¿¹Ô!");
+		
+		System.out.println("´Ùºó¾¾²¨ Å×½ºÆ®!");
 
 
 	}
