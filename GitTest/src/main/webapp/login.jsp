@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,90 +8,97 @@
 </head>
 <body>
 
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Your description">
-    <meta name="author" content="Your name">
+<!-- SEO Meta Tags -->
+<meta name="description" content="Your description">
+<meta name="author" content="Your name">
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+<!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+<meta property="og:site_name" content="" />
+<!-- website name -->
+<meta property="og:site" content="" />
+<!-- website link -->
+<meta property="og:title" content="" />
+<!-- title shown in the actual shared post -->
+<meta property="og:description" content="" />
+<!-- description shown in the actual shared post -->
+<meta property="og:image" content="" />
+<!-- image link, make sure it's jpg -->
+<meta property="og:url" content="" />
+<!-- where do you want your post to link to -->
+<meta name="twitter:card" content="summary_large_image">
+<!-- to have large image post format in Twitter -->
 
-    <!-- Webpage Title -->
-    <title>Privacy</title>
-     <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/fontawesome-all.min.css" rel="stylesheet">
-    <link href="./css/aos.min.css" rel="stylesheet">
-    <link href="./css/swiper.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="./assets/images/favicon.png">
+<!-- Webpage Title -->
+<title>Privacy</title>
+<!-- Styles -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+	rel="stylesheet">
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<link href="./css/fontawesome-all.min.css" rel="stylesheet">
+<link href="./css/aos.min.css" rel="stylesheet">
+<link href="./css/swiper.css" rel="stylesheet">
+<link href="./css/style.css" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="icon" href="./assets/images/favicon.png">
 </head>
 <body>
 
-   <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
-        <div class="container">
+	<!-- Navigation -->
+	<nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark"
+		aria-label="Main navigation">
+		<div class="container">
 
-            <!-- Image Logo -->
-            <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
+			<!-- Image Logo -->
+			<!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
 
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <a class="navbar-brand logo-text" href="index.html">상단 사이트 제목</a>
+			<!-- Text Logo - Use this if you don't have a graphic logo -->
+			<a class="navbar-brand logo-text" href="index.html">상단 사이트 제목</a>
 
-            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
+			<button class="navbar-toggler p-0 border-0" type="button"
+				id="navbarSideCollapse" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
 			<!-- 상단 메뉴 부분 -->
-			<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault" >
-                <ul class="navbar-nav ms-auto navbar-nav-scroll">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">로그인</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">제품소개</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">고장신고</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#plans">제품설치문의</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">광고신청</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
-                        
-                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="rivacy.html">개인정보</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="terms.html">제품관리</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="particle.html">광고관리</a></li>
-                        </ul>
-                    </li>
-                    <!-- 
+			<div class="navbar-collapse offcanvas-collapse"
+				id="navbarsExampleDefault">
+				<ul class="navbar-nav ms-auto navbar-nav-scroll">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">로그인</a></li>
+					<li class="nav-item"><a class="nav-link" href="#about">제품소개</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#services">고장신고</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#plans">제품설치문의</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">광고신청</a></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" id="dropdown01"
+						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
+
+						<ul class="dropdown-menu" aria-labelledby="dropdown01">
+							<li><a class="dropdown-item" href="rivacy.html">개인정보</a></li>
+							<li><div class="dropdown-divider"></div></li>
+							<li><a class="dropdown-item" href="terms.html">제품관리</a></li>
+							<li><div class="dropdown-divider"></div></li>
+							<li><a class="dropdown-item" href="particle.html">광고관리</a></li>
+						</ul></li>
+					<!-- 
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                      -->
-                </ul>
-                <!-- 소셜 아이콘 숨김
+				</ul>
+				<!-- 소셜 아이콘 숨김
                 <span class="nav-item social-icons">
                     <span class="fa-stack">
                         <a href="#your-link">
@@ -107,24 +114,48 @@
                     </span>
                 </span>
                  -->
-            </div> <!-- end of navbar-collapse -->
-        </div> <!-- end of container -->
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+			</div>
+			<!-- end of navbar-collapse -->
+		</div>
+		<!-- end of container -->
+	</nav>
+	<!-- end of navbar -->
+	<!-- end of navigation -->
 
 
-    <!-- Header -->
-    <header class="ex-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-10 offset-xl-1">
-                    <h1>Privacy Policy</h1>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </header> <!-- end of ex-header -->
-    <!-- end of header -->
-            
-    
+	<!-- Header -->
+	<header class="ex-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<h1>Privacy Policy</h1>
+				</div>
+				<!-- end of col -->
+			</div>
+			<!-- end of row -->
+		</div>
+		<!-- end of container -->
+	</header>
+	<!-- end of ex-header -->
+	<!-- end of header -->
+
+	<nav id="menu">
+		<ul class="links">
+			<li><h5>로그인</h5></li>
+			<form action="Login" method="post">
+				<li><input type="text" name="id" placeholder="id를 입력하세요"></li>
+				<li><input type="password" name="pw" placeholder="PW를 입력하세요"></li>
+				<li><input type="submit" value="LogIn" class="button fit"></li>
+			</form>
+		</ul>
+	
+
+			
+		
+	</nav>
+	<a href = "join.jsp"><button>회원가입</button></a>
+	<!-- Banner -->
+
+
 </body>
 </html>
