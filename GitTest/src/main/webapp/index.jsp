@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+
 <!-- SEO Meta Tags -->
     <meta name="description" content="Your description">
     <meta name="author" content="Your name">
@@ -19,7 +19,7 @@
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>상단바 title</title>
+    <title>스마트 반사경</title>
 
     <!-- Styles(스타일 시트) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
@@ -29,8 +29,10 @@
     <link href="./css/swiper.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
 
-    <!-- Favicon(상단바 icon) -->
+    <!-- Favicon(상단바 icon) 
     <link rel="icon" href="./assets/images/favicon.png">
+    -->
+    
 </head>
 <body>
     
@@ -39,10 +41,10 @@
         <div class="container">
 
             <!-- Image Logo -->
-            <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
+            <!-- <a class="navbar-brand logo-image" href="index.jsp"><img src="images/logo.svg" alt="alternative"></a> -->
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <a class="navbar-brand logo-text" href="index.html">상단 사이트 제목</a>
+            <a class="navbar-brand logo-text" href="index.jsp">IoT 스마트 반사경</a>
 
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -58,7 +60,7 @@
                         <a class="nav-link" href="#about">제품소개</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">고장신고</a>
+                        <a class="nav-link" href="#break">고장신고</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#plans">제품설치문의</a>
@@ -70,11 +72,11 @@
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
                         
                         <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="rivacy.html">개인정보</a></li>
+                            <li><a class="dropdown-item" href="privacy.jsp">개인정보</a></li>
                             <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="terms.html">제품관리</a></li>
+                            <li><a class="dropdown-item" href="terms.jsp">제품관리</a></li>
                             <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="particle.html">광고관리</a></li>
+                            <li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
                         </ul>
                     </li>
                     <!-- 
@@ -103,21 +105,27 @@
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
-    <!-- Home -->
+    <!-- 메인페이지 -->
     <section class="home py-5 d-flex align-items-center" id="header">
         <div class="container text-light py-5"  data-aos="fade-right"> 
             <h1 class="headline">스마트 <span class="home_text">반사경</span><br></h1>
-            <p class="para para-light py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus tempore accusamus quis magnam doloremque itaque ad modi, pariatur iste labore similique officiis impedit aspernatur aperiam facere architecto. Eligendi, repellendus inventore!</p>
+            <p class="para para-light py-3">소개글</p>
             <div class="d-flex align-items-center">
+                <!-- 
                 <p class="p-2"><i class="fas fa-laptop-house fa-lg"></i></p>
                 <p>Lorem ipsum dolor sit amet.</p>  
+                 -->
             </div>
             <div class="d-flex align-items-center">
+            	<!--  
                 <p class="p-2"><i class="fas fa-wifi fa-lg"></i></p>
                 <p>Lorem ipsum dolor sit amet.</p>  
+            	-->
             </div>
             <div class="my-3">
+            	<!-- 
                 <a class="btn" href="#plans">View Plans</a>
+            	 -->
             </div>
         </div> <!-- end of container -->
     </section> <!-- end of home -->
