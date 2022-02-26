@@ -182,12 +182,12 @@
 				<h2>제품소개</h2>
 			</div>
 			<div class="left">
-				<p class="py-2 para-light">
+				<p class="inner_content">
 				text
 				</p>
 			</div>
 			<div class="right">
-				<p class="py-2 para-light">
+				<p class="inner_content">
 				text
 				</p>
 			</div>
