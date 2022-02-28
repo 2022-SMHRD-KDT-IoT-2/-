@@ -1,3 +1,6 @@
+<%@page import="com.VO.BreakVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.DAO.BreakDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -42,6 +45,24 @@
     <link rel="icon" href="./assets/images/favicon.png">
 </head>
 <body>
+<%
+	BreakDAO dao=new BreakDAO();
+	int pageSize=10;
+	String pageNum=request.getParameter("pageNum");
+	if(pageNum==null){
+		pageNum="1";
+	}
+	int currentPage=Integer.parseInt(pageNum);
+	
+	int startRow=(currentPage-1)*pageSize+1;
+	int endRow=currentPage*pageSize;
+	int count=0;
+	count=dao.getCount();
+	ArrayList<BreakVO> al=null;
+	if(count>0){
+	al=dao.getList(startRow,endRow);
+	}
+%>
 
    <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
@@ -132,32 +153,89 @@
                 <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5" data-aos="fade-right">
                     <div style="width:90%">
                         <div class="text-center text-lg-start py-4 pt-lg-0">
-                            <p>제품고장</p>
-                            <h2 class="py-2">아래의 본문을 따라 작성해주시기 바랍니다.</h2>
-                            <p class="para-light"> 신고자의 이름과 연락처를 함께 작성바랍니다. 무분별한 신고는 자제해 주시며, 문의에 대한 답변은 작성해주신 연락처를 통해 응답하겠습니다. </p>
+                            <h3>게시판 목록</h3>
+		<table border="1" width="900">
+			<tr>
+				<td width="20%">번호</td>
+				<td width="20%">이름</td>
+				<td width="30%">제품번호</td>
+				<td width="20%">신고날짜</td>
+				</tr>
+			<%
+				if (count > 0) { // 데이터베이스에 데이터가 있으면
+					int number = count - (currentPage - 1) * pageSize; // 글 번호 순번 
+					for (int i = 0; i < al.size(); i++) {
+						BreakVO board = al.get(i); // 반환된 list에 담긴 참조값 할당
+			%>
+			<tr>
+				<td><%=board.getNum() %></td>
+				<td><%=board.getName() %></td>
+				<td>
+					<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%>
+					<a href="breakcontent.jsp?no=<%=board.getNum()%>"><%=board.getProduct_num() %></a>
+				</td>
+				<td><%=board.getDate() %></td>
+			</tr>
+			<%
+					}
+				} else { // 데이터가 없으면
+			%>
+			<tr>
+				<td colspan="6" align="center">게시글이 없습니다.</td>
+			</tr>
+				<%
+					}
+				%>
+			<tr>
+				<td colspan="6" align="right">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" align="center">
+					<%	// 페이징  처리
+						if(count > 0){
+							// 총 페이지의 수
+							int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
+							// 한 페이지에 보여줄 페이지 블럭(링크) 수
+							int pageBlock = 10;
+							// 한 페이지에 보여줄 시작 및 끝 번호(예 : 1, 2, 3 ~ 10 / 11, 12, 13 ~ 20)
+							int startPage = ((currentPage-1)/pageBlock)*pageBlock+1;
+							int endPage = startPage + pageBlock - 1;
+							
+							// 마지막 페이지가 총 페이지 수 보다 크면 endPage를 pageCount로 할당
+							if(endPage > pageCount){
+								endPage = pageCount;
+							}
+							
+							if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
+					%>
+								<a href="breaklist.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
+					<%			
+							}
+							
+							for(int i=startPage; i <= endPage; i++){ // 페이지 블록 번호
+								if(i == currentPage){ // 현재 페이지에는 링크를 설정하지 않음
+					%>
+									[<%=i %>]
+					<%									
+								}else{ // 현재 페이지가 아닌 경우 링크 설정
+					%>
+									<a href="breaklist.jsp?pageNum=<%=i%>">[<%=i %>]</a>
+					<%	
+								}
+							} // for end
+							
+							if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
+					%>
+								<a href="breaklist.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
+					<%			
+							}
+						}
+					%>
+				</td>
+			</tr>
+		</table>
                         </div>
-                        <div>
-                            <div class="row" >
-                                <div class="col-lg-6">
-                                <form action="BreakReport" method="post">
-                                    <div class="form-group py-2">
-                                        <input type="text" class="form-control form-control-input" name="name" id="exampleFormControlInput1" placeholder="신고 문의자 이름">
-                                    </div>                                
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-                                                   group py-2">
-                                        <input type="email" class="form-control form-control-input" name="phone"id="exampleFormControlInput2" placeholder="연락처 010-0000-0000">
-                                    </div>                                 
-                                </div>
-                            </div>
-                            <div class="form-group py-2">
-                                <textarea class="form-control form-control-input" name="content" id="exampleFormControlTextarea1" rows="6" placeholder="내용을 입력하세요."></textarea>
-                            </div>                            
-                        </div>
-                        <div class="my-3">
-                            <a class="btn form-control-submit-button" href="#your-link">등록</a>
-                        </div>
-                        </form>
                     </div> <!-- end of div -->
                 </div> <!-- end of col -->
                 <div id="map" class="col-lg-6 d-flex align-items-center" style="width:800px;height:400px;">                

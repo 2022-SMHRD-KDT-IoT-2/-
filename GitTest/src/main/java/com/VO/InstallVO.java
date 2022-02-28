@@ -2,13 +2,13 @@ package com.VO;
 
 public class InstallVO {
 	
-	int request_req;
-	String request_loc;
-	String request_name;
-	String request_Phone;
-	String request_date;
-	String request_status;
-	String user_id;
+	private int request_req;
+	private String request_loc;
+	private String request_name;
+	private String request_Phone;
+	private String request_date;
+	private String request_status;
+	private String user_id;
 	public InstallVO(int request_req, String request_loc, String request_name) {
 		super();
 		this.request_req = request_req;

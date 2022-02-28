@@ -127,6 +127,7 @@ public class InstallDAO {
 		return board;
 	}
 
+	//설치게시판에 글 등록하기
 	public int requestInstall(String loc, String name, String phone, String id) {
 		int cnt = 0;
 		try {

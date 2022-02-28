@@ -1,3 +1,6 @@
+<%@page import="com.VO.BreakVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.DAO.BreakDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -42,6 +45,11 @@
     <link rel="icon" href="./assets/images/favicon.png">
 </head>
 <body>
+<%
+	BreakDAO dao=new BreakDAO();
+	int no = Integer.parseInt(request.getParameter("no"));
+	BreakVO vo=dao.getOneList(no);
+%>
 
    <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
@@ -132,32 +140,31 @@
                 <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5" data-aos="fade-right">
                     <div style="width:90%">
                         <div class="text-center text-lg-start py-4 pt-lg-0">
-                            <p>제품고장</p>
-                            <h2 class="py-2">아래의 본문을 따라 작성해주시기 바랍니다.</h2>
-                            <p class="para-light"> 신고자의 이름과 연락처를 함께 작성바랍니다. 무분별한 신고는 자제해 주시며, 문의에 대한 답변은 작성해주신 연락처를 통해 응답하겠습니다. </p>
+                            <h3>게시판 목록</h3>
+		<h3>작성글</h3>
+		<table border="1" width="600">
+			<tr>
+				<td width="50">이름</td>
+				<td width="250"><%=vo.getName() %></td>
+				<td width="50">신고날짜</td>
+				<td width="250"><%=vo.getDate() %></td>
+			</tr>
+			<tr>
+				<td width="50">핸드폰번호</td>
+				<td width="250"><%=vo.getPhone() %></td>
+				<td width="50">제품번호</td>
+				<td width="250"><%=vo.getProduct_num() %></td>
+			</tr>
+			<tr>
+				<td>내용</td>
+				<td colspan="3"><pre><%=vo.getContent() %></pre></td>
+			</tr>
+			<tr align="center">
+				<td colspan="4">
+				</td>>
+				</tr>
+				</table>
                         </div>
-                        <div>
-                            <div class="row" >
-                                <div class="col-lg-6">
-                                <form action="BreakReport" method="post">
-                                    <div class="form-group py-2">
-                                        <input type="text" class="form-control form-control-input" name="name" id="exampleFormControlInput1" placeholder="신고 문의자 이름">
-                                    </div>                                
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-                                                   group py-2">
-                                        <input type="email" class="form-control form-control-input" name="phone"id="exampleFormControlInput2" placeholder="연락처 010-0000-0000">
-                                    </div>                                 
-                                </div>
-                            </div>
-                            <div class="form-group py-2">
-                                <textarea class="form-control form-control-input" name="content" id="exampleFormControlTextarea1" rows="6" placeholder="내용을 입력하세요."></textarea>
-                            </div>                            
-                        </div>
-                        <div class="my-3">
-                            <a class="btn form-control-submit-button" href="#your-link">등록</a>
-                        </div>
-                        </form>
                     </div> <!-- end of div -->
                 </div> <!-- end of col -->
                 <div id="map" class="col-lg-6 d-flex align-items-center" style="width:800px;height:400px;">                
