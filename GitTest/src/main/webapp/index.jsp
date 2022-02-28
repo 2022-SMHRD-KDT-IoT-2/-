@@ -181,15 +181,13 @@
 			<div class="intro">
 				<h2>제품소개</h2>
 			</div>
-			<div class="left">
-				<p class="inner_content">
-				text
-				</p>
-			</div>
-			<div class="right">
-				<p class="inner_content">
-				text
-				</p>
+			<div class="box">
+				<div class="box_black">
+					<p class="inner_content">img</p>
+				</div>
+				<div class="box_white">
+					<p class="inner_content">text</p>
+				</div>
 			</div>
 			<!-- 
 				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">

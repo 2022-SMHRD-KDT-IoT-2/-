@@ -295,25 +295,49 @@ li {
 /*     Introduction    */
 /***********************/
 #introduction .container div{
-	width: 100%;
+	width: 900px;
+	margin : 0px auto;
 }
 #introduction .container div.intro{
 	width: 100%;
-	height: 30%;
+	text-align : center;
+	padding-bottom : 20px;
 }
-#introduction .container div.left {
+
+#introduction .container .box_black {
 	width : 50%;
-	margin : 0;
+	height : 450px;
 	float : left;
 	background-color: #4D6780;
 	color: white;
-}
-#introduction .container div.right {
-	width : 50%;	
 	margin : 0;
-	float : right;
+	text-align : center;
+	line-height : 450px;
+}
+#introduction .container .box_white {
+	width : 50%;
+	height : 450px;
+	float : left;
 	background-color: white;
 	color: var(--primary);
+	margin : 0;
+	text-align : center;
+	line-height : 450px;
+}
+
+@media(max-width: 900px){
+	#introduction .container div{
+		width: 450px;
+		margin : 0px auto;
+	}
+	#introduction .container .box_black{
+		width : 100%;
+		height : 450px;
+	}
+	#introduction .container .box_white{
+		width : 100%;
+		height : 450px;
+	}
 }
 
 /******************/
