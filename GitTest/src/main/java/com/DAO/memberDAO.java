@@ -18,7 +18,7 @@ public class memberDAO {
 
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524";
 			String dbid = "campus_d_4_0216";
 			String dbpw = "smhrd4";
 
@@ -92,7 +92,7 @@ public class memberDAO {
 
 			conn();
 
-			String sql = "insert into t_user values(?,?,?,?,?,sysdate)";
+			String sql = "insert into t_user values(?,?,?,?,?,'y',sysdate)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
