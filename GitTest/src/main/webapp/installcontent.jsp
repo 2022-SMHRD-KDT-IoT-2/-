@@ -46,21 +46,8 @@
 <body>
 <%
 	InstallDAO dao=new InstallDAO();
-	int pageSize=10;
-	String pageNum=request.getParameter("pageNum");
-	if(pageNum==null){
-		pageNum="1";
-	}
-	int currentPage=Integer.parseInt(pageNum);
-	
-	int startRow=(currentPage-1)*pageSize+1;
-	int endRow=currentPage*pageSize;
-	int count=0;
-	count=dao.getCount();
-	ArrayList<InstallVO> al=null;
-	if(count>0){
-	al=dao.getList(startRow,endRow);
-	}
+	int no = Integer.parseInt(request.getParameter("no"));
+	InstallVO vo=dao.getOneList(no);
 %>
 
    <!-- Navigation -->
@@ -145,97 +132,42 @@
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
-    
-    <!-- 설치 테이블 -->
-    <body>
-	<center>
-		<h3>게시판 목록</h3>
-		<table border="1" width="900">
+    <center>
+		<h3>작성글</h3>
+		<table border="1" width="600">
 			<tr>
-				<td width="10%">번호</td>
-				<td width="15%">이름</td>
-				<td width="30%">위치</td>
-				</tr>
-			<%
-				if (count > 0) { // 데이터베이스에 데이터가 있으면
-					int number = count - (currentPage - 1) * pageSize; // 글 번호 순번 
-					for (int i = 0; i < al.size(); i++) {
-						InstallVO board = al.get(i); // 반환된 list에 담긴 참조값 할당
-			%>
-			<tr>
-				<td><%=board.getRequest_req() %></td>
-				<td><%=board.getRequest_name() %></td>
-				<td>
-					<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%>
-					<a href="installcontent.jsp?no=<%=board.getRequest_req()%>"><%=board.getRequest_loc() %></a>
-				</td>
-			</tr>
-			<%
-					}
-				} else { // 데이터가 없으면
-			%>
-			<tr>
-				<td colspan="6" align="center">게시글이 없습니다.</td>
-			</tr>
-				<%
-					}
-				%>
-			<tr>
-				<td colspan="6" align="right">
-				<%-- 버튼을 클릭하면 installrequest.jsp로 이동 --%>
-					<input type="button" value="글작성" onclick="location.href='installrequest.jsp'">
-				</td>
+				<td width="50">이름</td>
+				<td width="250"><%=vo.getRequest_name() %></td>
+				<td width="50">처리상태</td>
+				<td width="250"><%=vo.getRequest_status() %></td>
 			</tr>
 			<tr>
-				<td colspan="6" align="center">
-					<%	// 페이징  처리
-						if(count > 0){
-							// 총 페이지의 수
-							int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
-							// 한 페이지에 보여줄 페이지 블럭(링크) 수
-							int pageBlock = 10;
-							// 한 페이지에 보여줄 시작 및 끝 번호(예 : 1, 2, 3 ~ 10 / 11, 12, 13 ~ 20)
-							int startPage = ((currentPage-1)/pageBlock)*pageBlock+1;
-							int endPage = startPage + pageBlock - 1;
-							
-							// 마지막 페이지가 총 페이지 수 보다 크면 endPage를 pageCount로 할당
-							if(endPage > pageCount){
-								endPage = pageCount;
-							}
-							
-							if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
-					%>
-								<a href="install.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
-					<%			
-							}
-							
-							for(int i=startPage; i <= endPage; i++){ // 페이지 블록 번호
-								if(i == currentPage){ // 현재 페이지에는 링크를 설정하지 않음
-					%>
-									[<%=i %>]
-					<%									
-								}else{ // 현재 페이지가 아닌 경우 링크 설정
-					%>
-									<a href="install.jsp?pageNum=<%=i%>">[<%=i %>]</a>
-					<%	
-								}
-							} // for end
-							
-							if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
-					%>
-								<a href="install.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
-					<%			
-							}
-						}
-					%>
+				<td>지역</td>
+				<td colspan="3"><%=vo.getRequest_loc() %></td>
+			</tr>
+			<tr>
+				<td>핸드폰</td>
+				<td colspan="3"><pre><%=vo.getRequest_Phone() %></pre></td>
+			</tr>
+			<tr>
+				<td>날짜</td>
+				<td colspan="3"><pre><%=vo.getRequest_date() %></pre></td>
+			</tr>
+						<tr>
+				<td>아이디</td>
+				<td colspan="3"><pre><%=vo.getUser_id() %></pre></td>
+			</tr>
+			
+			<tr align="center">
+				<td colspan="4">
+					<%-- 버튼을 클릭하면 해당 페이지로 이동 / 수정과 삭제는 get방식으로 no값을 전달 --%>
+					<input type="button" value="글목록" onclick="location.href='list.jsp'">
+					<input type="button" value="수정" onclick="location.href='updateForm.jsp?no=<%=no%>'"> 
+					<input type="button" value="삭제" onclick="location.href='deleteForm.jsp?no=<%=no%>'">
 				</td>
 			</tr>
 		</table>
 	</center>
-</body>
-  
-    
-            
-    
+        
 </body>
 </html>
