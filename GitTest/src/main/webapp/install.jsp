@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>install</title>
+<title>제품설치문의</title>
 </head>
 <body>
 
@@ -32,7 +32,7 @@
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>Privacy</title>
+    <title>제품설치문의</title>
      <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -158,11 +158,11 @@
     
 	<center>
 	<div class="board">
-		<h3>게시판 목록</h3>
+		<h3>문의 목록</h3>
 		<table class="board_table">
 			<tr>
-				<th width="10%">번호</th>
-				<th width="15%">이름</th>
+				<th width="10%">No.</th>
+				<th width="15%">글제목</th>
 				<th width="30%">위치</th>
 				</tr>
 			<%
@@ -176,7 +176,7 @@
 				<td><%=board.getRequest_name() %></td>
 				<td>
 					<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%>
-					<a href="installcontent.jsp?no=<%=board.getRequest_req()%>"><%=board.getRequest_loc() %></a>
+					<a class="list-a" href="installcontent.jsp?no=<%=board.getRequest_req()%>"><%=board.getRequest_loc() %></a>
 				</td>
 			</tr>
 			<%
@@ -192,7 +192,7 @@
 			<tr>
 				<td colspan="6" align="right">
 				<%-- 버튼을 클릭하면 installrequest.jsp로 이동 --%>
-					<input type="button" value="글작성" onclick="location.href='installrequest.jsp'">
+					<input type="button" class="list-button" value="글작성" onclick="location.href='installrequest.jsp'">
 				</td>
 			</tr>
 			<tr>
@@ -214,7 +214,7 @@
 							
 							if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
 					%>
-								<a href="install.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
+								<a class="list-a" href="install.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
 					<%			
 							}
 							
@@ -225,14 +225,14 @@
 					<%									
 								}else{ // 현재 페이지가 아닌 경우 링크 설정
 					%>
-									<a href="install.jsp?pageNum=<%=i%>">[<%=i %>]</a>
+									<a class="list-a" href="install.jsp?pageNum=<%=i%>">[<%=i %>]</a>
 					<%	
 								}
 							} // for end
 							
 							if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
 					%>
-								<a href="install.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
+								<a class="list-a" href="install.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
 					<%			
 							}
 						}
