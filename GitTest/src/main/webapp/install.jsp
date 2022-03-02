@@ -147,14 +147,15 @@
     <!-- end of header -->
     
     <!-- 설치 테이블 -->
-    <body>
+    
 	<center>
+	<div class="board">
 		<h3>게시판 목록</h3>
-		<table border="1" width="900">
+		<table class="board_table">
 			<tr>
-				<td width="10%">번호</td>
-				<td width="15%">이름</td>
-				<td width="30%">위치</td>
+				<th width="10%">번호</th>
+				<th width="15%">이름</th>
+				<th width="30%">위치</th>
 				</tr>
 			<%
 				if (count > 0) { // 데이터베이스에 데이터가 있으면
@@ -231,11 +232,23 @@
 				</td>
 			</tr>
 		</table>
+		</div>
 	</center>
-</body>
-  
+	
+  <!-- Bottom -->
+    <div class="bottom py-2 text-light" >
+        <div class="container d-flex justify-content-between">
+            <div>
+            </div>
+            <div>
+                <i class="fab fa-cc-visa fa-lg p-1"></i>
+                <i class="fab fa-cc-mastercard fa-lg p-1"></i>
+                <i class="fab fa-cc-paypal fa-lg p-1"></i>
+                <i class="fab fa-cc-amazon-pay fa-lg p-1"></i>
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of bottom -->
     
-            
-    
+          
 </body>
 </html>
