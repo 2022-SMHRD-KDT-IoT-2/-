@@ -445,6 +445,7 @@ h5{
 	margin: 5px;
 	padding: 5px;
 	background-color: white;
+	border: 1px solid #2E3D4D;
 	color: #2E3D4D;
 	font-size: 15px;
 }
