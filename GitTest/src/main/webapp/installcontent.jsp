@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>install</title>
+<title>설치문의</title>
 </head>
 <body>
 
@@ -32,7 +32,7 @@
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>Privacy</title>
+    <title>설치문의</title>
      <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -139,37 +139,37 @@
     </header> <!-- end of ex-header -->
     <!-- end of header -->
     <center>
-		<h3>작성글</h3>
-		<table border="1" width="600">
+		<h5><%=vo.getRequest_name() %></h5>
+		<table class="content-table">
 			<tr>
-				<td width="50">이름</td>
-				<td width="250"><%=vo.getRequest_name() %></td>
-				<td width="50">처리상태</td>
-				<td width="250"><%=vo.getRequest_status() %></td>
+				<td class="td-title">이름</td>
+				<td class= "td-text"><%=vo.getRequest_name() %></td>
+				<td class="td-title">처리상태</td>
+				<td class= "td-text"><%=vo.getRequest_status() %></td>
 			</tr>
 			<tr>
-				<td>지역</td>
-				<td colspan="3"><%=vo.getRequest_loc() %></td>
+				<td class="td-title">지역</td>
+				<td class= "td-text" colspan="3"><%=vo.getRequest_loc() %></td>
 			</tr>
 			<tr>
-				<td>핸드폰</td>
-				<td colspan="3"><pre><%=vo.getRequest_Phone() %></pre></td>
+				<td class="td-title">핸드폰</td>
+				<td class= "td-text" colspan="3"><pre><%=vo.getRequest_Phone() %></pre></td>
 			</tr>
 			<tr>
-				<td>날짜</td>
-				<td colspan="3"><pre><%=vo.getRequest_date() %></pre></td>
+				<td class="td-title">날짜</td>
+				<td class= "td-text" colspan="3"><pre><%=vo.getRequest_date() %></pre></td>
 			</tr>
 						<tr>
-				<td>아이디</td>
-				<td colspan="3"><pre><%=vo.getUser_id() %></pre></td>
+				<td class="td-title">아이디</td>
+				<td class= "td-text" colspan="3"><pre><%=vo.getUser_id() %></pre></td>
 			</tr>
 			
 			<tr align="center">
-				<td colspan="4">
+				<td class="td-button" colspan="4">
 					<%-- 버튼을 클릭하면 해당 페이지로 이동 / 수정과 삭제는 get방식으로 no값을 전달 --%>
-					<input type="button" value="글목록" onclick="location.href='install.jsp'">
-					<input type="button" value="수정" onclick="location.href='updateForm.jsp?no=<%=no%>'"> 
-					<input type="button" value="삭제" onclick="location.href='deleteForm.jsp?no=<%=no%>'">
+					<input type="button" class="button-content" value="목록" onclick="location.href='install.jsp'">
+					<input type="button" class="button-content" value="수정" onclick="location.href='updateForm.jsp?no=<%=no%>'"> 
+					<input type="button" class="button-content" value="삭제" onclick="location.href='deleteForm.jsp?no=<%=no%>'">
 				</td>
 			</tr>
 		</table>
