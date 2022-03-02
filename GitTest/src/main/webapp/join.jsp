@@ -139,24 +139,57 @@
 	<!-- end of ex-header -->
 	<!-- end of header -->
 
-	<nav id="menu">
-
-		<ul class="actions vertical">
-			<li><h5>회원가입</h5></li>
-			<form action="Join" method="post">
-				<li><input type="text" name="id"  id="id" placeholder="id를 입력하세요"></li>
-				<li><input type="button" value="id중복체크" onclick="idCheck()"></li>
-				<li><span id="checkId"></span></li>
-				<li><input type="password" name="pw" placeholder="PW를 입력하세요"></li>
-				<li><input type="text" name="name" placeholder="이름을 입력하세요"></li>
-				<li><input type="text" name="phone" placeholder="전화번호를 입력하세요"></li>
-				<li><input type="text" name="email" placeholder="이메일을 입력하세요"></li>
-				<li><input type="text" name="addr" placeholder="집주소를 입력하세요"></li>
-				<li><input type="submit" value="JoinUs" class="button fit"></li>
+	<div class="loginjoindiv">
+	<nav id="menu" >
+	
+			<h5>회원가입</h5>
+			<div class="">
+			<form action="Join" method="post" class="loginjoinform">
+				<table class="loginjoinTable">
+				<tr>
+					<td><input type="text" name="id" class="text-field" id="id" placeholder="ID를 입력하세요"></td>
+				</tr>
+				<tr>	
+					<td><input type="button" value="중복 ID 확인" onclick="idCheck()"><br></td>
+				</tr>
+				<tr>	
+					<td><p id="checkId" class="text-field"></p></td>
+				</tr>
+				<tr>
+					<td>
+					<input type="password" name="pw" class="text-field" placeholder="비밀번호를 입력하세요">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<input type="text" name="name" class="text-field" placeholder="이름을 입력하세요">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<input type="text" name="phone" class="text-field" placeholder="전화번호를 입력하세요">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<input type="text" name="email" class="text-field" placeholder="이메일을 입력하세요">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<input type="text" name="addr" class="text-field" placeholder="주소를 입력하세요">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<input type="submit" value="JoinUs" class="button fit">
+					</td>
+				</tr>
+				</table>
 			</form>
-		</ul>
+			</div>
 	</nav>
-
+	</div>
 
 
 
