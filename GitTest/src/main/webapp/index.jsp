@@ -1,3 +1,4 @@
+<%@page import="com.VO.memberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -44,6 +45,9 @@
 
 </head>
 <body>
+	<%
+	memberVO vo = (memberVO) session.getAttribute("loginvo");
+	%>
 
 	<!-- Navigation -->
 	<nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark"
@@ -65,8 +69,13 @@
 			<div class="navbar-collapse offcanvas-collapse"
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
-					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="login.jsp">로그인</a></li>
+				<%
+		if (vo == null) {
+			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"login.jsp\">로그인</a></li>");
+		} else {
+			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
+		}
+		%> 
 					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>

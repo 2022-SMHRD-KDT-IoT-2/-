@@ -74,13 +74,13 @@
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="#">로그인</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">제품소개</a>
+					<li class="nav-item"><a class="nav-link" href="index.jsp">제품소개</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="#">광고신청</a></li>
+					<li class="nav-item"><a class="nav-link" href="productlist.jsp">제품리스트</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
