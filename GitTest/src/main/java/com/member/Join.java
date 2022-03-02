@@ -21,6 +21,7 @@ public class Join extends HttpServlet {
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
 		String phone = request.getParameter("phone");
+		String email = request.getParameter("email");
 		String addr = request.getParameter("addr");
 
 
@@ -28,7 +29,7 @@ public class Join extends HttpServlet {
 		
 		
 		memberDAO dao = new memberDAO();
-		int cnt = dao.join(id,pw,name,phone,addr);
+		int cnt = dao.join(id,pw,name,phone,email,addr);
 		
 		if (cnt > 0) {
 			response.sendRedirect("login.jsp");
