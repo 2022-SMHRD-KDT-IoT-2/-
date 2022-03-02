@@ -1,4 +1,4 @@
- /* Description: Master CSS file */
+/* Description: Master CSS file */
 
 /*****************************************
 Table Of Contents:
@@ -16,24 +16,18 @@ Table Of Contents:
 - Media Queries
 ******************************************/
 
-
 /**************************/
 /*     General Styles     */
 /**************************/
-:root {
-	--primary: #1c262f;
-	--primary-light: #212d37;
-	--secondary: #0ee951;
-	--tertiary: #00dabf;
+:root { 
+	--primary: #1c262f; 
+	--primary-light: #212d37; 
+	--secondary: #0ee951; 
+	--tertiary: #00dabf; 
 	--gradient: linear-gradient(to right, #0ee951, #00dabf);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-family: "Poppins", sans-serif;
 }
 
@@ -46,9 +40,7 @@ button {
 	font-family: sans-serif;
 }
 
-p,
-ul,
-h4 {
+p, ul, h4 {
 	margin: 0;
 	padding: 0;
 }
@@ -59,72 +51,45 @@ a {
 }
 
 li {
-  	list-style-type: none;
+	list-style-type: none;
 }
 
 /* Section Background */
-.home,
-.about,
-.services,
-.plans,
-.work,
-.contact {
+.home, .about, .services, .plans, .work, .contact {
 	height: 110vh;
 	position: relative;
 }
 
-.services,
-.work,
-.contact,
-.testimonial,
-.footer {
-  	background-color: var(--primary);
+.services, .work, .contact, .testimonial, .footer {
+	background-color: var(--primary);
 }
 
-.about,
-.plans,
-.company,
-.newsletter,
-.location {
-  	background-color: var(--primary-light);
+.about, .plans, .company, .newsletter, .location {
+	background-color: var(--primary-light);
 }
 
 .bottom {
-  	background-color: black;
+	background-color: black;
 }
 
 /* Gradient Border And Background On Icons */
-.home_text,
-.home .fas,
-.plans .far,
-.information .fas,
-.work .fas,
-.services .fas,
-.location .far,
-.location .fas {
+.home_text, .home .fas, .plans .far, .information .fas, .work .fas,
+	.services .fas, .location .far, .location .fas {
 	padding: 15px 0;
-	background: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		from(#0ee951),
-		to(#00dabf)
-	);
+	background: -webkit-gradient(linear, left top, left bottom, from(#0ee951),
+		to(#00dabf));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-.navbar-nav a:hover,
-.footer a:hover,
-.footer .fab:hover {
+.navbar-nav a:hover, .footer a:hover, .footer .fab:hover {
 	cursor: pointer;
 	background: var(--gradient);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-
 
 /**********************/
 /*     Navigation     */
@@ -157,7 +122,8 @@ li {
 
 .offcanvas-collapse {
 	position: fixed;
-	top: 2.75rem; /* adjusts the height between the top of the page and the offcanvas menu */
+	top: 2.75rem;
+	/* adjusts the height between the top of the page and the offcanvas menu */
 	bottom: 0;
 	left: 100%;
 	width: 100%;
@@ -197,7 +163,7 @@ li {
 }
 
 .navbar .dropdown-item:hover {
-  	background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 .navbar .dropdown-divider {
@@ -223,13 +189,8 @@ li {
 }
 
 .navbar .fa-stack-2x {
-	background: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		from(#0ee951),
-		to(#00dabf)
-	);
+	background: -webkit-gradient(linear, left top, left bottom, from(#0ee951),
+		to(#00dabf));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -242,11 +203,11 @@ li {
 }
 
 .navbar .fa-stack:hover .fa-stack-2x {
-  	color: var(--primary);
+	color: var(--primary);
 }
 
 .navbar .fa-stack:hover .fa-stack-1x {
-  	color: var(--primary);
+	color: var(--primary);
 }
 
 .navbar .navbar-toggler {
@@ -254,7 +215,6 @@ li {
 	border: none;
 	font-size: 1.25rem;
 }
-
 
 /****************/
 /*     Home     */
@@ -268,75 +228,76 @@ li {
 }
 
 .para {
-  	width: 50%;
+	width: 50%;
 }
 
 .para-light {
-  	opacity: 0.7;
+	opacity: 0.7;
 }
-
 
 /***********************/
 /*     Information     */
 /***********************/
 .information .container-fluid .row div:first-child {
-  	background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 .information .container-fluid .row div:last-child {
-  	background-color: white;
+	background-color: white;
 }
 
 .information .container-fluid .row div:nth-child(2) {
-  	background-color: var(--primary-light);
+	background-color: var(--primary-light);
 }
 
 /***********************/
 /*     Introduction    */
 /***********************/
-#introduction .container div{
+#introduction .container div {
 	width: 900px;
-	margin : 0px auto;
+	margin: 0px auto;
 }
-#introduction .container div.intro{
+
+#introduction .container div.intro {
 	width: 100%;
-	text-align : center;
-	padding-bottom : 20px;
+	text-align: center;
+	padding-bottom: 20px;
 }
 
 #introduction .container .box_black {
-	width : 50%;
-	height : 450px;
-	float : left;
+	width: 50%;
+	height: 450px;
+	float: left;
 	background-color: #4D6780;
 	color: white;
-	margin : 0;
-	text-align : center;
-	line-height : 450px;
-}
-#introduction .container .box_white {
-	width : 50%;
-	height : 450px;
-	float : left;
-	background-color: white;
-	color: var(--primary);
-	margin : 0;
-	text-align : center;
-	line-height : 450px;
+	margin: 0;
+	text-align: center;
+	line-height: 450px;
 }
 
-@media(max-width: 900px){
-	#introduction .container div{
+#introduction .container .box_white {
+	width: 50%;
+	height: 450px;
+	float: left;
+	background-color: white;
+	color: var(--primary);
+	margin: 0;
+	text-align: center;
+	line-height: 450px;
+}
+
+@media ( max-width : 900px) {
+	#introduction .container div {
 		width: 450px;
-		margin : 0px auto;
+		margin: 0px auto;
 	}
-	#introduction .container .box_black{
-		width : 100%;
-		height : 450px;
+	#introduction .container .box_black {
+		width: 100%;
+		height: 450px;
 	}
-	#introduction .container .box_white{
-		width : 100%;
-		height : 450px;
+	#introduction .container .box_white {
+		width: 100%;
+		height: 450px;
 	}
 }
 
@@ -401,6 +362,42 @@ li {
 	transform: translate(5px, 5px);
 }
 
+/*****************************/
+/*     install/breaklist     */
+/*****************************/
+.board {
+	color: white;
+	background: #0F1519;
+}
+
+h3 {
+	padding: 20px;
+}
+
+.board .board_table {
+	border-collapse: separate;
+	border-spacing: 1px;
+	text-align: center;
+	line-height: 1.5;
+	border-top: 1px solid #ccc;
+	margin: 20px 10px;
+	width: 900px;
+}
+
+.board .board_table th {
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border-bottom: 1px solid #ccc;
+}
+.board .board_table td {
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border-bottom: 1px solid #ccc;
+}
+
+
 
 /********************/
 /*     Services     */
@@ -420,7 +417,6 @@ li {
 	box-shadow: 5px 5px 0px 0px #0ee951;
 }
 
-
 /*****************/
 /*     Plans     */
 /*****************/
@@ -428,7 +424,6 @@ li {
 	padding: 20px;
 	border: 2px solid white;
 }
-
 
 /************************/
 /*     Testimonials     */
@@ -439,7 +434,7 @@ li {
 }
 
 .slider-1 .section-title {
-  	text-align: center;
+	text-align: center;
 }
 
 .slider-1 .h2-heading {
@@ -455,7 +450,7 @@ li {
 }
 
 .slider-1 .slider-container {
-  	position: relative;
+	position: relative;
 }
 
 .slider-1 .swiper-container {
@@ -463,26 +458,27 @@ li {
 	position: static;
 }
 
-.slider-1 .swiper-button-prev,
-.slider-1 .swiper-button-next {
-  	color: var(--primary);
+.slider-1 .swiper-button-prev, .slider-1 .swiper-button-next {
+	color: var(--primary);
 }
 
-.slider-1 .swiper-button-prev:focus,
-.slider-1 .swiper-button-next:focus {
+.slider-1 .swiper-button-prev:focus, .slider-1 .swiper-button-next:focus
+	{
 	/* even if you can't see it chrome you can see it on mobile device */
 	outline: none;
 }
 
 .slider-1 .swiper-button-prev {
 	left: -14px;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2028%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23707375'%2F%3E%3C%2Fsvg%3E");
+	background-image:
+		url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2028%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23707375'%2F%3E%3C%2Fsvg%3E");
 	background-size: 18px 28px;
 }
 
 .slider-1 .swiper-button-next {
 	right: -14px;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2028%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23707375'%2F%3E%3C%2Fsvg%3E");
+	background-image:
+		url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2028%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23707375'%2F%3E%3C%2Fsvg%3E");
 	background-size: 18px 28px;
 }
 
@@ -502,11 +498,11 @@ li {
 }
 
 .slider-1 .card-body {
-  	padding: 0;
+	padding: 0;
 }
 
 .slider-1 .testimonial-text {
-  	margin-bottom: 0.75rem;
+	margin-bottom: 0.75rem;
 }
 
 .slider-1 .testimonial-author {
@@ -522,35 +518,24 @@ li {
 
 /* Dropdown Menu */
 .navbar .dropdown .dropdown-menu {
-  	animation: fadeDropdown 0.2s; /* required for the fade animation */
+	animation: fadeDropdown 0.2s; /* required for the fade animation */
 }
 
-@-webkit-keyframes fadeDropdown {
-	0% {
-		opacity: 0;
-	}
+@-webkit-keyframes fadeDropdown { 
+	0% {opacity: 0;}
 
-	100% {
-		opacity: 1;
-	}
+100%{opacity:1;}
 }
 
-@keyframes fadeDropdown {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
+@keyframes fadeDropdown { 
+	0% {opacity: 0;}
+	100%{opacity:1;}
 }
-
 
 /**********************/
 /*     Newsletter     */
 /**********************/
-.form-control-input,
-.form-control-textarea {
+.form-control-input, .form-control-textarea {
 	width: 100%;
 	appearance: none;
 	border-radius: 4px;
@@ -560,7 +545,6 @@ li {
 	padding-top: 0.775rem;
 	padding-bottom: 0.775rem;
 }
-
 
 /******************************/
 /*     Back To Top Button     */
@@ -581,7 +565,7 @@ li {
 }
 
 #myBtn:hover {
-  	background-color: #0f0f11;
+	background-color: #0f0f11;
 }
 
 #myBtn img {
@@ -589,7 +573,6 @@ li {
 	margin-left: 0.125rem;
 	margin-bottom: 0.25rem;
 }
-
 
 /***********************/
 /*     Extra Pages     */
@@ -601,7 +584,7 @@ li {
 }
 
 .ex-header h1 {
-  	color: #fff;
+	color: #fff;
 }
 
 .ex-basic-1 .list-unstyled .fas {
@@ -610,7 +593,7 @@ li {
 }
 
 .ex-basic-1 .list-unstyled .flex-grow-1 {
-  	margin-left: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 .ex-basic-1 .text-box {
@@ -629,7 +612,7 @@ li {
 }
 
 .ex-cards-1 .card .fa-stack-2x {
-  	color: var(--secondary);
+	color: var(--secondary);
 }
 
 .ex-cards-1 .card .fa-stack-1x {
@@ -640,7 +623,7 @@ li {
 }
 
 .ex-cards-1 .card .list-unstyled .flex-grow-1 {
-  	margin-left: 2.25rem;
+	margin-left: 2.25rem;
 }
 
 .ex-cards-1 .card .list-unstyled .flex-grow-1 h5 {
@@ -648,32 +631,24 @@ li {
 	margin-bottom: 0.5rem;
 }
 
-
 /*************************/
 /*     Media Queries     */
 /*************************/
 @media only screen and (max-width: 1024px) {
-	.services,
-	.work,
-	.testimonial,
-	.about,
-	.contact,
-	.plans {
+	.services, .work, .testimonial, .about, .contact, .plans {
 		height: 100%;
 	}
 }
 
-@media (min-width: 992px) {
+@media ( min-width : 992px) {
 	.slider-1 .swiper-container {
 		width: 92%;
 	}
-
 	.slider-1 .swiper-button-prev {
 		left: -16px;
 		width: 22px;
 		background-size: 22px 34px;
 	}
-
 	.slider-1 .swiper-button-next {
 		right: -16px;
 		width: 22px;
@@ -687,14 +662,12 @@ li {
 		padding-top: 1.75rem;
 		background-color: transparent;
 	}
-
 	.navbar.top-nav-collapse {
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 		background-color: var(--primary);
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
 	}
-
 	.offcanvas-collapse {
 		position: static;
 		top: auto;
@@ -707,35 +680,28 @@ li {
 		overflow-y: visible;
 		visibility: visible;
 	}
-
 	.offcanvas-collapse.open {
 		transform: none;
 	}
-
 	.navbar .navbar-nav {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-
 	.navbar .nav-item .nav-link {
 		padding-right: 0.75rem;
 		padding-left: 0.75rem;
 	}
-
 	.navbar .dropdown-menu {
 		padding-top: 0.75rem;
 		padding-bottom: 0.875rem;
 		box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.08);
 	}
-
 	.navbar .dropdown-divider {
 		width: 90%;
 	}
-
 	.navbar .social-icons {
 		margin-left: 0.5rem;
 	}
-
 	.navbar .fa-stack {
 		margin-right: 0;
 		margin-left: 0.25rem;
@@ -746,21 +712,17 @@ li {
 	h1 {
 		font-size: 30px;
 	}
-
 	.para {
 		width: 100%;
 	}
-
 	.swiper-container {
 		width: 92%;
 	}
-
 	.swiper-button-prev {
 		left: -16px;
 		width: 22px;
 		background-size: 22px 34px;
 	}
-
 	.swiper-button-next {
 		right: -16px;
 		width: 22px;
