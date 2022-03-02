@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>login</title>
+<title>로그인</title>
 </head>
 <body>
 
@@ -36,7 +36,7 @@
 <!-- to have large image post format in Twitter -->
 
 <!-- Webpage Title -->
-<title>Privacy</title>
+<title>회원가입</title>
 <!-- Styles -->
 <link
 	href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
@@ -61,7 +61,7 @@
 			<!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
 
 			<!-- Text Logo - Use this if you don't have a graphic logo -->
-			<a class="navbar-brand logo-text" href="index.html">상단 사이트 제목</a>
+			<a class="navbar-brand logo-text" href="index.jsp">IoT 스마트 반사경</a>
 
 			<button class="navbar-toggler p-0 border-0" type="button"
 				id="navbarSideCollapse" aria-label="Toggle navigation">
@@ -74,11 +74,11 @@
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="#">로그인</a></li>
-					<li class="nav-item"><a class="nav-link" href="#about">제품소개</a>
+					<li class="nav-item"><a class="nav-link" href="#">제품소개</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="#services">고장신고</a>
+					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="#plans">제품설치문의</a>
+					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="#">광고신청</a></li>
 					<li class="nav-item dropdown"><a
@@ -86,7 +86,7 @@
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
 
 						<ul class="dropdown-menu" aria-labelledby="dropdown01">
-							<li><a class="dropdown-item" href="rivacy.html">개인정보</a></li>
+							<li><a class="dropdown-item" href="privacy.html">개인정보</a></li>
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="terms.html">제품관리</a></li>
 							<li><div class="dropdown-divider"></div></li>
@@ -128,7 +128,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-10 offset-xl-1">
-					<h1>Privacy Policy</h1>
+					<h1>로그인</h1>
 				</div>
 				<!-- end of col -->
 			</div>
