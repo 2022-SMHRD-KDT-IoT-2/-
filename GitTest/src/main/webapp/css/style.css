@@ -396,8 +396,16 @@ h3 {
 	vertical-align: top;
 	border-bottom: 1px solid #ccc;
 }
+.board .board_table .list-a {
+	color: #009987;
+}
 .bottom-box{
 	height: 20px;
+}
+.list-button{
+	background-color: white;
+	border: 1px solid #2E3D4D;
+	color: black;
 }
 
 /**********************/

@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>break</title>
+<title>고장신고</title>
 </head>
 <body>
 
@@ -39,7 +39,7 @@
 <!-- to have large image post format in Twitter -->
 
 <!-- Webpage Title -->
-<title>Privacy</title>
+<title>고장신고</title>
 
 <!-- Styles -->
 <link
@@ -83,7 +83,7 @@
 			<!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
 
 			<!-- Text Logo - Use this if you don't have a graphic logo -->
-			<a class="navbar-brand logo-text" href="index.jsp">상단 사이트 제목</a>
+			<a class="navbar-brand logo-text" href="index.jsp">IoT 스마트 반사경</a>
 
 			<button class="navbar-toggler p-0 border-0" type="button"
 				id="navbarSideCollapse" aria-label="Toggle navigation">
@@ -175,7 +175,7 @@
 				<h3>게시판 목록</h3>
 				<table class="board_table">
 					<tr>
-						<th width="20%">번호</th>
+						<th width="20%">No.</th>
 						<th width="20%">이름</th>
 						<th width="30%">제품번호</th>
 						<th width="20%">신고날짜</th>
@@ -190,8 +190,8 @@
 						<td><%=board.getNum()%></td>
 						<td><%=board.getName()%></td>
 						<td>
-							<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%> <a
-							href="breakcontent.jsp?no=<%=board.getNum()%>"><%=board.getProduct_num()%></a>
+							<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%>
+							<a class="list-a" href="breakcontent.jsp?no=<%=board.getNum()%>"><%=board.getProduct_num()%></a>
 						</td>
 						<td><%=board.getDate()%></td>
 					</tr>
@@ -227,20 +227,20 @@
 								}
 		
 								if (startPage > pageBlock) { // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
-							%> <a href="breaklist.jsp?pageNum=<%=startPage - 10%>">[이전]</a> <%
+							%> <a class="list-a" href="breaklist.jsp?pageNum=<%=startPage - 10%>">[이전]</a> <%
 		 }
 		
 		 for (int i = startPage; i <= endPage; i++) { // 페이지 블록 번호
 		 if (i == currentPage) { // 현재 페이지에는 링크를 설정하지 않음
 		 %> [<%=i%>] <%
 		 } else { // 현재 페이지가 아닌 경우 링크 설정
-		 %> <a href="breaklist.jsp?pageNum=<%=i%>">[<%=i%>]
+		 %> <a class="list-a" href="breaklist.jsp?pageNum=<%=i%>">[<%=i%>]
 						</a> <%
 		 }
 		 } // for end
 		
 		 if (endPage < pageCount) { // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
-		 %> <a href="breaklist.jsp?pageNum=<%=startPage + 10%>">[다음]</a> <%
+		 %> <a class="list-a" href="breaklist.jsp?pageNum=<%=startPage + 10%>">[다음]</a> <%
 		 }
 		 }
 		 %>

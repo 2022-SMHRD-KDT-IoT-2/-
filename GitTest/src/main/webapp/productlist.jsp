@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>install</title>
+<title>제품리스트</title>
 </head>
 <body>
 
@@ -31,7 +31,7 @@
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>Privacy</title>
+    <title>제품리스트</title>
      <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -71,7 +71,7 @@
             <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <a class="navbar-brand logo-text" href="index.jsp">상단 사이트 제목</a>
+            <a class="navbar-brand logo-text" href="index.jsp">IoT 스마트 반사경</a>
 
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -87,10 +87,10 @@
                         <a class="nav-link" href="#about">제품소개</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">고장신고</a>
+                        <a class="nav-link" href="breaklist.jsp">고장신고</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#plans">제품설치문의</a>
+                        <a class="nav-link" href="index.jsp">제품설치문의</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">광고신청</a>
@@ -153,7 +153,7 @@
 		<h3>게시판 목록</h3>
 		<table class="board_table">
 			<tr>
-				<th width="20%">번호</th>
+				<th width="20%">No.</th>
 				<th width="20%">제품번호</th>
 				<th width="30%">위치</th>
 				<th width="30%">아이디</th>
@@ -170,7 +170,7 @@
 				<td><%=board.getProduct_loc() %></td>
 				<td>
 					<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%>
-					<a href="productcontent.jsp?no=<%=board.getProduct_seq()%>"><%=board.getUser_id() %></a>
+					<a class="list-a" href="productcontent.jsp?no=<%=board.getProduct_seq()%>"><%=board.getUser_id() %></a>
 				</td>
 			</tr>
 			<%
@@ -186,7 +186,7 @@
 			<tr>
 				<td colspan="6" align="right">
 				<%-- 버튼을 클릭하면 installrequest.jsp로 이동 --%>
-					<input type="button" value="글작성" onclick="location.href='#'">
+					<input type="button" class="list-button" value="글쓰기" onclick="location.href='#'">
 				</td>
 			</tr>
 			<tr>
@@ -208,7 +208,7 @@
 							
 							if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
 					%>
-								<a href="productlist.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
+								<a class="list-a" href="productlist.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
 					<%			
 							}
 							
@@ -219,14 +219,14 @@
 					<%									
 								}else{ // 현재 페이지가 아닌 경우 링크 설정
 					%>
-									<a href="productlist.jsp?pageNum=<%=i%>">[<%=i %>]</a>
+									<a class="list-a" href="productlist.jsp?pageNum=<%=i%>">[<%=i %>]</a>
 					<%	
 								}
 							} // for end
 							
 							if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
 					%>
-								<a href="productlist.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
+								<a class="list-a" href="productlist.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
 					<%			
 							}
 						}
