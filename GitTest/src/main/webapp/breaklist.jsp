@@ -171,13 +171,14 @@
                             -->
 		<body>
 			<center>
+			<div class="board">
 				<h3>게시판 목록</h3>
-				<table border="1" width="900">
+				<table class="board_table">
 					<tr>
-						<td width="20%">번호</td>
-						<td width="20%">이름</td>
-						<td width="30%">제품번호</td>
-						<td width="20%">신고날짜</td>
+						<th width="20%">번호</th>
+						<th width="20%">이름</th>
+						<th width="30%">제품번호</th>
+						<th width="20%">신고날짜</th>
 					</tr>
 					<%
 					if (count > 0) { // 데이터베이스에 데이터가 있으면
@@ -246,6 +247,7 @@
 						</td>
 					</tr>
 				</table>
+				</div>
 			</center>
 		</body>
 <!-- 
@@ -327,7 +329,16 @@
 
 	var map = new kakao.maps.Map(container, options);
 </script>
-
+ <!-- Bottom -->
+    <div class="bottom py-2 text-light" >
+        <div class="container d-flex justify-content-between">
+            <div>
+            </div>
+            <div class="bottom-box">
+                
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of bottom -->
 
 <!-- Scripts -->
 <script src="./js/bootstrap.min.js"></script>
