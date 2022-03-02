@@ -146,10 +146,10 @@
 			<form action="Join" method="post" class="loginjoinform">
 				<table class="loginjoinTable">
 				<tr>
-					<td><input type="text" name="id" class="text-field" id="id" placeholder="ID를 입력하세요"></td>
+					<td><input type="text" name="id" class="text-field" id="id" placeholder="아이디/이메일을 입력하세요"></td>
 				</tr>
 				<tr>	
-					<td><input type="button" class="button-field2" value="중복 ID 확인" onclick="idCheck()"><br></td>
+					<td><input type="button" class="button-field2" value="아이디/이메일 중복 확인" onclick="idCheck()"><br></td>
 				</tr>
 				<tr>	
 					<td><p id="checkId" class="text-field"></p></td>
