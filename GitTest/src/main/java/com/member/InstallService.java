@@ -29,6 +29,10 @@ public class InstallService extends HttpServlet {
 		int cnt=dao.requestInstall(loc, name, phone, id);
 		if(cnt>0) {
 			response.sendRedirect("install.jsp");
+			System.out.println("작성성공");
+		}else {
+			response.sendRedirect("install.jsp");
+			System.out.println("작성실패");
 		}
 	}
 

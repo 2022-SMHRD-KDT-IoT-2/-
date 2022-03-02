@@ -6,12 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import com.VO.BreakVO;
+import com.VO.ProductVO;
 
-
-
-
-public class BreakDAO {
+public class ProductDAO {
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
@@ -43,16 +40,16 @@ public class BreakDAO {
 			e.getStackTrace();
 		}
 	}
-	public ArrayList<BreakVO> getList(int startRow,int endRow) {
+	public ArrayList<ProductVO> getList(int startRow,int endRow) {
 
-		ArrayList<BreakVO> al = new ArrayList<BreakVO>();
+		ArrayList<ProductVO> al = new ArrayList<ProductVO>();
 		try {
 
 			connect();
 			
-			String sql = "select report_seq, reporter_name,product_seq,report_date from "
-					+ "(select rownum rn, report_seq, reporter_name, product_seq,report_date from "
-					+ "(select report_seq, reporter_name, product_seq,report_date from t_report order by report_seq desc)) where rn between ? and ?";
+			String sql = "select product_seq,product_uid,product_loc,user_id from"
+					+ "(select rownum rn, product_seq,product_uid,product_loc,user_id from"
+					+ "(select product_seq,product_uid,product_loc,user_id from t_iot order by product_seq desc)) where rn between ? and ?";
 			;
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, startRow);
@@ -60,13 +57,13 @@ public class BreakDAO {
 			rs = psmt.executeQuery();
 			while (rs.next()) {
 				int getSeq = rs.getInt(1);
-				String getName = rs.getString(2);
-				int getProd_Seq = rs.getInt(3);
-				String getdate = rs.getString(4);
+				String getPro_id = rs.getString(2);
+				String getLoc = rs.getString(3);
+				String getid = rs.getString(4);
 
 				
 				
-				BreakVO vo = new BreakVO(getSeq, getName, getProd_Seq, getdate);
+				ProductVO vo = new ProductVO(getSeq, getPro_id, getLoc, getid);
 				al.add(vo);
 
 			}
@@ -86,7 +83,7 @@ public class BreakDAO {
 	// 총 레코드 수 구하는 로직
 			public int getCount(){
 				int count = 0;
-				String sql = "select count(*) from t_report";
+				String sql = "select count(*) from t_iot";
 				try {
 					connect();
 					psmt = conn.prepareStatement(sql);
@@ -103,13 +100,13 @@ public class BreakDAO {
 				return count; // 총 레코드 수 리턴
 			}
 			// 하나의 리시트 가져오기
-		public BreakVO getOneList(int no) {
+		public ProductVO getOneList(int no) {
 
-			BreakVO board = null;
+			ProductVO board = null;
 			try {
 				connect();
 
-				String sql = "select * from t_report where report_seq = ?";
+				String sql = "select * from t_iot where product_seq = ?";
 				psmt = conn.prepareStatement(sql);
 				psmt.setInt(1, no);
 				rs = psmt.executeQuery();
@@ -117,12 +114,13 @@ public class BreakDAO {
 
 				if (rs.next()) {
 					int seq = rs.getInt(1);
-					String name = rs.getString(2);
-					String phone = rs.getString(3);
-					int prod_seq = rs.getInt(4);
-					String content = rs.getString(5);
+					String pro_id = rs.getString(2);
+					String loc = rs.getString(3);
+					double latitude = rs.getDouble(4);
+					double longitude = rs.getDouble(5);
 					String date = rs.getString(6);
-					board = new BreakVO(seq,name, phone,prod_seq, content, date);
+					String user_id = rs.getString(7);
+					board = new ProductVO(seq,pro_id,loc,latitude,longitude,date,user_id);
 
 				}
 			} catch (Exception e) {
@@ -133,13 +131,13 @@ public class BreakDAO {
 			return board;
 		}
 
-	public int oneReport(String name, String phone, int product_num,String content) {
+	public int oneProduct(String name, String phone, int product_num,String content) {
 		int cnt = 0;
 		try {
 
 			connect();
 
-			String sql = "INSERT INTO t_report(report_seq,reporter_name,reporter_phone,product_seq,report_content,report_date)"
+			String sql = "INSERT INTO t_iot(product_seq, product_uid, product_loc,product_latitude,product_longitude,product_date,user_id)"
 					+ "VALUES(t_report_SEQ.nextval,?,?,?,?,sysdate)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, name);
@@ -166,6 +164,5 @@ public class BreakDAO {
 		}
 		return cnt;
 	}
-	
 	
 }

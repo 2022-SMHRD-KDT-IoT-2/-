@@ -1,5 +1,5 @@
-<%@page import="com.VO.InstallVO"%>
-<%@page import="com.DAO.InstallDAO"%>
+<%@page import="com.VO.ProductVO"%>
+<%@page import="com.DAO.ProductDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -45,22 +45,9 @@
 </head>
 <body>
 <%
-	InstallDAO dao=new InstallDAO();
-	int pageSize=10;
-	String pageNum=request.getParameter("pageNum");
-	if(pageNum==null){
-		pageNum="1";
-	}
-	int currentPage=Integer.parseInt(pageNum);
-	
-	int startRow=(currentPage-1)*pageSize+1;
-	int endRow=currentPage*pageSize;
-	int count=0;
-	count=dao.getCount();
-	ArrayList<InstallVO> al=null;
-	if(count>0){
-	al=dao.getList(startRow,endRow);
-	}
+	ProductDAO dao=new ProductDAO();
+	int no = Integer.parseInt(request.getParameter("no"));
+	ProductVO vo=dao.getOneList(no);
 %>
 
    <!-- Navigation -->
@@ -71,7 +58,7 @@
             <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <a class="navbar-brand logo-text" href="index.jsp">상단 사이트 제목</a>
+            <a class="navbar-brand logo-text" href="index.html">상단 사이트 제목</a>
 
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -139,113 +126,44 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
-                    <h1>설치문의게시판</h1>
+                    <h1>제품리스트</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
-    
-    <!-- 설치 테이블 -->
-    
-	<center>
-	<div class="board">
-		<h3>게시판 목록</h3>
-		<table class="board_table">
+    <center>
+		<h3>작성글</h3>
+		<table border="1" width="600">
 			<tr>
-				<th width="10%">번호</th>
-				<th width="15%">이름</th>
-				<th width="30%">위치</th>
-				</tr>
-			<%
-				if (count > 0) { // 데이터베이스에 데이터가 있으면
-					int number = count - (currentPage - 1) * pageSize; // 글 번호 순번 
-					for (int i = 0; i < al.size(); i++) {
-						InstallVO board = al.get(i); // 반환된 list에 담긴 참조값 할당
-			%>
-			<tr>
-				<td><%=board.getRequest_req() %></td>
-				<td><%=board.getRequest_name() %></td>
-				<td>
-					<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%>
-					<a href="installcontent.jsp?no=<%=board.getRequest_req()%>"><%=board.getRequest_loc() %></a>
-				</td>
-			</tr>
-			<%
-					}
-				} else { // 데이터가 없으면
-			%>
-			<tr>
-				<td colspan="6" align="center">게시글이 없습니다.</td>
-			</tr>
-				<%
-					}
-				%>
-			<tr>
-				<td colspan="6" align="right">
-				<%-- 버튼을 클릭하면 installrequest.jsp로 이동 --%>
-					<input type="button" value="글작성" onclick="location.href='installrequest.jsp'">
-				</td>
+				<td width="50">제품번호</td>
+				<td width="250"><%=vo.getProduct_uid() %></td>
+				<td width="50">설치위치</td>
+				<td width="250"><%=vo.getProduct_loc() %></td>
 			</tr>
 			<tr>
-				<td colspan="6" align="center">
-					<%	// 페이징  처리
-						if(count > 0){
-							// 총 페이지의 수
-							int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
-							// 한 페이지에 보여줄 페이지 블럭(링크) 수
-							int pageBlock = 10;
-							// 한 페이지에 보여줄 시작 및 끝 번호(예 : 1, 2, 3 ~ 10 / 11, 12, 13 ~ 20)
-							int startPage = ((currentPage-1)/pageBlock)*pageBlock+1;
-							int endPage = startPage + pageBlock - 1;
-							
-							// 마지막 페이지가 총 페이지 수 보다 크면 endPage를 pageCount로 할당
-							if(endPage > pageCount){
-								endPage = pageCount;
-							}
-							
-							if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
-					%>
-								<a href="install.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
-					<%			
-							}
-							
-							for(int i=startPage; i <= endPage; i++){ // 페이지 블록 번호
-								if(i == currentPage){ // 현재 페이지에는 링크를 설정하지 않음
-					%>
-									[<%=i %>]
-					<%									
-								}else{ // 현재 페이지가 아닌 경우 링크 설정
-					%>
-									<a href="install.jsp?pageNum=<%=i%>">[<%=i %>]</a>
-					<%	
-								}
-							} // for end
-							
-							if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
-					%>
-								<a href="install.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
-					<%			
-							}
-						}
-					%>
+				<td width="50">위도</td>
+				<td width="250"><%=vo.getProduct_latitude() %></td>
+				<td width="50">경도</td>
+				<td width="250"><%=vo.getProduct_longitude() %></td>
+			</tr>
+			<tr>
+				<td width="50">설치일자</td>
+				<td width="250"><%=vo.getProduct_date() %></td>
+				<td width="50">관리자아이디</td>
+				<td width="250"><%=vo.getUser_id() %></td>
+			</tr>
+			
+			<tr align="center">
+				<td colspan="4">
+					<%-- 버튼을 클릭하면 해당 페이지로 이동 / 수정과 삭제는 get방식으로 no값을 전달 --%>
+					<input type="button" value="글목록" onclick="location.href='productlist.jsp'">
+					<input type="button" value="수정" onclick="location.href='updateForm.jsp?no=<%=no%>'"> 
+					<input type="button" value="삭제" onclick="location.href='deleteForm.jsp?no=<%=no%>'">
 				</td>
 			</tr>
 		</table>
-		</div>
 	</center>
-	
-  <!-- Bottom -->
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
-    
-          
+        
 </body>
 </html>
