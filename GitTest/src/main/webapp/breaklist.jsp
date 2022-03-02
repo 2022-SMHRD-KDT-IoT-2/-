@@ -172,7 +172,7 @@
 		<body>
 			<center>
 			<div class="board">
-				<h3>게시판 목록</h3>
+				<h3>고장신고 목록</h3>
 				<table class="board_table">
 					<tr>
 						<th width="20%">No.</th>

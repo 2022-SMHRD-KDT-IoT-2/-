@@ -150,7 +150,7 @@
     
 	<center>
 	<div class="board">
-		<h3>게시판 목록</h3>
+		<h3>등록된 제품 목록</h3>
 		<table class="board_table">
 			<tr>
 				<th width="20%">No.</th>
