@@ -176,7 +176,7 @@
 				<td><%=board.getRequest_name() %></td>
 				<td>
 					<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%>
-					<a href="installcontent.jsp?no=<%=board.getRequest_req()%>"><%=board.getRequest_loc() %></a>
+					<a class="list-a" href="installcontent.jsp?no=<%=board.getRequest_req()%>"><%=board.getRequest_loc() %></a>
 				</td>
 			</tr>
 			<%
@@ -214,7 +214,7 @@
 							
 							if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
 					%>
-								<a href="install.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
+								<a class="list-a" href="install.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
 					<%			
 							}
 							
@@ -225,14 +225,14 @@
 					<%									
 								}else{ // 현재 페이지가 아닌 경우 링크 설정
 					%>
-									<a href="install.jsp?pageNum=<%=i%>">[<%=i %>]</a>
+									<a class="list-a" href="install.jsp?pageNum=<%=i%>">[<%=i %>]</a>
 					<%	
 								}
 							} // for end
 							
 							if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
 					%>
-								<a href="install.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
+								<a class="list-a" href="install.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
 					<%			
 							}
 						}
