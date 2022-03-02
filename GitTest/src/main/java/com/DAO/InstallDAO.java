@@ -49,8 +49,8 @@ public class InstallDAO {
 
 			connect();
 			
-			String sql = "select request_seq, request_name, request_loc from "
-					+ "(select rownum rn, request_seq, request_name, request_loc from "
+			String sql = "select request_seq, request_loc, request_name from "
+					+ "(select rownum rn, request_seq, request_loc, request_name from "
 					+ "(select * from t_request order by request_seq desc)) where rn between ? and ?";
 			;
 			psmt = conn.prepareStatement(sql);
@@ -59,10 +59,10 @@ public class InstallDAO {
 			rs = psmt.executeQuery();
 			while (rs.next()) {
 				int getSeq = rs.getInt(1);
-				String getName = rs.getString(2);
-				String getloc = rs.getString(3);
+				String getloc = rs.getString(2);
+				String getname = rs.getString(3);
 
-				InstallVO vo = new InstallVO(getSeq, getName, getloc);
+				InstallVO vo = new InstallVO(getSeq, getloc, getname);
 				al.add(vo);
 
 			}
@@ -82,9 +82,14 @@ public class InstallDAO {
 	// 총 레코드 수 구하는 로직
 		public int getCount(){
 			int count = 0;
-			String sql = "select count(*) from t_request";
+			
 			try {
 				connect();
+				
+				//여기 sql 실행코득
+				String sql = "select count(*) from t_request";
+				psmt = conn.prepareStatement(sql);
+				rs = psmt.executeQuery();
 				
 				if(rs.next()){
 					count = rs.getInt(1);
@@ -105,9 +110,11 @@ public class InstallDAO {
 
 			String sql = "select * from t_request where request_seq = ?";
 			psmt = conn.prepareStatement(sql);
-			rs = psmt.executeQuery();
+			
 			psmt.setInt(1, no);
-
+			rs = psmt.executeQuery();  
+			
+			
 			if (rs.next()) {
 				int seq = rs.getInt(1);
 				String loc = rs.getString(2);
@@ -134,14 +141,14 @@ public class InstallDAO {
 
 			connect();
 
-			String sql = "INSERT INTO t_request(request_seq,request_loc,equest_name,request_phone,request_date,request_status,user_id)"
-					+ "VALUES(t_request_SEQ,?,?,?,sysdate,'N',?); ";
+			String sql = "INSERT INTO t_request(request_seq,request_loc,request_name,request_phone,request_date,request_status,user_id)"
+					+ "VALUES(t_request_SEQ.nextval,?,?,?,sysdate, 'N' ,?)";
 			psmt = conn.prepareStatement(sql);
-			cnt = psmt.executeUpdate();
 			psmt.setString(1, loc);
 			psmt.setString(2, name);
 			psmt.setString(3, phone);
 			psmt.setString(4, id);
+			cnt = psmt.executeUpdate();
 
 			if (cnt > 0) {
 				System.out.println("추가되었습니다");

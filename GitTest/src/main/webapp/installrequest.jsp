@@ -150,7 +150,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-10 offset-xl-1">
-					<form action="#">
+					<form action="InstallService" method="post">
 						<table border="1">
 							<tr>
 								<td><h2 class="mb-3">설치지역</h2></td>

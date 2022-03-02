@@ -1,5 +1,5 @@
-<%@page import="com.VO.InstallVO"%>
-<%@page import="com.DAO.InstallDAO"%>
+<%@page import="com.VO.ProductVO"%>
+<%@page import="com.DAO.ProductDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -45,7 +45,7 @@
 </head>
 <body>
 <%
-	InstallDAO dao=new InstallDAO();
+	ProductDAO dao=new ProductDAO();
 	int pageSize=10;
 	String pageNum=request.getParameter("pageNum");
 	if(pageNum==null){
@@ -57,7 +57,7 @@
 	int endRow=currentPage*pageSize;
 	int count=0;
 	count=dao.getCount();
-	ArrayList<InstallVO> al=null;
+	ArrayList<ProductVO> al=null;
 	if(count>0){
 	al=dao.getList(startRow,endRow);
 	}
@@ -139,7 +139,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
-                    <h1>설치문의게시판</h1>
+                    <h1>제품리스트</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -153,22 +153,24 @@
 		<h3>게시판 목록</h3>
 		<table class="board_table">
 			<tr>
-				<th width="10%">번호</th>
-				<th width="15%">이름</th>
+				<th width="20%">번호</th>
+				<th width="20%">제품번호</th>
 				<th width="30%">위치</th>
+				<th width="30%">아이디</th>
 				</tr>
 			<%
 				if (count > 0) { // 데이터베이스에 데이터가 있으면
 					int number = count - (currentPage - 1) * pageSize; // 글 번호 순번 
 					for (int i = 0; i < al.size(); i++) {
-						InstallVO board = al.get(i); // 반환된 list에 담긴 참조값 할당
+					ProductVO board = al.get(i); // 반환된 list에 담긴 참조값 할당
 			%>
 			<tr>
-				<td><%=board.getRequest_req() %></td>
-				<td><%=board.getRequest_name() %></td>
+				<td><%=board.getProduct_seq() %></td>
+				<td><%=board.getProduct_uid() %></td>
+				<td><%=board.getProduct_loc() %></td>
 				<td>
 					<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%>
-					<a href="installcontent.jsp?no=<%=board.getRequest_req()%>"><%=board.getRequest_loc() %></a>
+					<a href="productcontent.jsp?no=<%=board.getProduct_seq()%>"><%=board.getUser_id() %></a>
 				</td>
 			</tr>
 			<%
@@ -184,7 +186,7 @@
 			<tr>
 				<td colspan="6" align="right">
 				<%-- 버튼을 클릭하면 installrequest.jsp로 이동 --%>
-					<input type="button" value="글작성" onclick="location.href='installrequest.jsp'">
+					<input type="button" value="글작성" onclick="location.href='#'">
 				</td>
 			</tr>
 			<tr>
@@ -206,7 +208,7 @@
 							
 							if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
 					%>
-								<a href="install.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
+								<a href="productlist.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
 					<%			
 							}
 							
@@ -217,14 +219,14 @@
 					<%									
 								}else{ // 현재 페이지가 아닌 경우 링크 설정
 					%>
-									<a href="install.jsp?pageNum=<%=i%>">[<%=i %>]</a>
+									<a href="productlist.jsp?pageNum=<%=i%>">[<%=i %>]</a>
 					<%	
 								}
 							} // for end
 							
 							if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
 					%>
-								<a href="install.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
+								<a href="productlist.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
 					<%			
 							}
 						}

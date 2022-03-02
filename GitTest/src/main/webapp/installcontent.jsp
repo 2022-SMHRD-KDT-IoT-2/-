@@ -161,7 +161,7 @@
 			<tr align="center">
 				<td colspan="4">
 					<%-- 버튼을 클릭하면 해당 페이지로 이동 / 수정과 삭제는 get방식으로 no값을 전달 --%>
-					<input type="button" value="글목록" onclick="location.href='list.jsp'">
+					<input type="button" value="글목록" onclick="location.href='install.jsp'">
 					<input type="button" value="수정" onclick="location.href='updateForm.jsp?no=<%=no%>'"> 
 					<input type="button" value="삭제" onclick="location.href='deleteForm.jsp?no=<%=no%>'">
 				</td>

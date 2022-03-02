@@ -27,7 +27,7 @@ public class InstallVO {
 		this.request_status = request_status;
 		this.user_id = user_id;
 	}
-
+ 
 	public int getRequest_req() {
 		return request_req;
 	}
