@@ -465,6 +465,50 @@ h5{
 	margin-bottom: 30px;
 }
 
+/*******************/
+/*     content     */
+/*******************/
+.breakcontent{
+	background-color: white;
+	display: inline;
+	text-align: center;
+}
+.breakcontent h5{
+	color: black;
+}
+
+.content-table{
+	border-collapse: separate;
+	border-spacing: 1px;
+	text-align: center;
+	line-height: 1.5;
+	border-top: 1px solid #ccc;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 600px;
+	color: black;
+}
+.content-table td{
+	border-bottom: 1px solid #ccc;
+	padding: 5px;
+}
+.content-table .td-title{
+	width: 100px;
+}
+.content-table .td-text{
+	width: 250px;
+}
+.content-table .td-button{
+	padding: 30px;
+	border: none;
+}
+.content-table .button-content{
+	background-color: white;
+	border: 1px solid #2E3D4D;
+	color: black;
+	margin-right: 2px;
+	margin-left: 2px;
+}
 
 
 /********************/

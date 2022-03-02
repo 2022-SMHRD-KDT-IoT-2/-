@@ -141,36 +141,39 @@
     <!-- end of header -->
 
     <!-- Contact -->
-    <section class="contact d-flex align-items-center py-5" id="contact">
+    <section class="breakcontent" id="contact">
         <div class="container-fluid text-light">
             <div class="row">
                 <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5" data-aos="fade-right">
                     <div style="width:90%">
                         <div class="text-center text-lg-start py-4 pt-lg-0">
-                            <h3>게시판 목록</h3>
-		<h3>작성글</h3>
-		<table border="1" width="600">
+                            
+    <center>
+		<h5><%=vo.getName() %></h5>
+		<table class="content-table">
 			<tr>
-				<td width="50">이름</td>
-				<td width="250"><%=vo.getName() %></td>
-				<td width="50">신고날짜</td>
-				<td width="250"><%=vo.getDate() %></td>
+				<td class="td-title">이름</td>
+				<td class= "td-text"><%=vo.getName() %></td>
+				<td class="td-title">신고<br>날짜</td>
+				<td class= "td-text"><%=vo.getDate() %></td>
 			</tr>
 			<tr>
-				<td width="50">핸드폰번호</td>
-				<td width="250"><%=vo.getPhone() %></td>
-				<td width="50">제품번호</td>
-				<td width="250"><%=vo.getProduct_num() %></td>
+				<td class="td-title">핸드폰<br>번호</td>
+				<td class= "td-text"><%=vo.getPhone() %></td>
+				<td class="td-title">제품<br>번호</td>
+				<td class= "td-text"><%=vo.getProduct_num() %></td>
 			</tr>
 			<tr>
-				<td>내용</td>
-				<td colspan="3"><pre><%=vo.getContent() %></pre></td>
+				<td class="td-title">내용</td>
+				<td class= "td-text" colspan="3"><pre><%=vo.getContent() %></pre></td>
 			</tr>
 			<tr align="center">
 				<td colspan="4">
-				</td>>
+				버튼 자리?
+				</td>
 				</tr>
 				</table>
+    </center>
                         </div>
                     </div> <!-- end of div -->
                 </div> <!-- end of col -->
@@ -179,7 +182,6 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </section> <!-- end of contact -->
-    
     
     
    <!-- Location -->
@@ -231,6 +233,16 @@
 	var map = new kakao.maps.Map(container, options);
     </script>
     
+    <!-- Bottom -->
+    <div class="bottom py-2 text-light" >
+        <div class="container d-flex justify-content-between">
+            <div>
+            </div>
+            <div class="bottom-box">
+                
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of bottom -->
     
     <!-- Scripts -->
     <script src="./js/bootstrap.min.js"></script><!-- Bootstrap framework -->

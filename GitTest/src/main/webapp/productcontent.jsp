@@ -139,37 +139,47 @@
     </header> <!-- end of ex-header -->
     <!-- end of header -->
     <center>
-		<h3>작성글</h3>
-		<table border="1" width="600">
+		<h5><%=vo.getProduct_uid() %></h5>
+		<table class="content-table">
 			<tr>
-				<td width="50">제품번호</td>
-				<td width="250"><%=vo.getProduct_uid() %></td>
-				<td width="50">설치위치</td>
-				<td width="250"><%=vo.getProduct_loc() %></td>
+				<td class="td-title">제품<br>번호</td>
+				<td class= "td-text"><%=vo.getProduct_uid() %></td>
+				<td class="td-title">설치<br>위치</td>
+				<td class= "td-text"><%=vo.getProduct_loc() %></td>
 			</tr>
 			<tr>
-				<td width="50">위도</td>
-				<td width="250"><%=vo.getProduct_latitude() %></td>
-				<td width="50">경도</td>
-				<td width="250"><%=vo.getProduct_longitude() %></td>
+				<td class="td-title">위도</td>
+				<td class= "td-text"><%=vo.getProduct_latitude() %></td>
+				<td class="td-title">경도</td>
+				<td class= "td-text"><%=vo.getProduct_longitude() %></td>
 			</tr>
 			<tr>
-				<td width="50">설치일자</td>
-				<td width="250"><%=vo.getProduct_date() %></td>
-				<td width="50">관리자아이디</td>
-				<td width="250"><%=vo.getUser_id() %></td>
+				<td class="td-title">설치<br>일자</td>
+				<td class= "td-text"><%=vo.getProduct_date() %></td>
+				<td class="td-title">관리자<br>아이디</td>
+				<td class= "td-text"><%=vo.getUser_id() %></td>
 			</tr>
 			
-			<tr align="center">
-				<td colspan="4">
+			<tr>
+				<td class="td-button" colspan="4">
 					<%-- 버튼을 클릭하면 해당 페이지로 이동 / 수정과 삭제는 get방식으로 no값을 전달 --%>
-					<input type="button" value="글목록" onclick="location.href='productlist.jsp'">
-					<input type="button" value="수정" onclick="location.href='updateForm.jsp?no=<%=no%>'"> 
-					<input type="button" value="삭제" onclick="location.href='deleteForm.jsp?no=<%=no%>'">
+					<input type="button" class="button-content" value="목록" onclick="location.href='productlist.jsp'">
+					<input type="button" class="button-content" value="수정" onclick="location.href='updateForm.jsp?no=<%=no%>'"> 
+					<input type="button" class="button-content" value="삭제" onclick="location.href='deleteForm.jsp?no=<%=no%>'">
 				</td>
 			</tr>
 		</table>
 	</center>
-        
+	
+        <!-- Bottom -->
+    <div class="bottom py-2 text-light" >
+        <div class="container d-flex justify-content-between">
+            <div>
+            </div>
+            <div class="bottom-box">
+                
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of bottom -->
 </body>
 </html>
