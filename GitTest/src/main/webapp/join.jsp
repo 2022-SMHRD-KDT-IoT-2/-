@@ -216,8 +216,7 @@
 			//요청방식 , 요청경로
 			xhr.open('get', 'idCheck?id=' + id.value)
 			//전송데이터의 형식
-			xhr.setRequestHeader('Content-Type',
-					'application/x-www-form-urlencoded;charset=UTF-8')
+			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8')
 			//요청 & 전송할 데이터
 			xhr.send()
 
@@ -226,7 +225,7 @@
 					if (xhr.status === 200) { //응답성공
 						console.log("응답성공")
 						console.log(xhr.responseText) //응답데이터 확인 (responseXML)
-						if (xhr.responseText == "true") {
+						if (xhr.responseText == 'true') {
 							span.innerText = '사용할 수 없는 아이디입니다.'
 						} else {
 							span.innerText = '사용할 수 있는 아이디입니다.'
