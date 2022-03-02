@@ -53,7 +53,7 @@ public class memberDAO {
 
 			conn();
 
-			String sql = "select * from t_user where id = ?";
+			String sql = "select * from t_user where user_id = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 
@@ -64,9 +64,10 @@ public class memberDAO {
 				String getpw = rs.getString(2);
 				String name = rs.getString(3);
 				String phone = rs.getString(4);
-				String addr = rs.getString(5);
-				String yn = rs.getString(6);
-				String joindate = rs.getString(7);
+				String email = rs.getString(5);
+				String addr = rs.getString(6);
+				String yn = rs.getString(7);
+				String joindate = rs.getString(8);
 
 				System.out.println("로그인 성공");
 
@@ -85,20 +86,21 @@ public class memberDAO {
 		return vo;
 	}
 
-	public int join(String id, String pw,String name, String phone,String addr) {
+	public int join(String id, String pw,String name, String phone,String email,String addr) {
 
 		int cnt = 0;
 		try {
 
 			conn();
 
-			String sql = "insert into t_user values(?,?,?,?,?,'y',sysdate)";
+			String sql = "insert into t_user values(?,?,?,?,?,?,'y',sysdate)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
 			psmt.setString(3, name);
 			psmt.setString(4, phone);
-			psmt.setString(5, addr);
+			psmt.setString(5, email);
+			psmt.setString(6, addr);
 
 
 
@@ -111,5 +113,31 @@ public class memberDAO {
 			close();
 		}
 		return cnt;
+	}
+	public boolean idCheck(String id) {
+		boolean check = false;
+
+		try {
+
+			conn();
+
+			String sql = "select user_id from t_user where user_id=?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				check = true;
+			} else {
+				check = false;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		} finally {
+			close();
+
+		}
+		return check;
 	}
 }

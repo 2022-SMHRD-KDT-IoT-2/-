@@ -5,6 +5,7 @@ public class memberVO {
 	private String pw;
 	private String name;
 	private String phone;
+	private String email;
 	private String addr;
 	private String yn;
 	private String joindate;
@@ -15,6 +16,18 @@ public class memberVO {
 		this.pw = pw;
 
 	
+	}
+	public memberVO(String id, String pw, String name, String phone, String email, String addr, String yn,
+			String joindate) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.phone = phone;
+		this.email = email;
+		this.addr = addr;
+		this.yn = yn;
+		this.joindate = joindate;
 	}
 	public memberVO(String id, String pw,String name, String phone,String addr) {
 		super();
@@ -50,6 +63,9 @@ public class memberVO {
 	}
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
 	}
 	public String getAddr() {
 		return addr;

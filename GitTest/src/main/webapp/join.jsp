@@ -144,10 +144,13 @@
 		<ul class="actions vertical">
 			<li><h5>회원가입</h5></li>
 			<form action="Join" method="post">
-				<li><input type="text" name="id" placeholder="id를 입력하세요"></li>
+				<li><input type="text" name="id"  id="id" placeholder="id를 입력하세요"></li>
+				<li><input type="button" value="id중복체크" onclick="idCheck()"></li>
+				<li><span id="checkId"></span></li>
 				<li><input type="password" name="pw" placeholder="PW를 입력하세요"></li>
 				<li><input type="text" name="name" placeholder="이름을 입력하세요"></li>
 				<li><input type="text" name="phone" placeholder="전화번호를 입력하세요"></li>
+				<li><input type="text" name="email" placeholder="이메일을 입력하세요"></li>
 				<li><input type="text" name="addr" placeholder="집주소를 입력하세요"></li>
 				<li><input type="submit" value="JoinUs" class="button fit"></li>
 			</form>
@@ -162,4 +165,41 @@
 
 
 </body>
+<script>
+		function idCheck() {
+			let id = document.querySelector('#id') //이메일 작성창
+			let span = document.querySelector('#checkId')
+
+			let xhr = new XMLHttpRequest()
+
+			//요청방식 , 요청경로
+			xhr.open('get', 'idCheck?id=' + id.value)
+			//전송데이터의 형식
+			xhr.setRequestHeader('Content-Type',
+					'application/x-www-form-urlencoded;charset=UTF-8')
+			//요청 & 전송할 데이터
+			xhr.send()
+
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === XMLHttpRequest.DONE) { //요청성공
+					if (xhr.status === 200) { //응답성공
+						console.log("응답성공")
+						console.log(xhr.responseText) //응답데이터 확인 (responseXML)
+						if (xhr.responseText == "true") {
+							span.innerText = '사용할 수 없는아이디'
+						} else {
+							span.innerText = '사용할 수 있는 아이디'
+						}
+
+						//true -> 사용할수없는 아이디
+						//false -> 사용할수 있는아이디
+					} else {
+						console.log("응답실패")
+					}
+				} else { //요청실패
+					console.log("요청실패")
+				}
+			}
+		}
+	</script>
 </html>
