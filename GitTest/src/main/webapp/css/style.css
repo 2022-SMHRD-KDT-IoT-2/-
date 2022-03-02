@@ -439,6 +439,15 @@ h5{
 	color: white;
 	font-size: 15px;
 }
+.loginjoinTable .button-field2{
+	width: 300px;
+	height: 42px;
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+	color: #2E3D4D;
+	font-size: 15px;
+}
 .loginjoinTable #checkId{
 	color: #009987;
 	font-style: italic;
