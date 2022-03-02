@@ -400,6 +400,53 @@ h3 {
 	height: 20px;
 }
 
+/**********************/
+/*     login/join     */
+/**********************/
+.loginjoindiv{
+	width: 500px;
+	margin: 20px;
+	text-align: center;
+	display: inline;
+}
+
+
+h5{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.loginjoinTable{
+	width: 500px;
+	margin-top: 20px;
+	text-align: center;
+	display: inline;
+	justify-content: center;
+}
+.loginjoinTable .text-field{
+	width: 300px;
+	height: 42px;
+	margin: 5px;
+	padding: 5px;
+}
+.loginjoinTable .button-field{
+	width: 300px;
+	height: 42px;
+	margin: 5px;
+	padding: 5px;
+	background-color: #2E3D4D;
+	border: none;
+	color: white;
+	font-size: 15px;
+}
+.loginjoinTable #checkId{
+	color: #009987;
+	font-style: italic;
+}
+.loginjoinform{
+	margin-bottom: 30px;
+}
+
 
 
 /********************/
