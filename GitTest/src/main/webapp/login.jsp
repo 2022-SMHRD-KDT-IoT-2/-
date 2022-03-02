@@ -138,24 +138,50 @@
 	</header>
 	<!-- end of ex-header -->
 	<!-- end of header -->
-
+	<div class="loginjoindiv">
 	<nav id="menu">
-		<ul class="links">
-			<li><h5>로그인</h5></li>
-			<form action="Login" method="post">
-				<li><input type="text" name="id" placeholder="id를 입력하세요"></li>
-				<li><input type="password" name="pw" placeholder="PW를 입력하세요"></li>
-				<li><input type="submit" value="LogIn" class="button fit"></li>
+		
+			<h5>로그인</h5>
+			<form action="Login" method="post" class="loginjoinform">
+				<table class="loginjoinTable">
+				<tr>
+					<td>
+					<input type="text" name="id" class="text-field" placeholder="ID를 입력하세요">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<input type="password" name="pw" class="text-field" placeholder="비밀번호를 입력하세요">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<input type="submit" class="button-field" value="로그인" class="button fit">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<a href = "join.jsp"><button class="button-field2">회원가입</button></a>
+					</td>
+				</tr>
+				</table>
 			</form>
 		</ul>
-	
-
-			
-		
 	</nav>
-	<a href = "join.jsp"><button>회원가입</button></a>
+	</div>	
+	
 	<!-- Banner -->
 
+<!-- Bottom -->
+    <div class="bottom py-2 text-light" >
+        <div class="container d-flex justify-content-between">
+            <div>
+            </div>
+            <div class="bottom-box">
+                
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of bottom -->
 
 </body>
 </html>
