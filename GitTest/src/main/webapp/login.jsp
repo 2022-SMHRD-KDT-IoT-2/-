@@ -146,7 +146,7 @@
 				<table class="loginjoinTable">
 				<tr>
 					<td>
-					<input type="text" name="id" class="text-field" placeholder="ID를 입력하세요">
+					<input type="text" name="id" class="text-field" placeholder="아이디/이메일을 입력하세요">
 					</td>
 				</tr>
 				<tr>
