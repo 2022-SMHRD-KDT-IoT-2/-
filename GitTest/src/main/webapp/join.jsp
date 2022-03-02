@@ -141,16 +141,15 @@
 
 	<div class="loginjoindiv">
 	<nav id="menu" >
-	
+			
 			<h5>회원가입</h5>
-			<div class="">
 			<form action="Join" method="post" class="loginjoinform">
 				<table class="loginjoinTable">
 				<tr>
 					<td><input type="text" name="id" class="text-field" id="id" placeholder="ID를 입력하세요"></td>
 				</tr>
 				<tr>	
-					<td><input type="button" value="중복 ID 확인" onclick="idCheck()"><br></td>
+					<td><input type="button" class="button-field" value="중복 ID 확인" onclick="idCheck()"><br></td>
 				</tr>
 				<tr>	
 					<td><p id="checkId" class="text-field"></p></td>
@@ -182,17 +181,26 @@
 				</tr>
 				<tr>
 					<td>
-					<input type="submit" value="JoinUs" class="button fit">
+					<input type="submit" class="button-field" value="가입하기" class="button fit">
 					</td>
 				</tr>
 				</table>
 			</form>
-			</div>
+			
 	</nav>
 	</div>
 
 
-
+  <!-- Bottom -->
+    <div class="bottom py-2 text-light" >
+        <div class="container d-flex justify-content-between">
+            <div>
+            </div>
+            <div class="bottom-box">
+                
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of bottom -->
 
 	<!-- Banner -->
 
@@ -219,9 +227,9 @@
 						console.log("응답성공")
 						console.log(xhr.responseText) //응답데이터 확인 (responseXML)
 						if (xhr.responseText == "true") {
-							span.innerText = '사용할 수 없는아이디'
+							span.innerText = '사용할 수 없는 아이디입니다.'
 						} else {
-							span.innerText = '사용할 수 있는 아이디'
+							span.innerText = '사용할 수 있는 아이디입니다.'
 						}
 
 						//true -> 사용할수없는 아이디
