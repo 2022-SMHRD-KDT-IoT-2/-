@@ -366,12 +366,12 @@ li {
 /*     install/breaklist     */
 /*****************************/
 .board {
-	color: white;
-	background: #0F1519;
+	color: black;
+	background: white;
 }
 
 h3 {
-	padding: 20px;
+	padding: 30px;
 }
 
 .board .board_table {
@@ -395,6 +395,9 @@ h3 {
 	font-weight: bold;
 	vertical-align: top;
 	border-bottom: 1px solid #ccc;
+}
+.bottom-box{
+	height: 20px;
 }
 
 
