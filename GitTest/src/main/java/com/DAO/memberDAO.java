@@ -72,7 +72,7 @@ public class memberDAO {
 				System.out.println("로그인 성공");
 
 				if (pw.equals(getpw)) {
-					vo = new memberVO(id, pw);
+					vo = new memberVO(getid, getpw, name, phone, email, addr,yn,joindate);
 				}
 
 			}
@@ -139,6 +139,33 @@ public class memberDAO {
 
 		}
 		return check;
+	}
+	public int updatePirvacy(String name, String pw, String email, String phone, String addr, String id) {
+		int cnt = 0;
+		try {
+
+			conn();
+
+			String sql = "update t_user set user_name=?,user_pw=?,user_email=?,user_phone=?,user_addr=? where user_id=?";
+
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, name);
+			psmt.setString(2, pw);
+			psmt.setString(3, email);
+			psmt.setString(4, phone);
+			psmt.setString(5, addr);
+			psmt.setString(6, id);
+			cnt = psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		} finally {
+			close();
+
+		}
+		return cnt;
+
 	}
 	public boolean adminCheck(String id) {
 		boolean check = false;
