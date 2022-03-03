@@ -58,7 +58,7 @@
 			<!-- <a class="navbar-brand logo-image" href="index.jsp"><img src="images/logo.svg" alt="alternative"></a> -->
 
 			<!-- Text Logo - Use this if you don't have a graphic logo -->
-			<a class="navbar-brand logo-text" href="index.jsp"><img src="assets/images/logo.svg" width="200" height="200"></a>
+			<a class="navbar-brand logo-text" href="index.jsp"><img src="assets/images/bluelogo.svg" width="200" height="200"></a>
 
 			<button class="navbar-toggler p-0 border-0" type="button"
 				id="navbarSideCollapse" aria-label="Toggle navigation">
