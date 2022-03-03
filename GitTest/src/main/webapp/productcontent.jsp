@@ -138,8 +138,9 @@
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
-    <center>
-		<h5><%=vo.getProduct_uid() %></h5>
+		<h5 class="content"><%=vo.getProduct_uid() %></h5>
+	<div class="contentdiv-div">
+    <div class="content-div">
 		<table class="content-table">
 			<tr>
 				<td class="td-title">제품<br>번호</td>
@@ -169,7 +170,8 @@
 				</td>
 			</tr>
 		</table>
-	</center>
+	</div>
+	</div>
 	
         <!-- Bottom -->
     <div class="bottom py-2 text-light" >

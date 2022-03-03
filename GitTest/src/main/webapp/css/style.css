@@ -365,28 +365,54 @@ li {
 /*****************************/
 /*     install/breaklist     */
 /*****************************/
+.search{
+	margin-top: 30px;
+	margin-bottom: 50px;	
+}
+.search .sel{
+	width: 100px;
+	height: 30px;
+}
+.search .search-button{
+	width: 80px;
+	height: 30px;
+	background-color: #009987;
+	color: white;
+	border: 1px solid var(--primary);
+}
+.search .search-text{
+	width: 200px;
+	height: 30px;
+	padding-left: 5px;
+}
+
 .board {
 	color: black;
 	background: white;
 	text-align: center;
 }
 
-h3 {
-	padding: 30px;
+.board h3{
+	margin-top: 50px;
+	margin-bottom: 30px;
 }
 
 .request-h5{
 	margin-top: 50px;
 }
-
+.table-div{
+	display: inline-block;
+	text-align: center;
+	width: 900px;
+}
 .board .board_table {
+	width: 100%;
 	border-collapse: separate;
 	border-spacing: 1px;
-	text-align: center;
 	line-height: 1.5;
 	border-top: 1px solid #ccc;
-	margin: 20px 10px;
-	width: 900px;
+	margin: 20px;
+	margin-bottom: 10px;
 }
 .board .board_table2 {
 	width: 500px;
@@ -407,6 +433,7 @@ h3 {
 
 .board .board_table th {
 	padding: 10px;
+	padding-bottom: 10px;
 	font-weight: bold;
 	vertical-align: top;
 	border-bottom: 1px solid #ccc;
@@ -563,17 +590,33 @@ h5{
 }
 .breakcontent h5{
 	color: black;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 30px;
 }
-
+.content{
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+.contentdiv-div{
+	text-align: center;
+}
+.content-div{
+	width: 700px;
+	display: inline-block;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
 .content-table{
+	display: inline;
 	border-collapse: separate;
 	border-spacing: 1px;
 	text-align: center;
 	line-height: 1.5;
-	border-top: 1px solid #ccc;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	width: 600px;
+	width: 100%;
 	color: black;
 }
 .content-table td{
@@ -587,7 +630,8 @@ h5{
 	width: 250px;
 }
 .content-table .td-button{
-	padding: 30px;
+	padding-top: 30px;
+	padding-bottom: 50px;
 	border: none;
 }
 .content-table .button-content{

@@ -138,8 +138,10 @@
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
-    <center>
-		<h5><%=vo.getRequest_name() %></h5>
+
+		<h5 class="content"><%=vo.getRequest_name() %></h5>
+    	<div class="contentdiv-div">
+    	<div class=content-div>
 		<table class="content-table">
 			<tr>
 				<td class="td-title">이름</td>
@@ -164,7 +166,7 @@
 				<td class= "td-text" colspan="3"><pre><%=vo.getUser_id() %></pre></td>
 			</tr>
 			
-			<tr align="center">
+			<tr>
 				<td class="td-button" colspan="4">
 					<%-- 버튼을 클릭하면 해당 페이지로 이동 / 수정과 삭제는 get방식으로 no값을 전달 --%>
 					<input type="button" class="button-content" value="목록" onclick="location.href='install.jsp'">
@@ -173,7 +175,9 @@
 				</td>
 			</tr>
 		</table>
-	</center>
+		</div>
+		</div>
+
 	
 	<!-- Bottom -->
     <div class="bottom py-2 text-light" >
