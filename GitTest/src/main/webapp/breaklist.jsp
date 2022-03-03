@@ -58,6 +58,9 @@
 <body>
 	<%
 	BreakDAO dao = new BreakDAO();
+
+	String sel = request.getParameter("sel");
+	String find = request.getParameter("find");
 	int pageSize = 10;
 	String pageNum = request.getParameter("pageNum");
 	if (pageNum == null) {
@@ -68,10 +71,16 @@
 	int startRow = (currentPage - 1) * pageSize + 1;
 	int endRow = currentPage * pageSize;
 	int count = 0;
+	int fcount = 0;
 	count = dao.getCount();
+	fcount = dao.getfCount(sel, find);
 	ArrayList<BreakVO> al = null;
-	if (count > 0) {
+	ArrayList<BreakVO> fal = null;
+	if (count > 0 && find == null) {
 		al = dao.getList(startRow, endRow);
+	}
+	if (fcount > 0) {
+		fal = dao.getfList(startRow, endRow, sel, find);
 	}
 	memberVO vo1 = (memberVO) session.getAttribute("loginvo");
 	%>
@@ -96,20 +105,22 @@
 			<div class="navbar-collapse offcanvas-collapse"
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
-				<%
-		if (vo1 == null) {
-			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"login.jsp\">로그인</a></li>");
-		} else {
-			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
-		}
-		%> 
+					<%
+					if (vo1 == null) {
+						out.print(
+						"<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"login.jsp\">로그인</a></li>");
+					} else {
+						out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
+					}
+					%>
 					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="productlist.jsp">제품리스트</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="productlist.jsp">제품리스트</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
@@ -150,7 +161,7 @@
 	</nav>
 	<!-- end of navbar -->
 	<!-- end of navigation -->
-    
+
 
 	<!-- Header -->
 	<header class="ex-header">
@@ -177,87 +188,152 @@
                     <div style="width:90%">
                         <div class="text-center text-lg-start py-4 pt-lg-0">
                             -->
-		<body>
-			<center>
-			<div class="board">
-				<h3>고장신고 목록</h3>
-				<table class="board_table">
-					<tr>
-						<th width="20%">No.</th>
-						<th width="20%">이름</th>
-						<th width="30%">제품번호</th>
-						<th width="20%">신고날짜</th>
-					</tr>
-					<%
-					if (count > 0) { // 데이터베이스에 데이터가 있으면
-						int number = count - (currentPage - 1) * pageSize; // 글 번호 순번 
-						for (int i = 0; i < al.size(); i++) {
-							BreakVO board = al.get(i); // 반환된 list에 담긴 참조값 할당
-					%>
-					<tr>
-						<td><%=board.getNum()%></td>
-						<td><%=board.getName()%></td>
-						<td>
-							<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%>
-							<a class="list-a" href="breakcontent.jsp?no=<%=board.getNum()%>"><%=board.getProduct_num()%></a>
-						</td>
-						<td><%=board.getDate()%></td>
-					</tr>
-					<%
-					}
-					} else { // 데이터가 없으면
-					%>
-					<tr>
-						<td colspan="6" align="center">게시글이 없습니다.</td>
-					</tr>
-					<%
-					}
-					%>
-					<tr>
-						<td colspan="6" align="right"></td>
-					</tr>
-					<tr>
-						<td colspan="6" align="center">
-							<%
-							// 페이징  처리
-							if (count > 0) {
-								// 총 페이지의 수
-								int pageCount = count / pageSize + (count % pageSize == 0 ? 0 : 1);
-								// 한 페이지에 보여줄 페이지 블럭(링크) 수
-								int pageBlock = 10;
-								// 한 페이지에 보여줄 시작 및 끝 번호(예 : 1, 2, 3 ~ 10 / 11, 12, 13 ~ 20)
-								int startPage = ((currentPage - 1) / pageBlock) * pageBlock + 1;
-								int endPage = startPage + pageBlock - 1;
-		
-								// 마지막 페이지가 총 페이지 수 보다 크면 endPage를 pageCount로 할당
-								if (endPage > pageCount) {
-									endPage = pageCount;
-								}
-		
-								if (startPage > pageBlock) { // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
-							%> <a class="list-a" href="breaklist.jsp?pageNum=<%=startPage - 10%>">[이전]</a> <%
-		 }
-		
-		 for (int i = startPage; i <= endPage; i++) { // 페이지 블록 번호
-		 if (i == currentPage) { // 현재 페이지에는 링크를 설정하지 않음
-		 %> [<%=i%>] <%
-		 } else { // 현재 페이지가 아닌 경우 링크 설정
-		 %> <a class="list-a" href="breaklist.jsp?pageNum=<%=i%>">[<%=i%>]
-						</a> <%
-		 }
-		 } // for end
-		
-		 if (endPage < pageCount) { // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
-		 %> <a class="list-a" href="breaklist.jsp?pageNum=<%=startPage + 10%>">[다음]</a> <%
-		 }
-		 }
-		 %>
-						</td>
-					</tr>
-				</table>
-				</div>
-			</center>
-		</body>
+<body>
+	<center>
+		<div class="board">
+			<h3>고장신고 목록</h3>
+			<table class="board_table">
+				<tr>
+					<th width="20%">No.</th>
+					<th width="20%">이름</th>
+					<th width="30%">제품순번</th>
+					<th width="20%">신고날짜</th>
+				</tr>
+				<%
+				if (count > 0 && fcount == 0 && find == null) { // 데이터베이스에 데이터가 있으면
+					int number = count - (currentPage - 1) * pageSize; // 글 번호 순번 
+					for (int i = 0; i < al.size(); i++) {
+						BreakVO board = al.get(i); // 반환된 list에 담긴 참조값 할당
+				%>
+				<tr>
+					<td><%=number--%></td>
+					<td><%=board.getName()%></td>
+					<td>
+						<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%> <a
+						class="list-a" href="breakcontent.jsp?no=<%=board.getNum()%>"><%=board.getProduct_num()%></a>
+					</td>
+					<td><%=board.getDate()%></td>
+				</tr>
+				<%
+				}
+				} else if (count == 0) { // 데이터가 없으면
+				%>
+				<tr>
+					<td colspan="6" align="center">게시글이 없습니다.</td>
+				</tr>
+				<%
+				} else if (count > 0 && fcount != 0) {
+				int number = fcount - (currentPage - 1) * pageSize; // 글 번호 순번
+				for (int i = 0; i < fal.size(); i++) {
+					BreakVO board = fal.get(i);
+				%>
+				<tr>
+					<td><%=number--%></td>
+					<td><%=board.getName()%></td>
+					<td>
+						<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값과 pageNum, sel, find를 갖고 content.jsp로 이동 --%>
+						<a class="list-a"
+						href="breakcontent.jsp?no=<%=board.getNum()%>&pageNum=<%=currentPage%>&sel=<%=sel%>&find=<%=find%>"><%=board.getProduct_num()%></a>
+					</td>
+					<td><%=board.getDate()%></td>
+				</tr>
+				<%
+				}
+				} else { // 검색된 데이터가 없으면
+				%>
+				<tr>
+					<td colspan="6" align="right"></td>
+				</tr>
+				<%
+				}
+				%>
+				<tr>
+					<td colspan="6" align="center">
+						<%
+						// 페이징  처리
+						if (count > 0 && fcount == 0 && find == null) {
+							// 총 페이지의 수
+							int pageCount = count / pageSize + (count % pageSize == 0 ? 0 : 1);
+							// 한 페이지에 보여줄 페이지 블럭(링크) 수
+							int pageBlock = 10;
+							// 한 페이지에 보여줄 시작 및 끝 번호(예 : 1, 2, 3 ~ 10 / 11, 12, 13 ~ 20)
+							int startPage = ((currentPage - 1) / pageBlock) * pageBlock + 1;
+							int endPage = startPage + pageBlock - 1;
+
+							// 마지막 페이지가 총 페이지 수 보다 크면 endPage를 pageCount로 할당
+							if (endPage > pageCount) {
+								endPage = pageCount;
+							}
+
+							if (startPage > pageBlock) { // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
+						%> <a class="list-a"
+						href="breaklist.jsp?pageNum=<%=startPage - 10%>">[이전]</a> <%
+ }
+
+ for (int i = startPage; i <= endPage; i++) { // 페이지 블록 번호
+ if (i == currentPage) { // 현재 페이지에는 링크를 설정하지 않음
+ %> [<%=i%>] <%
+ } else { // 현재 페이지가 아닌 경우 링크 설정
+ %> <a class="list-a" href="breaklist.jsp?pageNum=<%=i%>">[<%=i%>]
+					</a> <%
+ }
+ } // for end
+
+ if (endPage < pageCount) { // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
+ %> <a class="list-a" href="breaklist.jsp?pageNum=<%=startPage + 10%>">[다음]</a>
+						<%
+						}
+						} else if (fcount > 0) { // 페이징 처리(검색 데이터)
+						// 검색된 레코드의 총 페이지의 수
+						int pageCount = fcount / pageSize + (fcount % pageSize == 0 ? 0 : 1);
+						// 한 페이지에 보여줄 페이지 블럭(링크) 수
+						int pageBlock = 10;
+						// 한 페이지에 보여줄 시작 및 끝 번호(예 : 1, 2, 3 ~ 10 / 11, 12, 13 ~ 20)
+						int startPage = ((currentPage - 1) / pageBlock) * pageBlock + 1;
+						int endPage = startPage + pageBlock - 1;
+
+						// 마지막 페이지가 총 페이지 수 보다 크면 endPage를 pageCount로 할당
+						if (endPage > pageCount) {
+						endPage = pageCount;
+						}
+
+						if (startPage > pageBlock) {
+						%> <a
+						href="breaklist.jsp?pageNum=<%=startPage - 10%>&sel=<%=sel%>&find=<%=find%>">[이전]</a>
+						<%
+						}
+
+						for (int i = startPage; i <= endPage; i++) {
+						if (i == currentPage) { // 현재 페이지는 링크를 설정하지 않음
+						%> [<%=i%>] <%
+						} else { // 현재 페이지가 아닌 경우 링크
+						%> <a href="breaklist.jsp?pageNum=<%=i%>&sel=<%=sel%>&find=<%=find%>">[<%=i%>]
+					</a> <%
+ }
+ }
+
+ if (endPage < pageCount) {
+ %> <a
+						href="breaklist.jsp?pageNum=<%=startPage + 10%>&sel=<%=sel%>&find=<%=find%>">[다음]</a>
+						<%
+						}
+						}
+						%>
+					</td>
+				</tr>
+			</table>
+			<%-- 검색어 입력 form / get방식 / option value는 데이터베이스 칼럼과 동일하게 설정 --%>
+			<form method="get" action="breaklist.jsp">
+				<select name="sel">
+					<option value="product_seq">제품순번</option>
+					<option value="reporter_name">이름</option>
+				</select> <input type="text" name="find" id="find"> <input
+					type="submit" value="검색">
+			</form>
+
+		</div>
+	</center>
+</body>
 <!-- 
 		</div>
 		</div>
@@ -337,16 +413,15 @@
 
 	var map = new kakao.maps.Map(container, options);
 </script>
- <!-- Bottom -->
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
+<!-- Bottom -->
+<div class="bottom py-2 text-light">
+	<div class="container d-flex justify-content-between">
+		<div></div>
+		<div class="bottom-box"></div>
+	</div>
+	<!-- end of container -->
+</div>
+<!-- end of bottom -->
 
 <!-- Scripts -->
 <script src="./js/bootstrap.min.js"></script>

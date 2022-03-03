@@ -131,19 +131,20 @@ public class ProductDAO {
 			return board;
 		}
 
-	public int oneProduct(String name, String phone, int product_num,String content) {
+	public int oneProduct(String pro_id, String loc, double latitude, double longitude,String id) {
 		int cnt = 0;
 		try {
 
 			connect();
 
 			String sql = "INSERT INTO t_iot(product_seq, product_uid, product_loc,product_latitude,product_longitude,product_date,user_id)"
-					+ "VALUES(t_report_SEQ.nextval,?,?,?,?,sysdate)";
+					+ "VALUES(t_iot_SEQ.nextval,?,?,?,?,sysdate,?)";
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, name);
-			psmt.setString(2, phone);
-			psmt.setInt(3, product_num);
-			psmt.setString(4, content);
+			psmt.setString(1, pro_id);
+			psmt.setString(2, loc);
+			psmt.setDouble(3, latitude);
+			psmt.setDouble(4, longitude);
+			psmt.setString(5, id);
 			cnt = psmt.executeUpdate();
 
 			if (cnt > 0) {
@@ -165,4 +166,65 @@ public class ProductDAO {
 		return cnt;
 	}
 	
+	// 검색어와 일치하는 레코드 수를 구하는 로직
+		public int getfCount(String sel, String find){
+			int fCount = 0;
+			String sql = "select count(*) from t_iot where " + sel + " like '%" + find + "%'";
+			try {
+				connect();
+				psmt = conn.prepareStatement(sql);
+				rs = psmt.executeQuery();
+				if (rs.next()) {
+					fCount = rs.getInt(1);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				quitDB();
+			}
+			return fCount; // 총 레코드 수 리턴
+		}
+		
+		//검색관련 로직(페이징처리)
+		public ArrayList<ProductVO> getfList(int startRow,int endRow, String sel, String find) {
+
+			ArrayList<ProductVO> al = new ArrayList<ProductVO>();
+			try {
+
+				connect();
+				
+				String sql = "select product_seq,product_uid,product_loc,user_id from"
+						+ "(select rownum rn, product_seq,product_uid,product_loc,user_id from"
+						+ "(select product_seq,product_uid,product_loc,user_id from t_iot where "+sel+" like '%"+find+"%'"
+						+"order by product_seq desc)) where rn between ? and ?";
+				;
+				psmt = conn.prepareStatement(sql);
+				psmt.setInt(1, startRow);
+				psmt.setInt(2, endRow);
+				rs = psmt.executeQuery();
+				while (rs.next()) {
+					int getSeq = rs.getInt(1);
+					String getPro_id = rs.getString(2);
+					String getLoc = rs.getString(3);
+					String getid = rs.getString(4);
+
+					
+					
+					ProductVO vo = new ProductVO(getSeq, getPro_id, getLoc, getid);
+					al.add(vo);
+
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+
+			} finally {
+				try {
+					quitDB();
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				}
+
+			}
+			return al;
+		}
 }
