@@ -27,7 +27,7 @@
 <!-- to have large image post format in Twitter -->
 
 <!-- Webpage Title -->
-<title>스마트 반사경</title>
+<title>Smart Delineator</title>
 
 <!-- Styles(스타일 시트) -->
 <link
@@ -58,14 +58,12 @@
 			<!-- <a class="navbar-brand logo-image" href="index.jsp"><img src="images/logo.svg" alt="alternative"></a> -->
 
 			<!-- Text Logo - Use this if you don't have a graphic logo -->
-			<a class="navbar-brand logo-text" href="index.jsp">IoT 스마트 반사경</a>
+			<a class="navbar-brand logo-text" href="index.jsp"><img src="assets/images/bluelogo.svg" width="200" height="200"></a>
 
 			<button class="navbar-toggler p-0 border-0" type="button"
 				id="navbarSideCollapse" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-
-			<!-- 상단 메뉴 부분 -->
 			<div class="navbar-collapse offcanvas-collapse"
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
@@ -127,7 +125,7 @@
 	<section class="home py-5 d-flex align-items-center" id="header">
 		<div class="container text-light py-5" data-aos="fade-right">
 			<h1 class="headline">For Your <br><span class="home_text">Safety</span> Drive</h1>
-			<p class="para para-light py-3">소개글</p>
+			<p class="para para-light py-3">스마트 델리네이터는 야간 급커브도로 안전운행을 지원합니다</p>
 			<div class="d-flex align-items-center">
 				<!-- 
                 <p class="p-2"><i class="fas fa-laptop-house fa-lg"></i></p>

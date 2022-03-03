@@ -61,7 +61,7 @@
 			<!-- <a class="navbar-brand logo-image" href="index.jsp"><img src="images/logo.svg" alt="alternative"></a> -->
 
 			<!-- Text Logo - Use this if you don't have a graphic logo -->
-			<a class="navbar-brand logo-text" href="index.jsp">IoT 스마트 반사경</a>
+			<a class="navbar-brand logo-text" href="index.jsp"><img src="assets/images/bluelogo.svg" width="200" height="200"></a>
 
 			<button class="navbar-toggler p-0 border-0" type="button"
 				id="navbarSideCollapse" aria-label="Toggle navigation">
@@ -138,8 +138,9 @@
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
-    <center>
-		<h5><%=vo.getProduct_uid() %></h5>
+		<h5 class="content"><%=vo.getProduct_uid() %></h5>
+	<div class="contentdiv-div">
+    <div class="content-div">
 		<table class="content-table">
 			<tr>
 				<td class="td-title">제품<br>번호</td>
@@ -169,7 +170,8 @@
 				</td>
 			</tr>
 		</table>
-	</center>
+	</div>
+	</div>
 	
         <!-- Bottom -->
     <div class="bottom py-2 text-light" >

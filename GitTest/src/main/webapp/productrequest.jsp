@@ -1,5 +1,6 @@
 <%@page import="com.VO.memberVO"%>
-<%@page import="com.DAO.InstallDAO"%>
+<%@page import="com.VO.ProductVO"%>
+<%@page import="com.DAO.ProductDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
@@ -55,7 +56,7 @@
 </head>
 <body>
 	<%
-	InstallDAO dao = new InstallDAO();
+	ProductDAO dao = new ProductDAO();
 	memberVO vo = (memberVO) session.getAttribute("loginvo");
 	%>
 
@@ -152,36 +153,34 @@
 
 	<!-- 설치 테이블 -->
 	<!-- Header -->
-	<div class="board">
+	<div class="ex-basic-1 pt-5 pb-5">
 		<div class="container">
 			<div class="row">
-				<div class="intallrequestForm">
-					<form  action="InstallService" method="post">
-					<h5 class="request-h5">설치문의 글쓰기</h5>
-						<div class="table2-div">
-						<table class="board_table2">
+				<div class="col-xl-10 offset-xl-1">
+					<form action="ProductWrite" method="post">
+						<table border="1">
 							<tr>
-								<th>설치지역</th>
+								<td><h2 class="mb-3">제품아이디</h2></td>
+								<td><input type="text" name="pro_id"></td>
 							</tr>
 							<tr>
-								<td><input class="text-box" type="text" name="loc"></td>
+								<td><h2 class="mb-3">위치</h2></td>
+								<td><input type="text" name="loc"></td>
 							</tr>
 							<tr>
-								<th>이름</th>
+								<td><h2 class="mb-3">위도</h2></td>
+								<td><input type="text" name="latitude"></td>
 							</tr>
 							<tr>
-								<td><input class="text-box" type="text" name="name"></td>
+								<td><h2 class="mb-3">경도</h2></td>
+								<td><input type="text" name="longitude"></td>
 							</tr>
 							<tr>
-								<th>전화번호</th>
-							</tr>
-							<tr>
-								<td><input class="text-box" type="text" name="phone"></td>
+								<td><h2 class="mb-3">관리자아이디</h2></td>
+								<td><input type="text" name="id" value="<%=vo.getId()%>"></td>
 							</tr>
 						</table>
-						</div>
-							<br><input type="submit" class="list-button" value="글쓰기">
-						
+						<input type="submit">
 					</form>
 				</div>
 				<!-- end of col -->
@@ -191,17 +190,5 @@
 		<!-- end of container -->
 	</div>
 	<!-- end of ex-basic-1 -->
-	
-		<!-- Bottom -->
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
-	
 </body>
 </html>

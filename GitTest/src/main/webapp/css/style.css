@@ -365,36 +365,102 @@ li {
 /*****************************/
 /*     install/breaklist     */
 /*****************************/
+.search{
+	margin-top: 30px;
+	margin-bottom: 50px;	
+}
+.search .sel{
+	width: 100px;
+	height: 30px;
+}
+.search .search-button{
+	width: 80px;
+	height: 30px;
+	background-color: #009987;
+	color: white;
+	border: 1px solid var(--primary);
+}
+.search .search-text{
+	width: 200px;
+	height: 30px;
+	padding-left: 5px;
+}
+
 .board {
 	color: black;
 	background: white;
+	text-align: center;
 }
 
-h3 {
-	padding: 30px;
+.board h3{
+	margin-top: 50px;
+	margin-bottom: 30px;
 }
 
+.request-h5{
+	margin-top: 50px;
+}
+.table-div{
+	display: inline-block;
+	text-align: center;
+	width: 900px;
+}
 .board .board_table {
+	width: 100%;
 	border-collapse: separate;
 	border-spacing: 1px;
-	text-align: center;
 	line-height: 1.5;
 	border-top: 1px solid #ccc;
-	margin: 20px 10px;
-	width: 900px;
+	margin: 20px;
+	margin-bottom: 10px;
+}
+.board .board_table2 {
+	width: 500px;
+	display: inline;
+	text-align: center;
+	border-spacing: 1px;
+	line-height: 1.5;
+	margin: 20px;
+	margin-bottom: 30px;
+	padding: 10px;
+}
+.board .text-box{
+	width: 330px;
+	height: 40px;
+	padding: 10px;
+	margin-bottom: 10px;
 }
 
 .board .board_table th {
 	padding: 10px;
+	padding-bottom: 10px;
 	font-weight: bold;
 	vertical-align: top;
 	border-bottom: 1px solid #ccc;
+}
+.board .board_table2 th {
+	padding-top: 10px;
+	text-align: left;
+	font-weight: bold;
+	vertical-align: top;
+	margin-bottom: 10px;
 }
 .board .board_table td {
 	padding: 10px;
 	font-weight: bold;
 	vertical-align: top;
 	border-bottom: 1px solid #ccc;
+}
+.table2-div {
+	display: inline-block;
+	width:400px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.board .board_table2 td {
+	font-weight: bold;
+	vertical-align: top;
 }
 .board .board_table .list-a {
 	color: #009987;
@@ -406,6 +472,8 @@ h3 {
 	background-color: white;
 	border: 1px solid #2E3D4D;
 	color: black;
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 /**********************/
@@ -465,6 +533,53 @@ h5{
 	margin-bottom: 30px;
 }
 
+/******************/
+/*     mypage     */
+/******************/
+.mypage{
+	text-align: center;
+}
+.mypage h5{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.mypage .mypage-table{
+	display: inline;
+}
+.mypage .mypage-table th {
+	width: 150px;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	margin-bottom: 20px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background-color: #F2F2F2;
+}
+.mypage .mypage-table td {
+	width: 300px;
+	padding: 10px;
+	text-align: left;
+	vertical-align: middle;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.mypage .mypage-button{
+	width: 90px;
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+	border: 1px solid #2E3D4D;
+	font-size: 15px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.mypage .text-field{
+    padding: 5px;
+}
+
 /*******************/
 /*     content     */
 /*******************/
@@ -475,17 +590,33 @@ h5{
 }
 .breakcontent h5{
 	color: black;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 30px;
 }
-
+.content{
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+.contentdiv-div{
+	text-align: center;
+}
+.content-div{
+	width: 700px;
+	display: inline-block;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
 .content-table{
+	display: inline;
 	border-collapse: separate;
 	border-spacing: 1px;
 	text-align: center;
 	line-height: 1.5;
-	border-top: 1px solid #ccc;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	width: 600px;
+	width: 100%;
 	color: black;
 }
 .content-table td{
@@ -499,7 +630,8 @@ h5{
 	width: 250px;
 }
 .content-table .td-button{
-	padding: 30px;
+	padding-top: 30px;
+	padding-bottom: 50px;
 	border: none;
 }
 .content-table .button-content{

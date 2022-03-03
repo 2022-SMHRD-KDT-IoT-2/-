@@ -1,6 +1,8 @@
 package com.member;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,10 +33,15 @@ public class Join extends HttpServlet {
 		memberDAO dao = new memberDAO();
 		int cnt = dao.join(id,pw,name,phone,email,addr);
 		
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html; charset=UTF-8");
 		if (cnt > 0) {
-			response.sendRedirect("login.jsp");
+			out.println("<script>alert('회원가입 성공'); location.href = 'login.jsp'; </script>");
+			out.close();
 		}else {
-			response.sendRedirect("index.html");			
+			out.println("<script>alert('회원가입 실패');</script>");
+			out.close();
 		}
 	
 	}
