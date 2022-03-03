@@ -140,4 +140,35 @@ public class memberDAO {
 		}
 		return check;
 	}
+	public boolean adminCheck(String id) {
+		boolean check = false;
+
+		try {
+
+			conn();
+
+			String sql = "select admin_yn from t_user where user_id=?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				String checkadmin=rs.getString(1);
+				if(checkadmin.equals("Y")||checkadmin.equals("y")) {
+					check=true;
+				}else {
+					check=false;
+				}
+			} else {
+				
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		} finally {
+			close();
+
+		}
+		return check;
+	}
 }

@@ -161,7 +161,7 @@
 				</tr>
 				<tr>
 					<td>
-					<a href = "join.jsp"><button class="button-field2">회원가입</button></a>
+					<button type="button" class="button-field2" onclick="location.href='join.jsp';">회원가입</button>
 					</td>
 				</tr>
 				</table>

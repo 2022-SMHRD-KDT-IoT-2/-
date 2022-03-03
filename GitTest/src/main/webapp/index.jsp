@@ -126,9 +126,7 @@
 	<!-- 메인페이지 -->
 	<section class="home py-5 d-flex align-items-center" id="header">
 		<div class="container text-light py-5" data-aos="fade-right">
-			<h1 class="headline">
-				스마트 <span class="home_text">반사경</span><br>
-			</h1>
+			<h1 class="headline">For Your <br><span class="home_text">Safety</span> Drive</h1>
 			<p class="para para-light py-3">소개글</p>
 			<div class="d-flex align-items-center">
 				<!-- 
@@ -157,25 +155,19 @@
 		<div class="container-fluid">
 			<div class="row text-light">
 				<div class="col-lg-4 text-center p-5" data-aos="zoom-in">
-					<i class="fas fa-tachometer-alt fa-3x p-2"></i>
-					<h4 class="py-3">Download 1 GBPS</h4>
-					<p class="para-light">Lorem ipsum dolor sit amet, consectetur
-						adipisicing elit. Magnam odit consequatur doloribus natus in
-						suscipit!</p>
+					<i class="fas fa-map-marked-alt fa-3x p-2"></i>
+					<h4 class="py-3">Product Location Notification</h4>
+                    <p class="para-light">You can check the location of the products you manage!</p>
 				</div>
 				<div class="col-lg-4 text-center p-5" data-aos="zoom-in">
-					<i class="fas fa-clock fa-3x p-2"></i>
-					<h4 class="py-3">99% Internet Uptime</h4>
-					<p class="para-light">Lorem ipsum dolor sit amet, consectetur
-						adipisicing elit. Magnam odit consequatur doloribus natus in
-						suscipit!</p>
+					<i class="fas fa-money-check-alt fa-3x p-2"></i>
+					<h4 class="py-3">Economic Benefit</h4>
+                    <p class="para-light">Anyone can easily request an advertisement!</p>
 				</div>
 				<div class="col-lg-4 text-center p-5 text-dark" data-aos="zoom-in">
-					<i class="fas fa-headset fa-3x p-2"></i>
-					<h4 class="py-3">24/7 Support</h4>
-					<p class="para-light">Lorem ipsum dolor sit amet, consectetur
-						adipisicing elit. Magnam odit consequatur doloribus natus in
-						suscipit!</p>
+					<i class="fas fa-shield-alt fa-3x p-2"></i>
+					<h4 class="py-3">24/7 Management</h4>
+                    <p class="para-light">Manage product status in real time through product information!</p>
 				</div>
 			</div>
 		</div>

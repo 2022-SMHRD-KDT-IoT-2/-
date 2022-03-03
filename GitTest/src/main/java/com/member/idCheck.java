@@ -28,7 +28,7 @@ public class idCheck extends HttpServlet {
 		
 		//3.console 에 true/false(반환값) 출력
 		PrintWriter out=response.getWriter();
-		out.println(check);
+		out.print(check);
 	}
 
 }
