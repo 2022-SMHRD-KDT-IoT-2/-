@@ -20,8 +20,8 @@ Table Of Contents:
 /*     General Styles     */
 /**************************/
 :root { 
-	--primary: #1c262f; 
-	--primary-light: #212d37; 
+	--primary: #151F30; 
+	--primary-light: #283040; 
 	--secondary: #7EFFFF; 
 	--tertiary: #38B6FF; 
 	--gradient: linear-gradient(to right, #7EFFFF, #38B6FF);
@@ -268,7 +268,7 @@ li {
 	width: 50%;
 	height: 450px;
 	float: left;
-	background-color: #4D6780;
+	background-color: #4D6180;
 	color: white;
 	margin: 0;
 	text-align: center;
@@ -376,7 +376,7 @@ li {
 .search .search-button{
 	width: 80px;
 	height: 30px;
-	background-color: #009987;
+	background-color: #004599;
 	color: white;
 	border: 1px solid var(--primary);
 }
@@ -463,7 +463,7 @@ li {
 	vertical-align: top;
 }
 .board .board_table .list-a {
-	color: #009987;
+	color: #0091FF;
 }
 .bottom-box{
 	height: 20px;
@@ -526,7 +526,7 @@ h5{
 	font-size: 15px;
 }
 .loginjoinTable #checkId{
-	color: #009987;
+	color: #004599;
 	font-style: italic;
 }
 .loginjoinform{
