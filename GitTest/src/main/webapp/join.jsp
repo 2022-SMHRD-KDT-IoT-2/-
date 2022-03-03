@@ -1,3 +1,4 @@
+<%@page import="com.VO.memberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -51,7 +52,10 @@
 <link rel="icon" href="./assets/images/favicon.png">
 </head>
 <body>
+		<%
+			memberVO vo = (memberVO)session.getAttribute("loginvo");
 
+		%>
 	<!-- Navigation -->
 	<nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark"
 		aria-label="Main navigation">
@@ -147,6 +151,11 @@
 				<table class="loginjoinTable">
 				<tr>
 					<td><input type="text" name="id" class="text-field" id="id" placeholder="아이디/이메일을 입력하세요"></td>
+					<%
+						if(vo==null){
+						out.print("<h5>아이디를 입력해주세요</h5>");
+						}
+					%>
 				</tr>
 				<tr>	
 					<td><input type="button" class="button-field2" value="아이디/이메일 중복 확인" onclick="idCheck()"><br></td>
@@ -242,4 +251,5 @@
 			}
 		}
 	</script>
+					
 </html>
