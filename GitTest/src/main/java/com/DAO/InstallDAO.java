@@ -168,4 +168,62 @@ public class InstallDAO {
 		}
 		return cnt;
 	}
+	// 검색어와 일치하는 레코드 수를 구하는 로직
+		public int getfCount(String sel, String find) {
+			int fCount = 0;
+			String sql = "select count(*) from t_request where " + sel + " like '%" + find + "%'";
+			try {
+				connect();
+				psmt = conn.prepareStatement(sql);
+				rs = psmt.executeQuery();
+				if (rs.next()) {
+					fCount = rs.getInt(1);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				quitDB();
+			}
+			return fCount; // 총 레코드 수 리턴
+		}
+
+		// 검색관련 로직(페이징처리)
+		public ArrayList<InstallVO> getfList(int startRow, int endRow, String sel, String find) {
+
+			ArrayList<InstallVO> al = new ArrayList<InstallVO>();
+			try {
+
+				connect();
+
+				String sql = "select request_seq, request_loc, request_name from"
+						+ "(select rownum rn, request_seq, request_loc, request_name from"
+						+ "(select request_seq, request_loc, request_name from t_request where " + sel + " like '%" + find
+						+ "%'" + "order by request_seq desc)) where rn between ? and ?";
+				;
+				psmt = conn.prepareStatement(sql);
+				psmt.setInt(1, startRow);
+				psmt.setInt(2, endRow);
+				rs = psmt.executeQuery();
+				while (rs.next()) {
+					int getSeq = rs.getInt(1);
+					String getloc = rs.getString(2);
+					String getname = rs.getString(3);
+
+					InstallVO vo = new InstallVO(getSeq, getloc, getname);
+					al.add(vo);
+
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+
+			} finally {
+				try {
+					quitDB();
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				}
+
+			}
+			return al;
+		}
 }

@@ -1,15 +1,12 @@
-INSERT INTO t_iot (product_seq,product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES (t_iot_SEQ.nextval,'product_uid 1', 'product_loc 1', 1, 1, sysdate, 'user_id 1');
-INSERT INTO t_iot (product_seq,product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES (t_iot_SEQ.nextval,'product_uid 2', 'product_loc 2', 2, 2, sysdate, 'user_id 2');
-INSERT INTO t_iot (product_seq,product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES (t_iot_SEQ.nextval,'product_uid 3', 'product_loc 3', 3, 3, sysdate, 'user_id 3');
-INSERT INTO t_iot (product_seq,product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES (t_iot_SEQ.nextval,'product_uid 4', 'product_loc 4', 4, 4, sysdate, 'user_id 4');
+delete from t_report;
+delete from t_iot;
+delete from t_request;
+delete from t_user;
 
-
-INSERT INTO t_report (report_seq ,reporter_name, reporter_phone, product_seq, report_content, report_date) VALUES (t_report_SEQ.nextval,'reporter_name 1', 'reporter_phone 1', 1, 'report_content 1', sysdate);
-INSERT INTO t_report (report_seq ,reporter_name, reporter_phone, product_seq, report_content, report_date) VALUES (t_report_SEQ.nextval,'reporter_name 2', 'reporter_phone 2', 2, 'report_content 2', sysdate);
-INSERT INTO t_report (report_seq ,reporter_name, reporter_phone, product_seq, report_content, report_date) VALUES (t_report_SEQ.nextval,'reporter_name 3', 'reporter_phone 3', 3, 'report_content 3', sysdate);
-INSERT INTO t_report (report_seq ,reporter_name, reporter_phone, product_seq, report_content, report_date) VALUES (t_report_SEQ.nextval,'reporter_name 4', 'reporter_phone 4', 4, 'report_content 4', sysdate);
-
-
+INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_addr, admin_yn, user_joindate) VALUES ('user_id 01', 'user_pw 01', 'user_name 01', 'user_phone 01', 'user_email 01', 'user_addr 01', 'N', sysdate);
+INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_addr, admin_yn, user_joindate) VALUES ('user_id 02', 'user_pw 02', 'user_name 02', 'user_phone 02', 'user_email 02', 'user_addr 02', 'N', sysdate);
+INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_addr, admin_yn, user_joindate) VALUES ('user_id 03', 'user_pw 03', 'user_name 03', 'user_phone 03', 'user_email 03', 'user_addr 03', 'N', sysdate);
+INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_addr, admin_yn, user_joindate) VALUES ('user_id 04', 'user_pw 04', 'user_name 04', 'user_phone 04', 'user_email 04', 'user_addr 04', 'N', sysdate);
 INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_addr, admin_yn, user_joindate) VALUES ('user_id 05', 'user_pw 05', 'user_name 05', 'user_phone 05', 'user_email 05', 'user_addr 05', 'N', sysdate);
 INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_addr, admin_yn, user_joindate) VALUES ('user_id 06', 'user_pw 06', 'user_name 06', 'user_phone 06', 'user_email 06', 'user_addr 06', 'N', sysdate);
 INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_addr, admin_yn, user_joindate) VALUES ('user_id 07', 'user_pw 07', 'user_name 07', 'user_phone 07', 'user_email 07', 'user_addr 07', 'N', sysdate);
@@ -27,31 +24,25 @@ INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_ad
 INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_addr, admin_yn, user_joindate) VALUES ('user_id 19', 'user_pw 19', 'user_name 19', 'user_phone 19', 'user_email 19', 'user_addr 19', 'N', sysdate);
 INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_addr, admin_yn, user_joindate) VALUES ('user_id 20', 'user_pw 20', 'user_name 20', 'user_phone 20', 'user_email 20', 'user_addr 20', 'N', sysdate);
 
+drop trigger t_iot_AI_TRG;
 
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 01', 'request_name 01', 'request_phone 01', sysdate, 'N', 'user_id 01');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 02', 'request_name 02', 'request_phone 02', sysdate, 'N', 'user_id 02');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 03', 'request_name 03', 'request_phone 03', sysdate, 'N', 'user_id 03');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 04', 'request_name 04', 'request_phone 04', sysdate, 'N', 'user_id 04');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 05', 'request_name 05', 'request_phone 05', sysdate, 'N', 'user_id 05');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 06', 'request_name 06', 'request_phone 06', sysdate, 'N', 'user_id 06');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 07', 'request_name 07', 'request_phone 07', sysdate, 'N', 'user_id 07');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 08', 'request_name 08', 'request_phone 08', sysdate, 'N', 'user_id 08');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 09', 'request_name 09', 'request_phone 09', sysdate, 'N', 'user_id 09');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 10', 'request_name 10', 'request_phone 10', sysdate, 'N', 'user_id 10');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 11', 'request_name 11', 'request_phone 11', sysdate, 'N', 'user_id 11');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 12', 'request_name 12', 'request_phone 12', sysdate, 'N', 'user_id 12');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 13', 'request_name 13', 'request_phone 13', sysdate, 'N', 'user_id 13');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 14', 'request_name 14', 'request_phone 14', sysdate, 'N', 'user_id 14');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 15', 'request_name 15', 'request_phone 15', sysdate, 'N', 'user_id 15');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 16', 'request_name 16', 'request_phone 16', sysdate, 'N', 'user_id 16');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 17', 'request_name 17', 'request_phone 17', sysdate, 'N', 'user_id 17');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 18', 'request_name 18', 'request_phone 18', sysdate, 'N', 'user_id 18');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 19', 'request_name 19', 'request_phone 19', sysdate, 'N', 'user_id 19');
-INSERT INTO t_request (request_seq,request_loc, request_name, request_phone, request_date, request_status, user_id) VALUES (t_request_SEQ.nextval,'request_loc 20', 'request_name 20', 'request_phone 20', sysdate, 'N', 'user_id 20');
-
-
-select * from T_REquest;
-drop trigger t_report_AI_TRG;
-select count(*) from t_request;
-
-select * from t_request where request_seq = 6;
+INSERT INTO t_iot (product_seq,product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES (t_iot_SEQ.NEXTVAL,'product_uid 01', 'product_loc 01', 01, 01, sysdate, 'user_id 01');
+INSERT INTO t_iot (product_seq,product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES (t_iot_SEQ.NEXTVAL,'product_uid 02', 'product_loc 02', 02, 02, sysdate, 'user_id 02');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 03', 'product_loc 03', 03, 03, sysdate, 'user_id 03');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 04', 'product_loc 04', 04, 04, sysdate, 'user_id 04');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 05', 'product_loc 05', 05, 05, sysdate, 'user_id 05');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 06', 'product_loc 06', 06, 06, sysdate, 'user_id 06');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 07', 'product_loc 07', 07, 07, sysdate, 'user_id 07');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 08', 'product_loc 08', 08, 08, sysdate, 'user_id 08');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 09', 'product_loc 09', 09, 09, sysdate, 'user_id 09');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 10', 'product_loc 10', 10, 10, sysdate, 'user_id 10');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 11', 'product_loc 11', 11, 11, sysdate, 'user_id 11');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 12', 'product_loc 12', 12, 12, sysdate, 'user_id 12');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 13', 'product_loc 13', 13, 13, sysdate, 'user_id 13');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 14', 'product_loc 14', 14, 14, sysdate, 'user_id 14');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 15', 'product_loc 15', 15, 15, sysdate, 'user_id 15');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 16', 'product_loc 16', 16, 16, sysdate, 'user_id 16');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 17', 'product_loc 17', 17, 17, sysdate, 'user_id 17');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 18', 'product_loc 18', 18, 18, sysdate, 'user_id 18');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 19', 'product_loc 19', 19, 19, sysdate, 'user_id 19');
+INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 20', 'product_loc 20', 20, 20, sysdate, 'user_id 20');
