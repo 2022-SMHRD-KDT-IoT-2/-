@@ -40,7 +40,7 @@
 <!-- to have large image post format in Twitter -->
 
 <!-- Webpage Title -->
-<title>Privacy</title>
+<title>Privacy</title> 
 
 <!-- Styles -->
 <link
@@ -421,7 +421,7 @@ function adressSearch() {
 	    } 
 	});    
 }
-	
+	//Çª½¬Áß..
 	</script>
 
 	<!-- Scripts -->
