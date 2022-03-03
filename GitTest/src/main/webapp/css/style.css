@@ -375,6 +375,10 @@ h3 {
 	padding: 30px;
 }
 
+.request-h5{
+	margin-top: 50px;
+}
+
 .board .board_table {
 	border-collapse: separate;
 	border-spacing: 1px;
@@ -395,6 +399,12 @@ h3 {
 	margin: 20px;
 	margin-bottom: 30px;
 	padding: 10px;
+}
+.board .text-box{
+	width: 330px;
+	height: 40px;
+	padding: 10px;
+	margin-bottom: 10px;
 }
 
 .board .board_table th {
