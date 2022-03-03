@@ -146,11 +146,11 @@
 	<div class="loginjoindiv">
 	<nav id="menu" >
 			
-			<h5>회원가입</h5>
+			<h3>회원가입</h3>
 			<form action="Join" method="post" class="loginjoinform">
 				<table class="loginjoinTable">
 				<tr>
-					<td><input type="text" name="id" class="text-field" id="id" placeholder="아이디/이메일을 입력하세요"></td>
+					<td><input type="text" name="id" class="text-field" id="id" placeholder="아이디를 입력하세요"></td>
 					<%
 						if(vo==null){
 						out.print("<h5>아이디를 입력해주세요</h5>");
@@ -158,15 +158,21 @@
 					%>
 				</tr>
 				<tr>	
-					<td><input type="button" class="button-field2" value="아이디/이메일 중복 확인" onclick="idCheck()"><br></td>
+					<td><input type="button" class="button-field" value="아이디 중복 확인" onclick="idCheck()"><br></td>
 				</tr>
 				<tr>	
 					<td><p id="checkId" class="text-field"></p></td>
 				</tr>
 				<tr>
+				<td>비밀번호</td>
+				</tr>
+				<tr>
 					<td>
 					<input type="password" name="pw" class="text-field" placeholder="비밀번호를 입력하세요">
 					</td>
+				</tr>
+				<tr>
+				<td>이름</td>
 				</tr>
 				<tr>
 					<td>

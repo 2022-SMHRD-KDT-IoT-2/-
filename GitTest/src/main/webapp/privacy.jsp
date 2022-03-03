@@ -124,30 +124,64 @@
 				<table class="mypage-table">
 				<tr>
 					<th>이름</th>
-					<td>이름 출력</td>
+					<%if(vo!=null){ 
+					%>
+					<td><%=vo.getName() %></td>
+					<%} else{%>
+					<td></td>
+					<% 
+				}%>
 				</tr>
 				<tr>
 					<th>아이디</th>
-					<td>아이디 출력</td>
+					<%if(vo!=null){ %>
+					<td><%=vo.getId() %></td>
+					<%} else{%>
+					<td></td>
+					<% 
+				}%>
 				</tr>
 				<tr>
 					<th>비밀번호</th>
-					<td>비밀번호 출력</td>
+					<%if(vo!=null){ %>
+					<td><%=vo.getPw()%></td>
+					<%}else{%>
+					<td></td>
+					<% 
+				} %>
 				</tr>
 				<tr>
 					<th>이메일</th>
-					<td>email@test.com</td>
+					<%if(vo!=null){ %>
+					<td><%=vo.getEmail()%></td>
+					<%} else{%>
+					<td></td>
+					<% 
+				}%>
 				</tr>
 				<tr>
 					<th>전화번호</th>
-					<td>010-0000-0000</td>
+					<%if(vo!=null){ %>
+					<td><%=vo.getPhone()%></td>
+					<%}else{%>
+					<td></td>
+					<% 
+				} %> 
 				</tr>
 				<tr>
 					<th>주소</th>
-					<td>주소 출력</td>
+					<%if(vo!=null){ %>
+					<td><%=vo.getAddr()%></td>
+					<%}else{%>
+					<td></td>
+						<% 
+					} %>
 				</tr>
 				</table>
-				<br><input type="submit" class="mypage-button" value="정보 수정" onclick="location.href='privacyupdate.jsp'">
+				<%if(vo!=null){ %>
+					<td>
+				<br><input type="button" class="mypage-button" value="정보 수정" onclick="location.href='privacyupdate.jsp'">
+				<%}%>
 			</form>
     </div>
     <!-- end of basic -->

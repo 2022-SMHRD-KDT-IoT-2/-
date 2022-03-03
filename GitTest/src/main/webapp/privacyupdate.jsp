@@ -120,36 +120,36 @@
     <!-- Basic -->
     <div class="mypage">
     	<h5>내 정보 수정</h5>
-			<form action="#" method="post" class="mypage">
+			<form action="PrivacyUpdate" method="post" class="mypage">
 				<table class="mypage-table">
 				<tr>
 					<th>이름</th>
-					<td><input type="text" value="이름 출력" name="name" class="text-field" placeholder="이름을 입력하세요"></td>
+					<td><input type="text" value="<%=vo.getName() %>" name="name" class="text-field" placeholder="이름을 입력하세요"></td>
 				</tr>
 				<tr>
 					<th>아이디</th>
-					<td>아이디 출력</td>
+					<td><input type="text" readonly value="<%=vo.getId() %>" name="id" class="text-field" ></td>
 				</tr>
 				<tr>
 					<th>비밀번호</th>
-					<td><input type="password" value="비밀번호 출력" name="pw" class="text-field" placeholder="비밀번호를 입력하세요"></td>
+					<td><input type="password" value="<%=vo.getPw() %>" name="pw" class="text-field" placeholder="비밀번호를 입력하세요"></td>
 				</tr>
 				<tr>
 					<th>이메일</th>
-					<td><input type="text" value="이메일 출력" name="email" class="text-field" placeholder="이메일을 입력하세요"></td>
+					<td><input type="text" value="<%=vo.getEmail() %>" name="email" class="text-field" placeholder="이메일을 입력하세요"></td>
 				</tr>
 				<tr>
 					<th>전화번호</th>
-					<td><input type="text" value="전화번호 출력" name="phone" class="text-field" placeholder="전화번호를 입력하세요"></td>
+					<td><input type="text" value="<%=vo.getPhone() %>" name="phone" class="text-field" placeholder="전화번호를 입력하세요"></td>
 				</tr>
 				<tr>
 					<th>주소</th>
-					<td><input type="text" value="주소 출력" name="addr" class="text-field" placeholder="주소를 입력하세요"></td>
+					<td><input type="text" value="<%=vo.getAddr() %>" name="addr" class="text-field" placeholder="주소를 입력하세요"></td>
 				</tr>
 				</table>
 				<!-- 적용 버튼 누르면 DB update하고 (정보가 수정된)privacy.jsp로 돌아가게 -->
-				<br><a href="privacy.jsp"><input type="submit" class="mypage-button" value="적용"></a>
-				<a href="privacy.jsp"><input type="submit" class="mypage-button" value="취소"></a>
+				<br><input type="submit" class="mypage-button" value="적용">
+				<a href="privacy.jsp"><input type="button" class="mypage-button" value="취소"></a>
 			</form>
     </div>
     <!-- end of basic -->
