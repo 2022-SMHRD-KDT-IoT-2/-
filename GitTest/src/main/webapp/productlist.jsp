@@ -181,9 +181,10 @@
 
 	<!-- 설치 테이블 -->
 
-	<center>
+
 		<div class="board">
 			<h3>등록된 제품 목록</h3>
+			<div class="table-div">
 			<table class="board_table">
 				<tr>
 					<th width="20%">No.</th>
@@ -212,7 +213,7 @@
 				} else if(count==0){ // 데이터가 없으면
 				%>
 				<tr>
-					<td colspan="6" align="center">게시글이 없습니다.</td>
+					<td colspan="6">작성된 게시글이 없습니다.</td>
 				</tr>
 				<%
 				}else if(count>0 && fcount !=0){
@@ -234,7 +235,7 @@
 				} else { // 검색된 데이터가 없으면
 			%>
 			<tr>
-				<td colspan="6" align="center">게시글이 없습니다.</td>
+				<td colspan="6">해당되는 게시글이 없습니다.</td>
 			</tr>
 			<%		
 				}
@@ -325,19 +326,22 @@
 </td>
 </tr>
 </table>
+</div>
 <%-- 검색어 입력 form / get방식 / option value는 데이터베이스 칼럼과 동일하게 설정 --%>
+<div class="search">
 <form method="get" action="productlist.jsp">
-<select name="sel">
+<select name="sel" class="sel">
 <option value="product_uid">제품번호</option>
 <option value="product_loc">위치</option>
 <option value="user_id">아이디</option>
 </select>
-<input type="text" name="find" id="find">
-<input type="submit" value="검색">
+<input type="text" class="search-text" name="find" id="find">
+<input type="submit" class="search-button" value="검색">
 </form>
+</div>
 
 		</div>
-	</center>
+
 
 	<!-- Bottom -->
 	<div class="bottom py-2 text-light">
