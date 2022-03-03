@@ -234,6 +234,7 @@
 			<%		
 				}
 			%>
+			<%if(vo!=null) {%>
 				<tr>
 					<td colspan="6" align="right">
 					
@@ -244,6 +245,7 @@
 					</td>
 				</tr>
 				<tr>
+				<%} %>
 					<td colspan="6" align="center">
 						<%	// ÆäÀÌÂ¡  Ã³¸®
 						if(count > 0 && fcount==0 && find==null){

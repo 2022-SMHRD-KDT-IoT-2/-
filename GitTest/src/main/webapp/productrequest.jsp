@@ -177,7 +177,7 @@
 							</tr>
 							<tr>
 								<td><h2 class="mb-3">관리자아이디</h2></td>
-								<td><input type="text" name="id"></td>
+								<td><input type="text" name="id" value="<%=vo.getId()%>"></td>
 							</tr>
 						</table>
 						<input type="submit">

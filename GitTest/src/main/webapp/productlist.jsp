@@ -239,6 +239,7 @@
 			<%		
 				}
 			%>
+			<%if(vo1 != null){ %>
 				<tr>
 					<td colspan="6" align="right">
 						<%-- 버튼을 클릭하면 proudctwrite.jsp로 이동 --%> <input type="button"
@@ -246,6 +247,7 @@
 					</td>
 				</tr>
 				<tr>
+				<%} %>
 					<td colspan="6" align="center">
 						<%
 						// 페이징  처리
