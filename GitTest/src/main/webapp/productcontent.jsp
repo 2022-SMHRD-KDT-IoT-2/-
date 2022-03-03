@@ -67,8 +67,6 @@
 				id="navbarSideCollapse" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-
-			<!-- 상단 메뉴 부분 -->
 			<div class="navbar-collapse offcanvas-collapse"
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
@@ -85,7 +83,14 @@
 					</li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="productlist.jsp">제품리스트</a></li>
+					<%
+					if(vo1!=null){
+						System.out.print(vo1.getYn());
+						if(vo1.getYn().equals("Y")||vo1.getYn().equals("y")){
+						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
+						}
+					}
+					%>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
@@ -93,7 +98,7 @@
 						<ul class="dropdown-menu" aria-labelledby="dropdown01">
 							<li><a class="dropdown-item" href="privacy.jsp">개인정보</a></li>
 							<li><div class="dropdown-divider"></div></li>
-							<li><a class="dropdown-item" href="terms.jsp">제품관리</a></li>
+							<li><a class="dropdown-item" href="privacyproduct.jsp">제품관리</a></li>
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
@@ -124,7 +129,6 @@
 		</div>
 		<!-- end of container -->
 	</nav>
-	<!-- end of navbar -->
 	<!-- end of navigation -->
 
     <!-- Header -->

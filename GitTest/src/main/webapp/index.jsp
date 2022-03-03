@@ -1,3 +1,4 @@
+
 <%@page import="com.VO.memberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
@@ -47,6 +48,8 @@
 <body>
 	<%
 	memberVO vo = (memberVO) session.getAttribute("loginvo");
+
+	
 	%>
 
 	<!-- Navigation -->
@@ -80,7 +83,14 @@
 					</li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">力前汲摹巩狼</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="productlist.jsp">力前府胶飘</a></li>
+					<%
+					if(vo!=null){
+						System.out.print(vo.getYn());
+						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){
+						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">力前府胶飘</a></li>");
+						}
+					}
+					%>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">付捞其捞瘤</a>
@@ -88,7 +98,7 @@
 						<ul class="dropdown-menu" aria-labelledby="dropdown01">
 							<li><a class="dropdown-item" href="privacy.jsp">俺牢沥焊</a></li>
 							<li><div class="dropdown-divider"></div></li>
-							<li><a class="dropdown-item" href="terms.jsp">力前包府</a></li>
+							<li><a class="dropdown-item" href="privacyproduct.jsp">力前包府</a></li>
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="particle.jsp">堡绊包府</a></li>
 						</ul></li>

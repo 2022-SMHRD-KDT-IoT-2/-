@@ -62,7 +62,7 @@
 		<div class="container">
 
 			<!-- Image Logo -->
-			<!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
+			<!-- <a class="navbar-brand logo-image" href="index.jsp"><img src="images/logo.svg" alt="alternative"></a> -->
 
 			<!-- Text Logo - Use this if you don't have a graphic logo -->
 			<a class="navbar-brand logo-text" href="index.jsp"><img src="assets/images/bluelogo.svg" width="200" height="200"></a>
@@ -71,30 +71,40 @@
 				id="navbarSideCollapse" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-
-			<!-- 상단 메뉴 부분 -->
 			<div class="navbar-collapse offcanvas-collapse"
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
-					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">로그인</a></li>
-					<li class="nav-item"><a class="nav-link" href="index.jsp">제품소개</a>
+				<%
+		if (vo == null) {
+			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"login.jsp\">로그인</a></li>");
+		} else {
+			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
+		}
+		%> 
+					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="productlist.jsp">제품리스트</a></li>
+					<%
+					if(vo!=null){
+						System.out.print(vo.getYn());
+						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){
+						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
+						}
+					}
+					%>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
 
 						<ul class="dropdown-menu" aria-labelledby="dropdown01">
-							<li><a class="dropdown-item" href="privacy.html">개인정보</a></li>
+							<li><a class="dropdown-item" href="privacy.jsp">개인정보</a></li>
 							<li><div class="dropdown-divider"></div></li>
-							<li><a class="dropdown-item" href="terms.html">제품관리</a></li>
+							<li><a class="dropdown-item" href="privacyproduct.jsp">제품관리</a></li>
 							<li><div class="dropdown-divider"></div></li>
-							<li><a class="dropdown-item" href="particle.html">광고관리</a></li>
+							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
 					<!-- 
                     <li class="nav-item">
