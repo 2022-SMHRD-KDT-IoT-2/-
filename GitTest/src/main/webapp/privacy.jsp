@@ -147,7 +147,7 @@
 					<td>주소 출력</td>
 				</tr>
 				</table>
-				<br><a href="privacyupdate.jsp"><input type="submit" class="mypage-button" value="정보 수정" class="button fit"></a>
+				<br><input type="submit" class="mypage-button" value="정보 수정" onclick="location.href='privacyupdate.jsp'">
 			</form>
     </div>
     <!-- end of basic -->
