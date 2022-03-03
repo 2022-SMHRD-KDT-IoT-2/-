@@ -157,7 +157,8 @@
 			<div class="row">
 				<div class="intallrequestForm">
 					<form  action="InstallService" method="post">
-					<h5 class="request-h5">글쓰기</h5>
+					<h5 class="request-h5">설치문의 글쓰기</h5>
+						<div class="table2-div">
 						<table class="board_table2">
 							<tr>
 								<th>설치지역</th>
@@ -177,10 +178,9 @@
 							<tr>
 								<td><input class="text-box" type="text" name="phone"></td>
 							</tr>
-							<tr>
-								<td><input type="submit" class="list-button" value="글쓰기"></td>
-							</tr>
 						</table>
+						</div>
+							<br><input type="submit" class="list-button" value="글쓰기">
 						
 					</form>
 				</div>
