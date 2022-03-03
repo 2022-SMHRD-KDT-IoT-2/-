@@ -189,9 +189,10 @@
                         <div class="text-center text-lg-start py-4 pt-lg-0">
                             -->
 <body>
-	<center>
+
 		<div class="board">
 			<h3>고장신고 목록</h3>
+			<div class="table-div">
 			<table class="board_table">
 				<tr>
 					<th width="20%">No.</th>
@@ -219,7 +220,7 @@
 				} else if (count == 0) { // 데이터가 없으면
 				%>
 				<tr>
-					<td colspan="6" align="center">게시글이 없습니다.</td>
+					<td colspan="6">작성된 게시글이 없습니다.</td>
 				</tr>
 				<%
 				} else if (count > 0 && fcount != 0) {
@@ -242,7 +243,7 @@
 				} else { // 검색된 데이터가 없으면
 				%>
 				<tr>
-					<td colspan="6" align="right"></td>
+					<td colspan="6">해당되는 게시글이 없습니다.</td>
 				</tr>
 				<%
 				}
@@ -322,17 +323,20 @@
 					</td>
 				</tr>
 			</table>
+			</div>
 			<%-- 검색어 입력 form / get방식 / option value는 데이터베이스 칼럼과 동일하게 설정 --%>
+			<div class="search">
 			<form method="get" action="breaklist.jsp">
-				<select name="sel">
+				<select name="sel" class="sel">
 					<option value="product_seq">제품순번</option>
 					<option value="reporter_name">이름</option>
-				</select> <input type="text" name="find" id="find"> <input
-					type="submit" value="검색">
+				</select> <input type="text" class="search-text" name="find" id="find"> 
+				<input type="submit" class="search-button" value="검색">
 			</form>
+			</div>
 
 		</div>
-	</center>
+
 </body>
 <!-- 
 		</div>
