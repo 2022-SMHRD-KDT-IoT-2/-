@@ -152,30 +152,36 @@
 
 	<!-- 설치 테이블 -->
 	<!-- Header -->
-	<div class="ex-basic-1 pt-5 pb-5">
+	<div class="board">
 		<div class="container">
 			<div class="row">
-				<div class="col-xl-10 offset-xl-1">
-					<form action="InstallService" method="post">
-						<table border="1">
+				<div class="intallrequestForm">
+					<form  action="InstallService" method="post">
+					<h5>글쓰기</h5>
+						<table class="board_table2">
 							<tr>
-								<td><h2 class="mb-3">설치지역</h2></td>
+								<th>설치지역</th>
+							</tr>
+							<tr>
 								<td><input type="text" name="loc"></td>
 							</tr>
 							<tr>
-								<td><h2 class="mb-3">이름</h2></td>
+								<th>이름</th>
+							</tr>
+							<tr>
 								<td><input type="text" name="name"></td>
 							</tr>
 							<tr>
-								<td><h2 class="mb-3">전화번호</h2></td>
+								<th>전화번호</th>
+							</tr>
+							<tr>
 								<td><input type="text" name="phone"></td>
 							</tr>
 							<tr>
-								<td><h2 class="mb-3">아이디</h2></td>
-								<td><input type="text" name="id"></td>
+								<td><input type="submit" class="list-button" value="글작성"></td>
 							</tr>
 						</table>
-						<input type="submit">
+						
 					</form>
 				</div>
 				<!-- end of col -->
@@ -185,5 +191,17 @@
 		<!-- end of container -->
 	</div>
 	<!-- end of ex-basic-1 -->
+	
+		<!-- Bottom -->
+    <div class="bottom py-2 text-light" >
+        <div class="container d-flex justify-content-between">
+            <div>
+            </div>
+            <div class="bottom-box">
+                
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of bottom -->
+	
 </body>
 </html>
