@@ -228,7 +228,7 @@ public class ProductDAO {
 	}
 	
 
-		public int getprivacyfCount(String sel, String find,String id){
+		public int getprivacyfCount(String sel, String find, String id){
 			int fCount = 0;
 			String sql = "select count(*) from t_iot where (" + sel + " like '%" + find + "%') and where user_id=?";
 			try {
