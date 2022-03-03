@@ -1,3 +1,4 @@
+
 <%@page import="com.VO.memberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
@@ -47,6 +48,8 @@
 <body>
 	<%
 	memberVO vo = (memberVO) session.getAttribute("loginvo");
+
+	
 	%>
 
 	<!-- Navigation -->
@@ -80,7 +83,14 @@
 					</li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="productlist.jsp">제품리스트</a></li>
+					<%
+					if(vo!=null){
+						System.out.print(vo.getYn());
+						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){
+						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
+						}
+					}
+					%>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>

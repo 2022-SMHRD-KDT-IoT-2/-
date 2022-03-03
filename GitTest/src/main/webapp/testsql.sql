@@ -46,3 +46,7 @@ INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude
 INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 18', 'product_loc 18', 18, 18, sysdate, 'user_id 18');
 INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 19', 'product_loc 19', 19, 19, sysdate, 'user_id 19');
 INSERT INTO t_iot (product_uid, product_loc, product_latitude, product_longitude, product_date, user_id) VALUES ('product_uid 20', 'product_loc 20', 20, 20, sysdate, 'user_id 20');
+select * from T_USER;
+
+INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_addr, admin_yn, user_joindate) VALUES ('admin', '1', 'user_name 1', 'user_phone 1', 'user_email 1', 'user_addr 1', 'Y', sysdate);
+INSERT INTO t_user (user_id, user_pw, user_name, user_phone, user_email, user_addr, admin_yn, user_joindate) VALUES ('admin1', '1', 'user_name 2', 'user_phone 2', 'user_email 2', 'user_addr 2', 'Y', sysdate);
