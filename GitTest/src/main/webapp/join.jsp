@@ -164,7 +164,7 @@
 					<td><p id="checkId" class="text-field"></p></td>
 				</tr>
 				<tr>
-				<td>비밀번호</td>
+				<td style="text-align:left"><b>비밀번호</b></td>
 				</tr>
 				<tr>
 					<td>
@@ -172,7 +172,7 @@
 					</td>
 				</tr>
 				<tr>
-				<td>이름</td>
+				<td style="text-align:left"><b>이름</b></td>
 				</tr>
 				<tr>
 					<td>
@@ -180,14 +180,23 @@
 					</td>
 				</tr>
 				<tr>
+				<td style="text-align:left"><b>전화번호</b></td>
+				</tr>
+				<tr>
 					<td>
 					<input type="text" name="phone" class="text-field" placeholder="전화번호를 입력하세요">
 					</td>
 				</tr>
 				<tr>
+				<td style="text-align:left"><b>이메일</b></td>
+				</tr>
+				<tr>
 					<td>
 					<input type="text" name="email" class="text-field" placeholder="이메일을 입력하세요">
 					</td>
+				</tr>
+				<tr>
+				<td style="text-align:left"><b>주소</b></td>
 				</tr>
 				<tr>
 					<td>
