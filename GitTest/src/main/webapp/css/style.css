@@ -20,11 +20,11 @@ Table Of Contents:
 /*     General Styles     */
 /**************************/
 :root { 
-	--primary: #1c262f; 
-	--primary-light: #212d37; 
-	--secondary: #0ee951; 
-	--tertiary: #00dabf; 
-	--gradient: linear-gradient(to right, #0ee951, #00dabf);
+	--primary: #151F30; 
+	--primary-light: #283040; 
+	--secondary: #7EFFFF; 
+	--tertiary: #38B6FF; 
+	--gradient: linear-gradient(to right, #7EFFFF, #38B6FF);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -76,8 +76,8 @@ li {
 .home_text, .home .fas, .plans .far, .information .fas, .work .fas,
 	.services .fas, .location .far, .location .fas {
 	padding: 15px 0;
-	background: -webkit-gradient(linear, left top, left bottom, from(#0ee951),
-		to(#00dabf));
+	background: -webkit-gradient(linear, left top, left bottom, from(#7EFFFF),
+		to(#38B6FF));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -189,8 +189,8 @@ li {
 }
 
 .navbar .fa-stack-2x {
-	background: -webkit-gradient(linear, left top, left bottom, from(#0ee951),
-		to(#00dabf));
+	background: -webkit-gradient(linear, left top, left bottom, from(#7EFFFF),
+		to(#38B6FF));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -268,7 +268,7 @@ li {
 	width: 50%;
 	height: 450px;
 	float: left;
-	background-color: #4D6780;
+	background-color: #4D6180;
 	color: white;
 	margin: 0;
 	text-align: center;
@@ -376,7 +376,7 @@ li {
 .search .search-button{
 	width: 80px;
 	height: 30px;
-	background-color: #009987;
+	background-color: #004599;
 	color: white;
 	border: 1px solid var(--primary);
 }
@@ -463,7 +463,7 @@ li {
 	vertical-align: top;
 }
 .board .board_table .list-a {
-	color: #009987;
+	color: #0091FF;
 }
 .bottom-box{
 	height: 20px;
@@ -526,7 +526,7 @@ h5{
 	font-size: 15px;
 }
 .loginjoinTable #checkId{
-	color: #009987;
+	color: #004599;
 	font-style: italic;
 }
 .loginjoinform{
@@ -658,7 +658,7 @@ h5{
 	border-image-slice: 1;
 	border-width: 2px;
 	border-image-source: var(--gradient);
-	box-shadow: 5px 5px 0px 0px #0ee951;
+	box-shadow: 5px 5px 0px 0px #7EFFFF;
 }
 
 /*****************/
@@ -822,7 +822,7 @@ h5{
 /*     Extra Pages     */
 /***********************/
 .ex-header {
-	padding-top: 8.5rem;
+	padding-top: 10.5rem;
 	padding-bottom: 4rem;
 	background-color: var(--primary);
 }
