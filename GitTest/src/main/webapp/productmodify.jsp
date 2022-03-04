@@ -145,18 +145,19 @@
 		<h5 class="content"><%=vo.getProduct_uid() %></h5>
 	<div class="contentdiv-div">
     <div class="content-div">
+    <form action="ProductModify?no=<%=vo.getProduct_seq()%>" method="post">
 		<table class="content-table">
 			<tr>
 				<td class="td-title">제품<br>번호</td>
-				<td class= "td-text"><%=vo.getProduct_uid() %></td>
+				<td class= "td-text"><input type="text" name="product_id" value="<%=vo.getProduct_uid() %>"></td>
 				<td class="td-title">설치<br>위치</td>
-				<td class= "td-text"><%=vo.getProduct_loc() %></td>
+				<td class= "td-text"><input type="text" name="loc" value="<%=vo.getProduct_loc() %>"></td>
 			</tr>
 			<tr>
 				<td class="td-title">위도</td>
-				<td class= "td-text"><%=vo.getProduct_latitude() %></td>
+				<td class= "td-text"><input type="text" name="latitude" value="<%=vo.getProduct_latitude() %>"></td>
 				<td class="td-title">경도</td>
-				<td class= "td-text"><%=vo.getProduct_longitude() %></td>
+				<td class= "td-text"><input type="text" name="longitude" value="<%=vo.getProduct_longitude() %>"></td>
 			</tr>
 			<tr>
 				<td class="td-title">설치<br>일자</td>
@@ -168,9 +169,10 @@
 			<tr>
 				<td class="td-button" colspan="4">
 					<%-- 버튼을 클릭하면 해당 페이지로 이동 / 수정과 삭제는 get방식으로 no값을 전달 --%>
-					<input type="button" class="button-content" value="수정" onclick="location.href='productmodify.jsp?no=<%=vo.getProduct_seq()%>'"> 
-					<input type="button" class="button-content" value="삭제" onclick="location.href='ProductDelete?no=<%=vo.getProduct_seq()%>'">
+					<input type="submit" class="button-content" value="완료" > 
+					<input type="button" class="button-content" value="취소" onclick="location.href='pirvacyproduct.jsp'">
 				</td>
+				</form>
 			</tr>
 		</table>
 	</div>
