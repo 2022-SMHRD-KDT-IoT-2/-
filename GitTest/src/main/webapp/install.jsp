@@ -123,6 +123,7 @@
 						}
 					}
 					%>
+					<%if(vo!=null){ %>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
@@ -134,6 +135,7 @@
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
+						<%} %>
 					<!-- 
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -335,7 +337,17 @@
 				</div>
 		</div>
 
-
+	<!-- Scripts -->
+	<script src="./js/bootstrap.min.js"></script>
+	<!-- Bootstrap framework -->
+	<script src="./js/purecounter.min.js"></script>
+	<!-- Purecounter counter for statistics numbers -->
+	<script src="./js/swiper.min.js"></script>
+	<!-- Swiper for image and text sliders -->
+	<script src="./js/aos.js"></script>
+	<!-- AOS on Animation Scroll -->
+	<script src="./js/script.js"></script>
+	<!-- Custom scripts -->
 	<!-- Bottom -->
 	<div class="bottom-fixed">
 	<div class="bottom py-2 text-light">
