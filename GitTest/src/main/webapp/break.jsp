@@ -454,12 +454,6 @@ function adressSearch() {
 	    } 
 	});    
 }
-
-<<<<<<< HEAD
-=======
-
-	//Çª½¬Áß..
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-IoT-2/-.git
 	</script>
 	
 	<div class="bottom py-2 text-light" >
