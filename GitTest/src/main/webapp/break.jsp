@@ -216,11 +216,6 @@
 								<td><input type="text" name="detailAddress" id="address"></td>
 								<td><button type="button" id="searchBtn" onclick="adressSearch()">검색</button></td>
 							</tr>
-							<tr>
-								<td>상세 주소</td>
-								<td><input type="text" name="detailAddress2"></td>
-								<td></td>
-							</tr>
 						</table>
 					</div>
 				</div>
@@ -386,8 +381,8 @@
 	<script>
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
+        center: new kakao.maps.LatLng(35.150078125347754, 126.91980634412012), // 지도의 중심좌표
+        level: 9 // 지도의 확대 레벨
     };  
 
 // 지도를 생성합니다    
@@ -399,33 +394,67 @@ var geocoder = new kakao.maps.services.Geocoder();
 
 let address = document.querySelector('#address')
 
-// 주소로 좌표를 검색합니다
+var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+
+var positions = [
+    {
+        content : '<div style="padding:5px;color:black;">스마트인재개발원 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.150078125347754, 126.91980634412012" style="color:blue" target="_blank">로드뷰</a></div>', 
+        latlng: new kakao.maps.LatLng(35.150078125347754, 126.91980634412012)
+    },
+    {
+    	content : '<div style="color:black;">스마트인재개발원<br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.11069654335439, 126.877761898053" style="color:blue" target="_blank">로드뷰</a></div>', 
+        latlng: new kakao.maps.LatLng(35.11069654335439, 126.877761898053)
+    },
+    {
+    	content : '<div style="color:black;">제품번호 : 1 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.1935083414652, 126.71279814289726" style="color:blue" target="_blank">로드뷰</a></div>', 
+        latlng: new kakao.maps.LatLng(35.1935083414652, 126.71279814289726)
+    },
+    {
+    	content : '<div style="color:black;">제품번호 : 2 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.15575843433718, 126.971938982733" style="color:blue" target="_blank">로드뷰</a></div>',	// 광주 북구 화암동 산 171-2
+        latlng: new kakao.maps.LatLng(35.15575843433718, 126.971938982733)
+    }
+]
+
+for (var i = 0; i < positions.length; i ++) {
+	var imageSize = new kakao.maps.Size(24, 35);
+	var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+	
+	var marker = new kakao.maps.Marker({
+        map: map, 
+        position: positions[i].latlng,
+        image : markerImage,
+        clickable: true
+    });
+	
+	marker.setMap(map);
+	
+	var iwRemoveable = true;
+	
+    var infowindow = new kakao.maps.InfoWindow({
+        content: positions[i].content,
+        removable : iwRemoveable
+    });
+    kakao.maps.event.addListener(marker, 'click', mouseClick(map, marker, infowindow));
+}
+
+function mouseClick(map, marker, infowindow) {
+    return function() {
+        infowindow.open(map, marker);
+    };
+}
+
 function adressSearch() {
 	geocoder.addressSearch(address.value, function(result, status) {
 
-	    // 정상적으로 검색이 완료됐으면 
 	     if (status === kakao.maps.services.Status.OK) {
 
 	        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
 
-	        // 결과값으로 받은 위치를 마커로 표시합니다
-	        var marker = new kakao.maps.Marker({
-	            map: map,
-	            position: coords
-	        });
-
-	        // 인포윈도우로 장소에 대한 설명을 표시합니다
-	        var infowindow = new kakao.maps.InfoWindow({
-	            content: '<div style="width:150px;text-align:center;padding:6px 0;">우리</div>'
-	        });
-	        infowindow.open(map, marker);
-
-	        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
 	        map.setCenter(coords);
 	    } 
 	});    
 }
-	//푸쉬중..
+
 	</script>
 
 	<!-- Scripts -->
