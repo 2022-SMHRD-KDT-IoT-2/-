@@ -84,7 +84,7 @@
 	memberVO vo1 = (memberVO) session.getAttribute("loginvo");
 	%>
 
-	<<!-- Navigation -->
+	<!-- Navigation -->
 	<nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark"
 		aria-label="Main navigation">
 		<div class="container">
