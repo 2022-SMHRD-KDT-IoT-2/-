@@ -74,7 +74,7 @@
 	if (count > 0) {
 		al = dao.getList(startRow, endRow);
 	}
-	memberVO vo1 = (memberVO) session.getAttribute("loginvo");
+	memberVO vo = (memberVO) session.getAttribute("loginvo");
 	%>
 
 	<!-- Navigation -->
@@ -97,7 +97,7 @@
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
 				<%
-		if (vo1 == null) {
+		if (vo == null) {
 			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"login.jsp\">로그인</a></li>");
 		} else {
 			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
@@ -110,15 +110,16 @@
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%
-					if(vo1!=null){
-						System.out.print(vo1.getYn());
-						if(vo1.getYn().equals("Y")||vo1.getYn().equals("y")){
+					if(vo!=null){
+						System.out.print(vo.getYn());
+						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){
 						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
 						}
 					}
 					%>
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" id="dropdown01"
+					<% if(vo!=null){%>
+						<li class="nav-item dropdown">
+						<a	class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
 
 						<ul class="dropdown-menu" aria-labelledby="dropdown01">
@@ -128,6 +129,8 @@
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
+						<%}
+						%>
 					<!-- 
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
