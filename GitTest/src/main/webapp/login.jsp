@@ -164,20 +164,39 @@
 	<div class="loginjoindiv">
 		<nav id="menu">
 
-			<h5>로그인</h5>
 			<form action="Login" method="post" class="loginjoinform">
 				<table class="loginjoinTable">
 					<tr>
-						<td><input type="text" name="id" class="text-field"
-							placeholder="아이디/이메일을 입력하세요"></td>
+						<td>
+							<h5>로그인</h5>
+						</td>
 					</tr>
 					<tr>
-						<td><input type="password" name="pw" class="text-field"
-							placeholder="비밀번호를 입력하세요"></td>
+						<td>
+							<input type="text" id="id" name="id" class="text-field"
+							placeholder="아이디/이메일을 입력하세요">
+						</td>
+						<td>
+							<p id="id_check" style="color:red";></p>
+						</td>
 					</tr>
 					<tr>
-						<td><input type="submit" class="button-field" value="로그인"
-							class="button fit"></td>
+						<td>
+							<input type="password" id="pw" name="pw" class="text-field"
+							placeholder="비밀번호를 입력하세요">
+						</td>
+						<td>
+							<p id="pw_check" style="color:red";></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" id="submit" class="button-field" value="로그인"
+							class="button fit">
+						</td>
+						<td>
+							<p id="login_check" style="color:red";></p>
+						</td>
 					</tr>
 					<tr>
 						<td><a href="javascript:kakaoLogin();"><img src="assets/images/kakao_login.png"></a> 
@@ -220,8 +239,53 @@
 		</nav>
 	</div>
 
-
-	<!-- Banner -->
+<!-- Location -->
+	<section class="location text-light py-5">
+		<div class="container" data-aos="zoom-in">
+			<div class="row">
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="far fa-map fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>주소</h6>
+						<p>광주광역시 동구 예술길 31-15 스마트인재개발원</p>
+					</div>
+				</div>
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="fas fa-mobile-alt fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>연락처</h6>
+						<p>010-1234-5678</p>
+					</div>
+				</div>
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="far fa-envelope fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>이메일</h6>
+						<p>kdb7603@naver.com</p>
+					</div>
+				</div>
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="far fa-clock fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>상담문의</h6>
+						<p>09:00 AM - 18:00 PM</p>
+					</div>
+				</div>
+			</div>
+			<!-- end of row -->
+		</div>
+		<!-- end of container -->
+	</section>
+	<!-- end of location -->
+		
 
 	<!-- Bottom -->
 	<div class="bottom py-2 text-light">
@@ -233,6 +297,66 @@
 	</div>
 	<!-- end of bottom -->
 <!-- Scripts -->
+	<script>
+	let btn_submit = document.getElementById('submit')
+	let id_check = document.getElementById('id_check')
+	let pw_check = document.getElementById('pw_check')
+	let login_check = document.getElementById('login_check')
+	
+	btn_submit.addEventListener('click', function(){
+		
+		let id = document.getElementById('id').value
+		let pw = document.getElementById('pw').value
+		
+		if(!id){
+			id_check.innerText = "필수사항입니다.."
+		}
+		if(!pw){
+			pw_check.innerText = "필수사항입니다.."
+		}
+		if(!id||!pw){
+			id_check.innerText = "필수사항입니다.."
+			pw_check.innerText = "필수사항입니다.."
+		}
+		if(id&&pw){
+			login_check.innerText = ""
+				// 데이터 형식 만들기, JSON형식 {키:실제값}
+				let data = {'id':id, 'pw':pw}
+				let xhr = new XMLHttpRequest()
+				
+				// 요청방식, 요청경로
+				xhr.open('post', 'LoginService')
+				
+				// 전송데이터의 형식
+				xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+				
+				// 요청&전송할 데이터
+				xhr.send(JSON.stringify(data))
+				
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState===XMLHttpRequest.DONE){	// 요청성공
+						if(xhr.status===200){	// 응답성공
+							console.log("응답성공")
+							console.log(xhr.responseText) // 응답데이터 확인(responseXML)
+							if(xhr.responseText === "success"){
+								location.href = "index.jsp"
+							}else{
+								login_check.innerText = "아이디/비밀번호를 확인해주세요."
+							}
+						}else{	// 응답실패
+							console.log("응답실패")
+						}
+					}else{	// 요청실패
+						console.log("요청실패")
+					}
+				}
+		}
+			
+		})
+	
+	
+	</script>
+
 	<script src="./js/bootstrap.min.js"></script>
 	<!-- Bootstrap framework -->
 	<script src="./js/purecounter.min.js"></script>
