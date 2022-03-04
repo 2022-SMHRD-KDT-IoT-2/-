@@ -28,10 +28,10 @@ public class ProductWrite extends HttpServlet {
 		
 		int cnt=dao.oneProduct(pro_id, loc, latitude, longitude, id);
 		if(cnt>0) {
-			response.sendRedirect("productlist.jsp");
+			response.sendRedirect("privacyproduct.jsp");
 			System.out.println("작성성공");
 		}else {
-			response.sendRedirect("productlist.jsp");
+			response.sendRedirect("privacyproduct.jsp");
 			System.out.println("작성실패");
 		}
 	}

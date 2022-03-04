@@ -191,7 +191,7 @@ public class ProductDAO {
 			}
 			return board;
 		}
-
+//프로덕트 하나 추가하기
 	public int oneProduct(String pro_id, String loc, double latitude, double longitude,String id) {
 		int cnt = 0;
 		try {
@@ -226,11 +226,28 @@ public class ProductDAO {
 		}
 		return cnt;
 	}
-	
+	//검색한 객체 수 카운트
+	public int getfCount(String sel, String find){
+		int fCount = 0;
+		String sql = "select count(*) from t_iot where " + sel + " like '%" + find + "%'";
+		try {
+			connect();
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				fCount = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			quitDB();
+		}
+		return fCount; // 총 레코드 수 리턴
+	}
 
 		public int getprivacyfCount(String sel, String find, String id){
 			int fCount = 0;
-			String sql = "select count(*) from t_iot where (" + sel + " like '%" + find + "%') and where user_id=?";
+			String sql = "select count(*) from t_iot where user_id=? and (" + sel + " like '%" + find + "%')";
 			try {
 				connect();
 				psmt = conn.prepareStatement(sql);
@@ -258,12 +275,13 @@ public class ProductDAO {
 				String sql = "select product_seq,product_uid,product_loc,user_id from"
 						+ "(select rownum rn, product_seq,product_uid,product_loc,user_id from"
 						+ "(select product_seq,product_uid,product_loc,user_id from t_iot where "+sel+" like '%"+find+"%'"
-						+"order by product_seq desc)) where (rn between ? and ?) and user_id=?";
+						+"order by product_seq desc)) where user_id=? and (rn between ? and ?)";
 				;
 				psmt = conn.prepareStatement(sql);
-				psmt.setInt(1, startRow);
-				psmt.setInt(2, endRow);
-				psmt.setString(3, id);
+				psmt.setString(1, id);
+				psmt.setInt(2, startRow);
+				psmt.setInt(3, endRow);
+				
 				rs = psmt.executeQuery();
 				while (rs.next()) {
 					int getSeq = rs.getInt(1);
@@ -290,23 +308,7 @@ public class ProductDAO {
 			}
 			return al;
 		}
-		public int getfCount(String sel, String find){
-			int fCount = 0;
-			String sql = "select count(*) from t_iot where " + sel + " like '%" + find + "%'";
-			try {
-				connect();
-				psmt = conn.prepareStatement(sql);
-				rs = psmt.executeQuery();
-				if (rs.next()) {
-					fCount = rs.getInt(1);
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			} finally {
-				quitDB();
-			}
-			return fCount; // 총 레코드 수 리턴
-		}
+		
 		
 		//검색관련 로직(페이징처리)
 		public ArrayList<ProductVO> getfList(int startRow,int endRow, String sel, String find) {

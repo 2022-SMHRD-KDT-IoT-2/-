@@ -82,7 +82,7 @@
 		al = dao.privacyList(startRow, endRow, vo1.getId());
 	}
 	if(fcount>0){
-		fal=dao.getfList(startRow,endRow,sel,find);
+		fal=dao.privacyfList(startRow,endRow,sel,find,vo1.getId());
 	}
 	%>
 
@@ -173,7 +173,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-10 offset-xl-1">
-					<h1>제품리스트</h1>
+					<h1>제품관리</h1>
 				</div>
 				<!-- end of col -->
 			</div>
@@ -338,7 +338,6 @@
 <select name="sel" class="sel">
 <option value="product_uid">제품번호</option>
 <option value="product_loc">위치</option>
-<option value="user_id">아이디</option>
 </select>
 <input type="text" class="search-text" name="find" id="find">
 <input type="submit" class="search-button" value="검색">
@@ -360,4 +359,15 @@
 
 
 </body>
+<!-- Scripts -->
+	<script src="./js/bootstrap.min.js"></script>
+	<!-- Bootstrap framework -->
+	<script src="./js/purecounter.min.js"></script>
+	<!-- Purecounter counter for statistics numbers -->
+	<script src="./js/swiper.min.js"></script>
+	<!-- Swiper for image and text sliders -->
+	<script src="./js/aos.js"></script>
+	<!-- AOS on Animation Scroll -->
+	<script src="./js/script.js"></script>
+	<!-- Custom scripts -->
 </html>
