@@ -171,12 +171,12 @@
                     <p class="para-light">You can check the location of the products you manage!</p>
 				</div>
 				<div class="col-lg-4 text-center p-5" data-aos="zoom-in">
-					<i class="fas fa-money-check-alt fa-3x p-2"></i>
-					<h4 class="py-3">Economic Benefit</h4>
-                    <p class="para-light">Anyone can easily request an advertisement!</p>
+					<i class="fas fa-tools fa-3x p-2"></i>
+					<h4 class="py-3">Easy Installation</h4>
+                    <p class="para-light">This product is easy to install at an affordable price!</p>
 				</div>
 				<div class="col-lg-4 text-center p-5 text-dark" data-aos="zoom-in">
-					<i class="fas fa-shield-alt fa-3x p-2"></i>
+					<i class="fas fa-satellite-dish fa-3x p-2"></i>
 					<h4 class="py-3">24/7 Management</h4>
                     <p class="para-light">Manage product status in real time through product information!</p>
 				</div>
