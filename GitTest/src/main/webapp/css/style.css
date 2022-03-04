@@ -465,8 +465,13 @@ li {
 .board .board_table .list-a {
 	color: #0091FF;
 }
-.bottom-box{
+.bottom-box{	
 	height: 20px;
+}
+.bottom-fixed{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 .list-button{
 	background-color: white;

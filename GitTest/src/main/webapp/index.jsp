@@ -220,5 +220,15 @@
 	<!-- AOS on Animation Scroll -->
 	<script src="./js/script.js"></script>
 	<!-- Custom scripts -->
+<!-- Bottom -->
+    <div class="bottom py-2 text-light" >
+        <div class="container d-flex justify-content-between">
+            <div>
+            </div>
+            <div class="bottom-box">
+                
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of bottom -->
 </body>
 </html>

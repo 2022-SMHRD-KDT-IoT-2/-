@@ -203,6 +203,7 @@
 
     
     <!-- Bottom -->
+    <div class="bottom-fixed">
     <div class="bottom py-2 text-light" >
         <div class="container d-flex justify-content-between">
             <div>
@@ -212,7 +213,7 @@
             </div>
         </div> <!-- end of container -->
     </div> <!-- end of bottom -->
-
+	</div>
 
     <!-- Scripts -->
     <script src="./js/bootstrap.min.js"></script><!-- Bootstrap framework -->

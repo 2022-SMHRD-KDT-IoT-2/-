@@ -197,6 +197,7 @@
 	<!-- end of ex-basic-1 -->
 	
 		<!-- Bottom -->
+		<div class="bottom-fixed">
     <div class="bottom py-2 text-light" >
         <div class="container d-flex justify-content-between">
             <div>
@@ -206,6 +207,7 @@
             </div>
         </div> <!-- end of container -->
     </div> <!-- end of bottom -->
+    </div>
 	
 </body>
 </html>

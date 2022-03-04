@@ -240,10 +240,11 @@
         </div> <!-- end of container -->
     </div> <!-- end of bottom -->
 
-	<!-- Banner -->
-
 
 </body>
+
+
+	<!-- Banner -->
 <script>
 		function idCheck() {
 			let id = document.querySelector('#id') //이메일 작성창
