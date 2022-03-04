@@ -142,7 +142,7 @@
 	<!-- 메인페이지 -->
 	<section class="home py-5 d-flex align-items-center" id="header">
 		<div class="container text-light py-5" data-aos="fade-right">
-			<h1 class="headline" style="font-size:100px;">For Your <br><span class="home_text">Safety</span> Drive</h1>
+			<h1 class="headline" style="font-size:80px;">For Your <br><span class="home_text">Safety</span> Drive</h1>
 			<p class="para para-light py-3">스마트 델리네이터는 야간 급커브도로 안전운행을 지원합니다</p>
 			<div class="d-flex align-items-center">
 				<!-- 
