@@ -13,6 +13,9 @@ public class InstallDAO {
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
+	int cnt=0;
+	int count=0;
+	int fCount=0;
 	public void connect() {
 
 		try {
@@ -82,7 +85,6 @@ public class InstallDAO {
 	}
 	// 총 레코드 수 구하는 로직
 		public int getCount(){
-			int count = 0;
 			
 			try {
 				connect();
@@ -137,7 +139,6 @@ public class InstallDAO {
 
 	//설치게시판에 글 등록하기
 	public int requestInstall(String loc, String name, String phone, String id) {
-		int cnt = 0;
 		try {
 
 			connect();
@@ -171,7 +172,7 @@ public class InstallDAO {
 	}
 	// 검색어와 일치하는 레코드 수를 구하는 로직
 		public int getfCount(String sel, String find) {
-			int fCount = 0;
+
 			String sql = "select count(*) from t_request where " + sel + " like '%" + find + "%'";
 			try {
 				connect();
@@ -227,5 +228,47 @@ public class InstallDAO {
 
 			}
 			return al;
+		}
+		public int deleteInstall(String no) {
+			try {
+
+				connect();
+
+				String sql = "delete from t_request where request_seq=?";
+				psmt = conn.prepareStatement(sql);
+				psmt.setString(1, no);
+				cnt = psmt.executeUpdate();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+
+			} finally {
+				quitDB();
+
+			}
+			return cnt;
+		}
+		public int modifyInstall(String name,String status ,String loc,String phone,int no) {
+			try {
+
+				connect();
+
+				String sql = "update t_request set request_name=?, request_status=?, request_loc=?, request_phone=? where request_seq=?";
+				psmt = conn.prepareStatement(sql);
+				psmt.setString(1, name);
+				psmt.setString(2, status);
+				psmt.setString(3, loc);
+				psmt.setString(4, phone);
+				psmt.setInt(5, no);
+				cnt = psmt.executeUpdate();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+
+			} finally {
+				quitDB();
+
+			}
+			return cnt;
 		}
 }
