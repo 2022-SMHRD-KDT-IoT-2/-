@@ -384,6 +384,37 @@ li {
 	transform: translate(5px, 5px);
 }
 
+/*****************/
+/*     break     */
+/****************/
+.break-div{
+	width: 100%;
+	padding-top: 200px;
+	background-color: var(--primary);
+}
+.search-button .search-button{
+	width: 80px;
+	height: 30px;
+	background-color: #004599;
+	color: white;
+	border: 0;
+}
+.break-left div{
+	display: inline-block;
+	width: 50%;
+	text-align: left;
+}
+.br-left{
+	display: inline-block;
+}
+.br-right{
+	display: inline-block;
+}
+.break-right div{
+	width: 50%;
+	text-align: right;
+}
+
 /*****************************/
 /*     install/breaklist     */
 /*****************************/

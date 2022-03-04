@@ -254,7 +254,7 @@
 				<tr>
 					<td colspan="6" align="right">
 						<%-- 버튼을 클릭하면 proudctwrite.jsp로 이동 --%> <input type="button"
-						class="list-button" value="글쓰기" onclick="location.href='productrequest.jsp'">
+						class="list-button" value="제품 추가" onclick="location.href='productrequest.jsp'">
 					</td>
 				</tr>
 				<tr>

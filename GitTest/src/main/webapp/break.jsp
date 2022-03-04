@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>break</title>
+<title>고장신고</title>
 </head>
 <body>
 
@@ -40,7 +40,7 @@
 <!-- to have large image post format in Twitter -->
 
 <!-- Webpage Title -->
-<title>Privacy</title>
+<title>고장신고</title>
 
 <!-- Styles -->
 <link
@@ -175,14 +175,19 @@
 
 
 	<!-- Contact -->
+	<!-- 본문 -->
+	<div class="break-div">
 	<section class="contact d-flex align-items-center py-5" id="contact"
 		style="height: 800px">
 		<div class="container-fluid text-light">
+			
 			<div class="row">
+			<!-- 좌측 폼 -->
+			<div class="break-left">
 				<div
 					class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5"
 					data-aos="fade-right">
-					<div style="width: 90%">
+					<div>
 						<div class="text-center text-lg-start py-4 pt-lg-0">
 							<p>제품고장</p>
 							<h2 class="py-2">아래의 본문을 따라 고장신고글을 작성해주시기 바랍니다.</h2>
@@ -226,7 +231,11 @@
 					</div>
 					<!-- end of div -->
 				</div>
+				</div>
+				<!-- 좌측 폼 div종료 -->
 				<!-- end of col -->
+				<!-- 우측 지도 -->
+				<div class="break-right">
 				<div class="col-lg-6 d-flex align-items-center">
 					<table>
 						<tr>
@@ -234,24 +243,26 @@
 						</tr>
 						<tr>
 							<td><input type="text" name="detailAddress" id="address"></td>
-							<td><button type="button" id="searchBtn"
-									onclick="adressSearch()"> 검색 </button></td>
+							<td class="search-button"><button type="button" id="searchBtn"
+									onclick="adressSearch()" class="search-button"> 검색 </button></td>
 						</tr>
 					</table>
 					
 		<div id="map" style="width: 650px; height: 65%; vertical-align: bottom; float:right;"></div>
 	
+				</div>	
 				</div>
-				
+				<!-- 우측 지도 div 종료 -->		
 			</div>
-			<!-- end of col -->
+			
 		</div>
 		<!-- end of row -->
 		</div>
 		<!-- end of container -->
 	</section>
+	</div>
 	<!-- end of contact -->
-
+	
 	<!-- Location -->
 	<section class="location text-light py-5">
 		<div class="container" data-aos="zoom-in">
