@@ -155,20 +155,24 @@
 		<h5 class="content">상세내용</h5>
     	<div class="contentdiv-div">
     	<div class=content-div>
+    	<form action="InstallModify?no=<%=vo.getRequest_req()%>" method="post">
 		<table class="content-table">
 			<tr>
 				<td class="td-title">이름</td>
-				<td class= "td-text"><%=vo.getRequest_name() %></td>
+				<td class= "td-text"><input type="text" name="name" value="<%=vo.getRequest_name() %>"></td>
 				<td class="td-title">처리상태</td>
-				<td class= "td-text"><%=vo.getRequest_status() %></td>
+				<td class= "td-text"><select name="status">
+						<option value="Y">Y</option>
+						<option value="N">N</option>
+					</select></td>
 			</tr>
 			<tr>
 				<td class="td-title">지역</td>
-				<td class= "td-text" colspan="3"><%=vo.getRequest_loc() %></td>
+				<td class= "td-text" colspan="3"><input type="text" name="loc" value="<%=vo.getRequest_loc() %>"></td>
 			</tr>
 			<tr>
 				<td class="td-title">핸드폰</td>
-				<td class= "td-text" colspan="3"><pre><%=vo.getRequest_Phone() %></pre></td>
+				<td class= "td-text" colspan="3"><pre><input type="text" name="phone" value="<%=vo.getRequest_Phone() %>"></pre></td>
 			</tr>
 			<tr>
 				<td class="td-title">날짜</td>
@@ -181,13 +185,9 @@
 			
 			<tr>
 				<td class="td-button" colspan="4">
-					<input type="button" class="button-content" value="목록" onclick="location.href='install.jsp'">
-					<%if(vo1!=null){
-					if(vo.getUser_id().equals(vo1.getId())||vo1.getYn().equals("Y")||vo1.getYn().equals("y")) {%>
-					<input type="button" class="button-content" value="수정" onclick="location.href='installmodify.jsp?no=<%=vo.getRequest_req()%>'"> 
-					<input type="button" class="button-content" value="삭제" onclick="location.href='InstallDelete?no=<%=vo.getRequest_req()%>'">
-					<% }
-					}%>
+					<input type="submit" class="button-content" value="수정" > 
+					<input type="button" class="button-content" value="취소" onclick="location.href='InstallDelete?no=<%=vo.getRequest_req()%>'">
+					</form>
 				</td>
 			</tr>
 		</table>
