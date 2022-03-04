@@ -93,7 +93,7 @@ public class memberDAO {
 
 			conn();
 
-			String sql = "insert into t_user values(?,?,?,?,?,?,'y',sysdate)";
+			String sql = "insert into t_user values(?,?,?,?,?,?,'N',sysdate)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			psmt.setString(2, pw);

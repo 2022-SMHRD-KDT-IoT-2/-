@@ -465,8 +465,13 @@ li {
 .board .board_table .list-a {
 	color: #0091FF;
 }
-.bottom-box{
+.bottom-box{	
 	height: 20px;
+}
+.bottom-fixed{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 .list-button{
 	background-color: white;
@@ -502,8 +507,14 @@ h5{
 .loginjoinTable .text-field{
 	width: 300px;
 	height: 42px;
-	margin: 5px;
+	margin-bottom: 5px;
 	padding: 5px;
+}
+.loginjoinTable .text-text{
+	width: 300px;
+	height: 42px;
+	text-align: left;
+	font-weight: bold;
 }
 .loginjoinTable .button-field{
 	width: 300px;
@@ -910,6 +921,7 @@ h5{
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 		background-color: var(--primary);
+		background-color: rgba(1, 1, 25, 0.8);
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
 	}
 	.offcanvas-collapse {

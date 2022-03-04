@@ -455,8 +455,23 @@ function adressSearch() {
 	});    
 }
 
-	</script>
+<<<<<<< HEAD
+=======
 
+	//Çª½¬Áß..
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-IoT-2/-.git
+	</script>
+	
+	<div class="bottom py-2 text-light" >
+	<div class="container d-flex justify-content-between">
+    <div>
+    </div>
+    <div class="bottom-box">
+        
+    </div>
+	</div> <!-- end of container -->
+	</div> <!-- end of bottom -->
+	
 	<!-- Scripts -->
 	<script src="./js/bootstrap.min.js"></script>
 	<!-- Bootstrap framework -->

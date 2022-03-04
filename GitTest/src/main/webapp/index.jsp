@@ -91,8 +91,9 @@
 						}
 					}
 					%>
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" id="dropdown01"
+					<% if(vo!=null){%>
+						<li class="nav-item dropdown">
+						<a	class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
 
 						<ul class="dropdown-menu" aria-labelledby="dropdown01">
@@ -102,6 +103,8 @@
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
+						<%}
+						%>
 					<!-- 
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -168,12 +171,12 @@
                     <p class="para-light">You can check the location of the products you manage!</p>
 				</div>
 				<div class="col-lg-4 text-center p-5" data-aos="zoom-in">
-					<i class="fas fa-money-check-alt fa-3x p-2"></i>
-					<h4 class="py-3">Economic Benefit</h4>
-                    <p class="para-light">Anyone can easily request an advertisement!</p>
+					<i class="fas fa-tools fa-3x p-2"></i>
+					<h4 class="py-3">Easy Installation</h4>
+                    <p class="para-light">This product is easy to install at an affordable price!</p>
 				</div>
 				<div class="col-lg-4 text-center p-5 text-dark" data-aos="zoom-in">
-					<i class="fas fa-shield-alt fa-3x p-2"></i>
+					<i class="fas fa-satellite-dish fa-3x p-2"></i>
 					<h4 class="py-3">24/7 Management</h4>
                     <p class="para-light">Manage product status in real time through product information!</p>
 				</div>
@@ -220,5 +223,15 @@
 	<!-- AOS on Animation Scroll -->
 	<script src="./js/script.js"></script>
 	<!-- Custom scripts -->
+<!-- Bottom -->
+    <div class="bottom py-2 text-light" >
+        <div class="container d-flex justify-content-between">
+            <div>
+            </div>
+            <div class="bottom-box">
+                
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of bottom -->
 </body>
 </html>
