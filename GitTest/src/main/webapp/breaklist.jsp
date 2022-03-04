@@ -82,7 +82,7 @@
 	if (fcount > 0) {
 		fal = dao.getfList(startRow, endRow, sel, find);
 	}
-	memberVO vo1 = (memberVO) session.getAttribute("loginvo");
+	memberVO vo = (memberVO) session.getAttribute("loginvo");
 	%>
 
 	<!-- Navigation -->
@@ -104,7 +104,7 @@
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
 				<%
-		if (vo1 == null) {
+		if (vo == null) {
 			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"login.jsp\">로그인</a></li>");
 		} else {
 			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
@@ -112,20 +112,27 @@
 		%> 
 					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
-					</li>
+					<li class="nav-item dropdown">
+						<a	class="nav-link dropdown-toggle" id="dropdown02"
+						data-bs-toggle="dropdown" aria-expanded="false" href="#">고장신고</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown02">
+							<li><a class="dropdown-item" href="break.jsp">고장신고 작성</a></li>
+							<li><div class="dropdown-divider"></div></li>
+							<li><a class="dropdown-item" href="breaklist.jsp">고장신고 게시판</a></li>
+					</ul></li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%
-					if(vo1!=null){
-						System.out.print(vo1.getYn());
-						if(vo1.getYn().equals("Y")||vo1.getYn().equals("y")){
+					if(vo!=null){
+						System.out.print(vo.getYn());
+						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){
 						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
 						}
 					}
 					%>
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" id="dropdown01"
+					<% if(vo!=null){%>
+						<li class="nav-item dropdown">
+						<a	class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
 
 						<ul class="dropdown-menu" aria-labelledby="dropdown01">
@@ -135,6 +142,8 @@
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
+						<%}
+						%>
 					<!-- 
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -407,19 +416,6 @@
 </section>
 <!-- end of location -->
 
-<script type="text/javascript"
-	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54eb6a93d19563f656425928fbb6c218"></script>
-
-<!-- 카카오 맵 -->
-<script>
-	var container = document.getElementById('map');
-	var options = {
-		center : new kakao.maps.LatLng(33.450701, 126.570667),
-		level : 3
-	};
-
-	var map = new kakao.maps.Map(container, options);
-</script>
 <!-- Bottom -->
 <div class="bottom py-2 text-light">
 	<div class="container d-flex justify-content-between">

@@ -9,11 +9,12 @@ public class InstallVO {
 	private String request_date;
 	private String request_status;
 	private String user_id;
-	public InstallVO(int request_req, String request_loc, String request_name) {
+	public InstallVO(int request_req, String request_loc, String request_name,String request_status) {
 		super();
 		this.request_req = request_req;
 		this.request_loc = request_loc;
 		this.request_name = request_name;
+		this.request_status=request_status;
 	}
 	
 	public InstallVO(int request_req, String request_loc, String request_name, String request_Phone,

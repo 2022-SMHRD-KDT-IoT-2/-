@@ -28,15 +28,17 @@ public class PrivacyUpdate extends HttpServlet {
 		String id=request.getParameter("id");
 		
 		HttpSession session = request.getSession();
-	
-		memberVO vo=new memberVO(id, pw, name,phone, email, addr);
+		memberVO vo = (memberVO) session.getAttribute("loginvo");
+		String yn=vo.getYn();
+		
 		memberDAO dao=new memberDAO(); 
 		
 		int cnt=dao.updatePirvacy(name, pw, email, phone, addr, id);
 		if(cnt>0) {
-			System.out.println("수정성공");
+
+			memberVO vo1=new memberVO(id, pw, name,phone, email, addr,yn);
 			response.sendRedirect("privacy.jsp");
-			session.setAttribute("loginvo", vo);
+			session.setAttribute("loginvo", vo1);
 		}else {
 			System.out.println("수정실패");
 			response.sendRedirect("privacy.jsp");

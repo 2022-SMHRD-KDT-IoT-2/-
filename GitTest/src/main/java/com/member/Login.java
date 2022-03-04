@@ -29,10 +29,16 @@ public class Login extends HttpServlet {
 		
 		memberDAO dao = new memberDAO();
 		memberVO vo = dao.login(id,pw);
+		String name=vo.getName();
+		String phone=vo.getPhone();
+		String email=vo.getEmail();
+		String addr=vo.getAddr();
+		String yn=vo.getYn();
 		
 		if(vo!=null) {
+			memberVO vo1= new memberVO(id,pw,name,phone,email,addr,yn);
 			HttpSession session = request.getSession();
-			session.setAttribute("loginvo", vo); 
+			session.setAttribute("loginvo", vo1); 
 			
 			response.sendRedirect("index.jsp");
 		}else {

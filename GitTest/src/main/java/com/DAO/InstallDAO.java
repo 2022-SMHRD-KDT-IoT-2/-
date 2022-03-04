@@ -49,8 +49,8 @@ public class InstallDAO {
 
 			connect();
 			
-			String sql = "select request_seq, request_loc, request_name from "
-					+ "(select rownum rn, request_seq, request_loc, request_name from "
+			String sql = "select request_seq, request_loc, request_name, request_status from "
+					+ "(select rownum rn, request_seq, request_loc, request_name,request_status from "
 					+ "(select * from t_request order by request_seq desc)) where rn between ? and ?";
 			;
 			psmt = conn.prepareStatement(sql);
@@ -61,8 +61,9 @@ public class InstallDAO {
 				int getSeq = rs.getInt(1);
 				String getloc = rs.getString(2);
 				String getname = rs.getString(3);
+				String getstatus= rs.getString(4);
 
-				InstallVO vo = new InstallVO(getSeq, getloc, getname);
+				InstallVO vo = new InstallVO(getSeq, getloc, getname, getstatus);
 				al.add(vo);
 
 			}
@@ -195,9 +196,9 @@ public class InstallDAO {
 
 				connect();
 
-				String sql = "select request_seq, request_loc, request_name from"
-						+ "(select rownum rn, request_seq, request_loc, request_name from"
-						+ "(select request_seq, request_loc, request_name from t_request where " + sel + " like '%" + find
+				String sql = "select request_seq, request_loc, request_name,request_status from"
+						+ "(select rownum rn, request_seq, request_loc, request_name,request_status from"
+						+ "(select request_seq, request_loc, request_name,request_status from t_request where " + sel + " like '%" + find
 						+ "%'" + "order by request_seq desc)) where rn between ? and ?";
 				;
 				psmt = conn.prepareStatement(sql);
@@ -208,8 +209,9 @@ public class InstallDAO {
 					int getSeq = rs.getInt(1);
 					String getloc = rs.getString(2);
 					String getname = rs.getString(3);
+					String getstatus=rs.getString(4);
 
-					InstallVO vo = new InstallVO(getSeq, getloc, getname);
+					InstallVO vo = new InstallVO(getSeq, getloc, getname,getstatus);
 					al.add(vo);
 
 				}
