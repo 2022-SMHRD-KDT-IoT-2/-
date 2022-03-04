@@ -399,20 +399,27 @@ li {
 	color: white;
 	border: 0;
 }
-.break-left div{
-	display: inline-block;
+.break-left{
 	width: 50%;
+	display: inline-block;
 	text-align: left;
 }
-.br-left{
+.break-left .col-lg-6{
+	width: 100%;
 	display: inline-block;
 }
-.br-right{
-	display: inline-block;
-}
-.break-right div{
+.break-right{
 	width: 50%;
+	display: inline-block;
 	text-align: right;
+}
+.break-right .col-lg-6{
+	width: 100%;
+	display: inline-block;
+}
+.break-search{
+	display: inline-block;
+	text-align:right
 }
 
 /*****************************/
