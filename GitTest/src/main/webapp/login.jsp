@@ -175,6 +175,7 @@
 						<td><a href="javascript:kakaoLogin();"><img src="assets/images/kakao_login.png"></a> 
 						<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> 
 						<script>
+						
 	window.Kakao.init("b43551a3efd6736c68f6755e449a2250");
 
     function kakaoLogin(){
