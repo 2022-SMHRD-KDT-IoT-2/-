@@ -8,7 +8,6 @@
 <title>로그인</title>
 </head>
 <body>
-
 	<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,10 +51,9 @@
 <link rel="icon" href="./assets/images/favicon.png">
 </head>
 <body>
-<%
-			memberVO vo = (memberVO)session.getAttribute("loginvo");
-
-		%>
+	<%
+	memberVO vo = (memberVO) session.getAttribute("loginvo");
+	%>
 
 	<!-- Navigation -->
 	<nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark"
@@ -66,7 +64,8 @@
 			<!-- <a class="navbar-brand logo-image" href="index.jsp"><img src="images/logo.svg" alt="alternative"></a> -->
 
 			<!-- Text Logo - Use this if you don't have a graphic logo -->
-			<a class="navbar-brand logo-text" href="index.jsp"><img src="assets/images/bluelogo.svg" width="200" height="200"></a>
+			<a class="navbar-brand logo-text" href="index.jsp"><img
+				src="assets/images/bluelogo.svg" width="200" height="200"></a>
 
 			<button class="navbar-toggler p-0 border-0" type="button"
 				id="navbarSideCollapse" aria-label="Toggle navigation">
@@ -75,13 +74,14 @@
 			<div class="navbar-collapse offcanvas-collapse"
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
-				<%
-		if (vo == null) {
-			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"login.jsp\">로그인</a></li>");
-		} else {
-			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
-		}
-		%> 
+					<%
+					if (vo == null) {
+						out.print(
+						"<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"login.jsp\">로그인</a></li>");
+					} else {
+						out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
+					}
+					%>
 					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
@@ -89,10 +89,10 @@
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%
-					if(vo!=null){
+					if (vo != null) {
 						System.out.print(vo.getYn());
-						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){
-						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
+						if (vo.getYn().equals("Y") || vo.getYn().equals("y")) {
+							out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
 						}
 					}
 					%>
@@ -154,50 +154,74 @@
 	<!-- end of ex-header -->
 	<!-- end of header -->
 	<div class="loginjoindiv">
-	<nav id="menu">
-		
+		<nav id="menu">
+
 			<h5>로그인</h5>
 			<form action="Login" method="post" class="loginjoinform">
 				<table class="loginjoinTable">
-				<tr>
-					<td>
-					<input type="text" name="id" class="text-field" placeholder="아이디/이메일을 입력하세요">
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<input type="password" name="pw" class="text-field" placeholder="비밀번호를 입력하세요">
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<input type="submit" class="button-field" value="로그인" class="button fit">
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<button type="button" class="button-field2" onclick="location.href='join.jsp';">회원가입</button>
-					</td>
-				</tr>
+					<tr>
+						<td><input type="text" name="id" class="text-field"
+							placeholder="아이디/이메일을 입력하세요"></td>
+					</tr>
+					<tr>
+						<td><input type="password" name="pw" class="text-field"
+							placeholder="비밀번호를 입력하세요"></td>
+					</tr>
+					<tr>
+						<td><input type="submit" class="button-field" value="로그인"
+							class="button fit"></td>
+					</tr>
+					<tr>
+						<td><a href="javascript:kakaoLogin();"><img src="assets/images/kakao_login.png"></a> 
+						<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> 
+						<script>
+	window.Kakao.init("b43551a3efd6736c68f6755e449a2250");
+
+    function kakaoLogin(){
+        window.Kakao.Auth.login({
+            scope:'profile_nickname, account_email',
+            success: function(authObj){
+                console.log(authObj);
+                window.Kakao.API.request({
+                    url:'/v2/user/me', 
+                    success: (res) => {
+                        const kakao_account = res.kakao_account;
+                        console.log(kakao_account);
+                    }
+                }); //window.location.href="/ex/kakao_login.html" 리다이렉트되는 코드
+            },
+            fail: function(error){
+            	console.log(error);
+            }
+        });
+    }
+	</script>
+	</td>
+					</tr>				
+					<tr>
+						<td>
+							<button type="button" class="button-field2"
+								onclick="location.href='join.jsp';">회원가입</button>
+						</td>
+					</tr>
 				</table>
 			</form>
-		</ul>
-	</nav>
-	</div>	
-	
+			</ul>
+		</nav>
+	</div>
+
+
 	<!-- Banner -->
 
-<!-- Bottom -->
-	<div class="bottom-fixed">
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
-    </div>
+	<!-- Bottom -->
+	<div class="bottom py-2 text-light">
+		<div class="container d-flex justify-content-between">
+			<div></div>
+			<div class="bottom-box"></div>
+		</div>
+		<!-- end of container -->
+	</div>
+	<!-- end of bottom -->
+
 </body>
 </html>
