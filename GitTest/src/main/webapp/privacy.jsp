@@ -66,8 +66,14 @@
 		%> 
 					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
-					</li>
+					<li class="nav-item dropdown">
+						<a	class="nav-link dropdown-toggle" id="dropdown02"
+						data-bs-toggle="dropdown" aria-expanded="false" href="#">고장신고</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown02">
+							<li><a class="dropdown-item" href="break.jsp">고장신고 작성</a></li>
+							<li><div class="dropdown-divider"></div></li>
+							<li><a class="dropdown-item" href="breaklist.jsp">고장신고 게시판</a></li>
+					</ul></li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%

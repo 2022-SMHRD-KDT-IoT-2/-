@@ -20,7 +20,7 @@ Table Of Contents:
 /*     General Styles     */
 /**************************/
 :root { 
-	--primary: #151F30; 
+	--primary: #0C0F21; 
 	--primary-light: #283040; 
 	--secondary: #7EFFFF; 
 	--tertiary: #38B6FF; 
@@ -101,6 +101,13 @@ li {
 	background-color: var(--primary);
 	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.025);
 }
+.navbar-main {
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 0.875rem;
+	background-color: transparent;
+	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.025);
+}
 
 .navbar .navbar-brand {
 	padding-top: 0.25rem;
@@ -120,6 +127,19 @@ li {
 	text-decoration: none;
 }
 
+.navbar-main .offcanvas-collapse {
+	top: 2.75rem;
+	/* adjusts the height between the top of the page and the offcanvas menu */
+	bottom: 0;
+	left: 100%;
+	width: 100%;
+	overflow-y: auto;
+	visibility: hidden;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	background-color: transparent;
+	transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
 .offcanvas-collapse {
 	position: fixed;
 	top: 2.75rem;
@@ -140,10 +160,12 @@ li {
 	transform: translateX(-100%);
 }
 
+
 .navbar .navbar-nav {
 	margin-top: 0.75rem;
 	margin-bottom: 0.5rem;
 }
+
 
 .navbar .dropdown-menu {
 	border: none;
@@ -424,6 +446,16 @@ li {
 	margin-bottom: 30px;
 	padding: 10px;
 }
+.board .board_table3 {
+	width: 400px;
+	display: inline;
+	text-align: center;
+	border-spacing: 1px;
+	line-height: 1.5;
+	margin: 20px;
+	margin-bottom: 30px;
+	padding: 10px;
+}
 .board .text-box{
 	width: 330px;
 	height: 40px;
@@ -445,13 +477,38 @@ li {
 	vertical-align: top;
 	margin-bottom: 10px;
 }
+.board .board_table3 th {
+	width: 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	font-weight: bold;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
 .board .board_table td {
 	padding: 10px;
 	font-weight: bold;
 	vertical-align: top;
 	border-bottom: 1px solid #ccc;
 }
+.board .board_table3 td {
+	width: 300px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+}
+.board .board_table3 .readonly{
+	border: 0;
+}
 .table2-div {
+	display: inline-block;
+	width:400px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.table3-div {
 	display: inline-block;
 	width:400px;
 	text-align: center;
@@ -491,6 +548,9 @@ li {
 	display: inline;
 }
 
+#menu h3{
+	margin-top: 50px;
+}
 
 h5{
 	margin-top: 30px;
@@ -917,6 +977,7 @@ h5{
 		padding-top: 1.75rem;
 		background-color: transparent;
 	}
+
 	.navbar.top-nav-collapse {
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
@@ -939,25 +1000,31 @@ h5{
 	.offcanvas-collapse.open {
 		transform: none;
 	}
+
 	.navbar .navbar-nav {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
+
 	.navbar .nav-item .nav-link {
 		padding-right: 0.75rem;
 		padding-left: 0.75rem;
 	}
+
 	.navbar .dropdown-menu {
 		padding-top: 0.75rem;
 		padding-bottom: 0.875rem;
 		box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.08);
 	}
+
 	.navbar .dropdown-divider {
 		width: 90%;
 	}
+
 	.navbar .social-icons {
 		margin-left: 0.5rem;
 	}
+
 	.navbar .fa-stack {
 		margin-right: 0;
 		margin-left: 0.25rem;

@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>install</title>
+<title>제품관리</title>
 </head>
 <body>
 
@@ -40,7 +40,7 @@
 <!-- to have large image post format in Twitter -->
 
 <!-- Webpage Title -->
-<title>Privacy</title>
+<title>제품관리</title>
 <!-- Styles -->
 <link
 	href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
@@ -87,8 +87,14 @@
 		%> 
 					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
-					</li>
+					<li class="nav-item dropdown">
+						<a	class="nav-link dropdown-toggle" id="dropdown02"
+						data-bs-toggle="dropdown" aria-expanded="false" href="#">고장신고</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown02">
+							<li><a class="dropdown-item" href="break.jsp">고장신고 작성</a></li>
+							<li><div class="dropdown-divider"></div></li>
+							<li><a class="dropdown-item" href="breaklist.jsp">고장신고 게시판</a></li>
+					</ul></li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%
@@ -99,8 +105,9 @@
 						}
 					}
 					%>
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" id="dropdown01"
+					<% if(vo!=null){%>
+						<li class="nav-item dropdown">
+						<a	class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
 
 						<ul class="dropdown-menu" aria-labelledby="dropdown01">
@@ -110,6 +117,8 @@
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
+						<%}
+						%>
 					<!-- 
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -145,7 +154,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-10 offset-xl-1">
-					<h1>설치문의게시판</h1>
+					<h1>제품관리</h1>
 				</div>
 				<!-- end of col -->
 			</div>
@@ -158,34 +167,37 @@
 
 	<!-- 설치 테이블 -->
 	<!-- Header -->
-	<div class="ex-basic-1 pt-5 pb-5">
+	<div class="board">
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-10 offset-xl-1">
 					<form action="ProductWrite" method="post">
-						<table border="1">
+					<h3 class="request-h5">제품 추가하기</h3>
+						<div class="table3-div">
+						<table class="board_table3">
 							<tr>
-								<td><h2 class="mb-3">제품아이디</h2></td>
+								<th>제품아이디</th>
 								<td><input type="text" name="pro_id"></td>
 							</tr>
 							<tr>
-								<td><h2 class="mb-3">위치</h2></td>
+								<th>위치</th>
 								<td><input type="text" name="loc"></td>
 							</tr>
 							<tr>
-								<td><h2 class="mb-3">위도</h2></td>
+								<th>위도</th>
 								<td><input type="text" name="latitude"></td>
 							</tr>
 							<tr>
-								<td><h2 class="mb-3">경도</h2></td>
+								<th>경도</th>
 								<td><input type="text" name="longitude"></td>
 							</tr>
 							<tr>
-								<td><h2 class="mb-3">관리자아이디</h2></td>
-								<td><input type="text" name="id" value="<%=vo.getId()%>"></td>
+								<th>관리자아이디</th>
+								<td><input type="text" readonly name="id" class="readonly" value="<%=vo.getId()%>"></td>
 							</tr>
 						</table>
-						<input type="submit">
+						</div>
+						<br><input type="submit" class="list-button" value="제품 추가">
 					</form>
 				</div>
 				<!-- end of col -->
@@ -195,5 +207,19 @@
 		<!-- end of container -->
 	</div>
 	<!-- end of ex-basic-1 -->
+	
+	<!-- Bottom -->
+		<div class="bottom-fixed">
+    <div class="bottom py-2 text-light" >
+        <div class="container d-flex justify-content-between">
+            <div>
+            </div>
+            <div class="bottom-box">
+                
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of bottom -->
+    </div>
+	
 </body>
 </html>
