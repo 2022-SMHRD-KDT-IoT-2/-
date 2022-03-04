@@ -237,9 +237,10 @@
 				<!-- 우측 지도 -->
 				<div class="break-right">
 				<div class="col-lg-6 d-flex align-items-center">
+					<div class="break-search">
 					<table>
 						<tr>
-							<td>신고 위치 주소 검색</td>
+							<td class="break-search">신고 위치 주소 검색</td>
 						</tr>
 						<tr>
 							<td><input type="text" name="detailAddress" id="address"></td>
@@ -247,7 +248,7 @@
 									onclick="adressSearch()" class="search-button"> 검색 </button></td>
 						</tr>
 					</table>
-					
+					</div>
 		<div id="map" style="width: 650px; height: 65%; vertical-align: bottom; float:right;"></div>
 	
 				</div>	
