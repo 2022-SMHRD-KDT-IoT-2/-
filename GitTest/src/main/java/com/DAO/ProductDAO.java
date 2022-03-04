@@ -12,6 +12,9 @@ public class ProductDAO {
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
+	int fCount = 0;
+	int count =0;
+	int cnt=0;
 	public void connect() {
 
 		try {
@@ -123,7 +126,7 @@ public class ProductDAO {
 	}
 	// 총 레코드 수 구하는 로직
 			public int getCount(){
-				int count = 0;
+
 				String sql = "select count(*) from t_iot";
 				try {
 					connect();
@@ -142,7 +145,7 @@ public class ProductDAO {
 			}
 			
 			public int getprivacyCount(String id){
-				int count = 0;
+
 				String sql = "select count(*) from t_iot where user_id=? ";
 				try {
 					connect();
@@ -193,7 +196,6 @@ public class ProductDAO {
 		}
 //프로덕트 하나 추가하기
 	public int oneProduct(String pro_id, String loc, double latitude, double longitude,String id) {
-		int cnt = 0;
 		try {
 
 			connect();
@@ -228,7 +230,7 @@ public class ProductDAO {
 	}
 	//검색한 객체 수 카운트
 	public int getfCount(String sel, String find){
-		int fCount = 0;
+
 		String sql = "select count(*) from t_iot where " + sel + " like '%" + find + "%'";
 		try {
 			connect();
@@ -246,7 +248,7 @@ public class ProductDAO {
 	}
 
 		public int getprivacyfCount(String sel, String find, String id){
-			int fCount = 0;
+			
 			String sql = "select count(*) from t_iot where user_id=? and (" + sel + " like '%" + find + "%')";
 			try {
 				connect();
@@ -351,5 +353,24 @@ public class ProductDAO {
 
 			}
 			return al;
+		}
+		public int deleteProduct(String no) {
+			try {
+
+				connect();
+
+				String sql = "delete from t_iot where product_seq=?";
+				psmt = conn.prepareStatement(sql);
+				psmt.setString(1, no);
+				cnt = psmt.executeUpdate();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+
+			} finally {
+				quitDB();
+
+			}
+			return cnt;
 		}
 }
