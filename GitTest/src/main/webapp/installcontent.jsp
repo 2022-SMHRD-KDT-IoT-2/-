@@ -144,7 +144,7 @@
     </header> <!-- end of ex-header -->
     <!-- end of header -->
 
-		<h5 class="content"><%=vo.getRequest_name() %></h5>
+		<h5 class="content">상세내용</h5>
     	<div class="contentdiv-div">
     	<div class=content-div>
 		<table class="content-table">

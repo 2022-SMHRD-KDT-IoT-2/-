@@ -190,9 +190,10 @@
 			<div class="table-div">
 			<table class="board_table">
 				<tr>
-					<th width="10%">No.</th>
-					<th width="15%">글제목</th>
-					<th width="30%">위치</th>
+					<th width="20%">No.</th>
+					<th width="30%">이름</th>
+					<th width="40%">위치</th>
+					<th width="10%">처리상태</th>
 				</tr>
 				<%
 				if (count > 0 && fcount==0 && find==null) { // 데이터베이스에 데이터가 있으면
@@ -208,6 +209,7 @@
 						class="list-a"
 						href="installcontent.jsp?no=<%=board.getRequest_req()%>"><%=board.getRequest_loc() %></a>
 					</td>
+					<td><%=board.getRequest_status()%></td>
 				</tr>
 				<%
 					}
@@ -230,6 +232,7 @@
 						<a class="list-a"
 						href="installcontent.jsp?no=<%=board.getRequest_req()%>&pageNum=<%=currentPage%>&sel=<%=sel%>&find=<%=find%>"><%=board.getRequest_loc()%></a>
 					</td>
+					<td><%=board.getRequest_status()%></td>
 				</tr>
 				<%			
 					}

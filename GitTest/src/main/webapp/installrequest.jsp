@@ -174,13 +174,18 @@
 								<th>이름</th>
 							</tr>
 							<tr>
-								<td><input class="text-box" type="text" name="name"></td>
+								<td><input class="text-box" type="text" name="name" value="<%=vo.getName()%>"></td>
 							</tr>
 							<tr>
 								<th>전화번호</th>
 							</tr>
 							<tr>
-								<td><input class="text-box" type="text" name="phone"></td>
+								<td><input class="text-box" type="text" name="phone" value="<%=vo.getPhone()%>"></td>
+							</tr>
+							<th>아이디</th>
+							</tr>
+							<tr>
+								<td><input class="text-box" readonly type="text" name="id" value="<%=vo.getId()%>" ></td>
 							</tr>
 						</table>
 						</div>
