@@ -40,7 +40,7 @@
 <!-- to have large image post format in Twitter -->
 
 <!-- Webpage Title -->
-<title>Privacy</title> 
+<title>Privacy</title>
 
 <!-- Styles -->
 <link
@@ -87,7 +87,8 @@
 			<!-- <a class="navbar-brand logo-image" href="index.jsp"><img src="images/logo.svg" alt="alternative"></a> -->
 
 			<!-- Text Logo - Use this if you don't have a graphic logo -->
-			<a class="navbar-brand logo-text" href="index.jsp"><img src="assets/images/bluelogo.svg" width="200" height="200"></a>
+			<a class="navbar-brand logo-text" href="index.jsp"><img
+				src="assets/images/bluelogo.svg" width="200" height="200"></a>
 
 			<button class="navbar-toggler p-0 border-0" type="button"
 				id="navbarSideCollapse" aria-label="Toggle navigation">
@@ -96,36 +97,40 @@
 			<div class="navbar-collapse offcanvas-collapse"
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
-				<%
-		if (vo == null) {
-			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"login.jsp\">로그인</a></li>");
-		} else {
-			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
-		}
-		%> 
+					<%
+					if (vo == null) {
+						out.print(
+						"<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"login.jsp\">로그인</a></li>");
+					} else {
+						out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
+					}
+					%>
 					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
 					</li>
-					<li class="nav-item dropdown">
-						<a	class="nav-link dropdown-toggle" id="dropdown02"
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" id="dropdown02"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">고장신고</a>
 						<ul class="dropdown-menu" aria-labelledby="dropdown02">
 							<li><a class="dropdown-item" href="break.jsp">고장신고 작성</a></li>
 							<li><div class="dropdown-divider"></div></li>
-							<li><a class="dropdown-item" href="breaklist.jsp">고장신고 게시판</a></li>
-					</ul></li>
+							<li><a class="dropdown-item" href="breaklist.jsp">고장신고
+									게시판</a></li>
+						</ul></li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%
-					if(vo!=null){
+					if (vo != null) {
 						System.out.print(vo.getYn());
-						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){
-						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
+						if (vo.getYn().equals("Y") || vo.getYn().equals("y")) {
+							out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
 						}
 					}
 					%>
-					<% if(vo!=null){%>
-						<li class="nav-item dropdown">
-						<a	class="nav-link dropdown-toggle" id="dropdown01"
+					<%
+					if (vo != null) {
+					%>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
 
 						<ul class="dropdown-menu" aria-labelledby="dropdown01">
@@ -135,8 +140,9 @@
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
-						<%}
-						%>
+					<%
+					}
+					%>
 					<!-- 
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -179,9 +185,10 @@
 					<div style="width: 90%">
 						<div class="text-center text-lg-start py-4 pt-lg-0">
 							<p>제품고장</p>
-							<h2 class="py-2">아래의 본문을 따라 작성해주시기 바랍니다.</h2>
-							<p class="para-light">신고자의 이름과 연락처를 함께 작성바랍니다. 무분별한 신고는 자제해
-								주시며, 문의에 대한 답변은 작성해주신 연락처를 통해 응답하겠습니다.</p>
+							<h2 class="py-2">아래의 본문을 따라 고장신고글을 작성해주시기 바랍니다.</h2>
+							<strong class="para-light">허위 신고는 처벌의 대상이 될 수 있으므로 명확한
+								내용을 사실 기반으로 신고를 해 주시길 부탁드립니다.</strong>
+							<p class="para-light">문의에 대한 답변은 작성해주신 연락처를 통해 응답하겠습니다.</p>
 						</div>
 						<div>
 							<div class="row">
@@ -190,28 +197,26 @@
 										<div class="form-group py-2">
 											<input type="text" class="form-control form-control-input"
 												name="name" id="exampleFormControlInput1"
-												placeholder="신고 문의자 이름">
+												placeholder="신고자 성함">
 										</div>
 								</div>
 								<div class="col-lg-6">
-									<div
-										class="form-group py-2">
+									<div class="form-group py-2">
 										<input type="email" class="form-control form-control-input"
 											name="phone" id="exampleFormControlInput2"
-											placeholder="연락처 010-0000-0000">
+											placeholder="010-0000-0000">
 									</div>
 								</div>
 							</div>
 							<div class="form-group py-2">
 								<textarea class="form-control form-control-input" name="content"
 									id="exampleFormControlTextarea1" rows="6"
-									placeholder="지도를 통해 제품 위치를 확인하시고, ."></textarea>
+									placeholder="고장 신고 내용을 입력하세요."></textarea>
 							</div>
-							<div
-								class="form-group py-2">
-								<input type="number" class="form-control form-control-input"
-								name="product_number" id="exampleFormControlInput3"
-								placeholder="제품번호를 입력하세요.">
+							<div class="form-group py-2">
+								<input type="text" class="form-control form-control-input"
+									name="product_number" id="exampleFormControlInput3"
+									placeholder="지도 확인 후, 신고할 제품번호를 입력하세요.">
 							</div>
 						</div>
 						<div class="my-3">
@@ -222,21 +227,26 @@
 					<!-- end of div -->
 				</div>
 				<!-- end of col -->
-					<div class="col-lg-6 d-flex align-items-center">
-						<div id="map" style="width:800px; height:80%;">
-						</div>
-						<table>
-							<tr>
-								<td>주소</td>
-								<td><input type="text" name="detailAddress" id="address"></td>
-								<td><button type="button" id="searchBtn" onclick="adressSearch()">검색</button></td>
-							</tr>
-						</table>
-					</div>
+				<div class="col-lg-6 d-flex align-items-center">
+					<table>
+						<tr>
+							<td>신고 위치 주소 검색</td>
+						</tr>
+						<tr>
+							<td><input type="text" name="detailAddress" id="address"></td>
+							<td><button type="button" id="searchBtn"
+									onclick="adressSearch()"> 검색 </button></td>
+						</tr>
+					</table>
+					
+		<div id="map" style="width: 650px; height: 65%; vertical-align: bottom; float:right;"></div>
+	
 				</div>
-				<!-- end of col -->
+				
 			</div>
-			<!-- end of row -->
+			<!-- end of col -->
+		</div>
+		<!-- end of row -->
 		</div>
 		<!-- end of container -->
 	</section>
@@ -247,9 +257,7 @@
 		<div class="container" data-aos="zoom-in">
 			<div class="row">
 				<div class="col-lg-3 d-flex align-items-center">
-					<div class="p-2">
-						<i class="far fa-map fa-3x"></i>
-					</div>
+					<div class="p-2"></div>
 					<div class="ms-2">
 						<h6>주소</h6>
 						<p>광주광역시 동구 예술길 31-15 스마트인재개발원</p>
@@ -294,93 +302,100 @@
 		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54eb6a93d19563f656425928fbb6c218&libraries=services"></script>
 	<!-- 카카오 맵 -->
 	<script>
-	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = {
-        center: new kakao.maps.LatLng(35.150078125347754, 126.91980634412012), // 지도의 중심좌표
-        level: 9 // 지도의 확대 레벨
-    };  
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		mapOption = {
+			center : new kakao.maps.LatLng(35.150078125347754,
+					126.91980634412012), // 지도의 중심좌표
+			level : 9
+		// 지도의 확대 레벨
+		};
 
-// 지도를 생성합니다    
-var map = new kakao.maps.Map(mapContainer, mapOption); 
+		// 지도를 생성합니다    
+		var map = new kakao.maps.Map(mapContainer, mapOption);
 
-// 주소-좌표 변환 객체를 생성합니다
+		// 주소-좌표 변환 객체를 생성합니다
 
-var geocoder = new kakao.maps.services.Geocoder();
+		var geocoder = new kakao.maps.services.Geocoder();
 
-let address = document.querySelector('#address')
+		let address = document.querySelector('#address')
 
-var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+		var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
 
-var positions = [
-    {
-        content : '<div style="padding:5px;color:black;">스마트인재개발원 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.150078125347754, 126.91980634412012" style="color:blue" target="_blank">로드뷰</a></div>', 
-        latlng: new kakao.maps.LatLng(35.150078125347754, 126.91980634412012)
-    },
-    {
-    	content : '<div style="color:black;">스마트인재개발원<br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.11069654335439, 126.877761898053" style="color:blue" target="_blank">로드뷰</a></div>', 
-        latlng: new kakao.maps.LatLng(35.11069654335439, 126.877761898053)
-    },
-    {
-    	content : '<div style="color:black;">제품번호 : 1 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.1935083414652, 126.71279814289726" style="color:blue" target="_blank">로드뷰</a></div>', 
-        latlng: new kakao.maps.LatLng(35.1935083414652, 126.71279814289726)
-    },
-    {
-    	content : '<div style="color:black;">제품번호 : 2 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.15575843433718, 126.971938982733" style="color:blue" target="_blank">로드뷰</a></div>',	// 광주 북구 화암동 산 171-2
-        latlng: new kakao.maps.LatLng(35.15575843433718, 126.971938982733)
-    }
-]
+		var positions = [
+				{
+					content : '<div style="padding:5px;color:black;">스마트인재개발원 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.150078125347754, 126.91980634412012" style="color:blue" target="_blank">로드뷰</a></div>',
+					latlng : new kakao.maps.LatLng(35.150078125347754,
+							126.91980634412012)
+				},
+				{
+					content : '<div style="color:black;">스마트인재개발원<br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.11069654335439, 126.877761898053" style="color:blue" target="_blank">로드뷰</a></div>',
+					latlng : new kakao.maps.LatLng(35.11069654335439,
+							126.877761898053)
+				},
+				{
+					content : '<div style="color:black;">제품번호 : 1 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.1935083414652, 126.71279814289726" style="color:blue" target="_blank">로드뷰</a></div>',
+					latlng : new kakao.maps.LatLng(35.1935083414652,
+							126.71279814289726)
+				},
+				{
+					content : '<div style="color:black;">제품번호 : 2 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.15575843433718, 126.971938982733" style="color:blue" target="_blank">로드뷰</a></div>', // 광주 북구 화암동 산 171-2
+					latlng : new kakao.maps.LatLng(35.15575843433718,
+							126.971938982733)
+				} ]
 
-for (var i = 0; i < positions.length; i ++) {
-	var imageSize = new kakao.maps.Size(24, 35);
-	var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-	
-	var marker = new kakao.maps.Marker({
-        map: map, 
-        position: positions[i].latlng,
-        image : markerImage,
-        clickable: true
-    });
-	
-	marker.setMap(map);
-	
-	var iwRemoveable = true;
-	
-    var infowindow = new kakao.maps.InfoWindow({
-        content: positions[i].content,
-        removable : iwRemoveable
-    });
-    kakao.maps.event.addListener(marker, 'click', mouseClick(map, marker, infowindow));
-}
+		for (var i = 0; i < positions.length; i++) {
+			var imageSize = new kakao.maps.Size(24, 35);
+			var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
 
-function mouseClick(map, marker, infowindow) {
-    return function() {
-        infowindow.open(map, marker);
-    };
-}
+			var marker = new kakao.maps.Marker({
+				map : map,
+				position : positions[i].latlng,
+				image : markerImage,
+				clickable : true
+			});
 
-function adressSearch() {
-	geocoder.addressSearch(address.value, function(result, status) {
+			marker.setMap(map);
 
-	     if (status === kakao.maps.services.Status.OK) {
+			var iwRemoveable = true;
 
-	        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+			var infowindow = new kakao.maps.InfoWindow({
+				content : positions[i].content,
+				removable : iwRemoveable
+			});
+			kakao.maps.event.addListener(marker, 'click', mouseClick(map,
+					marker, infowindow));
+		}
 
-	        map.setCenter(coords);
-	    } 
-	});    
-}
+		function mouseClick(map, marker, infowindow) {
+			return function() {
+				infowindow.open(map, marker);
+			};
+		}
+
+		function adressSearch() {
+			geocoder.addressSearch(address.value,
+					function(result, status) {
+
+						if (status === kakao.maps.services.Status.OK) {
+
+							var coords = new kakao.maps.LatLng(result[0].y,
+									result[0].x);
+
+							map.setCenter(coords);
+						}
+					});
+		}
 	</script>
-	
-	<div class="bottom py-2 text-light" >
-	<div class="container d-flex justify-content-between">
-    <div>
-    </div>
-    <div class="bottom-box">
-        
-    </div>
-	</div> <!-- end of container -->
-	</div> <!-- end of bottom -->
-	
+
+	<div class="bottom py-2 text-light">
+		<div class="container d-flex justify-content-between">
+			<div></div>
+			<div class="bottom-box"></div>
+		</div>
+		<!-- end of container -->
+	</div>
+	<!-- end of bottom -->
+
 	<!-- Scripts -->
 	<script src="./js/bootstrap.min.js"></script>
 	<!-- Bootstrap framework -->
