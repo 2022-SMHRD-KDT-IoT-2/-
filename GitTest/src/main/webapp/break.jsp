@@ -260,7 +260,7 @@
 				<div class="break-right-bottom">
 				<div class="col-lg-6 d-flex align-items-center">
 				<div class="map">
-				<div id="map" style="width: 650px; height: 300px; border: 1px solid white; "></div>
+				<div id="map" style="width: 800px; height: 500px; border: 1px solid white; "></div>
 	
 				</div>	
 				</div>
@@ -329,7 +329,7 @@
 		mapOption = {
 			center : new kakao.maps.LatLng(35.150078125347754,
 					126.91980634412012), // 지도의 중심좌표
-			level : 9
+			level : 7
 		// 지도의 확대 레벨
 		};
 
