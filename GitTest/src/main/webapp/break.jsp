@@ -234,9 +234,12 @@
 				</div>
 				<!-- 좌측 폼 div종료 -->
 				<!-- end of col -->
-				<!-- 우측 지도 -->
+				<!-- 오른쪽 -->
+				<div class="br-right">
+				<!-- 검색창 -->
 				<div class="break-right">
 				<div class="col-lg-6 d-flex align-items-center">
+					<div class="searchbox">
 					<div class="break-search">
 					<table>
 						<tr>
@@ -249,13 +252,21 @@
 						</tr>
 					</table>
 					</div>
-		<div id="map" style="width: 650px; height: 65%; vertical-align: bottom; float:right;"></div>
+					</div>
+				</div>
+				</div>
+				<!-- 검색창 div 종료 -->		
+				<!-- 지도 -->
+				<div class="break-right-bottom">
+				<div class="col-lg-6 d-flex align-items-center">
+				<div class="map">
+				<div id="map" style="width: 650px; height: 300px; border: 1px solid white; "></div>
 	
 				</div>	
 				</div>
-				<!-- 우측 지도 div 종료 -->		
-			</div>
-			
+				</div>
+				<!-- 지도 div 종료 -->		
+				</div>
 		</div>
 		<!-- end of row -->
 		</div>
