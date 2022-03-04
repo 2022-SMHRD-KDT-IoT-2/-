@@ -416,13 +416,13 @@ li {
 	height: 20%;
 	display: block;
 }
-.br-right{
+.break-right{
 	width: 50%;
 	height: 100%;
 	display: block;
 	float: right;
 }
-.break-right-bottom{
+.map-right{
 	width: 50%;
 	height: 80%;
 	display: block;
@@ -433,7 +433,14 @@ li {
 }
 .break-search{
 	display: inline-block;
-	text-align:left;
+	text-align: right;
+	margin-bottom: 20px;
+}
+.break-search2{
+	display: inline-block;
+	text-align: right;
+	margin-bottom: 10px;
+	font-size: 20px;
 }
 .searchbox{
 	text-align: right;
@@ -443,7 +450,7 @@ li {
 .map{
 	display: block;
 	position: bottom; 
-	
+	border: 1px solid white;
 }
 
 /*****************************/
@@ -921,6 +928,7 @@ h5{
 	padding-left: 1.5rem;
 	padding-top: 0.775rem;
 	padding-bottom: 0.775rem;
+	resize: none;
 }
 
 /******************************/

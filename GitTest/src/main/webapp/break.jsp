@@ -235,15 +235,15 @@
 				<!-- 좌측 폼 div종료 -->
 				<!-- end of col -->
 				<!-- 오른쪽 -->
-				<div class="br-right">
-				<!-- 검색창 -->
 				<div class="break-right">
+				<!-- 검색창 -->
+				<div class="right">
 				<div class="col-lg-6 d-flex align-items-center">
 					<div class="searchbox">
 					<div class="break-search">
 					<table>
 						<tr>
-							<td class="break-search">신고 위치 주소 검색</td>
+							<td class="break-search2">신고 위치 주소 검색</td>
 						</tr>
 						<tr>
 							<td><input type="text" name="detailAddress" id="address"></td>
@@ -257,7 +257,7 @@
 				</div>
 				<!-- 검색창 div 종료 -->		
 				<!-- 지도 -->
-				<div class="break-right-bottom">
+				<div class="map-right">
 				<div class="col-lg-6 d-flex align-items-center">
 				<div class="map">
 				<div id="map" style="width: 800px; height: 500px; border: 1px solid white; "></div>
