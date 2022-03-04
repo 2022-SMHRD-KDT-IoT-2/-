@@ -373,4 +373,27 @@ public class ProductDAO {
 			}
 			return cnt;
 		}
+		public int modifyProduct(String pro_id, String loc, double latitude, double longitude,int no) {
+			try {
+
+				connect();
+
+				String sql = "update t_iot set product_uid=?, product_loc=?, product_latitude=?, product_longitude=? where product_seq=?";
+				psmt = conn.prepareStatement(sql);
+				psmt.setString(1, pro_id);
+				psmt.setString(2, loc);
+				psmt.setDouble(3, latitude);
+				psmt.setDouble(4, longitude);
+				psmt.setInt(5, no);
+				cnt = psmt.executeUpdate();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+
+			} finally {
+				quitDB();
+
+			}
+			return cnt;
+		}
 }

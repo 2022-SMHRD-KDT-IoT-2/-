@@ -79,14 +79,8 @@
 		%> 
 					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
 					</li>
-					<li class="nav-item dropdown">
-						<a	class="nav-link dropdown-toggle" id="dropdown02"
-						data-bs-toggle="dropdown" aria-expanded="false" href="#">고장신고</a>
-						<ul class="dropdown-menu" aria-labelledby="dropdown02">
-							<li><a class="dropdown-item" href="break.jsp">고장신고 작성</a></li>
-							<li><div class="dropdown-divider"></div></li>
-							<li><a class="dropdown-item" href="breaklist.jsp">고장신고 게시판</a></li>
-					</ul></li>
+					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
+					</li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%
@@ -97,7 +91,6 @@
 						}
 					}
 					%>
-					<%if(vo1!=null){ %>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
@@ -109,7 +102,6 @@
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
-						<%} %>
 					<!-- 
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -153,18 +145,19 @@
 		<h5 class="content"><%=vo.getProduct_uid() %></h5>
 	<div class="contentdiv-div">
     <div class="content-div">
+    <form action="ProductModify?no=<%=vo.getProduct_seq()%>" method="post">
 		<table class="content-table">
 			<tr>
 				<td class="td-title">제품<br>번호</td>
-				<td class= "td-text"><%=vo.getProduct_uid() %></td>
+				<td class= "td-text"><input type="text" name="product_id" value="<%=vo.getProduct_uid() %>"></td>
 				<td class="td-title">설치<br>위치</td>
-				<td class= "td-text"><%=vo.getProduct_loc() %></td>
+				<td class= "td-text"><input type="text" name="loc" value="<%=vo.getProduct_loc() %>"></td>
 			</tr>
 			<tr>
 				<td class="td-title">위도</td>
-				<td class= "td-text"><%=vo.getProduct_latitude() %></td>
+				<td class= "td-text"><input type="text" name="latitude" value="<%=vo.getProduct_latitude() %>"></td>
 				<td class="td-title">경도</td>
-				<td class= "td-text"><%=vo.getProduct_longitude() %></td>
+				<td class= "td-text"><input type="text" name="longitude" value="<%=vo.getProduct_longitude() %>"></td>
 			</tr>
 			<tr>
 				<td class="td-title">설치<br>일자</td>
@@ -176,9 +169,10 @@
 			<tr>
 				<td class="td-button" colspan="4">
 					<%-- 버튼을 클릭하면 해당 페이지로 이동 / 수정과 삭제는 get방식으로 no값을 전달 --%>
-					<input type="button" class="button-content" value="수정" onclick="location.href='productmodify.jsp?no=<%=vo.getProduct_seq()%>'"> 
-					<input type="button" class="button-content" value="삭제" onclick="location.href='ProductDelete?no=<%=vo.getProduct_seq()%>'">
+					<input type="submit" class="button-content" value="완료" > 
+					<input type="button" class="button-content" value="취소" onclick="location.href='pirvacyproduct.jsp'">
 				</td>
+				</form>
 			</tr>
 		</table>
 	</div>
@@ -194,16 +188,5 @@
             </div>
         </div> <!-- end of container -->
     </div> <!-- end of bottom -->
-    	<!-- Scripts -->
-	<script src="./js/bootstrap.min.js"></script>
-	<!-- Bootstrap framework -->
-	<script src="./js/purecounter.min.js"></script>
-	<!-- Purecounter counter for statistics numbers -->
-	<script src="./js/swiper.min.js"></script>
-	<!-- Swiper for image and text sliders -->
-	<script src="./js/aos.js"></script>
-	<!-- AOS on Animation Scroll -->
-	<script src="./js/script.js"></script>
-	<!-- Custom scripts -->
 </body>
 </html>
