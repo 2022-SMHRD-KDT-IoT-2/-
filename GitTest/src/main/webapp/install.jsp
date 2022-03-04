@@ -123,7 +123,7 @@
 					</li>
 					<%
 					if(vo!=null){
-						System.out.print(vo.getYn());
+
 						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){
 						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
 						}

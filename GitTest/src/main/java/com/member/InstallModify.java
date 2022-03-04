@@ -7,33 +7,30 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.DAO.ProductDAO;
+import com.DAO.InstallDAO;
 
 
-@WebServlet("/ProductModify")
-public class ProductModify extends HttpServlet {
+@WebServlet("/InstallModify")
+public class InstallModify extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("euc-kr");
 		
-		String product_id = request.getParameter("product_id");
+		String name= request.getParameter("name");
+		String status=request.getParameter("status");
 		String loc = request.getParameter("loc");
-		double latitude = Double.parseDouble(request.getParameter("latitude"));
-		double longitude=Double.parseDouble(request.getParameter("longitude"));
+		String phone = request.getParameter("phone");
 		int no = Integer.parseInt(request.getParameter("no"));
-		ProductDAO dao=new ProductDAO();
+		System.out.println(name+"\t"+status+"\t"+loc+"\t"+phone+"\t"+no);
+		InstallDAO dao=new InstallDAO();
 		
-		int cnt=dao.modifyProduct(product_id, loc, latitude, longitude, no);
+		int cnt=dao.modifyInstall(name, status, loc, phone, no);
 		if(cnt>0) {
-			response.sendRedirect("privacyproduct.jsp");
-			System.out.println("수정성공");
+			response.sendRedirect("install.jsp");
 		}else {
-			response.sendRedirect("privacyproduct.jsp");
-			System.out.println("수정실패");
+			response.sendRedirect("install.jsp");
 		}
-		
 	}
 
 }
