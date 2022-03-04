@@ -79,8 +79,14 @@
 		%> 
 					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
-					</li>
+					<li class="nav-item dropdown">
+						<a	class="nav-link dropdown-toggle" id="dropdown02"
+						data-bs-toggle="dropdown" aria-expanded="false" href="#">고장신고</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown02">
+							<li><a class="dropdown-item" href="break.jsp">고장신고 작성</a></li>
+							<li><div class="dropdown-divider"></div></li>
+							<li><a class="dropdown-item" href="breaklist.jsp">고장신고 게시판</a></li>
+					</ul></li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%
@@ -95,7 +101,6 @@
 						<li class="nav-item dropdown">
 						<a	class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
-
 						<ul class="dropdown-menu" aria-labelledby="dropdown01">
 							<li><a class="dropdown-item" href="privacy.jsp">개인정보</a></li>
 							<li><div class="dropdown-divider"></div></li>
@@ -137,7 +142,7 @@
 	<!-- 메인페이지 -->
 	<section class="home py-5 d-flex align-items-center" id="header">
 		<div class="container text-light py-5" data-aos="fade-right">
-			<h1 class="headline">For Your <br><span class="home_text">Safety</span> Drive</h1>
+			<h1 class="headline" style="font-size:100px;">For Your <br><span class="home_text">Safety</span> Drive</h1>
 			<p class="para para-light py-3">스마트 델리네이터는 야간 급커브도로 안전운행을 지원합니다</p>
 			<div class="d-flex align-items-center">
 				<!-- 
@@ -206,12 +211,59 @@
 					<img class="img-fluid" src="./assets/images/about.jpg" alt="about">
 				</div>
 				 -->
-
-
 		</div>
 		<!-- end of container -->
 	</section>
 	<!-- end of about -->
+	
+		<!-- Location -->
+	<section class="location text-light py-5">
+		<div class="container" data-aos="zoom-in">
+			<div class="row">
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="far fa-map fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>주소</h6>
+						<p>광주광역시 동구 예술길 31-15 스마트인재개발원</p>
+					</div>
+				</div>
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="fas fa-mobile-alt fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>연락처</h6>
+						<p>010-1234-5678</p>
+					</div>
+				</div>
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="far fa-envelope fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>이메일</h6>
+						<p>kdb7603@naver.com</p>
+					</div>
+				</div>
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="far fa-clock fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>상담문의</h6>
+						<p>09:00 AM - 18:00 PM</p>
+					</div>
+				</div>
+			</div>
+			<!-- end of row -->
+		</div>
+		<!-- end of container -->
+	</section>
+	<!-- end of location -->
+	
+	
 	<!-- Scripts -->
 	<script src="./js/bootstrap.min.js"></script>
 	<!-- Bootstrap framework -->
