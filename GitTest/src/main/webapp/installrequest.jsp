@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>install</title>
+<title>설치문의</title>
 </head>
 <body>
 
@@ -161,7 +161,7 @@
 			<div class="row">
 				<div class="intallrequestForm">
 					<form  action="InstallService" method="post">
-					<h5 class="request-h5">설치문의 글쓰기</h5>
+					<h3 class="request-h5">설치문의작성</h3>
 						<div class="table2-div">
 						<table class="board_table2">
 							<tr>

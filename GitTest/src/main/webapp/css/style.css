@@ -446,6 +446,16 @@ li {
 	margin-bottom: 30px;
 	padding: 10px;
 }
+.board .board_table3 {
+	width: 400px;
+	display: inline;
+	text-align: center;
+	border-spacing: 1px;
+	line-height: 1.5;
+	margin: 20px;
+	margin-bottom: 30px;
+	padding: 10px;
+}
 .board .text-box{
 	width: 330px;
 	height: 40px;
@@ -467,13 +477,38 @@ li {
 	vertical-align: top;
 	margin-bottom: 10px;
 }
+.board .board_table3 th {
+	width: 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	font-weight: bold;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
 .board .board_table td {
 	padding: 10px;
 	font-weight: bold;
 	vertical-align: top;
 	border-bottom: 1px solid #ccc;
 }
+.board .board_table3 td {
+	width: 300px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+}
+.board .board_table3 .readonly{
+	border: 0;
+}
 .table2-div {
+	display: inline-block;
+	width:400px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.table3-div {
 	display: inline-block;
 	width:400px;
 	text-align: center;
