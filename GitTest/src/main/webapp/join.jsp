@@ -160,12 +160,16 @@
 			<form action="Join" method="post" class="loginjoinform">
 				<table class="loginjoinTable">
 				<tr>
-					<td><input type="text" name="id" class="text-field" id="id" placeholder="아이디를 입력하세요"></td>
+					<td class="text-text">
 					<%
 						if(vo==null){
-						out.print("<h5>아이디를 입력해주세요</h5>");
+						out.print("아이디");
 						}
 					%>
+					</td>
+				</tr>
+				<tr>	
+					<td><input type="text" name="id" class="text-field" id="id" placeholder="아이디를 입력하세요"></td>
 				</tr>
 				<tr>	
 					<td><input type="button" class="button-field" value="아이디 중복 확인" onclick="idCheck()"><br></td>
@@ -174,7 +178,7 @@
 					<td><p id="checkId" class="text-field"></p></td>
 				</tr>
 				<tr>
-				<td style="text-align:left"><b>비밀번호</b></td>
+				<td class="text-text">비밀번호</td>
 				</tr>
 				<tr>
 					<td>
@@ -182,7 +186,7 @@
 					</td>
 				</tr>
 				<tr>
-				<td style="text-align:left"><b>이름</b></td>
+				<td class="text-text">이름</td>
 				</tr>
 				<tr>
 					<td>
@@ -190,7 +194,7 @@
 					</td>
 				</tr>
 				<tr>
-				<td style="text-align:left"><b>전화번호</b></td>
+				<td class="text-text">전화번호</td>
 				</tr>
 				<tr>
 					<td>
@@ -198,7 +202,7 @@
 					</td>
 				</tr>
 				<tr>
-				<td style="text-align:left"><b>이메일</b></td>
+				<td class="text-text">이메일</td>
 				</tr>
 				<tr>
 					<td>
@@ -206,7 +210,7 @@
 					</td>
 				</tr>
 				<tr>
-				<td style="text-align:left"><b>주소</b></td>
+				<td class="text-text">주소</td>
 				</tr>
 				<tr>
 					<td>
