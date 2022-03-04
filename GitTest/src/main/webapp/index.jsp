@@ -91,8 +91,9 @@
 						}
 					}
 					%>
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" id="dropdown01"
+					<% if(vo!=null){%>
+						<li class="nav-item dropdown">
+						<a	class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
 
 						<ul class="dropdown-menu" aria-labelledby="dropdown01">
@@ -102,6 +103,8 @@
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
+						<%}
+						%>
 					<!-- 
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
