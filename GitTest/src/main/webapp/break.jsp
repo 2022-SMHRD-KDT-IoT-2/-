@@ -225,12 +225,7 @@
 							</div>
 						</div>
 						<div class="my-3">
-<<<<<<< HEAD
 							<input type="submit" class="btn form-control-submit-button" value="등록">
-=======
-							<a href="#your-link"><input type="submit" class="btn form-control-submit-button" value="등록"></a>
-							<!-- <a class="btn form-control-submit-button" href="#your-link">등록</a> -->
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-IoT-2/-.git
 						</div>
 						</form>
 					</div>
