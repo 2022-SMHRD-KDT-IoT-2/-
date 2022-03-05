@@ -225,7 +225,7 @@
 							</div>
 						</div>
 						<div class="my-3">
-							<a class="btn form-control-submit-button" href="#your-link">등록</a>
+							<input type="submit" class="btn form-control-submit-button" value="등록">
 						</div>
 						</form>
 					</div>
@@ -235,32 +235,24 @@
 				<!-- 좌측 폼 div종료 -->
 				<!-- end of col -->
 				<!-- 오른쪽 -->
-				<div class="br-right">
-				<!-- 검색창 -->
 				<div class="break-right">
-				<div class="col-lg-6 d-flex align-items-center">
+				<!-- 검색창 -->
+				
+				<div class="col-lg-6 d-flex">
 					<div class="searchbox">
 					<div class="break-search">
-					<table>
-						<tr>
-							<td class="break-search">신고 위치 주소 검색</td>
-						</tr>
-						<tr>
-							<td><input type="text" name="detailAddress" id="address"></td>
-							<td class="search-button"><button type="button" id="searchBtn"
-									onclick="adressSearch()" class="search-button"> 검색 </button></td>
-						</tr>
-					</table>
+						<input type="text" name="detailAddress" id="address" placeholder="신고할 위치의 주소를 검색해주세요" class="break-search-text">
+						<button type="button" id="searchBtn" onclick="adressSearch()" class="break-search-button">검색</button>
 					</div>
 					</div>
 				</div>
-				</div>
+				
 				<!-- 검색창 div 종료 -->		
 				<!-- 지도 -->
-				<div class="break-right-bottom">
+				<div class="map-right">
 				<div class="col-lg-6 d-flex align-items-center">
 				<div class="map">
-				<div id="map" style="width: 800px; height: 500px; border: 1px solid white; "></div>
+				<div id="map" style="width: 800px; height: 500px;"></div>
 	
 				</div>	
 				</div>
