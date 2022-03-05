@@ -86,7 +86,7 @@
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%
-					if(vo1!=null){
+					if(vo!=null){
 						System.out.print(vo1.getYn());
 						if(vo1.getYn().equals("Y")||vo1.getYn().equals("y")){
 						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
@@ -172,20 +172,12 @@
 				<td class="td-title">내용</td>
 				<td class= "td-text" colspan="3"><pre><%=vo.getContent() %></pre></td>
 			</tr>
-
-				<%
-					if(vo1!=null){
-						if(vo1.getYn().equals("Y")||vo1.getYn().equals("y")){%>
-									<tr align="center">
-							<td colspan="4">
-						<input type="button" class="button-content" value="삭제" onclick="location.href='BreakDelete?no=<%=vo.getNum()%>'">
-										</td>
+			<tr align="center">
+				<td colspan="4">
+				<input type="button" class="button-content" value="수정" onclick="location.href='breakmodify.jsp?no=<%=vo.getNum()%>'"> 
+					<input type="button" class="button-content" value="삭제" onclick="location.href='BreakDelete?no=<%=vo.getNum()%>'">
+				</td>
 				</tr>
-						<%
-						}
-					}
-					%>
-
 				</table>
     </center>
                         </div>

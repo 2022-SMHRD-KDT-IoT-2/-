@@ -20,7 +20,7 @@ public class BreakDelete extends HttpServlet {
 		String no = request.getParameter("no");
 
 		BreakDAO dao = new BreakDAO();
-		int cnt = dao.deleteBreak(no);
+		int cnt = dao.deleteOneBreak(no);
 
 		if (cnt > 0) {
 			response.sendRedirect("breaklist.jsp");

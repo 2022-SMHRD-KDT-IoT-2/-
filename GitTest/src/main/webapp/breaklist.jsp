@@ -345,6 +345,15 @@
 				</select> <input type="text" class="search-text" name="find" id="find"> 
 				<input type="submit" class="search-button" value="검색">
 			</form>
+			<br>
+							<%
+					if(vo!=null){
+						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){%>
+						<input type="button" class="button-content" value="모든글삭제" onclick="location.href='BreakAllDelete'">
+						<%
+						}
+					}
+					%>
 			</div>
 
 		</div>
