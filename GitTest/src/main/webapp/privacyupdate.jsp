@@ -64,7 +64,7 @@
 			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
 		}
 		%> 
-					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
+					<li class="nav-item"><a class="nav-link" href="index.jsp#introduction">제품소개</a>
 					</li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown02"

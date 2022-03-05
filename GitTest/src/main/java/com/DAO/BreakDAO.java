@@ -225,5 +225,50 @@ public class BreakDAO {
 		}
 		return al;
 	}
+	public int deleteBreak(String no) {
+		int cnt=0;
+		try {
+
+			connect();
+			
+
+			String sql = "delete from t_report where report_seq=?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, no);
+			cnt = psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		} finally {
+			quitDB();
+
+		}
+		return cnt;
+	}
+	public int modifyBreak(String name,String status ,String loc,String phone,int no) {
+		int cnt=0;
+		try {
+
+			connect();
+
+			String sql = "update t_request set request_name=?, request_status=?, request_loc=?, request_phone=? where request_seq=?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, name);
+			psmt.setString(2, status);
+			psmt.setString(3, loc);
+			psmt.setString(4, phone);
+			psmt.setInt(5, no);
+			cnt = psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		} finally {
+			quitDB();
+
+		}
+		return cnt;
+	}
 
 }
