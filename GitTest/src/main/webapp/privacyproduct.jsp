@@ -211,7 +211,7 @@
 				%>
 				<tr>
 					<td><%=number--%></td>
-					<td><%=board.getProduct_uid()%></td>
+					<td><%=board.getProduct_seq()%></td>
 					<td><%=board.getProduct_loc()%></td>
 					<td>
 						<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%> <a
@@ -234,7 +234,7 @@
 				%>
 				<tr>
 				<td><%=number--%></td>
-				<td><%=board.getProduct_uid()%></td>
+				<td><%=board.getProduct_seq()%></td>
 				<td><%=board.getProduct_loc()%></td>
 				<td>
 					<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값과 pageNum, sel, find를 갖고 content.jsp로 이동 --%> 

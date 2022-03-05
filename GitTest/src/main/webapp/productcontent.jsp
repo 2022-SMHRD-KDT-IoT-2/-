@@ -150,12 +150,12 @@
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
-		<h5 class="content"><%=vo.getProduct_uid() %></h5>
+		<h5 class="content"><%=vo.getProduct_seq() %></h5>
 	<div class="contentdiv-div">
     <div class="content-div">
 		<table class="content-table">
 			<tr>
-				<td class="td-title">제품<br>번호</td>
+				<td class="td-title">제품<br>아이디</td>
 				<td class= "td-text"><%=vo.getProduct_uid() %></td>
 				<td class="td-title">설치<br>위치</td>
 				<td class= "td-text"><%=vo.getProduct_loc() %></td>

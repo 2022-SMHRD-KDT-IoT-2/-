@@ -21,7 +21,7 @@ public class BreakReport extends HttpServlet {
 		
 		String name = request.getParameter("name");
 		String phone = request.getParameter("phone");
-		int product_num = Integer.parseInt(request.getParameter("num"));
+		int product_num = Integer.parseInt(request.getParameter("product_number"));
 		String content=request.getParameter("content");
 		
 		BreakDAO dao=new BreakDAO();
