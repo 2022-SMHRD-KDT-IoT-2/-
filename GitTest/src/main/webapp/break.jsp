@@ -225,7 +225,7 @@
 							</div>
 						</div>
 						<div class="my-3">
-							<a class="btn form-control-submit-button" href="#your-link">등록</a>
+							<input type="submit" class="btn form-control-submit-button" value="등록">
 						</div>
 						</form>
 					</div>
