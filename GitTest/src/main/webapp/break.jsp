@@ -207,7 +207,7 @@
 								</div>
 								<div class="col-lg-6">
 									<div class="form-group py-2">
-										<input type="email" class="form-control form-control-input"
+										<input type="text" class="form-control form-control-input"
 											name="phone" id="exampleFormControlInput2"
 											placeholder="010-0000-0000">
 									</div>
@@ -251,10 +251,8 @@
 				<!-- 지도 -->
 				<div class="map-right">
 				<div class="col-lg-6 d-flex align-items-center">
-				<div class="map">
-				<div id="map" style="width: 800px; height: 500px;"></div>
-	
-				</div>	
+				<div id="map" class="map" ></div>
+				
 				</div>
 				</div>
 				<!-- 지도 div 종료 -->		
