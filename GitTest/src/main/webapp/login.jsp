@@ -200,22 +200,22 @@
 					</tr>
 					<tr>
 						<td><a href="javascript:kakaoLogin();"><img src="assets/images/kakao_login.png"></a> 
-						<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> 
-						<script>
+						<script src="https://developers.kakao.com/sdk/js/kakao.js"></script> 
 						
-	window.Kakao.init("b43551a3efd6736c68f6755e449a2250");
+	<script>					
+	Kakao.init("b43551a3efd6736c68f6755e449a2250");
 
     function kakaoLogin(){
-        window.Kakao.Auth.login({
-            scope:'profile_nickname, account_email',
-            success: function(authObj){
-                console.log(authObj);
-                window.Kakao.API.request({
+        Kakao.Auth.login({
+            success: function(response){
+                Kakao.API.request({
                     url:'/v2/user/me', 
-                    success: (res) => {
-                        const kakao_account = res.kakao_account;
-                        console.log(kakao_account);
-                    }
+                    success: function (response) {
+                    	console.log(response)
+                    },
+                    fail : function(response) {
+                    	console.log(error)
+                    },
                 }); //window.location.href="/ex/kakao_login.html" 리다이렉트되는 코드
             },
             fail: function(error){

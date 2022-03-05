@@ -19,7 +19,7 @@
 <meta property="og:title" content="" />
 <!-- title shown in the actual shared post -->
 <meta property="og:description" content="" />
-<!-- description shown in the actual shared post -->
+<!-- description shown in the actual shared post --> 
 <meta property="og:image" content="" />
 <!-- image link, make sure it's jpg -->
 <meta property="og:url" content="" />
