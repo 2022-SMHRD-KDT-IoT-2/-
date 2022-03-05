@@ -238,13 +238,13 @@
 				<div class="break-right">
 				<!-- 검색창 -->
 				
-				<div class="col-lg-6 d-flex">
 					<div class="searchbox">
 					<div class="break-search">
 						<input type="text" name="detailAddress" id="address" placeholder="신고할 위치의 주소를 검색해주세요" class="break-search-text">
 						<button type="button" id="searchBtn" onclick="adressSearch()" class="break-search-button">검색</button>
 					</div>
 					</div>
+				<div class="col-lg-6 d-flex">
 				</div>
 				
 				<!-- 검색창 div 종료 -->		

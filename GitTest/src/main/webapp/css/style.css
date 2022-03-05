@@ -434,6 +434,7 @@ li {
 	height: 100%;
 	display: block;
 	float: right;
+	padding-right: 3rem;
 }
 
 .break-search{
@@ -461,7 +462,7 @@ li {
 .map{
 	display: inline-block;
 	position: bottom;
-	width: 800px;
+	width: 100%;
 	height: 500px;
 }
 
@@ -514,7 +515,7 @@ li {
 	border-spacing: 1px;
 	line-height: 1.5;
 	border-top: 1px solid #ccc;
-	margin: 20px;
+	margin: 0px;
 	margin-bottom: 10px;
 }
 .board .board_table2 {
@@ -549,7 +550,7 @@ li {
 	padding-bottom: 10px;
 	font-weight: bold;
 	vertical-align: top;
-	border-bottom: 1px solid #ccc;
+	
 }
 .board .board_table2 th {
 	padding-top: 10px;
@@ -571,7 +572,7 @@ li {
 	padding: 10px;
 	font-weight: bold;
 	vertical-align: top;
-	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
 }
 .board .board_table3 td {
 	width: 300px;
@@ -617,6 +618,9 @@ li {
 	color: black;
 	margin-top: 20px;
 	margin-bottom: 30px;
+}
+.td-right{
+	text-align: right;
 }
 
 /**********************/
@@ -691,7 +695,7 @@ h5{
 .mypage{
 	text-align: center;
 }
-.mypage h5{
+.mypage h3{
 	margin-top: 30px;
 	margin-bottom: 20px;
 	text-align: center;
@@ -739,6 +743,10 @@ h5{
 	background-color: white;
 	display: inline;
 	text-align: center;
+}
+.breakcontent-div{
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 .breakcontent h5{
 	color: black;
