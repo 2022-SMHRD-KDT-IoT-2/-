@@ -234,13 +234,16 @@
 				</div>
 				<!-- 좌측 폼 div종료 -->
 				<!-- end of col -->
-				<!-- 우측 지도 -->
+				<!-- 오른쪽 -->
 				<div class="break-right">
+				<!-- 검색창 -->
+				<div class="right">
 				<div class="col-lg-6 d-flex align-items-center">
+					<div class="searchbox">
 					<div class="break-search">
 					<table>
 						<tr>
-							<td class="break-search">신고 위치 주소 검색</td>
+							<td class="break-search2">신고 위치 주소 검색</td>
 						</tr>
 						<tr>
 							<td><input type="text" name="detailAddress" id="address"></td>
@@ -249,13 +252,21 @@
 						</tr>
 					</table>
 					</div>
-		<div id="map" style="width: 650px; height: 65%; vertical-align: bottom; float:right;"></div>
+					</div>
+				</div>
+				</div>
+				<!-- 검색창 div 종료 -->		
+				<!-- 지도 -->
+				<div class="map-right">
+				<div class="col-lg-6 d-flex align-items-center">
+				<div class="map">
+				<div id="map" style="width: 800px; height: 500px; border: 1px solid white; "></div>
 	
 				</div>	
 				</div>
-				<!-- 우측 지도 div 종료 -->		
-			</div>
-			
+				</div>
+				<!-- 지도 div 종료 -->		
+				</div>
 		</div>
 		<!-- end of row -->
 		</div>
@@ -318,7 +329,7 @@
 		mapOption = {
 			center : new kakao.maps.LatLng(35.150078125347754,
 					126.91980634412012), // 지도의 중심좌표
-			level : 9
+			level : 7
 		// 지도의 확대 레벨
 		};
 

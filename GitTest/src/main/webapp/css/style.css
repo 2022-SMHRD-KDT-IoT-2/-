@@ -389,6 +389,7 @@ li {
 /****************/
 .break-div{
 	width: 100%;
+	height: 100%;
 	padding-top: 200px;
 	background-color: var(--primary);
 }
@@ -401,8 +402,10 @@ li {
 }
 .break-left{
 	width: 50%;
-	display: inline-block;
+	height: 100%;
+	display: block;
 	text-align: left;
+	float: left;
 }
 .break-left .col-lg-6{
 	width: 100%;
@@ -410,8 +413,19 @@ li {
 }
 .break-right{
 	width: 50%;
-	display: inline-block;
-	text-align: right;
+	height: 20%;
+	display: block;
+}
+.break-right{
+	width: 50%;
+	height: 100%;
+	display: block;
+	float: right;
+}
+.map-right{
+	width: 50%;
+	height: 80%;
+	display: block;
 }
 .break-right .col-lg-6{
 	width: 100%;
@@ -419,7 +433,24 @@ li {
 }
 .break-search{
 	display: inline-block;
-	text-align:right
+	text-align: right;
+	margin-bottom: 20px;
+}
+.break-search2{
+	display: inline-block;
+	text-align: right;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+.searchbox{
+	text-align: right;
+	display: block;
+	
+}
+.map{
+	display: block;
+	position: bottom; 
+	border: 1px solid white;
 }
 
 /*****************************/
@@ -897,6 +928,7 @@ h5{
 	padding-left: 1.5rem;
 	padding-top: 0.775rem;
 	padding-bottom: 0.775rem;
+	resize: none;
 }
 
 /******************************/
