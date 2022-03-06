@@ -190,41 +190,52 @@
     </section> <!-- end of contact -->
     
     
-   <!-- Location -->
-    <section class="location text-light py-5">
-        <div class="container" data-aos="zoom-in">
-            <div class="row">
-                <div class="col-lg-3 d-flex align-items-center">
-                    <div class="p-2"><i class="far fa-map fa-3x"></i></div>
-                    <div class="ms-2">
-                        <h6>주소</h6>
-                        <p>광주광역시 동구 예술길 31-15 스마트인재개발원</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-flex align-items-center" >
-                    <div class="p-2"><i class="fas fa-mobile-alt fa-3x"></i></div>
-                    <div class="ms-2">
-                        <h6>연락처</h6>
-                        <p>010-1234-5678</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-flex align-items-center" >
-                    <div class="p-2"><i class="far fa-envelope fa-3x"></i></div>
-                    <div class="ms-2">
-                        <h6>이메일</h6>
-                        <p>kdb7603@naver.com</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-flex align-items-center" >
-                    <div class="p-2"><i class="far fa-clock fa-3x"></i></div>
-                    <div class="ms-2">
-                        <h6>상담문의</h6>
-                        <p>09:00 AM - 18:00 PM</p>
-                    </div>
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of location -->    
+   <section class="location text-light py-5">
+      <div class="container" data-aos="zoom-in">
+         <div class="row">
+            <div class="col-lg-3 d-flex align-items-center">
+               <div class="p-2">
+                  <i class="far fa-map fa-3x"></i>
+               </div>
+               <div class="ms-2">
+                  <h6>주소</h6>
+                  <h6>광주광역시 동구<br>스마트인재개발원</h6>
+                  
+               </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+               <div class="p-2">
+                  <i class="fas fa-mobile-alt fa-3x"></i>
+               </div>
+               <div class="ms-2">
+                  <h6>연락처</h6>
+                  <p>82) 010-1234-5678</p>
+               </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+               <div class="p-2">
+                  <i class="far fa-envelope fa-3x"></i>
+               </div>
+               <div class="ms-2">
+                  <h6>이메일</h6>
+                  <p>kdb7603@naver.com</p>
+               </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+               <div class="p-2">
+                  <i class="far fa-clock fa-3x"></i>
+               </div>
+               <div class="ms-2">
+                  <h6>상담문의</h6>
+                  <p>09:00 AM - 18:00 PM</p>
+               </div>
+            </div>
+         </div>
+         <!-- end of row -->
+      </div>
+      <!-- end of container -->
+   </section>
+   <!-- end of location -->
     
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54eb6a93d19563f656425928fbb6c218"></script>
     
