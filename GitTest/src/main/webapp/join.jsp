@@ -37,7 +37,7 @@
 <!-- to have large image post format in Twitter -->
 
 <!-- Webpage Title -->
-<title>로그인</title>
+<title>회원가입</title>
 <!-- Styles -->
 <link
 	href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
@@ -237,16 +237,7 @@
 	</div>
 
 
-  <!-- Bottom -->
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
+
     <section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
@@ -293,6 +284,17 @@
       <!-- end of container -->
    </section>
    <!-- end of location -->
+
+  <!-- Bottom -->
+    <div class="bottom py-2 text-light" >
+        <div class="container d-flex justify-content-between">
+            <div>
+            </div>
+            <div class="bottom-box">
+                
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of bottom -->
 
 <!-- Scripts -->
 	<script src="./js/bootstrap.min.js"></script>
