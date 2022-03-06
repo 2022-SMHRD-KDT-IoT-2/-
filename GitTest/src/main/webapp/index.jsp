@@ -196,37 +196,11 @@
 						through product information!</p>
 				</div>
 			</div>
-		</div>
 		<!-- end of container -->
 	</section>
 	<!-- end of information -->
-
-	<!-- 제품소개 -->
-	<section class="about d-flex align-items-center text-light py-5"
-		id="introduction">
-		<div class="container">
-			<div class="intro">
-				<h2>제품소개</h2>
-			</div>
-			<div class="box">
-				<div class="box_black">
-					<p class="inner_content">img</p>
-				</div>
-				<div class="box_white">
-					<p class="inner_content">text</p>
-				</div>
-			</div>
-			<!-- 
-				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
-					<img class="img-fluid" src="./assets/images/about.jpg" alt="about">
-				</div>
-				 -->
-		</div>
-		<!-- end of container -->
-	</section>
-	<!-- end of about -->
 	
-	<section class="work d-flex align-items-center py-5" >
+	<section class="work d-flex align-items-center py-5" id="introduction">
         <div class="container-fluid text-light">
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right">
@@ -242,13 +216,12 @@
                         </div>
                         <div class="container" data-aos="fade-up">
                             <div class="row g-5">
-                                <div class="col-6 text-start" >
-                                
+                                <div class="col-6 text-start">                               
                                     <i class="fas fa-briefcase fa-2x text-start"></i>
                                     <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="1258" data-purecounter-duration="3">1</h2>
                                     <p>PROJECTS COMPLETED</p>
                                 </div>
-                                <div class="col-6" >
+                                <div class="col-6">
                                     <i class="fas fa-award fa-2x"></i>
                                     <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="3">1</h2>
                                     <p>AWARDS</p>
@@ -258,11 +231,7 @@
                                     <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="1255" data-purecounter-duration="3">1</h2>
                                     <p>CUSTOMER ACTIVE</p>
                                 </div>
-                                <div class="col-6">
-                                    <i class="fas fa-clock fa-2x"></i>
-                                    <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="1157" data-purecounter-duration="3">1</h2>
-                                    <p>GOOD REVIEWS</p>
-                                </div>
+                                
                             </div>
                         </div> <!-- end of container -->
                     </div> <!-- end of row -->
@@ -281,7 +250,8 @@
 					</div>
 					<div class="ms-2">
 						<h6>주소</h6>
-						<p>광주광역시 동구 예술길 31-15 스마트인재개발원</p>
+						<h6>광주광역시 동구<br>스마트인재개발원</h6>
+						
 					</div>
 				</div>
 				<div class="col-lg-3 d-flex align-items-center">
@@ -290,7 +260,7 @@
 					</div>
 					<div class="ms-2">
 						<h6>연락처</h6>
-						<p>010-1234-5678</p>
+						<p>82) 010-1234-5678</p>
 					</div>
 				</div>
 				<div class="col-lg-3 d-flex align-items-center">
