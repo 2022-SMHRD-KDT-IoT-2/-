@@ -612,6 +612,16 @@ li {
 	bottom: 0;
 	width: 100%;
 }
+.location-bottom{
+	padding-bottom: 35.98px;
+	width: 100%;
+}
+.location-fixed{
+	position: fixed;
+	bottom: 35.98px;
+	width: 100%;
+	padding-bottom: 20;
+}
 .list-button{
 	background-color: white;
 	border: 1px solid #2E3D4D;
@@ -635,6 +645,10 @@ li {
 
 #menu h3{
 	margin-top: 50px;
+}
+#menu .login-h3{
+	margin-top: 50px;
+	margin-bottom: 1.5rem;
 }
 
 h5{
