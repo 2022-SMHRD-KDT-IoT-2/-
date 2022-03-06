@@ -484,6 +484,14 @@ li {
 	color: white;
 	border: 1px solid var(--primary);
 }
+.search .button-content{
+	background-color: white;
+	border: 1px solid #2E3D4D;
+	color: black;
+	margin-right: 2px;
+	margin-left: 2px;
+	text-align: right;
+}
 .search .search-text{
 	width: 200px;
 	height: 30px;
@@ -517,6 +525,19 @@ li {
 	border-top: 1px solid #ccc;
 	margin: 0px;
 	margin-bottom: 10px;
+}
+.board .board_table .button-td{
+	background-color: white;
+	margin-right: 2px;
+	margin-left: 2px;
+	text-align: right;
+}
+.board .board_table .button-content{
+	background-color: white;
+	border: 1px solid #2E3D4D;
+	color: black;
+	margin-right: 2px;
+	margin-left: 2px;
 }
 .board .board_table2 {
 	width: 500px;
@@ -754,6 +775,7 @@ h5{
 }
 .mypage .text-field{
     padding: 5px;
+    width: 100%;
 }
 
 /*******************/

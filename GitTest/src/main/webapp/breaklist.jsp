@@ -209,8 +209,8 @@
 				<tr>
 					<th width="20%">No.</th>
 					<th width="20%">이름</th>
-					<th width="30%">제품순번</th>
-					<th width="20%">신고날짜</th>
+					<th width="20%">제품순번</th>
+					<th width="40%">신고날짜</th>
 				</tr>
 				<%
 				if (count > 0 && fcount == 0 && find == null) { // 데이터베이스에 데이터가 있으면
@@ -334,19 +334,9 @@
 						%>
 					</td>
 				</tr>
-			</table>
-			</div>
-			<%-- 검색어 입력 form / get방식 / option value는 데이터베이스 칼럼과 동일하게 설정 --%>
-			<div class="search">
-			<form method="get" action="breaklist.jsp">
-				<select name="sel" class="sel">
-					<option value="product_seq">제품순번</option>
-					<option value="reporter_name">이름</option>
-				</select> <input type="text" class="search-text" name="find" id="find"> 
-				<input type="submit" class="search-button" value="검색">
-			</form>
-			<br>
-							<%
+				<tr>
+					<td colspan="4" class="button-td">
+					<%
 					if(vo!=null){
 						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){%>
 						<input type="button" class="button-content" value="모든글삭제" onclick="location.href='BreakAllDelete'">
@@ -354,6 +344,21 @@
 						}
 					}
 					%>
+					</td>
+				</tr>
+			</table>
+			</div>
+			<%-- 검색어 입력 form / get방식 / option value는 데이터베이스 칼럼과 동일하게 설정 --%>
+			<div class="search">
+
+			<form method="get" action="breaklist.jsp">
+				<select name="sel" class="sel">
+					<option value="product_seq">제품순번</option>
+					<option value="reporter_name">이름</option>
+				</select> <input type="text" class="search-text" name="find" id="find"> 
+				<input type="submit" class="search-button" value="검색">
+			</form>
+
 			</div>
 
 		</div>
