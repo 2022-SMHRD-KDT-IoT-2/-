@@ -343,8 +343,11 @@
 					</select> <input type="text" class="search-text" name="find" id="find">
 					<input type="submit" class="search-button" value="°Ë»ö">
 				</form>
-				</div>
-		</div><section class="location text-light py-5">
+				</div>	
+		</div>
+		
+		<div class="location-fixed">		
+		<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
             <div class="col-lg-3 d-flex align-items-center">
@@ -387,10 +390,21 @@
          </div>
          <!-- end of row -->
       </div>
+      </div>
       <!-- end of container -->
    </section>
    <!-- end of location -->
-
+	<!-- Bottom -->
+	<div class="bottom-fixed">
+	<div class="bottom py-2 text-light">
+		<div class="container d-flex justify-content-between">
+			<div></div>
+			<div class="bottom-box"></div>
+		</div>
+		<!-- end of container -->
+	</div>
+	</div>
+	<!-- end of bottom -->
 
 	<!-- Scripts -->
 	<script src="./js/bootstrap.min.js"></script>
@@ -403,17 +417,8 @@
 	<!-- AOS on Animation Scroll -->
 	<script src="./js/script.js"></script>
 	<!-- Custom scripts -->
-	<!-- Bottom -->
-	<div class="bottom-fixed">
-	<div class="bottom py-2 text-light">
-		<div class="container d-flex justify-content-between">
-			<div></div>
-			<div class="bottom-box"></div>
-		</div>
-		<!-- end of container -->
-	</div>
-	</div>
-	<!-- end of bottom -->
+	
+	
 
 
 </body>
