@@ -559,6 +559,9 @@ li {
 	margin-bottom: 30px;
 	padding: 10px;
 }
+.board .board_table3 tr{
+	height: 60px;
+}
 .board .text-box{
 	width: 330px;
 	height: 40px;
@@ -586,7 +589,7 @@ li {
 	padding-bottom: 10px;
 	text-align: center;
 	font-weight: bold;
-	vertical-align: top;
+	vertical-align: middle;
 	margin-bottom: 10px;
 }
 .board .board_table td {
@@ -599,10 +602,15 @@ li {
 	width: 300px;
 	padding: 10px;
 	font-weight: bold;
-	vertical-align: top;
+	vertical-align: middle;
+}
+.table3-textbox{
+	height: 40px;
+	padding: 0px 5px 0px 5px;
 }
 .board .board_table3 .readonly{
-	border: 0;
+	border: 0 solid white;
+	height: 40px;
 }
 .table2-div {
 	display: inline-block;
@@ -644,10 +652,13 @@ li {
 	padding-bottom: 20;
 }
 .list-button{
+	width: 90px;
+	margin: 5px;
+	padding: 5px;
 	background-color: white;
 	border: 1px solid #2E3D4D;
-	color: black;
-	margin-top: 20px;
+	font-size: 15px;
+	margin-top: 30px;
 	margin-bottom: 30px;
 }
 .td-right{

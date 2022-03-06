@@ -177,23 +177,23 @@
 						<table class="board_table3">
 							<tr>
 								<th>제품아이디</th>
-								<td><input type="text" name="pro_id"></td>
+								<td><input type="text" class="table3-textbox" name="pro_id"></td>
 							</tr>
 							<tr>
 								<th>위치</th>
-								<td><input type="text" name="loc"></td>
+								<td><input type="text" class="table3-textbox" name="loc"></td>
 							</tr>
 							<tr>
 								<th>위도</th>
-								<td><input type="text" name="latitude"></td>
+								<td><input type="text" class="table3-textbox" name="latitude"></td>
 							</tr>
 							<tr>
 								<th>경도</th>
-								<td><input type="text" name="longitude"></td>
+								<td><input type="text" class="table3-textbox" name="longitude"></td>
 							</tr>
 							<tr>
 								<th>관리자아이디</th>
-								<td><input type="text" readonly name="id" class="readonly" value="<%=vo.getId()%>"></td>
+								<td><input type="text" readonly name="id"  class="readonly" value="<%=vo.getId()%>"></td>
 							</tr>
 						</table>
 						</div>
@@ -208,19 +208,8 @@
 	</div>
 	<!-- end of ex-basic-1 -->
 	
-	<!-- Bottom -->
-		<div class="bottom-fixed">
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
-    </div>
-    <section class="location text-light py-5">
+	<div class="location-fixed">		
+		<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
             <div class="col-lg-3 d-flex align-items-center">
@@ -263,9 +252,21 @@
          </div>
          <!-- end of row -->
       </div>
+      </div>
       <!-- end of container -->
    </section>
    <!-- end of location -->
+	<!-- Bottom -->
+	<div class="bottom-fixed">
+	<div class="bottom py-2 text-light">
+		<div class="container d-flex justify-content-between">
+			<div></div>
+			<div class="bottom-box"></div>
+		</div>
+		<!-- end of container -->
+	</div>
+	</div>
+	<!-- end of bottom -->
 		<!-- Scripts -->
 	<script src="./js/bootstrap.min.js"></script>
 	<!-- Bootstrap framework -->
