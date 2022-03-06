@@ -786,20 +786,26 @@ h5{
 	display: inline;
 	text-align: center;
 }
+.breakcontent .row{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+}
 .breakcontent-div{
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
-.breakcontent h5{
+.content {
 	color: black;
+	background: white;
 	text-align: center;
-	padding-top: 50px;
-	padding-bottom: 30px;
 }
-.content{
+
+.content h3{
 	margin-top: 50px;
 	margin-bottom: 30px;
 }
+
 .contentdiv-div{
 	text-align: center;
 }
@@ -811,22 +817,25 @@ h5{
 	border-bottom: 1px solid #ccc;
 }
 .content-table{
-	display: inline;
+	display: inline-block;
 	border-collapse: separate;
 	border-spacing: 1px;
 	text-align: center;
 	line-height: 1.5;
-	margin-top: 20px;
 	margin-bottom: 20px;
-	width: 100%;
+	width: 800px;
 	color: black;
 }
+.content-table tr{
+	height: 60px;
+}
 .content-table td{
-	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
 	padding: 5px;
 }
 .content-table .td-title{
-	width: 100px;
+	width: 150px;
+	background-color: #F2F2F2;
 }
 .content-table .td-text{
 	width: 250px;
@@ -842,6 +851,7 @@ h5{
 	color: black;
 	margin-right: 2px;
 	margin-left: 2px;
+	margin-top: 20px;
 }
 
 

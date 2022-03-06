@@ -73,7 +73,7 @@
 				id="navbarsExampleDefault">
 				<ul class="navbar-nav ms-auto navbar-nav-scroll">
 				<%
-		if (vo1 == null) {
+		if (vo == null) {
 			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"login.jsp\">로그인</a></li>");
 		} else {
 			out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
@@ -81,8 +81,14 @@
 		%> 
 					<li class="nav-item"><a class="nav-link" href="#introduction">제품소개</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
-					</li>
+					<li class="nav-item dropdown">
+						<a	class="nav-link dropdown-toggle" id="dropdown02"
+						data-bs-toggle="dropdown" aria-expanded="false" href="#">고장신고</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown02">
+							<li><a class="dropdown-item" href="break.jsp">고장신고 작성</a></li>
+							<li><div class="dropdown-divider"></div></li>
+							<li><a class="dropdown-item" href="breaklist.jsp">고장신고 게시판</a></li>
+					</ul></li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%
@@ -147,14 +153,14 @@
 
     <!-- Contact -->
     <section class="breakcontent" id="contact">
-        <div class="container-fluid text-light">
+        <div>
             <div class="row">
                 <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5" data-aos="fade-right">
-                    <div style="width:90%">
-                        <div class="text-center text-lg-start py-4 pt-lg-0">
+                    <div>
+                        <div class="text-center">
                             
-    <center>
-		<h5><%=vo.getName() %></h5>
+    <div class="content">
+		<h3><%=vo.getName() %></h3>
 		<table class="content-table">
 			<tr>
 				<td class="td-title">이름</td>
@@ -170,15 +176,15 @@
 			</tr>
 			<tr>
 				<td class="td-title">내용</td>
-				<td class= "td-text" colspan="3"><pre><%=vo.getContent() %></pre></td>
+				<td class= "td-text" colspan="3"><%=vo.getContent() %></td>
 			</tr>
 
 				<%
 					if(vo1!=null){
 						if(vo1.getYn().equals("Y")||vo1.getYn().equals("y")){%>
-									<tr align="center">
+									<tr>
 							<td colspan="4">
-						<input type="button" class="button-content" value="삭제" onclick="location.href='BreakDelete?no=<%=vo.getNum()%>'">
+						<input type="button" class="button-content" value="글삭제" onclick="location.href='BreakDelete?no=<%=vo.getNum()%>'">
 										</td>
 				</tr>
 						<%
@@ -187,7 +193,7 @@
 					%>
 
 				</table>
-    </center>
+    </div>
                         </div>
                     </div> <!-- end of div -->
                 </div> <!-- end of col -->
@@ -198,7 +204,8 @@
     </section> <!-- end of contact -->
     
     
-   <section class="location text-light py-5">
+   <div class="location-fixed">		
+		<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
             <div class="col-lg-3 d-flex align-items-center">
@@ -241,9 +248,21 @@
          </div>
          <!-- end of row -->
       </div>
+      </div>
       <!-- end of container -->
    </section>
    <!-- end of location -->
+	<!-- Bottom -->
+	<div class="bottom-fixed">
+	<div class="bottom py-2 text-light">
+		<div class="container d-flex justify-content-between">
+			<div></div>
+			<div class="bottom-box"></div>
+		</div>
+		<!-- end of container -->
+	</div>
+	</div>
+	<!-- end of bottom -->
     
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54eb6a93d19563f656425928fbb6c218"></script>
     
@@ -258,16 +277,6 @@
 	var map = new kakao.maps.Map(container, options);
     </script>
     
-    <!-- Bottom -->
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
     
     <!-- Scripts -->
     <script src="./js/bootstrap.min.js"></script><!-- Bootstrap framework -->
