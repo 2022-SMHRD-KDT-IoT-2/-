@@ -139,16 +139,16 @@
 
     <!-- Basic -->
     <div class="mypage">
-    	<h5>내 정보 수정</h5>
+    	<h3>내 정보 수정</h3>
 			<form action="PrivacyUpdate" method="post" class="mypage">
 				<table class="mypage-table">
 				<tr>
 					<th>이름</th>
-					<td><input type="text" value="<%=vo.getName() %>" name="name" class="text-field" placeholder="이름을 입력하세요"></td>
+					<td><input type="text" value="<%=vo.getName() %>" readonly name="name" class="text-field readonly" placeholder="이름을 입력하세요"></td>
 				</tr>
 				<tr>
 					<th>아이디</th>
-					<td><input type="text" readonly value="<%=vo.getId() %>" name="id" class="text-field" ></td>
+					<td><input type="text" readonly value="<%=vo.getId() %>" readonly name="id" class="text-field readonly" ></td>
 				</tr>
 				<tr>
 					<th>비밀번호</th>
@@ -175,17 +175,8 @@
     <!-- end of basic -->
 
     
-    <!-- Bottom -->
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
-    <section class="location text-light py-5">
+    <div class="location-fixed">		
+		<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
             <div class="col-lg-3 d-flex align-items-center">
@@ -228,9 +219,21 @@
          </div>
          <!-- end of row -->
       </div>
+      </div>
       <!-- end of container -->
    </section>
    <!-- end of location -->
+	<!-- Bottom -->
+	<div class="bottom-fixed">
+	<div class="bottom py-2 text-light">
+		<div class="container d-flex justify-content-between">
+			<div></div>
+			<div class="bottom-box"></div>
+		</div>
+		<!-- end of container -->
+	</div>
+	</div>
+	<!-- end of bottom -->
 
 
     <!-- Scripts -->

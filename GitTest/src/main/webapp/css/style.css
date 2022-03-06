@@ -710,12 +710,18 @@ h5{
 	text-align: center;
 }
 .mypage h3{
-	margin-top: 30px;
-	margin-bottom: 20px;
+	margin-top: 50px;
+	margin-bottom: 1.5rem;
 	text-align: center;
 }
 .mypage .mypage-table{
 	display: inline;
+}
+.mypage .mypage-table .readonly{
+	border: 0;
+}
+.mypage .mypage-table tr{
+	height: 60px;
 }
 .mypage .mypage-table th {
 	width: 150px;
@@ -743,7 +749,7 @@ h5{
 	background-color: white;
 	border: 1px solid #2E3D4D;
 	font-size: 15px;
-	margin-top: 20px;
+	margin-top: 30px;
 	margin-bottom: 30px;
 }
 .mypage .text-field{
