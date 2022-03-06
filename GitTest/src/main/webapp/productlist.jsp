@@ -249,15 +249,7 @@
 			<%		
 				}
 			%>
-			<%if(vo1 != null){ %>
-				<tr>
-					<td colspan="6" align="right">
-						<%-- 버튼을 클릭하면 proudctwrite.jsp로 이동 --%> <input type="button"
-						class="list-button" value="제품 추가" onclick="location.href='productrequest.jsp'">
-					</td>
-				</tr>
-				<tr>
-				<%} %>
+			
 					<td colspan="6" align="center">
 						<%
 						// 페이징  처리
@@ -334,6 +326,15 @@
 %>
 </td>
 </tr>
+		<%if(vo1 != null){ %>
+		<tr>
+			<td colspan="6" align="right">
+			<%-- 버튼을 클릭하면 proudctwrite.jsp로 이동 --%> <input type="button"
+			class="list-button" value="제품 추가" onclick="location.href='productrequest.jsp'">
+			</td>
+		</tr>
+		<tr>
+		<%} %>
 </table>
 </div>
 <%-- 검색어 입력 form / get방식 / option value는 데이터베이스 칼럼과 동일하게 설정 --%>
@@ -352,15 +353,7 @@
 		</div>
 
 
-	<!-- Bottom -->
-	<div class="bottom py-2 text-light">
-		<div class="container d-flex justify-content-between">
-			<div></div>
-			<div class="bottom-box"></div>
-		</div>
-		<!-- end of container -->
-	</div>
-	<!-- end of bottom -->
+	
 	<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
@@ -407,6 +400,16 @@
       <!-- end of container -->
    </section>
    <!-- end of location -->
+
+<!-- Bottom -->
+	<div class="bottom py-2 text-light">
+		<div class="container d-flex justify-content-between">
+			<div></div>
+			<div class="bottom-box"></div>
+		</div>
+		<!-- end of container -->
+	</div>
+	<!-- end of bottom -->
 
 	<!-- Scripts -->
 	<script src="./js/bootstrap.min.js"></script>
