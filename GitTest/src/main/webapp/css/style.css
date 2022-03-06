@@ -864,6 +864,9 @@ h5{
 	padding: 5px;
 	margin-top: 30px;
 }
+.content-table .td-text .text-box{
+	height: 40px;
+}
 
 
 /********************/

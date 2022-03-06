@@ -142,22 +142,23 @@
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
-		<h5 class="content"><%=vo.getProduct_uid() %></h5>
+    <div class="content">
+		<h3><%=vo.getProduct_uid() %></h3>
 	<div class="contentdiv-div">
     <div class="content-div">
     <form action="ProductModify?no=<%=vo.getProduct_seq()%>" method="post">
 		<table class="content-table">
 			<tr>
 				<td class="td-title">제품<br>번호</td>
-				<td class= "td-text"><input type="text" name="product_id" value="<%=vo.getProduct_uid() %>"></td>
+				<td class= "td-text"><input type="text" name="product_id" class="text-box" value="<%=vo.getProduct_uid() %>"></td>
 				<td class="td-title">설치<br>위치</td>
-				<td class= "td-text"><input type="text" name="loc" value="<%=vo.getProduct_loc() %>"></td>
+				<td class= "td-text"><input type="text" name="loc" class="text-box" value="<%=vo.getProduct_loc() %>"></td>
 			</tr>
 			<tr>
 				<td class="td-title">위도</td>
-				<td class= "td-text"><input type="text" name="latitude" value="<%=vo.getProduct_latitude() %>"></td>
+				<td class= "td-text"><input type="text" name="latitude" class="text-box" value="<%=vo.getProduct_latitude() %>"></td>
 				<td class="td-title">경도</td>
-				<td class= "td-text"><input type="text" name="longitude" value="<%=vo.getProduct_longitude() %>"></td>
+				<td class= "td-text"><input type="text" name="longitude" class="text-box" value="<%=vo.getProduct_longitude() %>"></td>
 			</tr>
 			<tr>
 				<td class="td-title">설치<br>일자</td>
@@ -177,7 +178,10 @@
 		</table>
 	</div>
 	</div>
-	<section class="location text-light py-5">
+	</div>
+	
+	<div class="location-fixed">		
+		<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
             <div class="col-lg-3 d-flex align-items-center">
@@ -220,19 +224,20 @@
          </div>
          <!-- end of row -->
       </div>
+      </div>
       <!-- end of container -->
    </section>
    <!-- end of location -->
-	
-        <!-- Bottom -->
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
+	<!-- Bottom -->
+	<div class="bottom-fixed">
+	<div class="bottom py-2 text-light">
+		<div class="container d-flex justify-content-between">
+			<div></div>
+			<div class="bottom-box"></div>
+		</div>
+		<!-- end of container -->
+	</div>
+	</div>
+	<!-- end of bottom -->
 </body>
 </html>
