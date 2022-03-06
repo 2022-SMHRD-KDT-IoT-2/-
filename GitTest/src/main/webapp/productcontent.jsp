@@ -150,7 +150,9 @@
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
-		<h5 class="content"><%=vo.getProduct_seq() %></h5>
+    
+    <div class="content">
+		<h3><%=vo.getProduct_seq() %></h3>
 	<div class="contentdiv-div">
     <div class="content-div">
 		<table class="content-table">
@@ -183,18 +185,10 @@
 		</table>
 	</div>
 	</div>
+	</div>
 	
-        <!-- Bottom -->
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
-    <section class="location text-light py-5">
+        <div class="location-fixed">		
+		<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
             <div class="col-lg-3 d-flex align-items-center">
@@ -237,9 +231,22 @@
          </div>
          <!-- end of row -->
       </div>
+      </div>
       <!-- end of container -->
    </section>
    <!-- end of location -->
+   
+	<!-- Bottom -->
+	<div class="bottom-fixed">
+	<div class="bottom py-2 text-light">
+		<div class="container d-flex justify-content-between">
+			<div></div>
+			<div class="bottom-box"></div>
+		</div>
+		<!-- end of container -->
+	</div>
+	</div>
+	<!-- end of bottom -->
     	<!-- Scripts -->
 	<script src="./js/bootstrap.min.js"></script>
 	<!-- Bootstrap framework -->
