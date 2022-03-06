@@ -19,7 +19,7 @@
 <meta property="og:title" content="" />
 <!-- title shown in the actual shared post -->
 <meta property="og:description" content="" />
-<!-- description shown in the actual shared post --> 
+<!-- description shown in the actual shared post -->
 <meta property="og:image" content="" />
 <!-- image link, make sure it's jpg -->
 <meta property="og:url" content="" />
@@ -147,8 +147,7 @@
 	<section class="home py-5 d-flex align-items-center" id="header">
 		<div class="container text-light py-5" data-aos="fade-right">
 			<h1 class="headline" style="font-size: 80px;">
-				For Your <br>
-				<span class="home_text">Safety</span> Drive
+				For Your <br> <span class="home_text">Safety</span> Drive
 			</h1>
 			<p class="para para-light py-3">스마트 델리네이터는 야간 급커브도로 안전운행을 지원합니다</p>
 			<div class="d-flex align-items-center">
@@ -196,49 +195,135 @@
 						through product information!</p>
 				</div>
 			</div>
-		<!-- end of container -->
+			<!-- end of container -->
 	</section>
 	<!-- end of information -->
-	
+
 	<section class="work d-flex align-items-center py-5" id="introduction">
-        <div class="container-fluid text-light">
-            <div class="row">
-                <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right">
-                    <img class="img-fluid" src="./assets/images/road.jpg" alt="work">        
-                </div>
-                <div class="col-lg-5 d-flex align-items-center px-4 py-3" data-aos="">
-                    <div class="row">
-                        <div class="text-center text-lg-start py-4 pt-lg-0">
-                            <p>About Smart Delineator</p>
-                            <h2 class="py-2">Smart Delineator</h2>
-                            <p class="para-light">제품소개가 여기서부터 시작되는 느낌으로 만들 예정!</p>                         
-                            <p class="para-light">우리는 아직 데이터가 없어서 목표를 여기에 넣을까 합니다.</p>
-                        </div>
-                        <div class="container" data-aos="fade-up">
-                            <div class="row g-5">
-                                <div class="col-6 text-start">                               
-                                    <i class="fas fa-briefcase fa-2x text-start"></i>
-                                    <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="1258" data-purecounter-duration="3">1</h2>
-                                    <p>PROJECTS COMPLETED</p>
-                                </div>
-                                <div class="col-6">
-                                    <i class="fas fa-award fa-2x"></i>
-                                    <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="3">1</h2>
-                                    <p>AWARDS</p>
-                                </div>
-                                <div class="col-6">
-                                    <i class="fas fa-users fa-2x"></i>
-                                    <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="1255" data-purecounter-duration="3">1</h2>
-                                    <p>CUSTOMER ACTIVE</p>
-                                </div>
-                                
-                            </div>
-                        </div> <!-- end of container -->
-                    </div> <!-- end of row -->
-                </div> <!-- end of col-lg-5 -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of work -->
+		<div class="container-fluid text-light">
+			<div class="row">
+				<div class="col-lg-6 d-flex align-items-center"
+					data-aos="fade-right">
+					<img class="img-fluid" src="./assets/images/road.jpg" alt="work">
+				</div>
+				<div class="col-lg-5 d-flex align-items-center px-4 py-3"
+					data-aos="">
+					<div class="row">
+						<div class="text-center text-lg-start py-4 pt-lg-0">
+							<p>About Smart Delineator</p>
+							<h2 class="py-2">Smart Delineator</h2>
+							<p class="para-light">제품소개가 여기서부터 시작되는 느낌으로 만들 예정!</p>
+							<p class="para-light">우리는 아직 데이터가 없어서 목표를 여기에 넣을까 합니다.</p>
+						</div>
+						<div class="container" data-aos="fade-up">
+							<div class="row g-5">
+								<div class="col-6 text-start">
+									<i class="fas fa-briefcase fa-2x text-start"></i>
+									<h2 class="purecounter" data-purecounter-start="0"
+										data-purecounter-end="1258" data-purecounter-duration="3">1</h2>
+									<p>PROJECTS COMPLETED</p>
+								</div>
+								<div class="col-6">
+									<i class="fas fa-award fa-2x"></i>
+									<h2 class="purecounter" data-purecounter-start="0"
+										data-purecounter-end="150" data-purecounter-duration="3">1</h2>
+									<p>AWARDS</p>
+								</div>
+								<div class="col-6">
+									<i class="fas fa-users fa-2x"></i>
+									<h2 class="purecounter" data-purecounter-start="0"
+										data-purecounter-end="1255" data-purecounter-duration="3">1</h2>
+									<p>CUSTOMER ACTIVE</p>
+								</div>
+								<div class="col-6">
+									<i class="fas fa-clock fa-2x"></i>
+									<h2 class="purecounter" data-purecounter-start="0"
+										data-purecounter-end="1157" data-purecounter-duration="3">1</h2>
+									<p>GOOD REVIEWS</p>
+								</div>
+							</div>
+						</div>
+						<!-- end of container -->
+					</div>
+					<!-- end of row -->
+				</div>
+				<!-- end of col-lg-5 -->
+			</div>
+			<!-- end of row -->
+		</div>
+		<!-- end of container -->
+	</section>
+	<!-- end of work -->
+
+	<!-- About -->
+	<section class="about d-flex align-items-center text-light py-5"
+		id="about">
+		<div class="container">
+			<div class="row d-flex align-items-center">
+				<div class="col-lg-7" data-aos="fade-right">
+					<p>ABOUT US</p>
+					<h1>POINT 1</h1>
+					<h4 class="py-2 para-light">엄청 경제적임 싸게 설치할 수 있음 어필어필</h4>
+					<p class="py-2 para-light">sed accusantium aut dolores
+						inventore architecto modi cupiditate eligendi corporis, illum illo
+						culpa. Reiciendis, molestias. Illum voluptatum quisquam ad
+						veritatis dolorem.</p>
+				</div>
+				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
+					<img class="img-fluid" src="./assets/images/about.jpg" alt="about">
+				</div>
+			</div>
+			<!-- end of row -->	
+		</div>
+		<!-- end of container -->
+		
+	</section>
+	<!-- end of about -->
+
+	<section class="about d-flex align-items-center text-light py-5"
+		id="about">
+		<div class="container">
+			<div class="row d-flex align-items-center">
+				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
+					<img class="img-fluid" src="./assets/images/about.jpg" alt="about">
+				</div>
+				<div class="col-lg-7" data-aos="fade-right">
+					<p style="text-align: right">ABOUT US</p>
+					<h1 style="text-align: right">POINT 2</h1>
+					<h4 class="py-2 para-light" style="text-align: right">2 color로 가시성 높임</h4>
+					<p class="py-2 para-light" style="text-align: right">>sed accusantium aut dolores
+						inventore architecto modi</p>
+
+				</div>
+
+			</div>
+			<!-- end of row -->
+		</div>
+		<!-- end of container -->
+	</section>
+	<!-- end of about -->
+	<section class="about d-flex align-items-center text-light py-5"
+		id="about">
+		<div class="container">
+			<div class="row d-flex align-items-center">
+				<div class="col-lg-7" data-aos="fade-right">
+					<p>ABOUT US</p>
+					<h1>시연영상</h1>
+					<p class="py-2 para-light">sed accusantium aut dolores
+						inventore architecto modi cupiditate eligendi corporis, illum illo
+						culpa. Reiciendis, molestias. Illum voluptatum quisquam ad
+						veritatis dolorem.</p>
+				</div>
+				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
+					<iframe width="676" height="310"
+					src="https://www.youtube.com/embed/oa-Yp1QnyAc"
+					frameborder="0" gesture="media" allowfullscreen="" class="video"></iframe>
+			</div>
+			</div>
+			<!-- end of row -->	
+		</div>
+		<!-- end of container -->	
+	</section>
 
 	<!-- Location -->
 	<section class="location text-light py-5">
@@ -250,8 +335,10 @@
 					</div>
 					<div class="ms-2">
 						<h6>주소</h6>
-						<h6>광주광역시 동구<br>스마트인재개발원</h6>
-						
+						<h6>
+							광주광역시 동구<br>스마트인재개발원
+						</h6>
+
 					</div>
 				</div>
 				<div class="col-lg-3 d-flex align-items-center">
