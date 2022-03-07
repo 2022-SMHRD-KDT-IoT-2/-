@@ -94,8 +94,6 @@
 							<li><a class="dropdown-item" href="privacy.jsp">개인정보</a></li>
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="privacyproduct.jsp">제품관리</a></li>
-							<li><div class="dropdown-divider"></div></li>
-							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
 					<!-- 
                     <li class="nav-item">
