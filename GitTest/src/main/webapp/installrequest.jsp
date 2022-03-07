@@ -166,34 +166,33 @@
 				<div class="intallrequestForm">
 					<form  action="InstallService" method="post">
 					<h3 class="request-h5">설치문의작성</h3>
+					
 						<div class="table2-div">
 						<table class="board_table2">
 							<tr>
-								<th>설치지역</th>
+								<td class="td-title">설치지역</td>
+								<td class="td-text"><input class="text-box" type="text" name="loc"></td>
 							</tr>
 							<tr>
-								<td><input class="text-box" type="text" name="loc"></td>
+								<td class="td-title">이름</td>
+								<td class="td-text"><input class="text-box" type="text" name="name" value="<%=vo.getName()%>"></td>
 							</tr>
 							<tr>
-								<th>이름</th>
+								<td class="td-title">전화번호</td>
+								<td class="td-text"><input class="text-box" type="text" name="phone" value="<%=vo.getPhone()%>"></td>
 							</tr>
 							<tr>
-								<td><input class="text-box" type="text" name="name" value="<%=vo.getName()%>"></td>
+								<td class="td-title">아이디</td>
+								<td class="td-text"><input class="text-box readonly" readonly type="text" name="id" value="<%=vo.getId()%>" ></td>
 							</tr>
 							<tr>
-								<th>전화번호</th>
-							</tr>
-							<tr>
-								<td><input class="text-box" type="text" name="phone" value="<%=vo.getPhone()%>"></td>
-							</tr>
-							<th>아이디</th>
-							</tr>
-							<tr>
-								<td><input class="text-box" readonly type="text" name="id" value="<%=vo.getId()%>" ></td>
+								<td colspan="2">
+							<input type="submit" class="list-button" value="글작성">
+								</td>
 							</tr>
 						</table>
 						</div>
-							<br><input type="submit" class="list-button" value="글작성">
+						
 						
 					</form>
 				</div>

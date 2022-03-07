@@ -510,7 +510,7 @@ li {
 	color: black;
 	background: white;
 	text-align: center;
-	min-height: 50%;
+	min-height: 53%;
 }
 
 .board h3{
@@ -550,14 +550,50 @@ li {
 	margin-top: 30px;
 }
 .board .board_table2 {
-	width: 500px;
-	display: inline;
-	text-align: center;
+	display: inline-block;
+	border-collapse: separate;
 	border-spacing: 1px;
+	text-align: center;
 	line-height: 1.5;
-	margin: 20px;
-	margin-bottom: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: black;
+}
+.table2-div {
+	display: inline-block;
+	width:500px;
+}
+.board .board_table2 tr{
+	height: 60px;
+	width: 100%;
+	border-top: 1px solid #ccc;
+}
+.board .board_table2 td{
+	border-top: 1px solid #ccc;
+}
+.board_table2 .td-title {
+	text-align: center;
+	background-color: #F2F2F2;
+	width: 120px;
+}
+.board_table2 .td-text {
+	font-weight: bold;
+	width: 300px;
+}
+.board .board_table td {
 	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border-top: 1px solid #ccc;
+}
+.board .board_table2 .text-box{
+	width: 330px;
+	height: 50px;
+	padding: 10px;
+	margin: 10px 5px 10px 5px;
+}
+.board .board_table2 .readonly{
+	border: 0;
 }
 .board .board_table3 {
 	width: 400px;
@@ -586,13 +622,7 @@ li {
 	vertical-align: top;
 	
 }
-.board .board_table2 th {
-	padding-top: 10px;
-	text-align: left;
-	font-weight: bold;
-	vertical-align: top;
-	margin-bottom: 10px;
-}
+
 .board .board_table3 th {
 	width: 100px;
 	padding-top: 10px;
@@ -602,12 +632,7 @@ li {
 	vertical-align: middle;
 	margin-bottom: 10px;
 }
-.board .board_table td {
-	padding: 10px;
-	font-weight: bold;
-	vertical-align: top;
-	border-top: 1px solid #ccc;
-}
+
 .board .board_table3 td {
 	width: 300px;
 	padding: 10px;
@@ -622,23 +647,12 @@ li {
 	border: 0 solid white;
 	height: 40px;
 }
-.table2-div {
-	display: inline-block;
-	width:400px;
-	text-align: center;
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-}
 .table3-div {
 	display: inline-block;
 	width:400px;
 	text-align: center;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
-}
-.board .board_table2 td {
-	font-weight: bold;
-	vertical-align: top;
 }
 .board .board_table .list-a {
 	color: #0091FF;
@@ -667,7 +681,6 @@ li {
 	padding: 5px;
 	background-color: white;
 	border: 1px solid #2E3D4D;
-	font-size: 15px;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
