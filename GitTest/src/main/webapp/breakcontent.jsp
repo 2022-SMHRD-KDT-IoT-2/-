@@ -178,7 +178,7 @@
 				if(vo1!=null){
 					if(vo1.getYn().equals("Y")||vo1.getYn().equals("y")){%>
 				<tr>
-					<td colspan="4">
+					<td colspan="4" class="button-right">
 						<input type="button" class="button-content" value="글삭제" onclick="location.href='BreakDelete.do?no=<%=vo.getNum()%>'">
 					</td>
 				</tr>
@@ -189,10 +189,13 @@
 
 		</table>
     	</div><!-- content -->
+    	<div class="breakcontent-hr">장소 확인</div>
                
         <!-- 맵 -->
-        <div id="map" class="col-lg-6 d-flex align-items-center" style="width:800px;height:400px;">                
+        <div class="map-div">
+        <div id="map" class="breakcontent-map">                
         </div> <!-- end of map -->
+        </div>
         
     </section> <!-- end of contact -->
         </div> <!-- end of board -->
