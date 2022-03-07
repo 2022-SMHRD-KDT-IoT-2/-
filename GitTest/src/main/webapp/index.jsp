@@ -215,35 +215,31 @@
 					<div class="row">
 						<div class="text-center text-lg-start py-4 pt-lg-0">
 							<p>About Smart Delineator</p>
-							<h2 class="py-2">Smart Delineator</h2>
+							<h1 class="py-2">Smart Delineator</h1>
 							<p class="para-light">제품소개가 여기서부터 시작되는 느낌으로 만들 예정!</p>
 							<p class="para-light">우리는 아직 데이터가 없어서 목표를 여기에 넣을까 합니다.</p>
 						</div>
 						<div class="container" data-aos="fade-up">
 							<div class="row g-5">
 								<div class="col-6 text-start">
-									<i class="fas fa-briefcase fa-2x text-start"></i>
+									
+									<i class="fas fa-chart-line fa-2x text-start"></i>
 									<h2 class="purecounter" data-purecounter-start="0"
-										data-purecounter-end="1258" data-purecounter-duration="3">1</h2>
-									<p>PROJECTS COMPLETED</p>
+										data-purecounter-end="3588" data-purecounter-duration="6">1</h2>
+									<p>NUMBER OF INSTALLATIONS</p>
 								</div>
-								<div class="col-6">
-									<i class="fas fa-award fa-2x"></i>
-									<h2 class="purecounter" data-purecounter-start="0"
-										data-purecounter-end="150" data-purecounter-duration="3">1</h2>
-									<p>AWARDS</p>
-								</div>
+								
 								<div class="col-6">
 									<i class="fas fa-users fa-2x"></i>
 									<h2 class="purecounter" data-purecounter-start="0"
 										data-purecounter-end="1255" data-purecounter-duration="3">1</h2>
-									<p>CUSTOMER ACTIVE</p>
+									<p>SIGN UP CUSTOMER</p>
 								</div>
 								<div class="col-6">
 									<i class="fas fa-clock fa-2x"></i>
 									<h2 class="purecounter" data-purecounter-start="0"
-										data-purecounter-end="1157" data-purecounter-duration="3">1</h2>
-									<p>GOOD REVIEWS</p>
+										data-purecounter-end="82" data-purecounter-duration="3">1</h2>
+									<p>VEHICLE ACCIDENT REDUCTION</p>
 								</div>
 							</div>
 						</div>
