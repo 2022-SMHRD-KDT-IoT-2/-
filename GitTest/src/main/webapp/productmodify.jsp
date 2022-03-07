@@ -146,7 +146,7 @@
 		<h3><%=vo.getProduct_uid() %></h3>
 	<div class="contentdiv-div">
     <div class="content-div">
-    <form action="ProductModify?no=<%=vo.getProduct_seq()%>" method="post">
+    <form action="ProductModify.do?no=<%=vo.getProduct_seq()%>" method="post">
 		<table class="content-table">
 			<tr>
 				<td class="td-title">제품<br>번호</td>
@@ -171,7 +171,7 @@
 				<td class="td-button" colspan="4">
 					<%-- 버튼을 클릭하면 해당 페이지로 이동 / 수정과 삭제는 get방식으로 no값을 전달 --%>
 					<input type="submit" class="button-content" value="완료" > 
-					<input type="button" class="button-content" value="취소" onclick="location.href='pirvacyproduct.jsp'">
+					<input type="button" class="button-content" value="취소" onclick= history.back()>
 				</td>
 				</form>
 			</tr>

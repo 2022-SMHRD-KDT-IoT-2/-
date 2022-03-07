@@ -183,7 +183,7 @@
 					<%if(vo1!=null){
 					if(vo.getUser_id().equals(vo1.getId())||vo1.getYn().equals("Y")||vo1.getYn().equals("y")) {%>
 					<input type="button" class="button-content" value="수정" onclick="location.href='installmodify.jsp?no=<%=vo.getRequest_req()%>'"> 
-					<input type="button" class="button-content" value="삭제" onclick="location.href='InstallDelete?no=<%=vo.getRequest_req()%>'">
+					<input type="button" class="button-content" value="삭제" onclick="location.href='InstallDelete.do?no=<%=vo.getRequest_req()%>'">
 					<% }
 					}%>
 				</td>

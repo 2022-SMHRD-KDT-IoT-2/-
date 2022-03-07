@@ -140,7 +140,7 @@
     <!-- Basic -->
     <div class="mypage">
     	<h3>내 정보 수정</h3>
-			<form action="PrivacyUpdate" method="post" class="mypage">
+			<form action="PrivacyUpdate.do" method="post" class="mypage">
 				<table class="mypage-table">
 				<tr>
 					<th>이름</th>

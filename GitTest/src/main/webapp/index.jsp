@@ -99,7 +99,7 @@
 					<%
 					if (vo != null) {
 
-						if (vo.getYn().equals("Y") || vo.getYn().equals("y")) {
+						if (vo.getYn().equals("Y") || vo.getYn().equals("y") || vo.getYn().equals("a") || vo.getYn().equals("A")) {
 							out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
 						}
 					}

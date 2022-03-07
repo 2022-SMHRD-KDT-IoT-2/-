@@ -173,7 +173,7 @@
 			<tr align="center">
 				<td colspan="4">
 				<input type="button" class="button-content" value="수정" onclick="location.href='breakmodify.jsp?no=<%=vo.getNum()%>'"> 
-					<input type="button" class="button-content" value="삭제" onclick="location.href='BreakDelete?no=<%=vo.getNum()%>'">
+					<input type="button" class="button-content" value="삭제" onclick="location.href='BreakDelete.do?no=<%=vo.getNum()%>'">
 				</td>
 				</tr>
 				</table>

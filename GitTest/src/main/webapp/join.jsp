@@ -163,7 +163,7 @@
 	<nav id="menu" >
 			
 			<h3>회원가입</h3>
-			<form action="Join" method="post" class="loginjoinform">
+			<form action="Join.do" method="post" class="loginjoinform">
 				<table class="loginjoinTable">
 				<tr>
 					<td class="text-text">
