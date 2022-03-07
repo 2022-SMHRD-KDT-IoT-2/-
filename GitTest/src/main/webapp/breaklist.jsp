@@ -369,8 +369,7 @@
 <!-- end of div -->
 </div>
 <!-- end of col -->
-<div id="map" class="col-lg-6 d-flex align-items-center"
-	style="width: 800px; height: 400px;"></div>
+
 <!-- end of col -->
 </div>
 <!-- end of row -->
