@@ -91,7 +91,7 @@ public class FrontController extends HttpServlet {
 			out.print("<script>alert('회원가입 성공'); location.href = 'login.jsp'; </script>");
 		}else if(url.equals("joinfail")) {
 			PrintWriter out = response.getWriter();
-			out.print("<script>alert('회원가입 실패');</script>");
+			out.print("<script>alert('회원가입 실패'); location.href = 'join.jsp';</script>");
 		}  
 		else {
 			response.sendRedirect(url);
