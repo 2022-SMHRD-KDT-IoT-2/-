@@ -196,8 +196,8 @@
 				<tr>
 					<th width="20%">No.</th>
 					<th width="30%">이름</th>
-					<th width="40%">위치</th>
-					<th width="10%">처리상태</th>
+					<th width="30%">위치</th>
+					<th width="20%">처리상태</th>
 				</tr>
 				<%
 				if (count > 0 && fcount==0 && find==null) { // 데이터베이스에 데이터가 있으면
@@ -248,17 +248,11 @@
 			<%		
 				}
 			%>
-			<%if(vo!=null) {%>
+			
+			
+				
 				<tr>
-					<td colspan="6" align="right">
-					<%-- 버튼을 클릭하면 installrequest.jsp로 이동 --%>
-						<input type="button" class="list-button" value="글작성"
-						onclick="location.href='installrequest.jsp'">
-					</td>
-				</tr>
-				<tr>
-				<%} %>
-					<td colspan="6" align="center">
+					<td colspan="6">
 						<%	// 페이징  처리
 						if(count > 0 && fcount==0 && find==null){
 							// 총 페이지의 수
@@ -324,12 +318,22 @@
 	 if (endPage < pageCount) {
 	 %> <a
 							href="install.jsp?pageNum=<%=startPage + 10%>&sel=<%=sel%>&find=<%=find%>">[다음]</a>
-		<%
+						<%
 						}
 						}
 						%>
 						</td>
 					</tr>
+					<%if(vo!=null) {%>
+				<tr>
+					<td colspan="6" class="button-td">
+					<%-- 버튼을 클릭하면 installrequest.jsp로 이동 --%>
+						<input type="button" class="list-button" value="글작성"
+						onclick="location.href='installrequest.jsp'">
+					</td>
+				</tr>
+				<%} %>
+					
 				</table>
 				</div>
 				<%-- 검색어 입력 form / get방식 / option value는 데이터베이스 칼럼과 동일하게 설정 --%>
@@ -344,7 +348,7 @@
 				</div>	
 		</div>
 		
-		<div class="location-fixed">		
+		
 		<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
@@ -388,19 +392,17 @@
          </div>
          <!-- end of row -->
       </div>
-      </div>
+      
       <!-- end of container -->
    </section>
    <!-- end of location -->
 	<!-- Bottom -->
-	<div class="bottom-fixed">
 	<div class="bottom py-2 text-light">
 		<div class="container d-flex justify-content-between">
 			<div></div>
 			<div class="bottom-box"></div>
 		</div>
 		<!-- end of container -->
-	</div>
 	</div>
 	<!-- end of bottom -->
 
