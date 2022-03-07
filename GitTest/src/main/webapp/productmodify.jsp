@@ -142,6 +142,7 @@
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
+    <div class="board2">
     <div class="content">
 		<h3><%=vo.getProduct_uid() %></h3>
 	<div class="contentdiv-div">
@@ -179,8 +180,8 @@
 	</div>
 	</div>
 	</div>
-	
-	<div class="location-fixed">		
+	</div>
+		
 		<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
@@ -224,12 +225,12 @@
          </div>
          <!-- end of row -->
       </div>
-      </div>
+
       <!-- end of container -->
    </section>
    <!-- end of location -->
 	<!-- Bottom -->
-	<div class="bottom-fixed">
+	
 	<div class="bottom py-2 text-light">
 		<div class="container d-flex justify-content-between">
 			<div></div>
@@ -237,7 +238,7 @@
 		</div>
 		<!-- end of container -->
 	</div>
-	</div>
+	
 	<!-- end of bottom -->
 </body>
 </html>
