@@ -149,36 +149,37 @@
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
-
-		<h5 class="content">상세내용</h5>
+		<div class="board">
+		<h3>상세내용</h3>
+		<div class="content">
     	<div class="contentdiv-div">
     	<div class=content-div>
     	<form action="InstallModify?no=<%=vo.getRequest_req()%>" method="post">
 		<table class="content-table">
 			<tr>
 				<td class="td-title">이름</td>
-				<td class= "td-text"><input type="text" name="name" value="<%=vo.getRequest_name() %>"></td>
-				<td class="td-title">처리상태</td>
-				<td class= "td-text"><select name="status">
+				<td class= "td-text left"><input type="text" name="name" class="text" value="<%=vo.getRequest_name() %>"></td>
+				<td class="td-title ">처리상태</td>
+				<td class= "td-text left"><select name="status" class="select">
 						<option value="Y">Y</option>
 						<option value="N">N</option>
 					</select></td>
 			</tr>
 			<tr>
 				<td class="td-title">지역</td>
-				<td class= "td-text" colspan="3"><input type="text" name="loc" value="<%=vo.getRequest_loc() %>"></td>
+				<td class= "td-text left" colspan="3"><input type="text" name="loc" class="text" value="<%=vo.getRequest_loc() %>"></td>
 			</tr>
 			<tr>
-				<td class="td-title">핸드폰</td>
-				<td class= "td-text" colspan="3"><pre><input type="text" name="phone" value="<%=vo.getRequest_Phone() %>"></pre></td>
+				<td class="td-title">전화번호</td>
+				<td class= "td-text left" colspan="3"><input type="text" name="phone" class="text" value="<%=vo.getRequest_Phone() %>"></td>
 			</tr>
 			<tr>
 				<td class="td-title">날짜</td>
-				<td class= "td-text" colspan="3"><pre><%=vo.getRequest_date() %></pre></td>
+				<td class= "td-text" colspan="3"><%=vo.getRequest_date() %></td>
 			</tr>
-						<tr>
+			<tr>
 				<td class="td-title">아이디</td>
-				<td class= "td-text" colspan="3"><pre><%=vo.getUser_id() %></pre></td>
+				<td class= "td-text" colspan="3"><%=vo.getUser_id() %></td>
 			</tr>
 			
 			<tr>
@@ -192,19 +193,11 @@
 		</table>
 		</div>
 		</div>
-
+		</div>
+		</div>
 	
-	<!-- Bottom -->
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
-    <section class="location text-light py-5">
+	<!-- Location -->
+	<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
             <div class="col-lg-3 d-flex align-items-center">
@@ -250,6 +243,17 @@
       <!-- end of container -->
    </section>
    <!-- end of location -->
+   
+	<!-- Bottom -->
+	<div class="bottom py-2 text-light">
+		<div class="container d-flex justify-content-between">
+			<div></div>
+			<div class="bottom-box"></div>
+		</div>
+		<!-- end of container -->
+	</div>
+	<!-- end of bottom -->
+	
         	<!-- Scripts -->
 	<script src="./js/bootstrap.min.js"></script>
 	<!-- Bootstrap framework -->
