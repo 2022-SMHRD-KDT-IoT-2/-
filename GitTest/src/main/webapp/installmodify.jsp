@@ -183,8 +183,9 @@
 			
 			<tr>
 				<td class="td-button" colspan="4">
-					<input type="submit" class="button-content" value="수정" > 
-					<input type="button" class="button-content" value="취소" onclick="location.href='InstallDelete?no=<%=vo.getRequest_req()%>'">
+					<input type="submit" class="button-content" value="수정"> 
+					<input type="button" class="button-content" value="취소" onclick=history.back()>
+					
 					</form>
 				</td>
 			</tr>
