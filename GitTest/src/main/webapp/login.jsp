@@ -196,7 +196,7 @@
 					<tr>
 						<td><a href="javascript:kakaoLogin();"><img src="assets/images/kakao_login.png"></a> 
 						<script src="https://developers.kakao.com/sdk/js/kakao.js"></script> 
-						
+						<a href="https://kauth.kakao.com/oauth/authorize?client_id=291c1081bfc3fad5cc9de574d8b849d7&redirect_uri=http://localhost:8000/blog/oauth/kakao?cmd=callback&response_type=code"><img height="38px" src="assets/images/kakao_login.png" /></a>
 	<script>					
 	Kakao.init("b43551a3efd6736c68f6755e449a2250");
 

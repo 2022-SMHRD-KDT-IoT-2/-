@@ -21,7 +21,7 @@ public class ProductWrite implements Command{
 		
 		int cnt=dao.oneProduct(pro_id, loc, latitude, longitude, id);
 
-		return "privacyproduct.jsp";
+		return "productlist.jsp";
 	}
 
 }
