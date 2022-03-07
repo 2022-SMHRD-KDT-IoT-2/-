@@ -150,13 +150,10 @@
     <!-- end of header -->
 
     <!-- Contact -->
+    <div class="board">  
     <section class="breakcontent" id="contact">
-        <div>
-            <div class="row">
-                <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5" data-aos="fade-right">
-                    <div>
-                        <div class="text-center">
-                            
+
+    <!-- table -->                  
     <div class="content">
 		<h3><%=vo.getName() %></h3>
 		<table class="content-table">
@@ -178,31 +175,30 @@
 			</tr>
 
 				<%
-					if(vo1!=null){
-						if(vo1.getYn().equals("Y")||vo1.getYn().equals("y")){%>
-									<tr>
-							<td colspan="4">
+				if(vo1!=null){
+					if(vo1.getYn().equals("Y")||vo1.getYn().equals("y")){%>
+				<tr>
+					<td colspan="4">
 						<input type="button" class="button-content" value="±Û»èÁ¦" onclick="location.href='BreakDelete.do?no=<%=vo.getNum()%>'">
-										</td>
+					</td>
 				</tr>
-						<%
-						}
+				<%
 					}
-					%>
+				}
+				%>
 
-				</table>
-    </div>
-                        </div>
-                    </div> <!-- end of div -->
-                </div> <!-- end of col -->
-                <div id="map" class="col-lg-6 d-flex align-items-center" style="width:800px;height:400px;">                
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
+		</table>
+    	</div><!-- content -->
+               
+        <!-- ¸Ê -->
+        <div id="map" class="col-lg-6 d-flex align-items-center" style="width:800px;height:400px;">                
+        </div> <!-- end of map -->
+        
     </section> <!-- end of contact -->
+        </div> <!-- end of board -->
     
     
-   <div class="location-fixed">		
+	<!-- Location -->	
 		<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
@@ -246,12 +242,11 @@
          </div>
          <!-- end of row -->
       </div>
-      </div>
       <!-- end of container -->
    </section>
    <!-- end of location -->
+   
 	<!-- Bottom -->
-	<div class="bottom-fixed">
 	<div class="bottom py-2 text-light">
 		<div class="container d-flex justify-content-between">
 			<div></div>
@@ -259,7 +254,7 @@
 		</div>
 		<!-- end of container -->
 	</div>
-	</div>
+
 	<!-- end of bottom -->
     
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54eb6a93d19563f656425928fbb6c218"></script>
