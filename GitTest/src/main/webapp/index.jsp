@@ -314,7 +314,7 @@
 					<h4 class="py-2 para-light"><br>야간 급커브 도로 운행시 스마트델리네이터 자동 작동 시연 동영상</h4>
 				</div>
 				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
-					<iframe width="700" height="350"
+					<iframe width="700" height="380"
 					src="https://www.youtube.com/embed/oa-Yp1QnyAc"
 					frameborder="0" gesture="media" allowfullscreen="" class="video"></iframe>
 			</div>
@@ -395,5 +395,6 @@
 		<!-- end of container -->
 	</div>
 	<!-- end of bottom -->
+	<script src="https://kit.fontawesome.com/70d105e515.js" crossorigin="anonymous"></script>
 </body>
 </html>
