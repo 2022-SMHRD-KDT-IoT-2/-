@@ -26,6 +26,14 @@ Table Of Contents:
 	--tertiary: #38B6FF; 
 	--gradient: linear-gradient(to right, #7EFFFF, #38B6FF);
 }
+html,body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	min-height: 80%;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Poppins", sans-serif;
@@ -502,6 +510,7 @@ li {
 	color: black;
 	background: white;
 	text-align: center;
+	min-height: 50%;
 }
 
 .board h3{
@@ -867,7 +876,6 @@ h5{
 .content-table .td-text .text-box{
 	height: 40px;
 }
-
 
 /********************/
 /*     Services     */
