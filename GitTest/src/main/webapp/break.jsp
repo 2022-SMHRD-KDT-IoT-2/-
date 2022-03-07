@@ -174,6 +174,7 @@
 
 	<!-- Contact -->
 	<!-- 본문 -->
+	<div class="board">
 	<div class="break-div">
 	<section class="contact d-flex align-items-center py-5" id="contact"
 		style="height: 800px">
@@ -234,8 +235,10 @@
 				<!-- end of col -->
 				<!-- 오른쪽 -->
 				<div class="break-right">
+				<table class="break-table">
+				<tr>
+					<td>
 				<!-- 검색창 -->
-				
 					<div class="searchbox">
 					<div class="break-search">
 						<input type="text" name="detailAddress" id="address" placeholder="신고할 위치의 주소를 검색해주세요" class="break-search-text">
@@ -245,7 +248,11 @@
 				<div class="col-lg-6 d-flex">
 				</div>
 				
-				<!-- 검색창 div 종료 -->		
+				<!-- 검색창 div 종료 -->
+					</td>
+				</tr>
+				<tr>
+					<td>		
 				<!-- 지도 -->
 				<div class="map-right">
 				<div class="col-lg-6 d-flex align-items-center">
@@ -253,63 +260,20 @@
 				
 				</div>
 				</div>
-				<!-- 지도 div 종료 -->		
+				<!-- 지도 div 종료 -->
+					</td>	
+				</tr>	
 				</div>
+				</table>
 		</div>
 		<!-- end of row -->
 		</div>
 		<!-- end of container -->
 	</section>
 	</div>
+	</div>
 	<!-- end of contact -->
 	
-	<section class="location text-light py-5">
-      <div class="container" data-aos="zoom-in">
-         <div class="row">
-            <div class="col-lg-3 d-flex align-items-center">
-               <div class="p-2">
-                  <i class="far fa-map fa-3x"></i>
-               </div>
-               <div class="ms-2">
-                  <h6>주소</h6>
-                  <h6>광주광역시 동구<br>스마트인재개발원</h6>
-                  
-               </div>
-            </div>
-            <div class="col-lg-3 d-flex align-items-center">
-               <div class="p-2">
-                  <i class="fas fa-mobile-alt fa-3x"></i>
-               </div>
-               <div class="ms-2">
-                  <h6>연락처</h6>
-                  <p>82) 010-1234-5678</p>
-               </div>
-            </div>
-            <div class="col-lg-3 d-flex align-items-center">
-               <div class="p-2">
-                  <i class="far fa-envelope fa-3x"></i>
-               </div>
-               <div class="ms-2">
-                  <h6>이메일</h6>
-                  <p>kdb7603@naver.com</p>
-               </div>
-            </div>
-            <div class="col-lg-3 d-flex align-items-center">
-               <div class="p-2">
-                  <i class="far fa-clock fa-3x"></i>
-               </div>
-               <div class="ms-2">
-                  <h6>상담문의</h6>
-                  <p>09:00 AM - 18:00 PM</p>
-               </div>
-            </div>
-         </div>
-         <!-- end of row -->
-      </div>
-      <!-- end of container -->
-   </section>
-   <!-- end of location -->
-
 
 	<script type="text/javascript"
 		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54eb6a93d19563f656425928fbb6c218&libraries=services"></script>
@@ -399,7 +363,56 @@
 					});
 		}
 	</script>
-
+	
+	<!-- Location -->
+	<section class="location text-light py-5">
+	      <div class="container" data-aos="zoom-in">
+	         <div class="row">
+	            <div class="col-lg-3 d-flex align-items-center">
+	               <div class="p-2">
+	                  <i class="far fa-map fa-3x"></i>
+	               </div>
+	               <div class="ms-2">
+	                  <h6>주소</h6>
+	                  <h6>광주광역시 동구<br>스마트인재개발원</h6>
+	                  
+	               </div>
+	            </div>
+	            <div class="col-lg-3 d-flex align-items-center">
+	               <div class="p-2">
+	                  <i class="fas fa-mobile-alt fa-3x"></i>
+	               </div>
+	               <div class="ms-2">
+	                  <h6>연락처</h6>
+	                  <p>82) 010-1234-5678</p>
+	               </div>
+	            </div>
+	            <div class="col-lg-3 d-flex align-items-center">
+	               <div class="p-2">
+	                  <i class="far fa-envelope fa-3x"></i>
+	               </div>
+	               <div class="ms-2">
+	                  <h6>이메일</h6>
+	                  <p>kdb7603@naver.com</p>
+	               </div>
+	            </div>
+	            <div class="col-lg-3 d-flex align-items-center">
+	               <div class="p-2">
+	                  <i class="far fa-clock fa-3x"></i>
+	               </div>
+	               <div class="ms-2">
+	                  <h6>상담문의</h6>
+	                  <p>09:00 AM - 18:00 PM</p>
+	               </div>
+	            </div>
+	         </div>
+	         <!-- end of row -->
+	      </div>
+	      <!-- end of container -->
+	   </section>
+	   <!-- end of location -->
+	
+	<!-- Bottom -->
 	<div class="bottom py-2 text-light">
 		<div class="container d-flex justify-content-between">
 			<div></div>

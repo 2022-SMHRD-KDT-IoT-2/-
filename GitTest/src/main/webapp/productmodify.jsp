@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>제품목록</title>
+<title>제품리스트</title>
 </head>
 <body>
 
@@ -32,7 +32,7 @@
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>제품목록</title>
+    <title>제품리스트</title>
      <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -79,8 +79,14 @@
 		%> 
 					<li class="nav-item"><a class="nav-link" href="index.jsp#introduction">제품소개</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="break.jsp">고장신고</a>
-					</li>
+					<li class="nav-item dropdown">
+						<a	class="nav-link dropdown-toggle" id="dropdown02"
+						data-bs-toggle="dropdown" aria-expanded="false" href="#">고장신고</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown02">
+							<li><a class="dropdown-item" href="break.jsp">고장신고 작성</a></li>
+							<li><div class="dropdown-divider"></div></li>
+							<li><a class="dropdown-item" href="breaklist.jsp">고장신고 게시판</a></li>
+					</ul></li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%
@@ -91,6 +97,7 @@
 						}
 					}
 					%>
+					<%if(vo1!=null){ %>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown01"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">마이페이지</a>
@@ -99,9 +106,8 @@
 							<li><a class="dropdown-item" href="privacy.jsp">개인정보</a></li>
 							<li><div class="dropdown-divider"></div></li>
 							<li><a class="dropdown-item" href="privacyproduct.jsp">제품관리</a></li>
-							<li><div class="dropdown-divider"></div></li>
-							<li><a class="dropdown-item" href="particle.jsp">광고관리</a></li>
 						</ul></li>
+						<%} %>
 					<!-- 
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -229,8 +235,9 @@
       <!-- end of container -->
    </section>
    <!-- end of location -->
+   
 	<!-- Bottom -->
-	
+
 	<div class="bottom py-2 text-light">
 		<div class="container d-flex justify-content-between">
 			<div></div>
@@ -238,7 +245,7 @@
 		</div>
 		<!-- end of container -->
 	</div>
-	
+
 	<!-- end of bottom -->
 </body>
 </html>
