@@ -43,6 +43,12 @@
 <!-- Favicon(상단바 icon) 
     <link rel="icon" href="./assets/images/favicon.png">
     -->
+    
+   <style>
+   .about{
+   	height :600px;
+   }
+   </style>
 
 </head>
 <body>
@@ -93,7 +99,7 @@
 					<%
 					if (vo != null) {
 
-						if (vo.getYn().equals("Y") || vo.getYn().equals("y")) {
+						if (vo.getYn().equals("Y") || vo.getYn().equals("y") || vo.getYn().equals("a") || vo.getYn().equals("A")) {
 							out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
 						}
 					}
@@ -288,9 +294,8 @@
 				<div class="col-lg-7" data-aos="fade-right">
 					<p style="text-align: right">ABOUT US</p>
 					<h1 style="text-align: right">POINT 2</h1>
-					<h4 class="py-2 para-light" style="text-align: right">2 color로 가시성 높임</h4>
-					<p class="py-2 para-light" style="text-align: right">>sed accusantium aut dolores
-						inventore architecto modi</p>
+					<h4 class="py-2 para-light" style="text-align: right">두 가지 색상의 LED를 사용하여 위험도에 따른 가시성을 높였습니다.</h4>
+					<p class="py-2 para-light" style="text-align: right">We used yellow LED and red LED to make it easy for anyone to see.</p>
 
 				</div>
 
@@ -305,15 +310,11 @@
 		<div class="container">
 			<div class="row d-flex align-items-center">
 				<div class="col-lg-7" data-aos="fade-right">
-					<p>ABOUT US</p>
-					<h1>시연영상</h1>
-					<p class="py-2 para-light">sed accusantium aut dolores
-						inventore architecto modi cupiditate eligendi corporis, illum illo
-						culpa. Reiciendis, molestias. Illum voluptatum quisquam ad
-						veritatis dolorem.</p>
+					<h1>시연 동영상</h1>
+					<h4 class="py-2 para-light"><br>야간 급커브 도로 운행시 스마트델리네이터 자동 작동 시연 동영상</h4>
 				</div>
 				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
-					<iframe width="676" height="310"
+					<iframe width="700" height="350"
 					src="https://www.youtube.com/embed/oa-Yp1QnyAc"
 					frameborder="0" gesture="media" allowfullscreen="" class="video"></iframe>
 			</div>
