@@ -706,9 +706,13 @@ li {
 	text-align: center;
 	display: inline;
 }
+.login-idpw-check{
+	color: red;
+}
 
 #menu h3{
 	margin-top: 50px;
+	margin-bottom: 1.5rem;
 }
 #menu .login-h3{
 	margin-top: 50px;
@@ -721,15 +725,14 @@ h5{
 	text-align: center;
 }
 .loginjoinTable{
-	width: 500px;
-	margin-top: 20px;
 	text-align: center;
-	display: inline;
+	display: inline-block;
 	justify-content: center;
 }
 .loginjoinTable .text-field{
 	width: 300px;
 	height: 42px;
+	margin-top: 5px;
 	margin-bottom: 5px;
 	padding: 5px;
 }

@@ -171,8 +171,10 @@
 							<input type="text" id="id" name="id" class="text-field"
 							placeholder="아이디/이메일을 입력하세요">
 						</td>
+					</tr>
+					<tr>
 						<td>
-							<p id="id_check" style="color:red";></p>
+							<p id="id_check" class="login-idpw-check"></p>
 						</td>
 					</tr>
 					<tr>
@@ -180,8 +182,10 @@
 							<input type="password" id="pw" name="pw" class="text-field"
 							placeholder="비밀번호를 입력하세요">
 						</td>
+					</tr>
+					<tr>
 						<td>
-							<p id="pw_check" style="color:red";></p>
+							<p id="pw_check" class="login-idpw-check"></p>
 						</td>
 					</tr>
 					<tr>
@@ -306,14 +310,14 @@
 		let pw = document.getElementById('pw').value
 		
 		if(!id){
-			id_check.innerText = "필수사항입니다.."
+			id_check.innerText = "아이디를 입력해주세요."
 		}
 		if(!pw){
-			pw_check.innerText = "필수사항입니다.."
+			pw_check.innerText = "비밀번호를 입력해주세요."
 		}
 		if(!id||!pw){
-			id_check.innerText = "필수사항입니다.."
-			pw_check.innerText = "필수사항입니다.."
+			id_check.innerText = "아이디를 입력해주세요."
+			pw_check.innerText = "비밀번호를 입력해주세요."
 		}
 		if(id&&pw){
 			login_check.innerText = ""
