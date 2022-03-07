@@ -164,7 +164,7 @@
 	<div class="loginjoindiv">
 		<nav id="menu">
 			<h3 class="login-h3">로그인</h3>
-			<form action="Login" method="post" class="loginjoinform">
+			<form class="loginjoinform">
 				<table class="loginjoinTable">
 					<tr>
 						<td>
@@ -322,7 +322,7 @@
 				let xhr = new XMLHttpRequest()
 				
 				// 요청방식, 요청경로
-				xhr.open('post', 'LoginService')
+				xhr.open('post', 'Login.do')
 				
 				// 전송데이터의 형식
 				xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
