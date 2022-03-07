@@ -105,7 +105,7 @@
 						out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">肺弊酒眶</a></li>");
 					}
 					%>
-					<li class="nav-item"><a class="nav-link" href="#introduction">力前家俺</a>
+					<li class="nav-item"><a class="nav-link" href="index.jsp#introduction">力前家俺</a>
 					</li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown02"
