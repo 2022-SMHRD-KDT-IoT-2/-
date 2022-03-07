@@ -174,7 +174,7 @@
 						<div class="table3-div">
 						<table class="board_table3">
 							<tr>
-								<th>제품아이디</th>
+								<th>제품번호</th>
 								<td><input type="text" class="table3-textbox" name="pro_id"></td>
 							</tr>
 							<tr>
