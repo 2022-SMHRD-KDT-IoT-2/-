@@ -175,7 +175,7 @@
     <!-- end of basic -->
 
     
-    <div class="location-fixed">		
+		
 		<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
@@ -219,19 +219,17 @@
          </div>
          <!-- end of row -->
       </div>
-      </div>
       <!-- end of container -->
    </section>
    <!-- end of location -->
+   
 	<!-- Bottom -->
-	<div class="bottom-fixed">
 	<div class="bottom py-2 text-light">
 		<div class="container d-flex justify-content-between">
 			<div></div>
 			<div class="bottom-box"></div>
 		</div>
 		<!-- end of container -->
-	</div>
 	</div>
 	<!-- end of bottom -->
 

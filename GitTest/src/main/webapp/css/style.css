@@ -750,6 +750,7 @@ h5{
 /******************/
 .mypage{
 	text-align: center;
+	min-height: 50%;
 }
 .mypage h3{
 	margin-top: 50px;
