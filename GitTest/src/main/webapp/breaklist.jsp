@@ -337,7 +337,7 @@
 					<%
 					if(vo!=null){
 						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){%>
-						<input type="button" class="button-content" value="모든글삭제" onclick="location.href='BreakAllDelete'">
+						<input type="button" class="button-content" value="모든글삭제" onclick="location.href='BreakAllDelete.do'">
 						<%
 						}
 					}

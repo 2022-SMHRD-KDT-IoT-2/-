@@ -169,7 +169,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-10 offset-xl-1">
-					<form action="ProductWrite" method="post">
+					<form action="ProductWrite.do" method="post">
 					<h3 class="request-h5">제품 추가하기</h3>
 						<div class="table3-div">
 						<table class="board_table3">

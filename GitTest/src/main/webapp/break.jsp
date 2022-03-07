@@ -196,7 +196,7 @@
 						<div>
 							<div class="row">
 								<div class="col-lg-6">
-									<form action="BreakReport" method="post">
+									<form action="BreakReport.do" method="post">
 										<div class="form-group py-2">
 											<input type="text" class="form-control form-control-input"
 												name="name" id="exampleFormControlInput1"

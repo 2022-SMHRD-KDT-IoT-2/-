@@ -78,7 +78,7 @@ public class FrontController extends HttpServlet {
 		}else if (result.equals("ProductWrite.do")) {
 			command = new ProductWrite();
 		}
-		
+		response.setContentType("text/html; charset=euc-kr");
 		String url = command.execute(request, response);
 		if (url.equals("true") || url.equals("false")) {
 			PrintWriter out = response.getWriter();
@@ -86,6 +86,12 @@ public class FrontController extends HttpServlet {
 		}else if(url.equals("success") || url.equals("fail")) {
 			PrintWriter out = response.getWriter();
 			out.print(url);
+		}else if(url.equals("joinsuccess")) {
+			PrintWriter out = response.getWriter();
+			out.print("<script>alert('회원가입 성공'); location.href = 'login.jsp'; </script>");
+		}else if(url.equals("joinfail")) {
+			PrintWriter out = response.getWriter();
+			out.print("<script>alert('회원가입 실패');</script>");
 		}  
 		else {
 			response.sendRedirect(url);

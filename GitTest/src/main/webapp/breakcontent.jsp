@@ -182,7 +182,7 @@
 						if(vo1.getYn().equals("Y")||vo1.getYn().equals("y")){%>
 									<tr>
 							<td colspan="4">
-						<input type="button" class="button-content" value="글삭제" onclick="location.href='BreakDelete?no=<%=vo.getNum()%>'">
+						<input type="button" class="button-content" value="글삭제" onclick="location.href='BreakDelete.do?no=<%=vo.getNum()%>'">
 										</td>
 				</tr>
 						<%

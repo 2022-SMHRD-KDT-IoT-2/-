@@ -29,9 +29,9 @@ public class Join implements Command{
 		String url="";
 		
 		if (cnt > 0) {
-			url="index.jsp";
+			url="joinsuccess";
 		}else {
-			url="index.jsp";
+			url="joinfail";
 		}
 		return url;
 	}

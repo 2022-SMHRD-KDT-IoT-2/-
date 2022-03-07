@@ -37,13 +37,14 @@ public class Login implements Command{
 		
 		memberDAO dao = new memberDAO();
 		memberVO vo = dao.login(id,pw);
-		String name=vo.getName();
-		String phone=vo.getPhone();
-		String email=vo.getEmail();
-		String addr=vo.getAddr();
-		String yn=vo.getYn();
+
 		String url="";
 		if(vo!=null) {
+			String name=vo.getName();
+			String phone=vo.getPhone();
+			String email=vo.getEmail();
+			String addr=vo.getAddr();
+			String yn=vo.getYn();
 			memberVO vo1= new memberVO(id,pw,name,phone,email,addr,yn);
 			HttpSession session = request.getSession();
 			session.setAttribute("loginvo", vo1); 

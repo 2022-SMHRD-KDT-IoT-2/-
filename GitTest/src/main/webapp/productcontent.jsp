@@ -177,7 +177,7 @@
 				<td class="td-button" colspan="4">
 					<%-- 버튼을 클릭하면 해당 페이지로 이동 / 수정과 삭제는 get방식으로 no값을 전달 --%>
 					<input type="button" class="button-content" value="수정" onclick="location.href='productmodify.jsp?no=<%=vo.getProduct_seq()%>'"> 
-					<input type="button" class="button-content" value="삭제" onclick="location.href='ProductDelete?no=<%=vo.getProduct_seq()%>'">
+					<input type="button" class="button-content" value="삭제" onclick="location.href='ProductDelete.do?no=<%=vo.getProduct_seq()%>'">
 				</td>
 			</tr>
 		</table>

@@ -146,7 +146,7 @@
 		<h3><%=vo.getProduct_uid() %></h3>
 	<div class="contentdiv-div">
     <div class="content-div">
-    <form action="ProductModify?no=<%=vo.getProduct_seq()%>" method="post">
+    <form action="ProductModify.do?no=<%=vo.getProduct_seq()%>" method="post">
 		<table class="content-table">
 			<tr>
 				<td class="td-title">제품<br>번호</td>
