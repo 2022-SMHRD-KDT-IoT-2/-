@@ -142,6 +142,7 @@
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
+    <!-- <div class="board"> -->
     <div class="content">
 		<h3><%=vo.getProduct_uid() %></h3>
 	<div class="contentdiv-div">
@@ -179,7 +180,7 @@
 	</div>
 	</div>
 	</div>
-	
+	<!-- </div> -->
 		
 		<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
