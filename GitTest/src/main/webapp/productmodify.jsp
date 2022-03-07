@@ -171,7 +171,7 @@
 				<td class="td-button" colspan="4">
 					<%-- 버튼을 클릭하면 해당 페이지로 이동 / 수정과 삭제는 get방식으로 no값을 전달 --%>
 					<input type="submit" class="button-content" value="완료" > 
-					<input type="button" class="button-content" value="취소" onclick="location.href='pirvacyproduct.jsp'">
+					<input type="button" class="button-content" value="취소" onclick= history.back()>
 				</td>
 				</form>
 			</tr>
