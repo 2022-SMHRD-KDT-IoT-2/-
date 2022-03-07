@@ -20,6 +20,6 @@ public class ProductModify implements Command{
 		
 		int cnt=dao.modifyProduct(product_id, loc, latitude, longitude, no);
 
-		return "privacyproduct.jsp";
+		return "productlist.jsp";
 	}
 }
