@@ -873,6 +873,22 @@ h5{
 .content-table .td-text{
 	width: 250px;
 }
+.content-table .left{
+	text-align: left;
+}
+.content-table .left .text{
+	margin-left: 5px;
+	height: 40px;
+	padding: 5px;
+}
+.content-table .left .select{
+	margin-left: 5px;
+	height: 40px;
+	width: 50px;
+	text-align: center;
+	padding: 5px;
+}
+
 .content-table .td-button{
 	border-top: 1px solid #ccc;
 	padding-bottom: 50px;
