@@ -149,8 +149,9 @@
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
-
-		<h5 class="content">상세내용</h5>
+    <div class="board">
+		<div class="content">
+		<h3>상세내용</h3>
     	<div class="contentdiv-div">
     	<div class=content-div>
 		<table class="content-table">
@@ -166,15 +167,15 @@
 			</tr>
 			<tr>
 				<td class="td-title">핸드폰</td>
-				<td class= "td-text" colspan="3"><pre><%=vo.getRequest_Phone() %></pre></td>
+				<td class= "td-text" colspan="3"><%=vo.getRequest_Phone() %></td>
 			</tr>
 			<tr>
 				<td class="td-title">날짜</td>
-				<td class= "td-text" colspan="3"><pre><%=vo.getRequest_date() %></pre></td>
+				<td class= "td-text" colspan="3"><%=vo.getRequest_date() %></td>
 			</tr>
 						<tr>
 				<td class="td-title">아이디</td>
-				<td class= "td-text" colspan="3"><pre><%=vo.getUser_id() %></pre></td>
+				<td class= "td-text" colspan="3"><%=vo.getUser_id() %></td>
 			</tr>
 			
 			<tr>
@@ -191,20 +192,10 @@
 		</table>
 		</div>
 		</div>
-
-	
-	<!-- Bottom -->
-    <div class="bottom py-2 text-light" >
-        <div class="container d-flex justify-content-between">
-            <div>
-            </div>
-            <div class="bottom-box">
-                
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of bottom -->
-    
-    <section class="location text-light py-5">
+		</div>
+		</div>
+	<!-- Location -->
+	<section class="location text-light py-5">
       <div class="container" data-aos="zoom-in">
          <div class="row">
             <div class="col-lg-3 d-flex align-items-center">
@@ -250,6 +241,17 @@
       <!-- end of container -->
    </section>
    <!-- end of location -->
+   
+	<!-- Bottom -->
+	<div class="bottom py-2 text-light">
+		<div class="container d-flex justify-content-between">
+			<div></div>
+			<div class="bottom-box"></div>
+		</div>
+		<!-- end of container -->
+	</div>
+	<!-- end of bottom -->
+	
         	<!-- Scripts -->
 	<script src="./js/bootstrap.min.js"></script>
 	<!-- Bootstrap framework -->
