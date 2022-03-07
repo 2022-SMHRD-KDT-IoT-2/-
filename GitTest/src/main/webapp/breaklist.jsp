@@ -123,10 +123,9 @@
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
 					<%
-					if(vo!=null){
-						System.out.print(vo.getYn());
-						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){
-						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
+					if (vo != null) {
+						if (vo.getYn().equals("Y") || vo.getYn().equals("y") || vo.getYn().equals("a") || vo.getYn().equals("A")) {
+							out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
 						}
 					}
 					%>
@@ -178,7 +177,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-10 offset-xl-1">
-					<h1>고장 신고 페이지</h1>
+					<h1>고장 신고 게시판</h1>
 				</div>
 				<!-- end of col -->
 			</div>
