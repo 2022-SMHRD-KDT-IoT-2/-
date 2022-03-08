@@ -170,8 +170,8 @@
 				<td class= "td-text"><%=vo.getProduct_num() %></td>
 			</tr>
 			<tr>
-				<td class="td-title">내용</td>
-				<td class= "td-text" colspan="3"><%=vo.getContent() %></td>
+				<td class="td-title last-td">내용</td>
+				<td class= "td-text last-td" colspan="3"><%=vo.getContent() %></td>
 			</tr>
 
 				<%
