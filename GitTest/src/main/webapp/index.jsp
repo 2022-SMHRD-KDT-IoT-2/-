@@ -211,8 +211,8 @@
 						<div class="text-center text-lg-start py-4 pt-lg-0">
 							<p>About Smart Delineator</p>
 							<h1 class="py-2">Smart Delineator</h1>
-							<p class="para-light">제품소개가 여기서부터 시작되는 느낌으로 만들 예정!</p>
-							<p class="para-light">우리는 아직 데이터가 없어서 목표를 여기에 넣을까 합니다.</p>
+							<p class="para-light">야간 급커브도로 교통사고 방지를 위한 스마트 비상경고 장치</p>
+							<p class="para-light">스마트 델리네이터는 야간 급커브도로 안전운행을 지원합니다</p>
 						</div>
 						<div class="container" data-aos="fade-up">
 							<div class="row g-5">
@@ -233,7 +233,7 @@
 								<div class="col-6">
 									<i class="fas fa-clock fa-2x"></i>
 									<h2 class="purecounter" data-purecounter-start="0"
-										data-purecounter-end="82" data-purecounter-duration="3">1</h2>
+										data-purecounter-end="82" data-purecounter-duration="3">1</h2><h2>%</h2>
 									<p>VEHICLE ACCIDENT REDUCTION</p>
 								</div>
 							</div>
@@ -259,11 +259,9 @@
 				<div class="col-lg-7" data-aos="fade-right">
 					<p>ABOUT US</p>
 					<h1>POINT 1</h1>
-					<h4 class="py-2 para-light">엄청 경제적임 싸게 설치할 수 있음 어필어필</h4>
-					<p class="py-2 para-light">sed accusantium aut dolores
-						inventore architecto modi cupiditate eligendi corporis, illum illo
-						culpa. Reiciendis, molestias. Illum voluptatum quisquam ad
-						veritatis dolorem.</p>
+					<h4 class="py-2 para-light">도로공사 등의 큰 비용손실 없이<br>본 제품만으로 손쉬운 급경사구간 환경개선이 가능합니다.</h4>
+					<p class="py-2 para-light">It is possible to easily improve the environment of steep slopes <br>
+					only with this product without significant cost loss due to road construction.</p>
 				</div>
 				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
 					<img class="img-fluid" src="./assets/images/about.jpg" alt="about">

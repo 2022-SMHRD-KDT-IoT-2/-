@@ -198,34 +198,61 @@
 						</td>
 					</tr>
 					<tr>
-						<td><a href="javascript:kakaoLogin();"><img src="assets/images/kakao_login.png"></a> 
-						<script src="https://developers.kakao.com/sdk/js/kakao.js"></script> 
-						<a href="https://kauth.kakao.com/oauth/authorize?client_id=291c1081bfc3fad5cc9de574d8b849d7&redirect_uri=http://localhost:8000/blog/oauth/kakao?cmd=callback&response_type=code"><img height="38px" src="assets/images/kakao_login.png" /></a>
-	<script>					
-	Kakao.init("b43551a3efd6736c68f6755e449a2250");
+                  <td><a href="javascript:kakaoLogin();"><img src="assets/images/kakao_login.png"></a> 
+                  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script> 
+                  
+   <script>
+   window.Kakao.init("f1a70b3ea0e39496dfb511839a1dbddf");
+   
+   
+   function kakaoLogin(){
+      window.Kakao.Auth.loginForm({
+         scope:'profile_nickname, account_email, gender',
+         success : function(response){
+            console.log(response);
+            window.Kakao.API.request({
+               url:'/v2/user/me',
+               success : res=> {
+                  let email = res.kakao_account.email;
+                  let name=res.kakao_account.profile.nickname; 
+                  console.log(res.kakao_account);
+        				//let data = {'email':email, 'name':name}
+          				let xhr = new XMLHttpRequest()
+          				
+          				xhr.open('get','KakaoLogin.do?id='+email+'&name='+name)
+          				
+          				// 전송데이터의 형식
+          				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8')
+          				//console.log(data)
+          				// 요청&전송할 데이터
+          				xhr.send()
+          				
+          				xhr.onreadystatechange = function(){
+          					if(xhr.readyState===XMLHttpRequest.DONE){	// 요청성공
+          						if(xhr.status===200){	// 응답성공
+          							console.log("응답성공")
+          							console.log(xhr.responseText) // 응답데이터 확인(responseXML)
+          							if(xhr.responseText === "kakaosuccess"){
+          								location.href = "index.jsp"
+          							}else{
+          							}
+          						}else{	// 응답실패
+          							console.log("응답실패")
+          						}
+          					}else{	// 요청실패
+          						console.log("요청실패")
+          					}
+          				}
 
-    function kakaoLogin(){
-        Kakao.Auth.login({
-            success: function(response){
-                Kakao.API.request({
-                    url:'/v2/user/me', 
-                    success: function (response) {
-                    	console.log(response)
-                    },
-                    fail : function(response) {
-                    	console.log(error)
-                    },
-                }); //window.location.href="/ex/kakao_login.html" 리다이렉트되는 코드
-            },
-            fail: function(error){
-            	console.log(error);
-            }
-        });
-    }
-         
-	</script>
-	</td>
-					</tr>				
+
+  		}
+            });
+         }
+      });
+   }
+</script>
+   </td>
+               </tr>			
 					<tr>
 						<td>
 							<button type="button" class="button-field2"
