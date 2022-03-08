@@ -62,6 +62,7 @@ li {
 	list-style-type: none;
 }
 
+
 /* Section Background */
 .home, .about, .services, .plans, .work, .contact {
 	height: 110vh;
@@ -97,6 +98,11 @@ li {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.index-about .about{
+	height :700px;
+   	background-color: #171826;
 }
 
 /**********************/
@@ -893,6 +899,9 @@ h5{
 	margin-top: 50px;
 	margin-bottom: 30px;
 }
+.content-table .last-td {
+	border-bottom: 1px solid #ccc;
+}
 
 .contentdiv-div{
 	text-align: center;
@@ -1147,6 +1156,7 @@ h5{
 
 .ex-header h1 {
 	color: #fff;
+	margin-top: 20px;
 }
 
 .ex-basic-1 .list-unstyled .fas {
