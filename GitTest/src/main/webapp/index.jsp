@@ -43,12 +43,7 @@
 <!-- Favicon(»ó´Ü¹Ù icon) 
     <link rel="icon" href="./assets/images/favicon.png">
     -->
-    
-   <style>
-   .about{
-   	height :600px;
-   }
-   </style>
+   
 
 </head>
 <body>
@@ -256,6 +251,7 @@
 	<!-- end of work -->
 
 	<!-- About -->
+	<div class="index-about">
 	<section class="about d-flex align-items-center text-light py-5"
 		id="about">
 		<div class="container">
@@ -319,7 +315,8 @@
 		</div>
 		<!-- end of container -->	
 	</section>
-
+	</div>
+	
 	<!-- Location -->
 	<section class="location text-light py-5">
 		<div class="container" data-aos="zoom-in">
