@@ -188,7 +188,8 @@
 	</div>
 	</div>
 		
-		<jsp:include page="footer.jsp"></jsp:include>
+	<!-- Location -->
+	<jsp:include page="footer.jsp"></jsp:include>
    
 	<!-- Bottom -->
 
