@@ -161,6 +161,8 @@
 	</header>
 	<!-- end of ex-header -->
 	<!-- end of header -->
+	
+	<div class="board">
 	<div class="loginjoindiv">
 		<nav id="menu">
 			<h3 class="login-h3">로그인</h3>
@@ -193,12 +195,15 @@
 							<input type="button" id="submit" class="button-field" value="로그인"
 							class="button fit">
 						</td>
+					</tr>
+					<tr>
 						<td>
-							<p id="login_check" style="color:red";></p>
+							<p id="login_check" class="login-idpw-check"></p>
 						</td>
 					</tr>
 					<tr>
-                  <td><a href="javascript:kakaoLogin();"><img src="assets/images/kakao_login.png"></a> 
+                  <td class="kakao-login">
+                  <a href="javascript:kakaoLogin();"><img src="assets/images/kakao_login.png"></a> 
                   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script> 
                   
    <script>
@@ -264,57 +269,12 @@
 			</ul>
 		</nav>
 	</div>
+	</div>
 
-<div class="location-fixed">		
-		<section class="location text-light py-5">
-      <div class="container" data-aos="zoom-in">
-         <div class="row">
-            <div class="col-lg-3 d-flex align-items-center">
-               <div class="p-2">
-                  <i class="far fa-map fa-3x"></i>
-               </div>
-               <div class="ms-2">
-                  <h6>주소</h6>
-                  <h6>광주광역시 동구<br>스마트인재개발원</h6>
-                  
-               </div>
-            </div>
-            <div class="col-lg-3 d-flex align-items-center">
-               <div class="p-2">
-                  <i class="fas fa-mobile-alt fa-3x"></i>
-               </div>
-               <div class="ms-2">
-                  <h6>연락처</h6>
-                  <p>82) 010-1234-5678</p>
-               </div>
-            </div>
-            <div class="col-lg-3 d-flex align-items-center">
-               <div class="p-2">
-                  <i class="far fa-envelope fa-3x"></i>
-               </div>
-               <div class="ms-2">
-                  <h6>이메일</h6>
-                  <p>kdb7603@naver.com</p>
-               </div>
-            </div>
-            <div class="col-lg-3 d-flex align-items-center">
-               <div class="p-2">
-                  <i class="far fa-clock fa-3x"></i>
-               </div>
-               <div class="ms-2">
-                  <h6>상담문의</h6>
-                  <p>09:00 AM - 18:00 PM</p>
-               </div>
-            </div>
-         </div>
-         <!-- end of row -->
-      </div>
-      </div>
-      <!-- end of container -->
-   </section>
-   <!-- end of location -->
+	<!-- Location -->
+	<jsp:include page="footer.jsp"></jsp:include>
+
 	<!-- Bottom -->
-	<div class="bottom-fixed">
 	<div class="bottom py-2 text-light">
 		<div class="container d-flex justify-content-between">
 			<div></div>
@@ -322,8 +282,8 @@
 		</div>
 		<!-- end of container -->
 	</div>
-	</div>
 	<!-- end of bottom -->
+	
 <!-- Scripts -->
 	<script>
 	let btn_submit = document.getElementById('submit')
@@ -338,11 +298,13 @@
 		
 		if(!id){
 			id_check.innerText = "아이디를 입력해주세요."
+			pw_check.innerText = " "
 		}
 		if(!pw){
+			id_check.innerText = ""
 			pw_check.innerText = "비밀번호를 입력해주세요."
 		}
-		if(!id||!pw){
+		if(!id&&!pw){
 			id_check.innerText = "아이디를 입력해주세요."
 			pw_check.innerText = "비밀번호를 입력해주세요."
 		}
@@ -370,6 +332,8 @@
 								location.href = "index.jsp"
 							}else{
 								login_check.innerText = "아이디/비밀번호를 확인해주세요."
+								id_check.innerText = " "
+								pw_check.innerText = " "
 							}
 						}else{	// 응답실패
 							console.log("응답실패")
