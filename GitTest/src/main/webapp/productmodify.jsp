@@ -202,5 +202,17 @@
 	</div>
 
 	<!-- end of bottom -->
+	
+		<!-- Scripts -->
+	<script src="./js/bootstrap.min.js"></script>
+	<!-- Bootstrap framework -->
+	<script src="./js/purecounter.min.js"></script>
+	<!-- Purecounter counter for statistics numbers -->
+	<script src="./js/swiper.min.js"></script>
+	<!-- Swiper for image and text sliders -->
+	<script src="./js/aos.js"></script>
+	<!-- AOS on Animation Scroll -->
+	<script src="./js/script.js"></script>
+	<!-- Custom scripts -->
 </body>
 </html>
