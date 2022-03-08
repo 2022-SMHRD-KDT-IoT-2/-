@@ -122,10 +122,9 @@
 					<li class="nav-item"><a class="nav-link" href="install.jsp">力前汲摹巩狼</a>
 					</li>
 					<%
-					if(vo!=null){
-
-						if(vo.getYn().equals("Y")||vo.getYn().equals("y")){
-						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">力前府胶飘</a></li>");
+					if (vo != null) {
+						if (vo.getYn().equals("Y") || vo.getYn().equals("y") || vo.getYn().equals("a") || vo.getYn().equals("A")) {
+							out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">力前府胶飘</a></li>");
 						}
 					}
 					%>

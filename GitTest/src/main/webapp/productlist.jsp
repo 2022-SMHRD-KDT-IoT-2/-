@@ -125,8 +125,7 @@
 					</li>
 					<%
 					if (vo1 != null) {
-
-						if (vo1.getYn().equals("Y") || vo1.getYn().equals("y")) {
+						if (vo1.getYn().equals("Y") || vo1.getYn().equals("y") || vo1.getYn().equals("a") || vo1.getYn().equals("A")) {
 							out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
 						}
 					}

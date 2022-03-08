@@ -105,8 +105,8 @@
 						out.print("<li class=\"nav-item\"><a class=\"nav-link active\"aria-current=\"page\" href=\"Logout\">로그아웃</a></li>");
 					}
 					%>
-					<li class="nav-item"><a class="nav-link" href="index.jsp#introduction">제품소개</a>
-					</li>
+					<li class="nav-item"><a class="nav-link"
+						href="index.jsp#introduction">제품소개</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="dropdown02"
 						data-bs-toggle="dropdown" aria-expanded="false" href="#">고장신고</a>
@@ -118,10 +118,10 @@
 						</ul></li>
 					<li class="nav-item"><a class="nav-link" href="install.jsp">제품설치문의</a>
 					</li>
+
 					<%
 					if (vo != null) {
-						System.out.print(vo.getYn());
-						if (vo.getYn().equals("Y") || vo.getYn().equals("y")) {
+						if (vo.getYn().equals("Y") || vo.getYn().equals("y") || vo.getYn().equals("a") || vo.getYn().equals("A")) {
 							out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"productlist.jsp\">제품리스트</a></li>");
 						}
 					}
@@ -175,105 +175,104 @@
 	<!-- Contact -->
 	<!-- 본문 -->
 	<div class="board">
-	<div class="break-div">
-	<section class="contact d-flex align-items-center py-5" id="contact"
-		style="height: 800px">
-		<div class="container-fluid text-light">
-			
-			<div class="row">
-			<!-- 좌측 폼 -->
-			<div class="break-left">
-				<div
-					class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5"
-					data-aos="fade-right">
-					<div>
-						<div class="text-center text-lg-start py-4 pt-lg-0">
-							<p>제품고장</p>
-							<h2 class="py-2">아래의 본문을 따라 고장신고글을 작성해주시기 바랍니다.</h2>
-							<strong class="para-light">허위 신고는 처벌의 대상이 될 수 있으므로 명확한
-								내용을 사실 기반으로 신고를 해 주시길 부탁드립니다.</strong>
-							<p class="para-light">문의에 대한 답변은 작성해주신 연락처를 통해 응답하겠습니다.</p>
-						</div>
-						<div>
-							<div class="row">
-								<div class="col-lg-6">
-									<form action="BreakReport.do" method="post">
+		<div class="break-div">
+			<section class="contact d-flex align-items-center py-5" id="contact"
+				style="height: 800px">
+				<div class="container-fluid text-light">
+
+					<div class="row">
+						<!-- 좌측 폼 -->
+						<div class="break-left">
+							<div
+								class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5"
+								data-aos="fade-right">
+								<div>
+									<div class="text-center text-lg-start py-4 pt-lg-0">
+										<p>제품고장</p>
+										<h2 class="py-2">아래의 본문을 따라 고장신고글을 작성해주시기 바랍니다.</h2>
+										<strong class="para-light">허위 신고는 처벌의 대상이 될 수 있으므로
+											명확한 내용을 사실 기반으로 신고를 해 주시길 부탁드립니다.</strong>
+										<p class="para-light">문의에 대한 답변은 작성해주신 연락처를 통해 응답하겠습니다.</p>
+									</div>
+									<div>
+										<div class="row">
+											<div class="col-lg-6">
+												<form action="BreakReport.do" method="post">
+													<div class="form-group py-2">
+														<input type="text" class="form-control form-control-input"
+															name="name" id="exampleFormControlInput1"
+															placeholder="신고자 성함">
+													</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="form-group py-2">
+													<input type="text" class="form-control form-control-input"
+														name="phone" id="exampleFormControlInput2"
+														placeholder="010-0000-0000">
+												</div>
+											</div>
+										</div>
+										<div class="form-group py-2">
+											<textarea class="form-control form-control-input"
+												name="content" id="exampleFormControlTextarea1" rows="6"
+												placeholder="고장 신고 내용을 입력하세요."></textarea>
+										</div>
 										<div class="form-group py-2">
 											<input type="text" class="form-control form-control-input"
-												name="name" id="exampleFormControlInput1"
-												placeholder="신고자 성함">
+												name="product_number" id="exampleFormControlInput3"
+												placeholder="지도 확인 후, 신고할 제품번호를 입력하세요.">
 										</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="form-group py-2">
-										<input type="text" class="form-control form-control-input"
-											name="phone" id="exampleFormControlInput2"
-											placeholder="010-0000-0000">
 									</div>
+									<div class="my-3">
+										<input type="submit" class="btn form-control-submit-button"
+											value="등록">
+									</div>
+									</form>
 								</div>
-							</div>
-							<div class="form-group py-2">
-								<textarea class="form-control form-control-input" name="content"
-									id="exampleFormControlTextarea1" rows="6"
-									placeholder="고장 신고 내용을 입력하세요."></textarea>
-							</div>
-							<div class="form-group py-2">
-								<input type="text" class="form-control form-control-input"
-									name="product_number" id="exampleFormControlInput3"
-									placeholder="지도 확인 후, 신고할 제품번호를 입력하세요.">
+								<!-- end of div -->
 							</div>
 						</div>
-						<div class="my-3">
-							<input type="submit" class="btn form-control-submit-button" value="등록">
+						<!-- 좌측 폼 div종료 -->
+						<!-- end of col -->
+						<!-- 오른쪽 -->
+						<div class="break-right">
+							<table class="break-table">
+								<tr>
+									<td>
+										<!-- 검색창 -->
+										<div class="searchbox">
+											<div class="break-search">
+												<input type="text" name="detailAddress" id="address"
+													placeholder="신고할 위치의 주소를 검색해주세요" class="break-search-text">
+												<button type="button" id="searchBtn"
+													onclick="adressSearch()" class="break-search-button">검색</button>
+											</div>
+										</div>
+										<div class="col-lg-6 d-flex"></div> <!-- 검색창 div 종료 -->
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- 지도 -->
+										<div class="map-right">
+											<div class="col-lg-6 d-flex align-items-center">
+												<div id="map" class="map"></div>
+
+											</div>
+										</div> <!-- 지도 div 종료 -->
+									</td>
+								</tr>
+								</div>
+							</table>
 						</div>
-						</form>
+						<!-- end of row -->
 					</div>
-					<!-- end of div -->
-				</div>
-				</div>
-				<!-- 좌측 폼 div종료 -->
-				<!-- end of col -->
-				<!-- 오른쪽 -->
-				<div class="break-right">
-				<table class="break-table">
-				<tr>
-					<td>
-				<!-- 검색창 -->
-					<div class="searchbox">
-					<div class="break-search">
-						<input type="text" name="detailAddress" id="address" placeholder="신고할 위치의 주소를 검색해주세요" class="break-search-text">
-						<button type="button" id="searchBtn" onclick="adressSearch()" class="break-search-button">검색</button>
-					</div>
-					</div>
-				<div class="col-lg-6 d-flex">
-				</div>
-				
-				<!-- 검색창 div 종료 -->
-					</td>
-				</tr>
-				<tr>
-					<td>		
-				<!-- 지도 -->
-				<div class="map-right">
-				<div class="col-lg-6 d-flex align-items-center">
-				<div id="map" class="map" ></div>
-				
-				</div>
-				</div>
-				<!-- 지도 div 종료 -->
-					</td>	
-				</tr>	
-				</div>
-				</table>
+					<!-- end of container -->
+			</section>
 		</div>
-		<!-- end of row -->
-		</div>
-		<!-- end of container -->
-	</section>
-	</div>
 	</div>
 	<!-- end of contact -->
-	
+
 
 	<script type="text/javascript"
 		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54eb6a93d19563f656425928fbb6c218&libraries=services"></script>
@@ -283,7 +282,7 @@
 		mapOption = {
 			center : new kakao.maps.LatLng(35.150078125347754,
 					126.91980634412012), // 지도의 중심좌표
-			level : 7
+			level : 6
 		// 지도의 확대 레벨
 		};
 
@@ -363,55 +362,57 @@
 					});
 		}
 	</script>
-	
+
 	<!-- Location -->
 	<section class="location text-light py-5">
-	      <div class="container" data-aos="zoom-in">
-	         <div class="row">
-	            <div class="col-lg-3 d-flex align-items-center">
-	               <div class="p-2">
-	                  <i class="far fa-map fa-3x"></i>
-	               </div>
-	               <div class="ms-2">
-	                  <h6>주소</h6>
-	                  <h6>광주광역시 동구<br>스마트인재개발원</h6>
-	                  
-	               </div>
-	            </div>
-	            <div class="col-lg-3 d-flex align-items-center">
-	               <div class="p-2">
-	                  <i class="fas fa-mobile-alt fa-3x"></i>
-	               </div>
-	               <div class="ms-2">
-	                  <h6>연락처</h6>
-	                  <p>82) 010-1234-5678</p>
-	               </div>
-	            </div>
-	            <div class="col-lg-3 d-flex align-items-center">
-	               <div class="p-2">
-	                  <i class="far fa-envelope fa-3x"></i>
-	               </div>
-	               <div class="ms-2">
-	                  <h6>이메일</h6>
-	                  <p>kdb7603@naver.com</p>
-	               </div>
-	            </div>
-	            <div class="col-lg-3 d-flex align-items-center">
-	               <div class="p-2">
-	                  <i class="far fa-clock fa-3x"></i>
-	               </div>
-	               <div class="ms-2">
-	                  <h6>상담문의</h6>
-	                  <p>09:00 AM - 18:00 PM</p>
-	               </div>
-	            </div>
-	         </div>
-	         <!-- end of row -->
-	      </div>
-	      <!-- end of container -->
-	   </section>
-	   <!-- end of location -->
-	
+		<div class="container" data-aos="zoom-in">
+			<div class="row">
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="far fa-map fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>주소</h6>
+						<h6>
+							광주광역시 동구<br>스마트인재개발원
+						</h6>
+
+					</div>
+				</div>
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="fas fa-mobile-alt fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>연락처</h6>
+						<p>82) 010-1234-5678</p>
+					</div>
+				</div>
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="far fa-envelope fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>이메일</h6>
+						<p>kdb7603@naver.com</p>
+					</div>
+				</div>
+				<div class="col-lg-3 d-flex align-items-center">
+					<div class="p-2">
+						<i class="far fa-clock fa-3x"></i>
+					</div>
+					<div class="ms-2">
+						<h6>상담문의</h6>
+						<p>09:00 AM - 18:00 PM</p>
+					</div>
+				</div>
+			</div>
+			<!-- end of row -->
+		</div>
+		<!-- end of container -->
+	</section>
+	<!-- end of location -->
+
 	<!-- Bottom -->
 	<div class="bottom py-2 text-light">
 		<div class="container d-flex justify-content-between">

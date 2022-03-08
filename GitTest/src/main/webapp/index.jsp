@@ -43,12 +43,7 @@
 <!-- Favicon(상단바 icon) 
     <link rel="icon" href="./assets/images/favicon.png">
     -->
-    
-   <style>
-   .about{
-   	height :600px;
-   }
-   </style>
+   
 
 </head>
 <body>
@@ -215,35 +210,31 @@
 					<div class="row">
 						<div class="text-center text-lg-start py-4 pt-lg-0">
 							<p>About Smart Delineator</p>
-							<h2 class="py-2">Smart Delineator</h2>
+							<h1 class="py-2">Smart Delineator</h1>
 							<p class="para-light">제품소개가 여기서부터 시작되는 느낌으로 만들 예정!</p>
 							<p class="para-light">우리는 아직 데이터가 없어서 목표를 여기에 넣을까 합니다.</p>
 						</div>
 						<div class="container" data-aos="fade-up">
 							<div class="row g-5">
 								<div class="col-6 text-start">
-									<i class="fas fa-briefcase fa-2x text-start"></i>
+									
+									<i class="fas fa-chart-line fa-2x text-start"></i>
 									<h2 class="purecounter" data-purecounter-start="0"
-										data-purecounter-end="1258" data-purecounter-duration="3">1</h2>
-									<p>PROJECTS COMPLETED</p>
+										data-purecounter-end="3588" data-purecounter-duration="6">1</h2>
+									<p>NUMBER OF INSTALLATIONS</p>
 								</div>
-								<div class="col-6">
-									<i class="fas fa-award fa-2x"></i>
-									<h2 class="purecounter" data-purecounter-start="0"
-										data-purecounter-end="150" data-purecounter-duration="3">1</h2>
-									<p>AWARDS</p>
-								</div>
+								
 								<div class="col-6">
 									<i class="fas fa-users fa-2x"></i>
 									<h2 class="purecounter" data-purecounter-start="0"
 										data-purecounter-end="1255" data-purecounter-duration="3">1</h2>
-									<p>CUSTOMER ACTIVE</p>
+									<p>SIGN UP CUSTOMER</p>
 								</div>
 								<div class="col-6">
 									<i class="fas fa-clock fa-2x"></i>
 									<h2 class="purecounter" data-purecounter-start="0"
-										data-purecounter-end="1157" data-purecounter-duration="3">1</h2>
-									<p>GOOD REVIEWS</p>
+										data-purecounter-end="82" data-purecounter-duration="3">1</h2>
+									<p>VEHICLE ACCIDENT REDUCTION</p>
 								</div>
 							</div>
 						</div>
@@ -260,6 +251,7 @@
 	<!-- end of work -->
 
 	<!-- About -->
+	<div class="index-about">
 	<section class="about d-flex align-items-center text-light py-5"
 		id="about">
 		<div class="container">
@@ -314,7 +306,7 @@
 					<h4 class="py-2 para-light"><br>야간 급커브 도로 운행시 스마트델리네이터 자동 작동 시연 동영상</h4>
 				</div>
 				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
-					<iframe width="700" height="350"
+					<iframe width="700" height="380"
 					src="https://www.youtube.com/embed/oa-Yp1QnyAc"
 					frameborder="0" gesture="media" allowfullscreen="" class="video"></iframe>
 			</div>
@@ -323,10 +315,11 @@
 		</div>
 		<!-- end of container -->	
 	</section>
-
+	</div>
+	
 	<!-- Location -->
 	<section class="location text-light py-5">
-		<div class="container" data-aos="zoom-in">
+		<div class="container aos-init aos-animate" data-aos="zoom-in">
 			<div class="row">
 				<div class="col-lg-3 d-flex align-items-center">
 					<div class="p-2">
@@ -395,5 +388,6 @@
 		<!-- end of container -->
 	</div>
 	<!-- end of bottom -->
+	<script src="https://kit.fontawesome.com/70d105e515.js" crossorigin="anonymous"></script>
 </body>
 </html>

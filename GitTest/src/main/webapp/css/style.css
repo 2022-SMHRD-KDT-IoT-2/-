@@ -62,6 +62,7 @@ li {
 	list-style-type: none;
 }
 
+
 /* Section Background */
 .home, .about, .services, .plans, .work, .contact {
 	height: 110vh;
@@ -97,6 +98,11 @@ li {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.index-about .about{
+	height :700px;
+   	background-color: #171826;
 }
 
 /**********************/
@@ -706,9 +712,13 @@ li {
 	text-align: center;
 	display: inline;
 }
+.login-idpw-check{
+	color: red;
+}
 
 #menu h3{
 	margin-top: 50px;
+	margin-bottom: 1.5rem;
 }
 #menu .login-h3{
 	margin-top: 50px;
@@ -721,15 +731,14 @@ h5{
 	text-align: center;
 }
 .loginjoinTable{
-	width: 500px;
-	margin-top: 20px;
 	text-align: center;
-	display: inline;
+	display: inline-block;
 	justify-content: center;
 }
 .loginjoinTable .text-field{
 	width: 300px;
 	height: 42px;
+	margin-top: 5px;
 	margin-bottom: 5px;
 	padding: 5px;
 }
@@ -889,6 +898,9 @@ h5{
 .content h3{
 	margin-top: 50px;
 	margin-bottom: 30px;
+}
+.content-table .last-td {
+	border-bottom: 1px solid #ccc;
 }
 
 .contentdiv-div{
@@ -1144,6 +1156,7 @@ h5{
 
 .ex-header h1 {
 	color: #fff;
+	margin-top: 20px;
 }
 
 .ex-basic-1 .list-unstyled .fas {

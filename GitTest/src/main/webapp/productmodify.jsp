@@ -189,7 +189,7 @@
 	</div>
 		
 		<section class="location text-light py-5">
-      <div class="container" data-aos="zoom-in">
+      <div class="container aos-init aos-animate" data-aos="zoom-in">
          <div class="row">
             <div class="col-lg-3 d-flex align-items-center">
                <div class="p-2">
