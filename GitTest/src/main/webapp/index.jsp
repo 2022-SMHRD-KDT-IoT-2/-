@@ -43,7 +43,14 @@
 <!-- Favicon(상단바 icon) 
     <link rel="icon" href="./assets/images/favicon.png">
     -->
-   
+
+<!-- 제품설명크기 조질 -->
+<style>
+#about {
+	height: 600px
+}
+</style>
+
 
 </head>
 <body>
@@ -217,13 +224,13 @@
 						<div class="container" data-aos="fade-up">
 							<div class="row g-5">
 								<div class="col-6 text-start">
-									
+
 									<i class="fas fa-chart-line fa-2x text-start"></i>
 									<h2 class="purecounter" data-purecounter-start="0"
 										data-purecounter-end="3588" data-purecounter-duration="6">1</h2>
 									<p>NUMBER OF INSTALLATIONS</p>
 								</div>
-								
+
 								<div class="col-6">
 									<i class="fas fa-users fa-2x"></i>
 									<h2 class="purecounter" data-purecounter-start="0"
@@ -233,7 +240,8 @@
 								<div class="col-6">
 									<i class="fas fa-clock fa-2x"></i>
 									<h2 class="purecounter" data-purecounter-start="0"
-										data-purecounter-end="82" data-purecounter-duration="3">1</h2><h2>%</h2>
+										data-purecounter-end="82" data-purecounter-duration="3">1</h2>
+									<h2>%</h2>
 									<p>VEHICLE ACCIDENT REDUCTION</p>
 								</div>
 							</div>
@@ -252,69 +260,78 @@
 
 	<!-- About -->
 	<div class="index-about">
-	<section class="about d-flex align-items-center text-light py-5"
-		id="about">
-		<div class="container">
-			<div class="row d-flex align-items-center">
-				<div class="col-lg-7" data-aos="fade-right">
-					<p>ABOUT US</p>
-					<h1>POINT 1</h1>
-					<h4 class="py-2 para-light">도로공사 등의 큰 비용손실 없이<br>본 제품만으로 손쉬운 급경사구간 환경개선이 가능합니다.</h4>
-					<p class="py-2 para-light">It is possible to easily improve the environment of steep slopes <br>
-					only with this product without significant cost loss due to road construction.</p>
+		<section class="about d-flex align-items-center text-light py-5"
+			id="about">
+			<div class="container">
+				<div class="row d-flex align-items-center">
+					<div class="col-lg-7" data-aos="fade-right">
+						<p>ABOUT US</p>
+						<h1>POINT 1</h1>
+						<h4 class="py-2 para-light">
+							도로공사 등의 큰 비용손실 없이<br>본 제품만으로 손쉬운 급경사구간 환경개선이 가능합니다.
+						</h4>
+						<p class="py-2 para-light">
+							It is possible to easily improve the environment of steep slopes
+							<br> only with this product without significant cost loss
+							due to road construction.
+						</p>
+					</div>
+					<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
+						<img class="img-fluid" src="./assets/images/about.jpg" alt="about">
+					</div>
 				</div>
-				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
-					<img class="img-fluid" src="./assets/images/about.jpg" alt="about">
-				</div>
+				<!-- end of row -->
 			</div>
-			<!-- end of row -->	
-		</div>
-		<!-- end of container -->
-		
-	</section>
-	<!-- end of about -->
+			<!-- end of container -->
 
-	<section class="about d-flex align-items-center text-light py-5"
-		id="about">
-		<div class="container">
-			<div class="row d-flex align-items-center">
-				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
-					<img class="img-fluid" src="./assets/images/about.jpg" alt="about">
-				</div>
-				<div class="col-lg-7" data-aos="fade-right">
-					<p style="text-align: right">ABOUT US</p>
-					<h1 style="text-align: right">POINT 2</h1>
-					<h4 class="py-2 para-light" style="text-align: right">두 가지 색상의 LED를 사용하여 위험도에 따른 가시성을 높였습니다.</h4>
-					<p class="py-2 para-light" style="text-align: right">We used yellow LED and red LED to make it easy for anyone to see.</p>
+		</section>
+		<!-- end of about -->
+
+		<section class="about d-flex align-items-center text-light py-5"
+			id="about">
+			<div class="container">
+				<div class="row d-flex align-items-center">
+					<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
+						<img class="img-fluid" src="./assets/images/about.jpg" alt="about">
+					</div>
+					<div class="col-lg-7" data-aos="fade-right">
+						<p style="text-align: right">ABOUT US</p>
+						<h1 style="text-align: right">POINT 2</h1>
+						<h4 class="py-2 para-light" style="text-align: right">두 가지
+							색상의 LED를 사용하여 위험도에 따른 가시성을 높였습니다.</h4>
+						<p class="py-2 para-light" style="text-align: right">We used
+							yellow LED and red LED to make it easy for anyone to see.</p>
+
+					</div>
 
 				</div>
-
+				<!-- end of row -->
 			</div>
-			<!-- end of row -->
-		</div>
-		<!-- end of container -->
-	</section>
-	<!-- end of about -->
-	<section class="about d-flex align-items-center text-light py-5"
-		id="about">
-		<div class="container">
-			<div class="row d-flex align-items-center">
-				<div class="col-lg-7" data-aos="fade-right">
-					<h1>시연 동영상</h1>
-					<h4 class="py-2 para-light"><br>야간 급커브 도로 운행시 스마트델리네이터 자동 작동 시연 동영상</h4>
+			<!-- end of container -->
+		</section>
+		<!-- end of about -->
+		<section class="about d-flex align-items-center text-light py-5"
+			id="about">
+			<div class="container">
+				<div class="row d-flex align-items-center">
+					<div class="col-lg-7" data-aos="fade-right">
+						<h1>시연 동영상</h1>
+						<h4 class="py-2 para-light">
+							<br>야간 급커브 도로 운행시 스마트델리네이터 자동 작동 시연 동영상
+						</h4>
+					</div>
+					<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
+						<iframe width="700" height="380"
+							src="https://www.youtube.com/embed/oa-Yp1QnyAc" frameborder="0"
+							gesture="media" allowfullscreen="" class="video"></iframe>
+					</div>
 				</div>
-				<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
-					<iframe width="700" height="380"
-					src="https://www.youtube.com/embed/oa-Yp1QnyAc"
-					frameborder="0" gesture="media" allowfullscreen="" class="video"></iframe>
+				<!-- end of row -->
 			</div>
-			</div>
-			<!-- end of row -->	
-		</div>
-		<!-- end of container -->	
-	</section>
+			<!-- end of container -->
+		</section>
 	</div>
-	
+
 	<!-- Location -->
 	<section class="location text-light py-5">
 		<div class="container aos-init aos-animate" data-aos="zoom-in">
@@ -386,6 +403,7 @@
 		<!-- end of container -->
 	</div>
 	<!-- end of bottom -->
-	<script src="https://kit.fontawesome.com/70d105e515.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/70d105e515.js"
+		crossorigin="anonymous"></script>
 </body>
 </html>
