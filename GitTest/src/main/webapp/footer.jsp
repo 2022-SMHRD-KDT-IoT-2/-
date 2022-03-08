@@ -40,11 +40,11 @@
 <body>
 	<!-- Location -->
 	<section class="location text-light py-5">
-		<div class="container aos-init aos-animate" data-aos="zoom-in">
+		<div class="container aos-init" data-aos="zoom-in">
 			<div class="row">
 				<div class="col-lg-3 d-flex align-items-center">
 					<div class="p-2">
-						<i class="far fa-map fa-3x"></i>
+						<i class="far fa-map fa-3x" aria-hidden="true"></i>
 					</div>
 					<div class="ms-2">
 						<h6>аж╪р</h6>
@@ -87,5 +87,8 @@
 		<!-- end of container -->
 	</section>
 	<!-- end of location -->
+	
+		<script src="https://kit.fontawesome.com/70d105e515.js"
+		crossorigin="anonymous"></script>
 </body>
 </html>
