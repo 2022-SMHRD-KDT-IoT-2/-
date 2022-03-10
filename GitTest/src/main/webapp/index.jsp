@@ -269,7 +269,7 @@
 						<p>ABOUT US</p>
 						<h1>POINT 1</h1>
 						<h4 class="py-2 para-light">
-							도로공사 등의 큰 비용손실 없이<br>본 제품만으로 손쉬운 급경사구간 환경개선이 가능합니다.
+							도로공사 등의 큰 비용손실 없이<br>본 제품만으로 손쉬운 급커브구간 환경개선이 가능합니다.
 						</h4>
 						<p class="py-2 para-light">
 							It is possible to easily improve the environment of steep slopes
