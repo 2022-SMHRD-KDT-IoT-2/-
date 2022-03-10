@@ -18,6 +18,16 @@ public class ProductVO {
 			this.user_id = user_id;
 		}
 		
+		
+
+		public ProductVO(int product_seq, double product_latitude, double product_longitude) {
+			super();
+			this.product_seq = product_seq;
+			this.product_latitude = product_latitude;
+			this.product_longitude = product_longitude;
+		}
+
+
 
 		public ProductVO(int product_seq, String product_uid, String product_loc, double product_latitude,
 				double product_longitude, String product_date, String user_id) {

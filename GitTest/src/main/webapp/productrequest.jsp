@@ -166,9 +166,18 @@
 	<!-- 설치 테이블 -->
 	<!-- Header -->
 	<div class="board">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-10 offset-xl-1">
+			<section class="contact d-flex align-items-center py-5" id="contact"
+				style="height: 800px">
+				<div class="container-fluid text-light">
+
+					<div class="row">
+						<!-- 좌측 폼 -->
+						<div class="break-left">
+							<div
+								class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5"
+								data-aos="fade-right">
+								<div>
+									<div class="text-center text-lg-start py-4 pt-lg-0">
 					<form action="ProductWrite.do" method="post">
 					<h3 class="request-h5">제품 추가하기</h3>
 						<div class="table3-div">
@@ -183,11 +192,11 @@
 							</tr>
 							<tr>
 								<th>위도</th>
-								<td><input type="text" class="table3-textbox" name="latitude"></td>
+								<td><input type="text" id="latitude" class="table3-textbox" name="latitude"></td>
 							</tr>
 							<tr>
 								<th>경도</th>
-								<td><input type="text" class="table3-textbox" name="longitude"></td>
+								<td><input type="text" id="longitude"class="table3-textbox" name="longitude"></td>
 							</tr>
 							<tr>
 								<th>관리자아이디</th>
@@ -205,6 +214,37 @@
 		<!-- end of container -->
 	</div>
 	<!-- end of ex-basic-1 -->
+	<div class="break-right">
+							<table class="break-table">
+								<tr>
+									<td>
+										<!-- 검색창 -->
+										<div class="searchbox">
+											<div class="break-search">
+												<input type="text" name="detailAddress" id="address"
+													placeholder="등록할 위치의 주소를 검색해주세요" class="break-search-text">
+												<button type="button" id="searchBtn"
+													onclick="adressSearch()" class="break-search-button">검색</button>
+											</div>
+										</div>
+										<div class="col-lg-6 d-flex"></div> <!-- 검색창 div 종료 -->
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- 지도 -->
+										<div class="map-right">
+											<div class="col-lg-6 d-flex align-items-center">
+												<div id="map" class="map"></div>
+
+											</div>
+										</div> <!-- 지도 div 종료 -->
+									</td>
+								</tr>
+								</div>
+							</table>
+						</div>
+						<!-- end of row -->
 	
 		
 	<!-- Location -->
@@ -219,6 +259,53 @@
 		<!-- end of container -->
 	</div>
 	<!-- end of bottom -->
+	
+	
+	<script type="text/javascript"
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54eb6a93d19563f656425928fbb6c218&libraries=services"></script>
+	<!-- 카카오 맵 -->
+	<script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		mapOption = {
+			center : new kakao.maps.LatLng(35.150078125347754,
+					126.91980634412012), // 지도의 중심좌표
+			level : 6
+		// 지도의 확대 레벨
+		};
+
+		// 지도를 생성합니다    
+		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+// 지도를 클릭한 위치에 표출할 마커입니다
+var marker = new kakao.maps.Marker({ 
+    // 지도 중심좌표에 마커를 생성합니다 
+    position: map.getCenter() 
+}); 
+// 지도에 마커를 표시합니다
+marker.setMap(map);
+
+// 지도에 클릭 이벤트를 등록합니다
+// 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
+kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
+    
+    // 클릭한 위도, 경도 정보를 가져옵니다 
+    var latlng = mouseEvent.latLng; 
+    
+    // 마커 위치를 클릭한 위치로 옮깁니다
+    marker.setPosition(latlng);
+    
+    var latitude = latlng.getLat();
+    var longitude = latlng.getLng()
+    
+    var resultDiv1 = document.getElementById('latitude');
+    var resultDiv2 = document.getElementById('longitude'); 
+    resultDiv1.value=latitude;
+    resultDiv2.value=longitude;
+    
+});
+		
+	</script>
+	
 	
 		<!-- Scripts -->
 	<script src="./js/bootstrap.min.js"></script>

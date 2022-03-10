@@ -1,3 +1,5 @@
+<%@page import="com.VO.ProductVO"%>
+<%@page import="com.DAO.ProductDAO"%>
 <%@page import="com.VO.memberVO"%>
 <%@page import="com.VO.BreakVO"%>
 <%@page import="java.util.ArrayList"%>
@@ -59,22 +61,8 @@
 
 	<%
 	BreakDAO dao = new BreakDAO();
-	int pageSize = 10;
-	String pageNum = request.getParameter("pageNum");
-	if (pageNum == null) {
-		pageNum = "1";
-	}
-	int currentPage = Integer.parseInt(pageNum);
-
-	int startRow = (currentPage - 1) * pageSize + 1;
-	int endRow = currentPage * pageSize;
-	int count = 0;
-	count = dao.getCount();
-	ArrayList<BreakVO> al = null;
-	if (count > 0) {
-		al = dao.getList(startRow, endRow);
-	}
 	memberVO vo = (memberVO) session.getAttribute("loginvo");
+	
 	%>
 
 	<!-- Navigation -->
@@ -278,6 +266,9 @@
 		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54eb6a93d19563f656425928fbb6c218&libraries=services"></script>
 	<!-- 카카오 맵 -->
 	<script>
+	<%
+	ProductDAO pdao=new ProductDAO();
+	ArrayList<ProductVO> al=pdao.mapList();%>
 		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 		mapOption = {
 			center : new kakao.maps.LatLng(35.150078125347754,
@@ -298,25 +289,19 @@
 		var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
 
 		var positions = [
+			<%
+			
+			for(int i=0; i<al.size(); i++){%>
 				{
-					content : '<div style="padding:5px;color:black;">스마트인재개발원 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.150078125347754, 126.91980634412012" style="color:blue" target="_blank">로드뷰</a></div>',
-					latlng : new kakao.maps.LatLng(35.150078125347754,
-							126.91980634412012)
+					content : '<div style="padding:5px;color:black;">제품번호 : '+<%=al.get(i).getProduct_seq()%>+' <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,'+<%=al.get(i).getProduct_latitude()%>+','+<%=al.get(i).getProduct_longitude()%>+'" style="color:blue" target="_blank">로드뷰</a></div>',
+					latlng : new kakao.maps.LatLng(<%=al.get(i).getProduct_latitude()%>,
+							<%=al.get(i).getProduct_longitude()%>)
 				},
+				<%}%>
 				{
-					content : '<div style="color:black;">스마트인재개발원<br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.11069654335439, 126.877761898053" style="color:blue" target="_blank">로드뷰</a></div>',
-					latlng : new kakao.maps.LatLng(35.11069654335439,
-							126.877761898053)
-				},
-				{
-					content : '<div style="color:black;">제품번호 : 1 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.1935083414652, 126.71279814289726" style="color:blue" target="_blank">로드뷰</a></div>',
-					latlng : new kakao.maps.LatLng(35.1935083414652,
-							126.71279814289726)
-				},
-				{
-					content : '<div style="color:black;">제품번호 : 2 <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.15575843433718, 126.971938982733" style="color:blue" target="_blank">로드뷰</a></div>', // 광주 북구 화암동 산 171-2
-					latlng : new kakao.maps.LatLng(35.15575843433718,
-							126.971938982733)
+					content : '<div style="color:black;">제품번호 : '+<%=al.get(al.size()-1).getProduct_seq()%>+' <br><a href="https://map.kakao.com/link/map/제품이 설치된 위치입니다. 로드뷰를 통해 신고제품의 위치가 정확한지 확인해주세요.,35.15575843433718, 126.971938982733" style="color:blue" target="_blank">로드뷰</a></div>', // 광주 북구 화암동 산 171-2
+					latlng : new kakao.maps.LatLng(<%=al.get(al.size()-1).getProduct_latitude()%>,
+							<%=al.get(al.size()-1).getProduct_latitude()%>)
 				} ]
 
 		for (var i = 0; i < positions.length; i++) {

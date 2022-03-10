@@ -83,6 +83,41 @@ public class ProductDAO {
 		}
 		return al;
 	}
+	public ArrayList<ProductVO> mapList() {
+
+		ArrayList<ProductVO> al = new ArrayList<ProductVO>();
+		try {
+
+			connect();
+			
+			String sql = "select product_seq,product_latitude,product_longitude from t_iot";
+			
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+				int getSeq = rs.getInt(1);
+				double latitude = rs.getDouble(2);
+				double longitude = rs.getDouble(3);
+
+				
+				
+				ProductVO vo = new ProductVO(getSeq, latitude, longitude);
+				al.add(vo);
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		} finally {
+			try {
+				quitDB();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+
+		}
+		return al;
+	}
 	public ArrayList<ProductVO> privacyList(int startRow,int endRow,String id) {
 
 		ArrayList<ProductVO> al = new ArrayList<ProductVO>();
