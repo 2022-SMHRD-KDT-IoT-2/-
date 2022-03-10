@@ -172,19 +172,19 @@
 
 					<div class="row">
 						<!-- 좌측 폼 -->
-						<div class="break-left">
+						<div class="request-left">
 							<div
 								class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5"
 								data-aos="fade-right">
 								<div>
 									<div class="text-center text-lg-start py-4 pt-lg-0">
 					<form action="ProductWrite.do" method="post">
-					<h3 class="request-h5">제품 추가하기</h3>
+					<h3 class="productrequest-h3">제품 추가하기</h3>
 						<div class="table3-div">
 						<table class="board_table3">
 							<tr>
 								<th>제품번호</th>
-								<td><input type="text" class="table3-textbox" name="pro_id"></td>
+								<td><input type="text" class="table3-textbox" name="pro_id" autofocus></td>
 							</tr>
 							<tr>
 								<th>위치</th>
@@ -200,11 +200,13 @@
 							</tr>
 							<tr>
 								<th>관리자아이디</th>
-								<td><input type="text" readonly name="id"  class="readonly" value="<%=vo.getId()%>"></td>
+								<td><input type="text" readonly name="id"  class="table3-readonly" value="<%=vo.getId()%>"></td>
 							</tr>
 						</table>
 						</div>
-						<br><input type="submit" class="list-button" value="제품 추가">
+						<div class="request-button">
+						<input type="submit" class="request-button-in" value="제품 추가">
+						</div>
 					</form>
 				</div>
 				<!-- end of col -->
@@ -244,8 +246,14 @@
 								</div>
 							</table>
 						</div>
+						
+						</div>
 						<!-- end of row -->
-	
+						</div>
+						<!-- end of container -->
+				</section>
+				</div>
+				
 		
 	<!-- Location -->
 	<jsp:include page="footer.jsp"></jsp:include>

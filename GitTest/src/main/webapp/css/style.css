@@ -437,7 +437,19 @@ li {
 	text-align: left;
 	float: left;
 }
+.request-left{
+	width: 50%;
+	height: 100%;
+	display: block;
+	text-align: left;
+	float: left;
+	padding-right: 70px;
+}
 .break-left .col-lg-6{
+	width: 100%;
+	display: inline-block;
+}
+.request-left .col-lg-6{
 	width: 100%;
 	display: inline-block;
 }
@@ -452,7 +464,7 @@ li {
 	height: 100%;
 	display: block;
 	float: right;
-	padding-right: 4rem;
+	padding-right: 6rem;
 }
 
 .break-search{
@@ -536,6 +548,25 @@ li {
 
 .request-h5{
 	margin-top: 50px;
+}
+.request-button{
+	text-align: center;
+}
+.request-button-in{
+	width: 80%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2E3D4D;
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+	border: 1px solid #2E3D4D;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.productrequest-h3{
+	padding-left: 10px;
 }
 .table-div{
 	display: inline-block;
@@ -658,6 +689,12 @@ li {
 .table3-textbox{
 	height: 40px;
 	padding: 0px 5px 0px 5px;
+}
+.table3-readonly{
+	border: 0 solid white;
+	height: 40px;
+	width: 191.48px;
+	padding: 10px;
 }
 .board .board_table3 .readonly{
 	border: 0 solid white;
