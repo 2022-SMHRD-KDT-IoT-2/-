@@ -171,7 +171,7 @@
 						<table class="board_table2">
 							<tr>
 								<td class="td-title">설치지역</td>
-								<td class="td-text"><input class="text-box" type="text" name="loc"></td>
+								<td class="td-text"><input class="text-box" autofocus type="text" name="loc"></td>
 							</tr>
 							<tr>
 								<td class="td-title">이름</td>

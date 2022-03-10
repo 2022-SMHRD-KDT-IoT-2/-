@@ -189,7 +189,7 @@
 													<div class="form-group py-2">
 														<input type="text" class="form-control form-control-input"
 															name="name" id="exampleFormControlInput1"
-															placeholder="신고자 성함">
+															placeholder="신고자 성함" autofocus>
 													</div>
 											</div>
 											<div class="col-lg-6">

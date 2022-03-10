@@ -171,7 +171,7 @@
 					<tr>
 						<td>
 							<input type="text" id="id" name="id" class="text-field"
-							placeholder="아이디/이메일을 입력하세요">
+							placeholder="아이디/이메일을 입력하세요" autofocus>
 						</td>
 					</tr>
 					<tr>

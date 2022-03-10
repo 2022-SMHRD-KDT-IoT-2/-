@@ -175,7 +175,7 @@
 					</td>
 				</tr>
 				<tr>	
-					<td><input type="text" name="id" class="text-field" id="id" placeholder="아이디를 입력하세요"></td>
+					<td><input type="text" name="id" class="text-field" id="id" autofocus placeholder="아이디를 입력하세요"></td>
 				</tr>
 				<tr>	
 					<td><input type="button" class="button-field" value="아이디 중복 확인" onclick="idCheck()"><br></td>
