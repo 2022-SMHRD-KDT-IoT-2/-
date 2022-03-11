@@ -318,12 +318,11 @@
 					<div class="col-lg-7" data-aos="fade-right">
 						<h1>시연 동영상</h1>
 						<h4 class="py-2 para-light">
-							야간 급커브 도로 운행시 스마트델리네이터 자동 작동 시연 동영상 <br><br><br><br>정면 시연 동영상
-						</h4>
+							야간 급커브 도로 운행시 스마트델리네이터 자동 작동 시연 동영상 </h4>
 					</div>
 					<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
 						<iframe width="700" height="380"
-							src="https://www.youtube.com/embed/oa-Yp1QnyAc" frameborder="0"
+							src="https://www.youtube.com/embed/wDrkiA74xjI" frameborder="0"
 							gesture="media" allowfullscreen="" class="video"></iframe>
 					</div>
 				</div>
@@ -332,25 +331,6 @@
 			<!-- end of container -->
 		</section>
 
-		<section class="about d-flex align-items-center text-light py-5"
-			id="about">
-			<div class="container">
-				<div class="row d-flex align-items-center">
-					<div class="col-lg-7" data-aos="fade-right">
-						<h4 class="py-2 para-light">
-							<br><br>윗면 시연 동영상
-						</h4>
-					</div>
-					<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
-						<iframe width="700" height="380"
-							src="https://www.youtube.com/embed/oa-Yp1QnyAc" frameborder="0"
-							gesture="media" allowfullscreen="" class="video"></iframe>
-					</div>
-				</div>
-				<!-- end of row -->
-			</div>
-			<!-- end of container -->
-		</section>
 
 	</div>
 
