@@ -278,7 +278,7 @@
 						</p>
 					</div>
 					<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
-						<img class="img-fluid" src="./assets/images/about.jpg" alt="about">
+						<img class="img-fluid" src="./assets/images/main_pro01.png" alt="about">
 					</div>
 				</div>
 				<!-- end of row -->
@@ -293,7 +293,7 @@
 			<div class="container">
 				<div class="row d-flex align-items-center">
 					<div class="col-lg-5 text-center py-4 py-sm-0" data-aos="fade-down">
-						<img class="img-fluid" src="./assets/images/about.jpg" alt="about">
+						<img class="img-fluid" src="./assets/images/main_pro02.png" alt="about">
 					</div>
 					<div class="col-lg-7" data-aos="fade-right">
 						<p style="text-align: right">ABOUT US</p>
