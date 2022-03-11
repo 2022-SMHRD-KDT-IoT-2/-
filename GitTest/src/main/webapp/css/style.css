@@ -410,6 +410,12 @@ li {
 }
 .break-table{
 	width: 100%;
+	max-width: 800px;
+}
+.break-table2{
+	width: 100%;
+	margin-top: 40px;
+	max-width: 800px;
 }
 .break-search-button{
 	width: 100px;
@@ -567,6 +573,7 @@ li {
 }
 .productrequest-h3{
 	padding-left: 10px;
+	color: black;
 }
 .table-div{
 	display: inline-block;
@@ -706,6 +713,7 @@ li {
 	text-align: center;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
+	color: black;
 }
 .board .board_table .list-a {
 	color: #0091FF;

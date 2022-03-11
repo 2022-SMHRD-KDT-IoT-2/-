@@ -166,20 +166,20 @@
 	<!-- 설치 테이블 -->
 	<!-- Header -->
 	<div class="board">
-			<section class="contact d-flex align-items-center py-5" id="contact"
-				style="height: 800px">
+		
+			
 				<div class="container-fluid text-light">
 
 					<div class="row">
 						<!-- 좌측 폼 -->
-						<div class="request-left">
+				<div class="break-left">
 							<div
 								class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5"
 								data-aos="fade-right">
 								<div>
-									<div class="text-center text-lg-start py-4 pt-lg-0">
 					<form action="ProductWrite.do" method="post">
 					<h3 class="productrequest-h3">제품 추가하기</h3>
+					
 						<div class="table3-div">
 						<table class="board_table3">
 							<tr>
@@ -192,11 +192,11 @@
 							</tr>
 							<tr>
 								<th>위도</th>
-								<td><input type="text" id="latitude" class="table3-textbox" name="latitude"></td>
+								<td><input type="text" readonly id="latitude" class="table3-textbox" name="latitude"></td>
 							</tr>
 							<tr>
 								<th>경도</th>
-								<td><input type="text" id="longitude"class="table3-textbox" name="longitude"></td>
+								<td><input type="text" readonly id="longitude"class="table3-textbox" name="longitude"></td>
 							</tr>
 							<tr>
 								<th>관리자아이디</th>
@@ -214,24 +214,12 @@
 			<!-- end of row -->
 		</div>
 		<!-- end of container -->
-	</div>
+			<!-- 좌측 폼 div종료 -->
+						<!-- end of col -->
+						<!-- 오른쪽 -->
 	<!-- end of ex-basic-1 -->
 	<div class="break-right">
-							<table class="break-table">
-								<tr>
-									<td>
-										<!-- 검색창 -->
-										<div class="searchbox">
-											<div class="break-search">
-												<input type="text" name="detailAddress" id="address"
-													placeholder="등록할 위치의 주소를 검색해주세요" class="break-search-text">
-												<button type="button" id="searchBtn"
-													onclick="adressSearch()" class="break-search-button">검색</button>
-											</div>
-										</div>
-										<div class="col-lg-6 d-flex"></div> <!-- 검색창 div 종료 -->
-									</td>
-								</tr>
+							<table class="break-table2">
 								<tr>
 									<td>
 										<!-- 지도 -->
@@ -247,12 +235,12 @@
 							</table>
 						</div>
 						
-						</div>
+								</div>
 						<!-- end of row -->
-						</div>
-						<!-- end of container -->
-				</section>
-				</div>
+					</div>
+					<!-- end of container -->
+		
+	</div>
 				
 		
 	<!-- Location -->
