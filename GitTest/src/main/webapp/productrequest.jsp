@@ -166,9 +166,8 @@
 	<!-- 설치 테이블 -->
 	<!-- Header -->
 	<div class="board">
-		<div class="break-div">
-			<section class="contact d-flex align-items-center py-5" id="contact"
-				style="height: 800px">
+		
+			
 				<div class="container-fluid text-light">
 
 					<div class="row">
@@ -220,7 +219,7 @@
 						<!-- 오른쪽 -->
 	<!-- end of ex-basic-1 -->
 	<div class="break-right">
-							<table class="break-table">
+							<table class="break-table2">
 								<tr>
 									<td>
 										<!-- 지도 -->
@@ -240,8 +239,7 @@
 						<!-- end of row -->
 					</div>
 					<!-- end of container -->
-			</section>
-		</div>
+		
 	</div>
 				
 		
