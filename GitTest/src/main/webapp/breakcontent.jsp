@@ -1,3 +1,5 @@
+<%@page import="com.VO.ProductVO"%>
+<%@page import="com.DAO.ProductDAO"%>
 <%@page import="com.VO.memberVO"%>
 <%@page import="com.VO.BreakVO"%>
 <%@page import="java.util.ArrayList"%>
@@ -49,8 +51,11 @@
 <%
 	BreakDAO dao=new BreakDAO();
 	int no = Integer.parseInt(request.getParameter("no"));
+	int pro_seq = Integer.parseInt(request.getParameter("pro_seq"));
 	BreakVO vo=dao.getOneList(no);
 	memberVO vo1 = (memberVO) session.getAttribute("loginvo");
+	ProductDAO pdao=new ProductDAO(); 
+	ProductVO vo2=pdao.getOneList(pro_seq);
 	%>
 
 	<!-- Navigation -->
@@ -221,11 +226,22 @@
     <script>
     var container = document.getElementById('map');
     var options = {
-		center: new kakao.maps.LatLng(33.450701, 126.570667),
+		center: new kakao.maps.LatLng(<%=vo2.getProduct_latitude()%>, <%=vo2.getProduct_longitude()%>),
 		level: 3
 	};
 
 	var map = new kakao.maps.Map(container, options);
+	
+	// 마커가 표시될 위치입니다 
+	var markerPosition  = new kakao.maps.LatLng(<%=vo2.getProduct_latitude()%>, <%=vo2.getProduct_longitude()%>); 
+
+	// 마커를 생성합니다
+	var marker = new kakao.maps.Marker({
+	    position: markerPosition
+	});
+
+	// 마커가 지도 위에 표시되도록 설정합니다
+	marker.setMap(map);
     </script>
     
     

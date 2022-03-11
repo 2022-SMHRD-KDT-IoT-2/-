@@ -220,7 +220,7 @@
 					<td><%=board.getName()%></td>
 					<td>
 						<%-- 제목을 클릭하면 get 방식으로 해당 항목의 no값을 갖고 content.jsp로 이동 --%> <a
-						class="list-a" href="breakcontent.jsp?no=<%=board.getNum()%>"><%=board.getProduct_num()%></a>
+						class="list-a" href="breakcontent.jsp?no=<%=board.getNum()%>&pro_seq=<%=board.getProduct_num()%>"><%=board.getProduct_num()%></a>
 					</td>
 					<td><%=board.getDate()%></td>
 				</tr>
