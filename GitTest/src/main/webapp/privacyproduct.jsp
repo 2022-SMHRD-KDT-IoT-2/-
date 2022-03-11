@@ -328,7 +328,9 @@
 %>
 </td>
 </tr>
-<%if(vo1 != null){ %>
+<%
+if (vo1 != null && (vo1.getYn().equals("A") || vo1.getYn().equals("a"))) {
+%>
 	<tr>
 		<td colspan="6" class="button-td">
 		<%-- 버튼을 클릭하면 proudctwrite.jsp로 이동 --%> <input type="button"
