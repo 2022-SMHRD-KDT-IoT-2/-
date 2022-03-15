@@ -14,7 +14,7 @@
 - 디자인도구 : PhotoShop
 - 영상편집도구 : Premire Pro / Clova Dubbing Beta
 ## 4. 대표이미지
-
+![대표이미지](https://user-images.githubusercontent.com/100102759/158280847-a219b304-2db1-4819-b51c-a2b443495e59.jpg)
 ## 5. 기능흐름도
 - 스마트 델리네이터
 ![서비스 흐름도](https://user-images.githubusercontent.com/97875522/158282432-df7fe343-804b-459c-b003-e59674a1cf31.png)
