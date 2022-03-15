@@ -14,6 +14,8 @@
 ## 6. 사용부품
 
 ## 7. 회로도
+- 조도센서 및 LED 배선
+- ![회로도_채원팀](https://user-images.githubusercontent.com/100102759/158281950-e670d246-c278-4dff-bf59-36bc07b48617.jpg)
 
 ## 8. 시연사진
 
