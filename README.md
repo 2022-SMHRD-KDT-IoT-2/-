@@ -27,7 +27,7 @@
 ![회로도_채원팀](https://user-images.githubusercontent.com/100102759/158281950-e670d246-c278-4dff-bf59-36bc07b48617.jpg)
 
 ## 8. 시연사진
-
+https://youtu.be/NWF3Md0O94s
 ## 9. 제작일정
 | 일정 | 상세내용 |
 |------|-----------|
