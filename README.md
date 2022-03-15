@@ -9,7 +9,7 @@
 ## 3. 개발환경
 - 사용언어 : Java 1.8 / HTML / CSS / Javascript
 - 개발도구 : eclipse / VSCode / Arduino
-- 서버환경 : tocatm 8.5
+- 서버환경 : tomcat 9.0
 - 데이터베이스 : oracle 11g
 - 디자인도구 : PhotoShop
 - 영상편집도구 : VLLO / Premire Pro / Clova Dubbing Beta
