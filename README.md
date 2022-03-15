@@ -29,7 +29,8 @@
 
 ## 8. 시연사진
 [![스마트델리네이터 시연영상](https://img.youtube.com/vi/wDrkiA74xjI/0.jpg)](https://youtu.be/wDrkiA74xjI)
-[![웹 시연영상](https://img.youtube/NWF3Md0O94s/0.jpg)](https://youtu.be/NWF3Md0O94s)
+[![웹 시연영상](https://img.youtube.com/watch?v=NWF3Md0O94s/0.jpg)](https://youtu.be/NWF3Md0O94s)
+
 ## 9. 제작일정
 | 일정 | 상세내용 |
 |------|-----------|
