@@ -11,7 +11,7 @@
 - 서버환경 : tocatm 8.5
 - 데이터베이스 : oracle 11g
 - 디자인도구 : PhotoShop
-- 영상편집도구 : Premire Pro / Clova Dubbing Beta
+- 영상편집도구 : VLLO / Premire Pro / Clova Dubbing Beta
 ## 4. 대표이미지
 ![대표이미지](https://user-images.githubusercontent.com/100102759/158280847-a219b304-2db1-4819-b51c-a2b443495e59.jpg)
 ## 5. 기능흐름도
