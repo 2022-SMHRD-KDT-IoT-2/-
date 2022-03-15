@@ -15,9 +15,9 @@
 ## 4. 대표이미지
 ![대표이미지](https://user-images.githubusercontent.com/100102759/158280847-a219b304-2db1-4819-b51c-a2b443495e59.jpg)
 ## 5. 기능흐름도
-- 스마트 델리네이터
+- 스마트 델리네이터(차량 감지 및 상황에 따른 LED 자동 점등)
 ![서비스 흐름도](https://user-images.githubusercontent.com/97875522/158282432-df7fe343-804b-459c-b003-e59674a1cf31.png)
-- 스마트 델리네이터 웹페이지
+- 스마트 델리네이터 웹페이지(제품 정보/위치 확인)
 ![서비스 흐름도(웹)](https://user-images.githubusercontent.com/97875522/158282439-5e6e6c8f-91a3-4501-acb6-e0f299a8de72.png)
 ## 6. 사용부품
 - 부품주문서 파일 넣기
